@@ -1,0 +1,2587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionDesignerDomainModel.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionDesigner</value>
+    <comment>Description for DslLibrary &apos;ConfigurationSectionDesigner&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionDesignerDomainModel.DisplayName" xml:space="preserve">
+    <value>ConfigurationSectionDesigner</value>
+    <comment>DisplayName for DslLibrary &apos;ConfigurationSectionDesigner&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModel.Description" xml:space="preserve">
+    <value>The configuration section being designed, which contains all configuration elements.</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionModel&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModel.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionModel&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModel/Namespace.Description" xml:space="preserve">
+    <value>The root namespace used for code generation.</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ConfigurationSectionModel&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModel/Namespace.DisplayName" xml:space="preserve">
+    <value>Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ConfigurationSectionModel&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModel/Namespace.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;Namespace&apos; on DomainClass &apos;ConfigurationSectionModel&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModel/XmlSchemaNamespace.Description" xml:space="preserve">
+    <value>The root XML namespace for XML Schema (XSD) generation.</value>
+    <comment>Description for DomainProperty &apos;XmlSchemaNamespace&apos; on DomainClass &apos;ConfigurationSectionModel&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModel/XmlSchemaNamespace.DisplayName" xml:space="preserve">
+    <value>Xml Schema Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;XmlSchemaNamespace&apos; on DomainClass &apos;ConfigurationSectionModel&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModel/XmlSchemaNamespace.Category" xml:space="preserve">
+    <value>XML</value>
+    <comment>Category for DomainProperty &apos;XmlSchemaNamespace&apos; on DomainClass &apos;ConfigurationSectionModel&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElement</value>
+    <comment>Description for DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement.DisplayName" xml:space="preserve">
+    <value>Configuration Element</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/Documentation.Description" xml:space="preserve">
+    <value>Provides documentation notes on this Configuration Element.</value>
+    <comment>Description for DomainProperty &apos;Documentation&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/Documentation.DisplayName" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>DisplayName for DomainProperty &apos;Documentation&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/Documentation.Category" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>Category for DomainProperty &apos;Documentation&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/HasCustomChildElements.Description" xml:space="preserve">
+    <value>Determines if this configuration element has custom child elements that are not known at design-time. WARNING: Setting this to true will disable intellisense to the ENTIRE configuration file because the resulting schema will become ambiguous.</value>
+    <comment>Description for DomainProperty &apos;HasCustomChildElements&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/HasCustomChildElements.DisplayName" xml:space="preserve">
+    <value>Has Custom Child Elements</value>
+    <comment>DisplayName for DomainProperty &apos;HasCustomChildElements&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/HasCustomChildElements.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;HasCustomChildElements&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/IsReadOnly.Description" xml:space="preserve">
+    <value>Determines whether the configuration element can be modified or not.</value>
+    <comment>Description for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/IsReadOnly.DisplayName" xml:space="preserve">
+    <value>Is Read Only</value>
+    <comment>DisplayName for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/IsReadOnly.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/DisplayName.Description" xml:space="preserve">
+    <value>Specifies the display name for this element</value>
+    <comment>Description for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/DisplayName.DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+    <comment>DisplayName for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElement/DisplayName.Category" xml:space="preserve">
+    <value>Metadata</value>
+    <comment>Category for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;ConfigurationElement&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.AttributeProperty</value>
+    <comment>Description for DomainClass &apos;AttributeProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeProperty.DisplayName" xml:space="preserve">
+    <value>Attribute</value>
+    <comment>DisplayName for DomainClass &apos;AttributeProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeProperty/DefaultValue.Description" xml:space="preserve">
+    <value>The default value of this property.</value>
+    <comment>Description for DomainProperty &apos;DefaultValue&apos; on DomainClass &apos;AttributeProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeProperty/DefaultValue.DisplayName" xml:space="preserve">
+    <value>Default Value</value>
+    <comment>DisplayName for DomainProperty &apos;DefaultValue&apos; on DomainClass &apos;AttributeProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeProperty/DefaultValue.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;DefaultValue&apos; on DomainClass &apos;AttributeProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeProperty/CustomEditor.Description" xml:space="preserve">
+    <value>Use a custom editor to edit this attribute</value>
+    <comment>Description for DomainProperty &apos;CustomEditor&apos; on DomainClass &apos;AttributeProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeProperty/CustomEditor.DisplayName" xml:space="preserve">
+    <value>Custom Editor</value>
+    <comment>DisplayName for DomainProperty &apos;CustomEditor&apos; on DomainClass &apos;AttributeProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeProperty/CustomEditor.Category" xml:space="preserve">
+    <value>Metadata</value>
+    <comment>Category for DomainProperty &apos;CustomEditor&apos; on DomainClass &apos;AttributeProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSection</value>
+    <comment>Description for DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection.DisplayName" xml:space="preserve">
+    <value>Configuration Section</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/CodeGenOptions.Description" xml:space="preserve">
+    <value>The possible blocks of code that are generated for a Configuration Section.</value>
+    <comment>Description for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/CodeGenOptions.DisplayName" xml:space="preserve">
+    <value>Code Generation Options</value>
+    <comment>DisplayName for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/CodeGenOptions.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/XmlSectionName.Description" xml:space="preserve">
+    <value>The name of this Configuration Section as it appears in XML.</value>
+    <comment>Description for DomainProperty &apos;XmlSectionName&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/XmlSectionName.DisplayName" xml:space="preserve">
+    <value>Xml Section Name</value>
+    <comment>DisplayName for DomainProperty &apos;XmlSectionName&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/XmlSectionName.Category" xml:space="preserve">
+    <value>XML</value>
+    <comment>Category for DomainProperty &apos;XmlSectionName&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/ProtectionProvider.Description" xml:space="preserve">
+    <value>Decides which section protection provider to protect this configuration section with</value>
+    <comment>Description for DomainProperty &apos;ProtectionProvider&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/ProtectionProvider.DisplayName" xml:space="preserve">
+    <value>Protection Provider</value>
+    <comment>DisplayName for DomainProperty &apos;ProtectionProvider&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/ProtectionProvider.Category" xml:space="preserve">
+    <value>Protection</value>
+    <comment>Category for DomainProperty &apos;ProtectionProvider&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/CustomProtectionProvider.Description" xml:space="preserve">
+    <value>If &quot;Protection Provider&quot; is set to Custom, this property decides which custom provider to use</value>
+    <comment>Description for DomainProperty &apos;CustomProtectionProvider&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/CustomProtectionProvider.DisplayName" xml:space="preserve">
+    <value>Custom Protection Provider</value>
+    <comment>DisplayName for DomainProperty &apos;CustomProtectionProvider&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSection/CustomProtectionProvider.Category" xml:space="preserve">
+    <value>Protection</value>
+    <comment>Category for DomainProperty &apos;CustomProtectionProvider&apos; on DomainClass &apos;ConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementCollection</value>
+    <comment>Description for DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection.DisplayName" xml:space="preserve">
+    <value>Configuration Element Collection</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/CollectionType.Description" xml:space="preserve">
+    <value>The type of this collection.</value>
+    <comment>Description for DomainProperty &apos;CollectionType&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/CollectionType.DisplayName" xml:space="preserve">
+    <value>Collection Type</value>
+    <comment>DisplayName for DomainProperty &apos;CollectionType&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/CollectionType.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;CollectionType&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/XmlItemName.Description" xml:space="preserve">
+    <value>The name of each item in the collection as it appears in XML.</value>
+    <comment>Description for DomainProperty &apos;XmlItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/XmlItemName.DisplayName" xml:space="preserve">
+    <value>Xml Item Name</value>
+    <comment>DisplayName for DomainProperty &apos;XmlItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/XmlItemName.Category" xml:space="preserve">
+    <value>XML</value>
+    <comment>Category for DomainProperty &apos;XmlItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/CodeGenOptions.Description" xml:space="preserve">
+    <value>The possible blocks of code that are generated for a Configuration Element Collection.</value>
+    <comment>Description for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/CodeGenOptions.DisplayName" xml:space="preserve">
+    <value>Code Generation Options</value>
+    <comment>DisplayName for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/CodeGenOptions.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/AddItemName.Description" xml:space="preserve">
+    <value>The name of the &apos;add&apos; configuration element. This value is only used if CollectionType is AddRemoveClearMap or AddRemoveClearMapAlternate.</value>
+    <comment>Description for DomainProperty &apos;AddItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/AddItemName.DisplayName" xml:space="preserve">
+    <value>Add Item Name</value>
+    <comment>DisplayName for DomainProperty &apos;AddItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/AddItemName.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;AddItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/RemoveItemName.Description" xml:space="preserve">
+    <value>The name of the &apos;remove&apos; configuration element. This value is only used if CollectionType is AddRemoveClearMap or AddRemoveClearMapAlternate.</value>
+    <comment>Description for DomainProperty &apos;RemoveItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/RemoveItemName.DisplayName" xml:space="preserve">
+    <value>Remove Item Name</value>
+    <comment>DisplayName for DomainProperty &apos;RemoveItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/RemoveItemName.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;RemoveItemName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/ClearItemsName.Description" xml:space="preserve">
+    <value>The name for the &apos;clear&apos; configuration element. This value is only used if CollectionType is AddRemoveClearMap or AddRemoveClearMapAlternate.</value>
+    <comment>Description for DomainProperty &apos;ClearItemsName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/ClearItemsName.DisplayName" xml:space="preserve">
+    <value>Clear Items Name</value>
+    <comment>DisplayName for DomainProperty &apos;ClearItemsName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/ClearItemsName.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;ClearItemsName&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/UseHashForElementKey.Description" xml:space="preserve">
+    <value>If set to true, allow the ItemType element to be keyless, uses GetHashCode on the elemt itself.</value>
+    <comment>Description for DomainProperty &apos;UseHashForElementKey&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/UseHashForElementKey.DisplayName" xml:space="preserve">
+    <value>Use Hash For Element Key</value>
+    <comment>DisplayName for DomainProperty &apos;UseHashForElementKey&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollection/UseHashForElementKey.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;UseHashForElementKey&apos; on DomainClass &apos;ConfigurationElementCollection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ElementProperty</value>
+    <comment>Description for DomainClass &apos;ElementProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementProperty.DisplayName" xml:space="preserve">
+    <value>Element</value>
+    <comment>DisplayName for DomainClass &apos;ElementProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationProperty</value>
+    <comment>Description for DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Property</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Name.Description" xml:space="preserve">
+    <value>The name of this property.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Name.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsRequired.Description" xml:space="preserve">
+    <value>Determines if this is a required property.</value>
+    <comment>Description for DomainProperty &apos;IsRequired&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsRequired.DisplayName" xml:space="preserve">
+    <value>Is Required</value>
+    <comment>DisplayName for DomainProperty &apos;IsRequired&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsRequired.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;IsRequired&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsKey.Description" xml:space="preserve">
+    <value>Determines if this property is the key for the element in which it appears.</value>
+    <comment>Description for DomainProperty &apos;IsKey&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsKey.DisplayName" xml:space="preserve">
+    <value>Is Key</value>
+    <comment>DisplayName for DomainProperty &apos;IsKey&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsKey.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;IsKey&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsDefaultCollection.Description" xml:space="preserve">
+    <value>Determines if this is the default property collection. NOTE: If false, the .NET framework will build a nested section like &apos;&lt;items&gt; ...&lt;/items&gt;&apos; to hold the collection. This property will be ignored if element is not a collections.</value>
+    <comment>Description for DomainProperty &apos;IsDefaultCollection&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsDefaultCollection.DisplayName" xml:space="preserve">
+    <value>Is Default Collection</value>
+    <comment>DisplayName for DomainProperty &apos;IsDefaultCollection&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsDefaultCollection.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;IsDefaultCollection&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/XmlName.Description" xml:space="preserve">
+    <value>The name of this property as it appears in XML.</value>
+    <comment>Description for DomainProperty &apos;XmlName&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/XmlName.DisplayName" xml:space="preserve">
+    <value>Xml Name</value>
+    <comment>DisplayName for DomainProperty &apos;XmlName&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/XmlName.Category" xml:space="preserve">
+    <value>XML</value>
+    <comment>Category for DomainProperty &apos;XmlName&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsReadOnly.Description" xml:space="preserve">
+    <value>Determines if this property has only a getter or also a setter.</value>
+    <comment>Description for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsReadOnly.DisplayName" xml:space="preserve">
+    <value>Is Read Only</value>
+    <comment>DisplayName for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/IsReadOnly.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;IsReadOnly&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Documentation.Description" xml:space="preserve">
+    <value>Provides documentation notes on this property.</value>
+    <comment>Description for DomainProperty &apos;Documentation&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Documentation.DisplayName" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>DisplayName for DomainProperty &apos;Documentation&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Documentation.Category" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>Category for DomainProperty &apos;Documentation&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/CustomAttributes.Description" xml:space="preserve">
+    <value>Adds custom Attributes to the property. These will be applied to the property in the code behind file as VS attributes. Make sure the custom attributes declared here are defined.</value>
+    <comment>Description for DomainProperty &apos;CustomAttributes&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/CustomAttributes.DisplayName" xml:space="preserve">
+    <value>Custom Attributes</value>
+    <comment>DisplayName for DomainProperty &apos;CustomAttributes&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/CustomAttributes.Category" xml:space="preserve">
+    <value>Metadata</value>
+    <comment>Category for DomainProperty &apos;CustomAttributes&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Browsable.Description" xml:space="preserve">
+    <value>Whether a property should be displayed</value>
+    <comment>Description for DomainProperty &apos;Browsable&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Browsable.DisplayName" xml:space="preserve">
+    <value>Browsable</value>
+    <comment>DisplayName for DomainProperty &apos;Browsable&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Browsable.Category" xml:space="preserve">
+    <value>Metadata</value>
+    <comment>Category for DomainProperty &apos;Browsable&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/DisplayName.Description" xml:space="preserve">
+    <value>Specifies the display name for a property</value>
+    <comment>Description for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/DisplayName.DisplayName" xml:space="preserve">
+    <value>Display Name</value>
+    <comment>DisplayName for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/DisplayName.Category" xml:space="preserve">
+    <value>Metadata</value>
+    <comment>Category for DomainProperty &apos;DisplayName&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Category.Description" xml:space="preserve">
+    <value>The name of the category in which to group the property</value>
+    <comment>Description for DomainProperty &apos;Category&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Category.DisplayName" xml:space="preserve">
+    <value>Category</value>
+    <comment>DisplayName for DomainProperty &apos;Category&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/Category.Category" xml:space="preserve">
+    <value>Metadata</value>
+    <comment>Category for DomainProperty &apos;Category&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/TypeConverter.Description" xml:space="preserve">
+    <value>The typeconverter to use for this property</value>
+    <comment>Description for DomainProperty &apos;TypeConverter&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/TypeConverter.DisplayName" xml:space="preserve">
+    <value>Type Converter</value>
+    <comment>DisplayName for DomainProperty &apos;TypeConverter&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationProperty/TypeConverter.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;TypeConverter&apos; on DomainClass &apos;ConfigurationProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeDefinition.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.TypeDefinition</value>
+    <comment>Description for DomainClass &apos;TypeDefinition&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeDefinition.DisplayName" xml:space="preserve">
+    <value>Type Definition</value>
+    <comment>DisplayName for DomainClass &apos;TypeDefinition&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ExternalType.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ExternalType</value>
+    <comment>Description for DomainClass &apos;ExternalType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ExternalType.DisplayName" xml:space="preserve">
+    <value>External Type</value>
+    <comment>DisplayName for DomainClass &apos;ExternalType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.EnumeratedType</value>
+    <comment>Description for DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType.DisplayName" xml:space="preserve">
+    <value>Enumerated Type</value>
+    <comment>DisplayName for DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/IsFlags.Description" xml:space="preserve">
+    <value>Determines if this type is a flags enumeration.</value>
+    <comment>Description for DomainProperty &apos;IsFlags&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/IsFlags.DisplayName" xml:space="preserve">
+    <value>Is Flags</value>
+    <comment>DisplayName for DomainProperty &apos;IsFlags&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/IsFlags.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;IsFlags&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/Documentation.Description" xml:space="preserve">
+    <value>Provides documentation notes on this type definition.</value>
+    <comment>Description for DomainProperty &apos;Documentation&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/Documentation.DisplayName" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>DisplayName for DomainProperty &apos;Documentation&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/Documentation.Category" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>Category for DomainProperty &apos;Documentation&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/CodeGenOptions.Description" xml:space="preserve">
+    <value>Defines if code for the enumeration is generated.</value>
+    <comment>Description for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/CodeGenOptions.DisplayName" xml:space="preserve">
+    <value>Code Generation Options</value>
+    <comment>DisplayName for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedType/CodeGenOptions.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;CodeGenOptions&apos; on DomainClass &apos;EnumeratedType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.EnumerationLiteral</value>
+    <comment>Description for DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral.DisplayName" xml:space="preserve">
+    <value>Enumeration Literal</value>
+    <comment>DisplayName for DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Name.Description" xml:space="preserve">
+    <value>The name of the enumeration literal.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Name.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Value.Description" xml:space="preserve">
+    <value>The numeric value of the enumeration literal (may be null).</value>
+    <comment>Description for DomainProperty &apos;Value&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Value.DisplayName" xml:space="preserve">
+    <value>Value</value>
+    <comment>DisplayName for DomainProperty &apos;Value&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Value.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Value&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Documentation.Description" xml:space="preserve">
+    <value>Provides documentation notes on this enumeration literal.</value>
+    <comment>Description for DomainProperty &apos;Documentation&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Documentation.DisplayName" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>DisplayName for DomainProperty &apos;Documentation&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumerationLiteral/Documentation.Category" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>Category for DomainProperty &apos;Documentation&apos; on DomainClass &apos;EnumerationLiteral&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.BaseConfigurationType</value>
+    <comment>Description for DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType.DisplayName" xml:space="preserve">
+    <value>Base Configuration Type</value>
+    <comment>DisplayName for DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/TypeName.Description" xml:space="preserve">
+    <value>The actual type name of this Configuration Element.</value>
+    <comment>Description for DomainProperty &apos;TypeName&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/TypeName.DisplayName" xml:space="preserve">
+    <value>Type Name</value>
+    <comment>DisplayName for DomainProperty &apos;TypeName&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/TypeName.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;TypeName&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/InheritanceModifier.Description" xml:space="preserve">
+    <value>Determines if the inheritance modifier of the generated class is none, abstract or sealed</value>
+    <comment>Description for DomainProperty &apos;InheritanceModifier&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/InheritanceModifier.DisplayName" xml:space="preserve">
+    <value>Inheritance Modifier</value>
+    <comment>DisplayName for DomainProperty &apos;InheritanceModifier&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/InheritanceModifier.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;InheritanceModifier&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/AccessModifier.Description" xml:space="preserve">
+    <value>Determines what the access modifier for the generated class is.</value>
+    <comment>Description for DomainProperty &apos;AccessModifier&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/AccessModifier.DisplayName" xml:space="preserve">
+    <value>Access Modifier</value>
+    <comment>DisplayName for DomainProperty &apos;AccessModifier&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationType/AccessModifier.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainProperty &apos;AccessModifier&apos; on DomainClass &apos;BaseConfigurationType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroup.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroup</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroup.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionProperty</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Section Property</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionProperty/ConfigurationSectionName.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionProperty.Configuration Section Name</value>
+    <comment>Description for DomainProperty &apos;ConfigurationSectionName&apos; on DomainClass &apos;ConfigurationSectionProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionProperty/ConfigurationSectionName.DisplayName" xml:space="preserve">
+    <value>Configuration Section Name</value>
+    <comment>DisplayName for DomainProperty &apos;ConfigurationSectionName&apos; on DomainClass &apos;ConfigurationSectionProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupProperty</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionGroupProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Property</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionGroupProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupProperty/ConfigurationSectionGroupName.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupProperty.Configuration Section Group Name</value>
+    <comment>Description for DomainProperty &apos;ConfigurationSectionGroupName&apos; on DomainClass &apos;ConfigurationSectionGroupProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupProperty/ConfigurationSectionGroupName.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Name</value>
+    <comment>DisplayName for DomainProperty &apos;ConfigurationSectionGroupName&apos; on DomainClass &apos;ConfigurationSectionGroupProperty&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidators.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.PropertyValidators</value>
+    <comment>Description for DomainClass &apos;PropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidators.DisplayName" xml:space="preserve">
+    <value>Validators</value>
+    <comment>DisplayName for DomainClass &apos;PropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidator.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.PropertyValidator</value>
+    <comment>Description for DomainClass &apos;PropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidator.DisplayName" xml:space="preserve">
+    <value>Property Validator</value>
+    <comment>DisplayName for DomainClass &apos;PropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidator/Name.Description" xml:space="preserve">
+    <value>The validator&apos;s name</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;PropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidator/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;PropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidator/Name.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;PropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CallbackValidator.Description" xml:space="preserve">
+    <value>Provides dynamic validation of an object by calling a method to validate it.</value>
+    <comment>Description for DomainClass &apos;CallbackValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CallbackValidator.DisplayName" xml:space="preserve">
+    <value>Callback Validator</value>
+    <comment>DisplayName for DomainClass &apos;CallbackValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CallbackValidator/Callback.Description" xml:space="preserve">
+    <value>The method to call for validation.</value>
+    <comment>Description for DomainProperty &apos;Callback&apos; on DomainClass &apos;CallbackValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CallbackValidator/Callback.DisplayName" xml:space="preserve">
+    <value>Callback</value>
+    <comment>DisplayName for DomainProperty &apos;Callback&apos; on DomainClass &apos;CallbackValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CallbackValidator/Callback.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;Callback&apos; on DomainClass &apos;CallbackValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.NumberValidator.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.NumberValidator</value>
+    <comment>Description for DomainClass &apos;NumberValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.NumberValidator.DisplayName" xml:space="preserve">
+    <value>Number Validator</value>
+    <comment>DisplayName for DomainClass &apos;NumberValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.NumberValidator/ExcludeRange.Description" xml:space="preserve">
+    <value>Indicates whether to include or exclude the range defined by the MinValue and MaxValue property values.</value>
+    <comment>Description for DomainProperty &apos;ExcludeRange&apos; on DomainClass &apos;NumberValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.NumberValidator/ExcludeRange.DisplayName" xml:space="preserve">
+    <value>Exclude Range</value>
+    <comment>DisplayName for DomainProperty &apos;ExcludeRange&apos; on DomainClass &apos;NumberValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.NumberValidator/ExcludeRange.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;ExcludeRange&apos; on DomainClass &apos;NumberValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.IntegerValidator.Description" xml:space="preserve">
+    <value>Validates properties of Int32 type.</value>
+    <comment>Description for DomainClass &apos;IntegerValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.IntegerValidator.DisplayName" xml:space="preserve">
+    <value>Integer Validator</value>
+    <comment>DisplayName for DomainClass &apos;IntegerValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.IntegerValidator/MaxValue.Description" xml:space="preserve">
+    <value>The maximum value allowed for the property.</value>
+    <comment>Description for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;IntegerValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.IntegerValidator/MaxValue.DisplayName" xml:space="preserve">
+    <value>Max Value</value>
+    <comment>DisplayName for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;IntegerValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.IntegerValidator/MaxValue.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;IntegerValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.IntegerValidator/MinValue.Description" xml:space="preserve">
+    <value>The minimum value allowed for the property.</value>
+    <comment>Description for DomainProperty &apos;MinValue&apos; on DomainClass &apos;IntegerValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.IntegerValidator/MinValue.DisplayName" xml:space="preserve">
+    <value>Min Value</value>
+    <comment>DisplayName for DomainProperty &apos;MinValue&apos; on DomainClass &apos;IntegerValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.IntegerValidator/MinValue.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;MinValue&apos; on DomainClass &apos;IntegerValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.LongValidator.Description" xml:space="preserve">
+    <value>Validates properties of Int64 type.</value>
+    <comment>Description for DomainClass &apos;LongValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.LongValidator.DisplayName" xml:space="preserve">
+    <value>Long Validator</value>
+    <comment>DisplayName for DomainClass &apos;LongValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.LongValidator/MaxValue.Description" xml:space="preserve">
+    <value>The maximum value allowed for the property.</value>
+    <comment>Description for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;LongValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.LongValidator/MaxValue.DisplayName" xml:space="preserve">
+    <value>Max Value</value>
+    <comment>DisplayName for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;LongValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.LongValidator/MaxValue.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;LongValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.LongValidator/MinValue.Description" xml:space="preserve">
+    <value>The minimum value allowed for the property.</value>
+    <comment>Description for DomainProperty &apos;MinValue&apos; on DomainClass &apos;LongValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.LongValidator/MinValue.DisplayName" xml:space="preserve">
+    <value>Min Value</value>
+    <comment>DisplayName for DomainProperty &apos;MinValue&apos; on DomainClass &apos;LongValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.LongValidator/MinValue.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;MinValue&apos; on DomainClass &apos;LongValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PositiveTimeSpanValidator.Description" xml:space="preserve">
+    <value>Validates properties of TimeSpan type.</value>
+    <comment>Description for DomainClass &apos;PositiveTimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PositiveTimeSpanValidator.DisplayName" xml:space="preserve">
+    <value>Positive Time Span Validator</value>
+    <comment>DisplayName for DomainClass &apos;PositiveTimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TimeSpanValidator.Description" xml:space="preserve">
+    <value>Validates properties of TimeSpan type.</value>
+    <comment>Description for DomainClass &apos;TimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TimeSpanValidator.DisplayName" xml:space="preserve">
+    <value>Time Span Validator</value>
+    <comment>DisplayName for DomainClass &apos;TimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TimeSpanValidator/MaxValue.Description" xml:space="preserve">
+    <value>The maximum value allowed for the property.</value>
+    <comment>Description for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;TimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TimeSpanValidator/MaxValue.DisplayName" xml:space="preserve">
+    <value>Max Value</value>
+    <comment>DisplayName for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;TimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TimeSpanValidator/MaxValue.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;MaxValue&apos; on DomainClass &apos;TimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TimeSpanValidator/MinValue.Description" xml:space="preserve">
+    <value>The minimum value allowed for the property.</value>
+    <comment>Description for DomainProperty &apos;MinValue&apos; on DomainClass &apos;TimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TimeSpanValidator/MinValue.DisplayName" xml:space="preserve">
+    <value>Min Value</value>
+    <comment>DisplayName for DomainProperty &apos;MinValue&apos; on DomainClass &apos;TimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TimeSpanValidator/MinValue.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;MinValue&apos; on DomainClass &apos;TimeSpanValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.RegexStringValidator.Description" xml:space="preserve">
+    <value>Uses a regular expression to validate properties of the String type.</value>
+    <comment>Description for DomainClass &apos;RegexStringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.RegexStringValidator.DisplayName" xml:space="preserve">
+    <value>RegexString Validator</value>
+    <comment>DisplayName for DomainClass &apos;RegexStringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.RegexStringValidator/RegularExpression.Description" xml:space="preserve">
+    <value>The regular expression used to filter the string assigned to the decorated configuration-element property.</value>
+    <comment>Description for DomainProperty &apos;RegularExpression&apos; on DomainClass &apos;RegexStringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.RegexStringValidator/RegularExpression.DisplayName" xml:space="preserve">
+    <value>Regular Expression</value>
+    <comment>DisplayName for DomainProperty &apos;RegularExpression&apos; on DomainClass &apos;RegexStringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.RegexStringValidator/RegularExpression.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;RegularExpression&apos; on DomainClass &apos;RegexStringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator.Description" xml:space="preserve">
+    <value>Validates properties of String type.</value>
+    <comment>Description for DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator.DisplayName" xml:space="preserve">
+    <value>String Validator</value>
+    <comment>DisplayName for DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/InvalidCharacters.Description" xml:space="preserve">
+    <value>The set of characters that are not allowed for the property.</value>
+    <comment>Description for DomainProperty &apos;InvalidCharacters&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/InvalidCharacters.DisplayName" xml:space="preserve">
+    <value>Invalid Characters</value>
+    <comment>DisplayName for DomainProperty &apos;InvalidCharacters&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/InvalidCharacters.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;InvalidCharacters&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/MaxLength.Description" xml:space="preserve">
+    <value>The maximum length allowed for the string to assign to the property.</value>
+    <comment>Description for DomainProperty &apos;MaxLength&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/MaxLength.DisplayName" xml:space="preserve">
+    <value>Max Length</value>
+    <comment>DisplayName for DomainProperty &apos;MaxLength&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/MaxLength.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;MaxLength&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/MinLength.Description" xml:space="preserve">
+    <value>The minimum allowed value for the string to assign to the property.</value>
+    <comment>Description for DomainProperty &apos;MinLength&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/MinLength.DisplayName" xml:space="preserve">
+    <value>Min Length</value>
+    <comment>DisplayName for DomainProperty &apos;MinLength&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.StringValidator/MinLength.Category" xml:space="preserve">
+    <value>Validation</value>
+    <comment>Category for DomainProperty &apos;MinLength&apos; on DomainClass &apos;StringValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverter.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.CustomTypeConverter</value>
+    <comment>Description for DomainClass &apos;CustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverter.DisplayName" xml:space="preserve">
+    <value>Custom Type Converter</value>
+    <comment>DisplayName for DomainClass &apos;CustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverter/Name.Description" xml:space="preserve">
+    <value>The name of the custom converter</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;CustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverter/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;CustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverter/Documentation.Description" xml:space="preserve">
+    <value>Provides documentation notes on this custom converter.</value>
+    <comment>Description for DomainProperty &apos;Documentation&apos; on DomainClass &apos;CustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverter/Documentation.DisplayName" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>DisplayName for DomainProperty &apos;Documentation&apos; on DomainClass &apos;CustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverter/Documentation.Category" xml:space="preserve">
+    <value>Documentation</value>
+    <comment>Category for DomainProperty &apos;Documentation&apos; on DomainClass &apos;CustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeBase.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.TypeBase</value>
+    <comment>Description for DomainClass &apos;TypeBase&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeBase.DisplayName" xml:space="preserve">
+    <value>Type Base</value>
+    <comment>DisplayName for DomainClass &apos;TypeBase&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeBase/Name.Description" xml:space="preserve">
+    <value>The name of the type</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;TypeBase&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeBase/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;TypeBase&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeBase/Name.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Name&apos; on DomainClass &apos;TypeBase&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeBase/Namespace.Description" xml:space="preserve">
+    <value>The namespace of this type.</value>
+    <comment>Description for DomainProperty &apos;Namespace&apos; on DomainClass &apos;TypeBase&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeBase/Namespace.DisplayName" xml:space="preserve">
+    <value>Namespace</value>
+    <comment>DisplayName for DomainProperty &apos;Namespace&apos; on DomainClass &apos;TypeBase&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeBase/Namespace.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainProperty &apos;Namespace&apos; on DomainClass &apos;TypeBase&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.Attribute.Description" xml:space="preserve">
+    <value>Represents an attribute.</value>
+    <comment>Description for DomainClass &apos;Attribute&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.Attribute.DisplayName" xml:space="preserve">
+    <value>Attribute</value>
+    <comment>DisplayName for DomainClass &apos;Attribute&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.Attribute/Name.Description" xml:space="preserve">
+    <value>The name of the attribute. This should be a Fully Qualified Name.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;Attribute&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.Attribute/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;Attribute&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeParameter.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.AttributeParameter</value>
+    <comment>Description for DomainClass &apos;AttributeParameter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeParameter.DisplayName" xml:space="preserve">
+    <value>Attribute Parameter</value>
+    <comment>DisplayName for DomainClass &apos;AttributeParameter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeParameter/Name.Description" xml:space="preserve">
+    <value>The name of a name attribute parameter. Set to empty string if the parameter is not named.</value>
+    <comment>Description for DomainProperty &apos;Name&apos; on DomainClass &apos;AttributeParameter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeParameter/Name.DisplayName" xml:space="preserve">
+    <value>Name</value>
+    <comment>DisplayName for DomainProperty &apos;Name&apos; on DomainClass &apos;AttributeParameter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeParameter/Value.Description" xml:space="preserve">
+    <value>The value of the parameter.</value>
+    <comment>Description for DomainProperty &apos;Value&apos; on DomainClass &apos;AttributeParameter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeParameter/Value.DisplayName" xml:space="preserve">
+    <value>Value</value>
+    <comment>DisplayName for DomainProperty &apos;Value&apos; on DomainClass &apos;AttributeParameter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.Comment.Description" xml:space="preserve">
+    <value>Diagram comment box. Will not affect resulting configuration code.</value>
+    <comment>Description for DomainClass &apos;Comment&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.Comment.DisplayName" xml:space="preserve">
+    <value>Comment</value>
+    <comment>DisplayName for DomainClass &apos;Comment&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.Comment/Text.Description" xml:space="preserve">
+    <value>Comment text.</value>
+    <comment>Description for DomainProperty &apos;Text&apos; on DomainClass &apos;Comment&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.Comment/Text.DisplayName" xml:space="preserve">
+    <value>Text</value>
+    <comment>DisplayName for DomainProperty &apos;Text&apos; on DomainClass &apos;Comment&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties</value>
+    <comment>Description for DomainClass &apos;ConfigurationElementHasAttributeProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties.DisplayName" xml:space="preserve">
+    <value>Configuration Element Has Attribute Properties</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationElementHasAttributeProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties/ConfigurationElement.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties.ConfigurationElement</value>
+    <comment>Description for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementHasAttributeProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties/ConfigurationElement.DisplayName" xml:space="preserve">
+    <value>Configuration Element</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementHasAttributeProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties/ConfigurationElement.PropertyDisplayName" xml:space="preserve">
+    <value>Attribute Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementHasAttributeProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties/AttributeProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties.AttributeProperty</value>
+    <comment>Description for DomainRole &apos;AttributeProperty&apos; on DomainRelationship &apos;ConfigurationElementHasAttributeProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties/AttributeProperty.DisplayName" xml:space="preserve">
+    <value>Attribute Property</value>
+    <comment>DisplayName for DomainRole &apos;AttributeProperty&apos; on DomainRelationship &apos;ConfigurationElementHasAttributeProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties/AttributeProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Element</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AttributeProperty&apos; on DomainRelationship &apos;ConfigurationElementHasAttributeProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType</value>
+    <comment>Description for DomainClass &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType.DisplayName" xml:space="preserve">
+    <value>Configuration Element Collection Has Item Type</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType/ConfigurationElementCollection.Description" xml:space="preserve">
+    <value>The type of the items in this collection.</value>
+    <comment>Description for DomainRole &apos;ConfigurationElementCollection&apos; on DomainRelationship &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType/ConfigurationElementCollection.DisplayName" xml:space="preserve">
+    <value>Configuration Element Collection</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationElementCollection&apos; on DomainRelationship &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType/ConfigurationElementCollection.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainRole &apos;ConfigurationElementCollection&apos; on DomainRelationship &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType/ConfigurationElementCollection.PropertyDisplayName" xml:space="preserve">
+    <value>Item Type</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationElementCollection&apos; on DomainRelationship &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType/ConfigurationElement.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType.ConfigurationElement</value>
+    <comment>Description for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType/ConfigurationElement.DisplayName" xml:space="preserve">
+    <value>Configuration Element</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType/ConfigurationElement.PropertyDisplayName" xml:space="preserve">
+    <value>Referring Configuration Element Collections</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementCollectionHasItemType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasElementProperties.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementHasElementProperties</value>
+    <comment>Description for DomainClass &apos;ConfigurationElementHasElementProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasElementProperties.DisplayName" xml:space="preserve">
+    <value>Configuration Element Has Element Properties</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationElementHasElementProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasElementProperties/ConfigurationElement.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementHasElementProperties.ConfigurationElement</value>
+    <comment>Description for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementHasElementProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasElementProperties/ConfigurationElement.DisplayName" xml:space="preserve">
+    <value>Configuration Element</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementHasElementProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasElementProperties/ConfigurationElement.PropertyDisplayName" xml:space="preserve">
+    <value>Element Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ConfigurationElementHasElementProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasElementProperties/ElementProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementHasElementProperties.ElementProperty</value>
+    <comment>Description for DomainRole &apos;ElementProperty&apos; on DomainRelationship &apos;ConfigurationElementHasElementProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasElementProperties/ElementProperty.DisplayName" xml:space="preserve">
+    <value>Element Property</value>
+    <comment>DisplayName for DomainRole &apos;ElementProperty&apos; on DomainRelationship &apos;ConfigurationElementHasElementProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementHasElementProperties/ElementProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Element</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ElementProperty&apos; on DomainRelationship &apos;ConfigurationElementHasElementProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType.Description" xml:space="preserve">
+    <value>The type of this property.</value>
+    <comment>Description for DomainClass &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType.DisplayName" xml:space="preserve">
+    <value>Element Property Has Type</value>
+    <comment>DisplayName for DomainClass &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType/ElementProperty.Description" xml:space="preserve">
+    <value>The type of this property.</value>
+    <comment>Description for DomainRole &apos;ElementProperty&apos; on DomainRelationship &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType/ElementProperty.DisplayName" xml:space="preserve">
+    <value>Element Property</value>
+    <comment>DisplayName for DomainRole &apos;ElementProperty&apos; on DomainRelationship &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType/ElementProperty.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainRole &apos;ElementProperty&apos; on DomainRelationship &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType/ElementProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Type</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ElementProperty&apos; on DomainRelationship &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType/ConfigurationElement.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ElementPropertyHasType.ConfigurationElement</value>
+    <comment>Description for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType/ConfigurationElement.DisplayName" xml:space="preserve">
+    <value>Configuration Element</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasType/ConfigurationElement.PropertyDisplayName" xml:space="preserve">
+    <value>Referring Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationElement&apos; on DomainRelationship &apos;ElementPropertyHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType.Description" xml:space="preserve">
+    <value>The type of this property.</value>
+    <comment>Description for DomainClass &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType.DisplayName" xml:space="preserve">
+    <value>Attribute Property Has Property Type</value>
+    <comment>DisplayName for DomainClass &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType/AttributeProperty.Description" xml:space="preserve">
+    <value>The type of this property.</value>
+    <comment>Description for DomainRole &apos;AttributeProperty&apos; on DomainRelationship &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType/AttributeProperty.DisplayName" xml:space="preserve">
+    <value>Attribute Property</value>
+    <comment>DisplayName for DomainRole &apos;AttributeProperty&apos; on DomainRelationship &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType/AttributeProperty.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainRole &apos;AttributeProperty&apos; on DomainRelationship &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType/AttributeProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Type</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AttributeProperty&apos; on DomainRelationship &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType/TypeDefinition.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.AttributePropertyHasPropertyType.TypeDefinition</value>
+    <comment>Description for DomainRole &apos;TypeDefinition&apos; on DomainRelationship &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType/TypeDefinition.DisplayName" xml:space="preserve">
+    <value>Type Definition</value>
+    <comment>DisplayName for DomainRole &apos;TypeDefinition&apos; on DomainRelationship &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributePropertyHasPropertyType/TypeDefinition.PropertyDisplayName" xml:space="preserve">
+    <value>Referring Attributes</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TypeDefinition&apos; on DomainRelationship &apos;AttributePropertyHasPropertyType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionModelHasTypeDefinitions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model Has Type Definitions</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionModelHasTypeDefinitions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions/ConfigurationSectionModel.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions.ConfigurationSectionModel</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasTypeDefinitions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions/ConfigurationSectionModel.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasTypeDefinitions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions/ConfigurationSectionModel.PropertyDisplayName" xml:space="preserve">
+    <value>Type Definitions</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasTypeDefinitions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions/TypeDefinition.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions.TypeDefinition</value>
+    <comment>Description for DomainRole &apos;TypeDefinition&apos; on DomainRelationship &apos;ConfigurationSectionModelHasTypeDefinitions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions/TypeDefinition.DisplayName" xml:space="preserve">
+    <value>Type Definition</value>
+    <comment>DisplayName for DomainRole &apos;TypeDefinition&apos; on DomainRelationship &apos;ConfigurationSectionModelHasTypeDefinitions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions/TypeDefinition.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TypeDefinition&apos; on DomainRelationship &apos;ConfigurationSectionModelHasTypeDefinitions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedTypeHasLiterals.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.EnumeratedTypeHasLiterals</value>
+    <comment>Description for DomainClass &apos;EnumeratedTypeHasLiterals&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedTypeHasLiterals.DisplayName" xml:space="preserve">
+    <value>Enumerated Type Has Literals</value>
+    <comment>DisplayName for DomainClass &apos;EnumeratedTypeHasLiterals&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedTypeHasLiterals/EnumeratedType.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.EnumeratedTypeHasLiterals.EnumeratedType</value>
+    <comment>Description for DomainRole &apos;EnumeratedType&apos; on DomainRelationship &apos;EnumeratedTypeHasLiterals&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedTypeHasLiterals/EnumeratedType.DisplayName" xml:space="preserve">
+    <value>Enumerated Type</value>
+    <comment>DisplayName for DomainRole &apos;EnumeratedType&apos; on DomainRelationship &apos;EnumeratedTypeHasLiterals&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedTypeHasLiterals/EnumeratedType.PropertyDisplayName" xml:space="preserve">
+    <value>Literals</value>
+    <comment>PropertyDisplayName for DomainRole &apos;EnumeratedType&apos; on DomainRelationship &apos;EnumeratedTypeHasLiterals&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedTypeHasLiterals/EnumerationLiteral.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.EnumeratedTypeHasLiterals.EnumerationLiteral</value>
+    <comment>Description for DomainRole &apos;EnumerationLiteral&apos; on DomainRelationship &apos;EnumeratedTypeHasLiterals&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedTypeHasLiterals/EnumerationLiteral.DisplayName" xml:space="preserve">
+    <value>Enumeration Literal</value>
+    <comment>DisplayName for DomainRole &apos;EnumerationLiteral&apos; on DomainRelationship &apos;EnumeratedTypeHasLiterals&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.EnumeratedTypeHasLiterals/EnumerationLiteral.PropertyDisplayName" xml:space="preserve">
+    <value>Enumerated Type</value>
+    <comment>PropertyDisplayName for DomainRole &apos;EnumerationLiteral&apos; on DomainRelationship &apos;EnumeratedTypeHasLiterals&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionModelHasConfigurationElements&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model Has Configuration Elements</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionModelHasConfigurationElements&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements/ConfigurationSectionModel.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements.ConfigurationSectionModel</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasConfigurationElements&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements/ConfigurationSectionModel.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasConfigurationElements&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements/ConfigurationSectionModel.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Elements</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasConfigurationElements&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements/BaseConfigurationType.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements.BaseConfigurationType</value>
+    <comment>Description for DomainRole &apos;BaseConfigurationType&apos; on DomainRelationship &apos;ConfigurationSectionModelHasConfigurationElements&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements/BaseConfigurationType.DisplayName" xml:space="preserve">
+    <value>Base Configuration Type</value>
+    <comment>DisplayName for DomainRole &apos;BaseConfigurationType&apos; on DomainRelationship &apos;ConfigurationSectionModelHasConfigurationElements&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements/BaseConfigurationType.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;BaseConfigurationType&apos; on DomainRelationship &apos;ConfigurationSectionModelHasConfigurationElements&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionGroupHasConfigurationSectionProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Has Configuration Section Properties</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionGroupHasConfigurationSectionProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties/ConfigurationSectionGroup.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties.ConfigurationSectionGroup</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties/ConfigurationSectionGroup.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties/ConfigurationSectionGroup.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties/ConfigurationSectionProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties.ConfigurationSectionProperty</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties/ConfigurationSectionProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Section Property</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties/ConfigurationSectionProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Group</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection.DisplayName" xml:space="preserve">
+    <value>Configuration Section Property Has Configuration Section</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection/ConfigurationSectionProperty.Description" xml:space="preserve">
+    <value>The configuration section the section group contains</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionProperty&apos; on DomainRelationship &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection/ConfigurationSectionProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Section Property</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionProperty&apos; on DomainRelationship &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection/ConfigurationSectionProperty.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainRole &apos;ConfigurationSectionProperty&apos; on DomainRelationship &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection/ConfigurationSectionProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Contained Configuration Section</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionProperty&apos; on DomainRelationship &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection/ConfigurationSection.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection.ConfigurationSection</value>
+    <comment>Description for DomainRole &apos;ConfigurationSection&apos; on DomainRelationship &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection/ConfigurationSection.DisplayName" xml:space="preserve">
+    <value>Configuration Section</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSection&apos; on DomainRelationship &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection/ConfigurationSection.PropertyDisplayName" xml:space="preserve">
+    <value>Referring Configuration Section Group</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSection&apos; on DomainRelationship &apos;ConfigurationSectionPropertyHasConfigurationSection&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionGroupHasConfigurationSectionGroupProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Has Configuration Section Group Properties</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionGroupHasConfigurationSectionGroupProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties/ConfigurationSectionGroup.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties.ConfigurationSectionGroup</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionGroupProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties/ConfigurationSectionGroup.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionGroupProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties/ConfigurationSectionGroup.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Group Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionGroupProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties/ConfigurationSectionGroupProperty.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties.ConfigurationSectionGroupProperty</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionGroupProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionGroupProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties/ConfigurationSectionGroupProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Property</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionGroupProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionGroupProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties/ConfigurationSectionGroupProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Group</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionGroupProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupHasConfigurationSectionGroupProperties&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Property Has Configuration Section Group</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup/ConfigurationSectionGroupProperty.Description" xml:space="preserve">
+    <value>The configuration section the section group contains</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionGroupProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup/ConfigurationSectionGroupProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Property</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionGroupProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup/ConfigurationSectionGroupProperty.Category" xml:space="preserve">
+    <value>Definition</value>
+    <comment>Category for DomainRole &apos;ConfigurationSectionGroupProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup/ConfigurationSectionGroupProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Group</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionGroupProperty&apos; on DomainRelationship &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup/ConfigurationSectionGroup.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup.ConfigurationSectionGroup</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup/ConfigurationSectionGroup.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup/ConfigurationSectionGroup.PropertyDisplayName" xml:space="preserve">
+    <value>Referring Configuration Section Group</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionGroup&apos; on DomainRelationship &apos;ConfigurationSectionGroupPropertyHasConfigurationSectionGroup&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionModelHasPropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model Has Property Validators</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionModelHasPropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators/ConfigurationSectionModel.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators.ConfigurationSectionModel</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasPropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators/ConfigurationSectionModel.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasPropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators/ConfigurationSectionModel.PropertyDisplayName" xml:space="preserve">
+    <value>Property Validators</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasPropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators/PropertyValidators.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators.PropertyValidators</value>
+    <comment>Description for DomainRole &apos;PropertyValidators&apos; on DomainRelationship &apos;ConfigurationSectionModelHasPropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators/PropertyValidators.DisplayName" xml:space="preserve">
+    <value>Property Validators</value>
+    <comment>DisplayName for DomainRole &apos;PropertyValidators&apos; on DomainRelationship &apos;ConfigurationSectionModelHasPropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators/PropertyValidators.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PropertyValidators&apos; on DomainRelationship &apos;ConfigurationSectionModelHasPropertyValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidatorsHasValidators.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.PropertyValidatorsHasValidators</value>
+    <comment>Description for DomainClass &apos;PropertyValidatorsHasValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidatorsHasValidators.DisplayName" xml:space="preserve">
+    <value>Property Validators Has Validators</value>
+    <comment>DisplayName for DomainClass &apos;PropertyValidatorsHasValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidatorsHasValidators/PropertyValidators.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.PropertyValidatorsHasValidators.PropertyValidators</value>
+    <comment>Description for DomainRole &apos;PropertyValidators&apos; on DomainRelationship &apos;PropertyValidatorsHasValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidatorsHasValidators/PropertyValidators.DisplayName" xml:space="preserve">
+    <value>Property Validators</value>
+    <comment>DisplayName for DomainRole &apos;PropertyValidators&apos; on DomainRelationship &apos;PropertyValidatorsHasValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidatorsHasValidators/PropertyValidators.PropertyDisplayName" xml:space="preserve">
+    <value>Validators</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PropertyValidators&apos; on DomainRelationship &apos;PropertyValidatorsHasValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidatorsHasValidators/PropertyValidator.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.PropertyValidatorsHasValidators.PropertyValidator</value>
+    <comment>Description for DomainRole &apos;PropertyValidator&apos; on DomainRelationship &apos;PropertyValidatorsHasValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidatorsHasValidators/PropertyValidator.DisplayName" xml:space="preserve">
+    <value>Property Validator</value>
+    <comment>DisplayName for DomainRole &apos;PropertyValidator&apos; on DomainRelationship &apos;PropertyValidatorsHasValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.PropertyValidatorsHasValidators/PropertyValidator.PropertyDisplayName" xml:space="preserve">
+    <value>Property Validators</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PropertyValidator&apos; on DomainRelationship &apos;PropertyValidatorsHasValidators&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator</value>
+    <comment>Description for DomainClass &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator.DisplayName" xml:space="preserve">
+    <value>Configuration Property Has Property Validator</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator/ConfigurationProperty.Description" xml:space="preserve">
+    <value>The validator used to validate this property. Add validators by viewing the &apos;Configuration Section Explorer&apos; explorer tab and locating the Property Validators item. Right-click that item to add.</value>
+    <comment>Description for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator/ConfigurationProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Property</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator/ConfigurationProperty.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator/ConfigurationProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Validator</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator/PropertyValidator.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator.PropertyValidator</value>
+    <comment>Description for DomainRole &apos;PropertyValidator&apos; on DomainRelationship &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator/PropertyValidator.DisplayName" xml:space="preserve">
+    <value>Property Validator</value>
+    <comment>DisplayName for DomainRole &apos;PropertyValidator&apos; on DomainRelationship &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator/PropertyValidator.PropertyDisplayName" xml:space="preserve">
+    <value>Referring Configuration Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;PropertyValidator&apos; on DomainRelationship &apos;ConfigurationPropertyHasPropertyValidator&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionModelHasCustomTypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model Has Custom Type Converters</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionModelHasCustomTypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters/ConfigurationSectionModel.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters.ConfigurationSectionModel</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasCustomTypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters/ConfigurationSectionModel.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasCustomTypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters/ConfigurationSectionModel.PropertyDisplayName" xml:space="preserve">
+    <value>Custom Type Converters</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasCustomTypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters/CustomTypeConverter.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters.CustomTypeConverter</value>
+    <comment>Description for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;ConfigurationSectionModelHasCustomTypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters/CustomTypeConverter.DisplayName" xml:space="preserve">
+    <value>Custom Type Converter</value>
+    <comment>DisplayName for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;ConfigurationSectionModelHasCustomTypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters/CustomTypeConverter.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;ConfigurationSectionModelHasCustomTypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter</value>
+    <comment>Description for DomainClass &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter.DisplayName" xml:space="preserve">
+    <value>Configuration Property References Custom Type Converter</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter/ConfigurationProperty.Description" xml:space="preserve">
+    <value>The custom type converter to use if the TypeConverter property is set to Custom</value>
+    <comment>Description for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter/ConfigurationProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Property</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter/ConfigurationProperty.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter/ConfigurationProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Custom Type Converter</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter/CustomTypeConverter.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter.CustomTypeConverter</value>
+    <comment>Description for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter/CustomTypeConverter.DisplayName" xml:space="preserve">
+    <value>Custom Type Converter</value>
+    <comment>DisplayName for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter/CustomTypeConverter.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Properties</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;ConfigurationPropertyReferencesCustomTypeConverter&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverterHasType.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.CustomTypeConverterHasType</value>
+    <comment>Description for DomainClass &apos;CustomTypeConverterHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverterHasType.DisplayName" xml:space="preserve">
+    <value>Custom Type Converter Has Type</value>
+    <comment>DisplayName for DomainClass &apos;CustomTypeConverterHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverterHasType/CustomTypeConverter.Description" xml:space="preserve">
+    <value>The type this converter converts to and from</value>
+    <comment>Description for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;CustomTypeConverterHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverterHasType/CustomTypeConverter.DisplayName" xml:space="preserve">
+    <value>Custom Type Converter</value>
+    <comment>DisplayName for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;CustomTypeConverterHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverterHasType/CustomTypeConverter.PropertyDisplayName" xml:space="preserve">
+    <value>Type</value>
+    <comment>PropertyDisplayName for DomainRole &apos;CustomTypeConverter&apos; on DomainRelationship &apos;CustomTypeConverterHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverterHasType/TypeBase.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.CustomTypeConverterHasType.TypeBase</value>
+    <comment>Description for DomainRole &apos;TypeBase&apos; on DomainRelationship &apos;CustomTypeConverterHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverterHasType/TypeBase.DisplayName" xml:space="preserve">
+    <value>Type Base</value>
+    <comment>DisplayName for DomainRole &apos;TypeBase&apos; on DomainRelationship &apos;CustomTypeConverterHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomTypeConverterHasType/TypeBase.PropertyDisplayName" xml:space="preserve">
+    <value>Referring Custom Type Converters</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TypeBase&apos; on DomainRelationship &apos;CustomTypeConverterHasType&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass</value>
+    <comment>Description for DomainClass &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass.DisplayName" xml:space="preserve">
+    <value>Base Configuration Type Has Base Class</value>
+    <comment>DisplayName for DomainClass &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass/SourceBaseConfigurationType.Description" xml:space="preserve">
+    <value>Base class of this type</value>
+    <comment>Description for DomainRole &apos;SourceBaseConfigurationType&apos; on DomainRelationship &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass/SourceBaseConfigurationType.DisplayName" xml:space="preserve">
+    <value>Source Base Configuration Type</value>
+    <comment>DisplayName for DomainRole &apos;SourceBaseConfigurationType&apos; on DomainRelationship &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass/SourceBaseConfigurationType.Category" xml:space="preserve">
+    <value>Code</value>
+    <comment>Category for DomainRole &apos;SourceBaseConfigurationType&apos; on DomainRelationship &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass/SourceBaseConfigurationType.PropertyDisplayName" xml:space="preserve">
+    <value>Base Class</value>
+    <comment>PropertyDisplayName for DomainRole &apos;SourceBaseConfigurationType&apos; on DomainRelationship &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass/TargetBaseConfigurationType.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass.TargetBaseConfigurationType</value>
+    <comment>Description for DomainRole &apos;TargetBaseConfigurationType&apos; on DomainRelationship &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass/TargetBaseConfigurationType.DisplayName" xml:space="preserve">
+    <value>Target Base Configuration Type</value>
+    <comment>DisplayName for DomainRole &apos;TargetBaseConfigurationType&apos; on DomainRelationship &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass/TargetBaseConfigurationType.PropertyDisplayName" xml:space="preserve">
+    <value>Super Class Of</value>
+    <comment>PropertyDisplayName for DomainRole &apos;TargetBaseConfigurationType&apos; on DomainRelationship &apos;BaseConfigurationTypeHasBaseClass&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeHasParameters.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.AttributeHasParameters</value>
+    <comment>Description for DomainClass &apos;AttributeHasParameters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeHasParameters.DisplayName" xml:space="preserve">
+    <value>Attribute Has Parameters</value>
+    <comment>DisplayName for DomainClass &apos;AttributeHasParameters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeHasParameters/Attribute.Description" xml:space="preserve">
+    <value>The list of parameters for this attribute.</value>
+    <comment>Description for DomainRole &apos;Attribute&apos; on DomainRelationship &apos;AttributeHasParameters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeHasParameters/Attribute.DisplayName" xml:space="preserve">
+    <value>Attribute</value>
+    <comment>DisplayName for DomainRole &apos;Attribute&apos; on DomainRelationship &apos;AttributeHasParameters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeHasParameters/Attribute.PropertyDisplayName" xml:space="preserve">
+    <value>Parameters</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Attribute&apos; on DomainRelationship &apos;AttributeHasParameters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeHasParameters/AttributeParameter.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.AttributeHasParameters.AttributeParameter</value>
+    <comment>Description for DomainRole &apos;AttributeParameter&apos; on DomainRelationship &apos;AttributeHasParameters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeHasParameters/AttributeParameter.DisplayName" xml:space="preserve">
+    <value>Attribute Parameter</value>
+    <comment>DisplayName for DomainRole &apos;AttributeParameter&apos; on DomainRelationship &apos;AttributeHasParameters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AttributeHasParameters/AttributeParameter.PropertyDisplayName" xml:space="preserve">
+    <value>Attribute</value>
+    <comment>PropertyDisplayName for DomainRole &apos;AttributeParameter&apos; on DomainRelationship &apos;AttributeHasParameters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes</value>
+    <comment>Description for DomainClass &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes.DisplayName" xml:space="preserve">
+    <value>Configuration Property Has Attributes</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes/ConfigurationProperty.Description" xml:space="preserve">
+    <value>Adds custom Attributes to the property</value>
+    <comment>Description for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes/ConfigurationProperty.DisplayName" xml:space="preserve">
+    <value>Configuration Property</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes/ConfigurationProperty.Category" xml:space="preserve">
+    <value>Metadata</value>
+    <comment>Category for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes/ConfigurationProperty.PropertyDisplayName" xml:space="preserve">
+    <value>Attributes</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationProperty&apos; on DomainRelationship &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes/Attribute.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes.Attribute</value>
+    <comment>Description for DomainRole &apos;Attribute&apos; on DomainRelationship &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes/Attribute.DisplayName" xml:space="preserve">
+    <value>Attribute</value>
+    <comment>DisplayName for DomainRole &apos;Attribute&apos; on DomainRelationship &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes/Attribute.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Property</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Attribute&apos; on DomainRelationship &apos;ConfigurationPropertyHasAttributes&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasComments.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasComments</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionModelHasComments&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasComments.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model Has Comments</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionModelHasComments&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasComments/ConfigurationSectionModel.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasComments.ConfigurationSectionModel</value>
+    <comment>Description for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasComments&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasComments/ConfigurationSectionModel.DisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>DisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasComments&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasComments/ConfigurationSectionModel.PropertyDisplayName" xml:space="preserve">
+    <value>Comments</value>
+    <comment>PropertyDisplayName for DomainRole &apos;ConfigurationSectionModel&apos; on DomainRelationship &apos;ConfigurationSectionModelHasComments&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasComments/Comment.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasComments.Comment</value>
+    <comment>Description for DomainRole &apos;Comment&apos; on DomainRelationship &apos;ConfigurationSectionModelHasComments&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasComments/Comment.DisplayName" xml:space="preserve">
+    <value>Comment</value>
+    <comment>DisplayName for DomainRole &apos;Comment&apos; on DomainRelationship &apos;ConfigurationSectionModelHasComments&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionModelHasComments/Comment.PropertyDisplayName" xml:space="preserve">
+    <value>Configuration Section Model</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Comment&apos; on DomainRelationship &apos;ConfigurationSectionModelHasComments&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentsReferenceConfigurationItems.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.CommentsReferenceConfigurationItems</value>
+    <comment>Description for DomainClass &apos;CommentsReferenceConfigurationItems&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentsReferenceConfigurationItems.DisplayName" xml:space="preserve">
+    <value>Comments Reference Configuration Items</value>
+    <comment>DisplayName for DomainClass &apos;CommentsReferenceConfigurationItems&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentsReferenceConfigurationItems/Comment.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;Comment&apos; on DomainRelationship &apos;CommentsReferenceConfigurationItems&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentsReferenceConfigurationItems/Comment.DisplayName" xml:space="preserve">
+    <value>Comment</value>
+    <comment>DisplayName for DomainRole &apos;Comment&apos; on DomainRelationship &apos;CommentsReferenceConfigurationItems&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentsReferenceConfigurationItems/Comment.PropertyDisplayName" xml:space="preserve">
+    <value>Subjects</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Comment&apos; on DomainRelationship &apos;CommentsReferenceConfigurationItems&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentsReferenceConfigurationItems/Subject.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainRole &apos;Subject&apos; on DomainRelationship &apos;CommentsReferenceConfigurationItems&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentsReferenceConfigurationItems/Subject.DisplayName" xml:space="preserve">
+    <value>Subject</value>
+    <comment>DisplayName for DomainRole &apos;Subject&apos; on DomainRelationship &apos;CommentsReferenceConfigurationItems&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentsReferenceConfigurationItems/Subject.PropertyDisplayName" xml:space="preserve">
+    <value>Comments</value>
+    <comment>PropertyDisplayName for DomainRole &apos;Subject&apos; on DomainRelationship &apos;CommentsReferenceConfigurationItems&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionCodeGenOptions/Singleton.DisplayName" xml:space="preserve">
+    <value>Singleton</value>
+    <comment>Display name for EnumerationLiteral &apos;Singleton&apos; on DomainEnumeration &apos;ConfigurationSectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionCodeGenOptions/Singleton.Description" xml:space="preserve">
+    <value>Generates a static singleton instance for easy access to the Configuration Section.</value>
+    <comment>Description for EnumerationLiteral &apos;Singleton&apos; on DomainEnumeration &apos;ConfigurationSectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionCodeGenOptions/None.DisplayName" xml:space="preserve">
+    <value>None</value>
+    <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ConfigurationSectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionCodeGenOptions/None.Description" xml:space="preserve">
+    <value>No additional code is generated.</value>
+    <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ConfigurationSectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionCodeGenOptions/XmlnsProperty.DisplayName" xml:space="preserve">
+    <value>XmlnsProperty</value>
+    <comment>Display name for EnumerationLiteral &apos;XmlnsProperty&apos; on DomainEnumeration &apos;ConfigurationSectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionCodeGenOptions/XmlnsProperty.Description" xml:space="preserve">
+    <value>Generates a property that represents the XML namespace (xmlns).</value>
+    <comment>Description for EnumerationLiteral &apos;XmlnsProperty&apos; on DomainEnumeration &apos;ConfigurationSectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionCodeGenOptions/Protection.DisplayName" xml:space="preserve">
+    <value>Protection</value>
+    <comment>Display name for EnumerationLiteral &apos;Protection&apos; on DomainEnumeration &apos;ConfigurationSectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionCodeGenOptions/Protection.Description" xml:space="preserve">
+    <value>Generates code for easy access to the configuration section protection mechanisms</value>
+    <comment>Description for EnumerationLiteral &apos;Protection&apos; on DomainEnumeration &apos;ConfigurationSectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/Indexer.DisplayName" xml:space="preserve">
+    <value>Indexer</value>
+    <comment>Display name for EnumerationLiteral &apos;Indexer&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/Indexer.Description" xml:space="preserve">
+    <value>Generates an indexer for the elements in the collection.</value>
+    <comment>Description for EnumerationLiteral &apos;Indexer&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/AddMethod.DisplayName" xml:space="preserve">
+    <value>AddMethod</value>
+    <comment>Display name for EnumerationLiteral &apos;AddMethod&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/AddMethod.Description" xml:space="preserve">
+    <value>Generates an &quot;Add&quot; method to add items to the collection.</value>
+    <comment>Description for EnumerationLiteral &apos;AddMethod&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/None.DisplayName" xml:space="preserve">
+    <value>None</value>
+    <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/None.Description" xml:space="preserve">
+    <value>No additional code is generated.</value>
+    <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/RemoveMethod.DisplayName" xml:space="preserve">
+    <value>RemoveMethod</value>
+    <comment>Display name for EnumerationLiteral &apos;RemoveMethod&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/RemoveMethod.Description" xml:space="preserve">
+    <value>Generates a &quot;Remove&quot; method to add items to the collection.</value>
+    <comment>Description for EnumerationLiteral &apos;RemoveMethod&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/GetItemMethods.DisplayName" xml:space="preserve">
+    <value>GetItemMethods</value>
+    <comment>Display name for EnumerationLiteral &apos;GetItemMethods&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/GetItemMethods.Description" xml:space="preserve">
+    <value>Generates &quot;GetItem&quot; methods to retrieve items from the collection by key and id.</value>
+    <comment>Description for EnumerationLiteral &apos;GetItemMethods&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/ICollection.DisplayName" xml:space="preserve">
+    <value>ICollection</value>
+    <comment>Display name for EnumerationLiteral &apos;ICollection&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionCodeGenOptions/ICollection.Description" xml:space="preserve">
+    <value>Generates ICollection&lt;T&gt; implementation for the collection</value>
+    <comment>Description for EnumerationLiteral &apos;ICollection&apos; on DomainEnumeration &apos;ConfigurationElementCollectionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeDefinitionCodeGenOptions/None.DisplayName" xml:space="preserve">
+    <value>None</value>
+    <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;TypeDefinitionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeDefinitionCodeGenOptions/None.Description" xml:space="preserve">
+    <value>No code is generated.</value>
+    <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;TypeDefinitionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeDefinitionCodeGenOptions/TypeDefinition.DisplayName" xml:space="preserve">
+    <value>TypeDefinition</value>
+    <comment>Display name for EnumerationLiteral &apos;TypeDefinition&apos; on DomainEnumeration &apos;TypeDefinitionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeDefinitionCodeGenOptions/TypeDefinition.Description" xml:space="preserve">
+    <value>Generates the type definition in code.</value>
+    <comment>Description for EnumerationLiteral &apos;TypeDefinition&apos; on DomainEnumeration &apos;TypeDefinitionCodeGenOptions&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomEditors/None.DisplayName" xml:space="preserve">
+    <value>None</value>
+    <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;CustomEditors&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomEditors/None.Description" xml:space="preserve">
+    <value>Do not use a custom editor</value>
+    <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;CustomEditors&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomEditors/FileNameEditor.DisplayName" xml:space="preserve">
+    <value>FileNameEditor</value>
+    <comment>Display name for EnumerationLiteral &apos;FileNameEditor&apos; on DomainEnumeration &apos;CustomEditors&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomEditors/FileNameEditor.Description" xml:space="preserve">
+    <value>Provides a user interface for choosing a file from the file system</value>
+    <comment>Description for EnumerationLiteral &apos;FileNameEditor&apos; on DomainEnumeration &apos;CustomEditors&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomEditors/FolderNameEditor.DisplayName" xml:space="preserve">
+    <value>FolderNameEditor</value>
+    <comment>Display name for EnumerationLiteral &apos;FolderNameEditor&apos; on DomainEnumeration &apos;CustomEditors&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CustomEditors/FolderNameEditor.Description" xml:space="preserve">
+    <value>Provides a user interface for choosing a folder from the file system</value>
+    <comment>Description for EnumerationLiteral &apos;FolderNameEditor&apos; on DomainEnumeration &apos;CustomEditors&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ProtectionProviders/DataProtectionConfigurationProvider.DisplayName" xml:space="preserve">
+    <value>DataProtectionConfigurationProvider</value>
+    <comment>Display name for EnumerationLiteral &apos;DataProtectionConfigurationProvider&apos; on DomainEnumeration &apos;ProtectionProviders&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ProtectionProviders/DataProtectionConfigurationProvider.Description" xml:space="preserve">
+    <value>This provider uses DPAPI to encrypt and decrypt data</value>
+    <comment>Description for EnumerationLiteral &apos;DataProtectionConfigurationProvider&apos; on DomainEnumeration &apos;ProtectionProviders&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ProtectionProviders/RSAProtectedConfigurationProvider.DisplayName" xml:space="preserve">
+    <value>RSAProtectedConfigurationProvider</value>
+    <comment>Display name for EnumerationLiteral &apos;RSAProtectedConfigurationProvider&apos; on DomainEnumeration &apos;ProtectionProviders&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ProtectionProviders/RSAProtectedConfigurationProvider.Description" xml:space="preserve">
+    <value>This provider uses the RSA public key encryption to encrypt and decrypt data</value>
+    <comment>Description for EnumerationLiteral &apos;RSAProtectedConfigurationProvider&apos; on DomainEnumeration &apos;ProtectionProviders&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ProtectionProviders/Custom.DisplayName" xml:space="preserve">
+    <value>Custom</value>
+    <comment>Display name for EnumerationLiteral &apos;Custom&apos; on DomainEnumeration &apos;ProtectionProviders&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ProtectionProviders/Custom.Description" xml:space="preserve">
+    <value>Use a custom ProtectedConfigurationProvider</value>
+    <comment>Description for EnumerationLiteral &apos;Custom&apos; on DomainEnumeration &apos;ProtectionProviders&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/CommaDelimitedStringCollectionConverter.DisplayName" xml:space="preserve">
+    <value>CommaDelimitedStringCollectionConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;CommaDelimitedStringCollectionConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/CommaDelimitedStringCollectionConverter.Description" xml:space="preserve">
+    <value>Converts a comma-delimited value to/from a CommaDelimitedStringCollection</value>
+    <comment>Description for EnumerationLiteral &apos;CommaDelimitedStringCollectionConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/GenericEnumConverter.DisplayName" xml:space="preserve">
+    <value>GenericEnumConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;GenericEnumConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/GenericEnumConverter.Description" xml:space="preserve">
+    <value>Converts between a string and an enumerated type</value>
+    <comment>Description for EnumerationLiteral &apos;GenericEnumConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/InfiniteIntConverter.DisplayName" xml:space="preserve">
+    <value>InfiniteIntConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;InfiniteIntConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/InfiniteIntConverter.Description" xml:space="preserve">
+    <value>Converts between a string and the standard infinite or integer value</value>
+    <comment>Description for EnumerationLiteral &apos;InfiniteIntConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/InfiniteTimeSpanConverter.DisplayName" xml:space="preserve">
+    <value>InfiniteTimeSpanConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;InfiniteTimeSpanConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/InfiniteTimeSpanConverter.Description" xml:space="preserve">
+    <value>Converts between a string and the standard infinite TimeSpan value</value>
+    <comment>Description for EnumerationLiteral &apos;InfiniteTimeSpanConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/None.DisplayName" xml:space="preserve">
+    <value>None</value>
+    <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/None.Description" xml:space="preserve">
+    <value>No type conversion will be done</value>
+    <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TimeSpanMinutesConverter.DisplayName" xml:space="preserve">
+    <value>TimeSpanMinutesConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;TimeSpanMinutesConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TimeSpanMinutesConverter.Description" xml:space="preserve">
+    <value>Converts to and from a time span expressed in minutes</value>
+    <comment>Description for EnumerationLiteral &apos;TimeSpanMinutesConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TimeSpanMinutesOrInfiniteConverter.DisplayName" xml:space="preserve">
+    <value>TimeSpanMinutesOrInfiniteConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;TimeSpanMinutesOrInfiniteConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TimeSpanMinutesOrInfiniteConverter.Description" xml:space="preserve">
+    <value>Converts to and from a time span expressed in minutes, or infinite</value>
+    <comment>Description for EnumerationLiteral &apos;TimeSpanMinutesOrInfiniteConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TimeSpanSecondsConverter.DisplayName" xml:space="preserve">
+    <value>TimeSpanSecondsConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;TimeSpanSecondsConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TimeSpanSecondsConverter.Description" xml:space="preserve">
+    <value>Converts to and from a time span expressed in seconds</value>
+    <comment>Description for EnumerationLiteral &apos;TimeSpanSecondsConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TimeSpanSecondsOrInfiniteConverter.DisplayName" xml:space="preserve">
+    <value>TimeSpanSecondsOrInfiniteConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;TimeSpanSecondsOrInfiniteConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TimeSpanSecondsOrInfiniteConverter.Description" xml:space="preserve">
+    <value>Converts to and from a time span expressed in seconds, or infinite</value>
+    <comment>Description for EnumerationLiteral &apos;TimeSpanSecondsOrInfiniteConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TypeNameConverter.DisplayName" xml:space="preserve">
+    <value>TypeNameConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;TypeNameConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/TypeNameConverter.Description" xml:space="preserve">
+    <value>Converts between a Type object and the string representation of that type</value>
+    <comment>Description for EnumerationLiteral &apos;TypeNameConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/WhiteSpaceTrimStringConverter.DisplayName" xml:space="preserve">
+    <value>WhiteSpaceTrimStringConverter</value>
+    <comment>Display name for EnumerationLiteral &apos;WhiteSpaceTrimStringConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/WhiteSpaceTrimStringConverter.Description" xml:space="preserve">
+    <value>Converts a string to its canonical format (white space trimmed from front and back)</value>
+    <comment>Description for EnumerationLiteral &apos;WhiteSpaceTrimStringConverter&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/Custom.DisplayName" xml:space="preserve">
+    <value>Custom</value>
+    <comment>Display name for EnumerationLiteral &apos;Custom&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.TypeConverters/Custom.Description" xml:space="preserve">
+    <value>Use a custom type converter</value>
+    <comment>Description for EnumerationLiteral &apos;Custom&apos; on DomainEnumeration &apos;TypeConverters&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.InheritanceModifiers/None.DisplayName" xml:space="preserve">
+    <value>None</value>
+    <comment>Display name for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;InheritanceModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.InheritanceModifiers/None.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.InheritanceModifiers.None</value>
+    <comment>Description for EnumerationLiteral &apos;None&apos; on DomainEnumeration &apos;InheritanceModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.InheritanceModifiers/Abstract.DisplayName" xml:space="preserve">
+    <value>Abstract</value>
+    <comment>Display name for EnumerationLiteral &apos;Abstract&apos; on DomainEnumeration &apos;InheritanceModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.InheritanceModifiers/Abstract.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.InheritanceModifiers.Abstract</value>
+    <comment>Description for EnumerationLiteral &apos;Abstract&apos; on DomainEnumeration &apos;InheritanceModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.InheritanceModifiers/Sealed.DisplayName" xml:space="preserve">
+    <value>Sealed</value>
+    <comment>Display name for EnumerationLiteral &apos;Sealed&apos; on DomainEnumeration &apos;InheritanceModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.InheritanceModifiers/Sealed.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.InheritanceModifiers.Sealed</value>
+    <comment>Description for EnumerationLiteral &apos;Sealed&apos; on DomainEnumeration &apos;InheritanceModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AccessModifiers/Internal.DisplayName" xml:space="preserve">
+    <value>Internal</value>
+    <comment>Display name for EnumerationLiteral &apos;Internal&apos; on DomainEnumeration &apos;AccessModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AccessModifiers/Internal.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.AccessModifiers.Internal</value>
+    <comment>Description for EnumerationLiteral &apos;Internal&apos; on DomainEnumeration &apos;AccessModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AccessModifiers/Public.DisplayName" xml:space="preserve">
+    <value>Public</value>
+    <comment>Display name for EnumerationLiteral &apos;Public&apos; on DomainEnumeration &apos;AccessModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.AccessModifiers/Public.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.AccessModifiers.Public</value>
+    <comment>Description for EnumerationLiteral &apos;Public&apos; on DomainEnumeration &apos;AccessModifiers&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationShape.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationShape</value>
+    <comment>Description for DomainClass &apos;ConfigurationShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationShape.DisplayName" xml:space="preserve">
+    <value>Configuration Shape</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationShape/OutlineDashStyle.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationShape.Outline Dash Style</value>
+    <comment>Description for DomainProperty &apos;OutlineDashStyle&apos; on DomainClass &apos;ConfigurationShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationShape/OutlineDashStyle.DisplayName" xml:space="preserve">
+    <value>Outline Dash Style</value>
+    <comment>DisplayName for DomainProperty &apos;OutlineDashStyle&apos; on DomainClass &apos;ConfigurationShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationShape/OutlineThickness.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationShape.Outline Thickness</value>
+    <comment>Description for DomainProperty &apos;OutlineThickness&apos; on DomainClass &apos;ConfigurationShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationShape/OutlineThickness.DisplayName" xml:space="preserve">
+    <value>Outline Thickness</value>
+    <comment>DisplayName for DomainProperty &apos;OutlineThickness&apos; on DomainClass &apos;ConfigurationShape&apos;</comment>
+  </data>
+  <data name="ConfigurationShapeNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConfigurationShapeDescriptionDecoratorDefaultText" xml:space="preserve">
+    <value>DescriptionDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConfigurationShapeAbstractNameDecoratorDefaultText" xml:space="preserve">
+    <value>AbstractNameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionShape.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionShape</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionShape.DisplayName" xml:space="preserve">
+    <value>Configuration Section Shape</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionShape.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementCollectionShape</value>
+    <comment>Description for DomainClass &apos;ConfigurationElementCollectionShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionShape.DisplayName" xml:space="preserve">
+    <value>Configuration Element Collection Shape</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationElementCollectionShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementShape.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementShape</value>
+    <comment>Description for DomainClass &apos;ConfigurationElementShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementShape.DisplayName" xml:space="preserve">
+    <value>Configuration Element Shape</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationElementShape&apos;</comment>
+  </data>
+  <data name="ConfigurationElementShapeAttributePropertiesTitle" xml:space="preserve">
+    <value>Attributes</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ConfigurationElementShapeElementPropertiesTitle" xml:space="preserve">
+    <value>Elements</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupShape.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupShape</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionGroupShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupShape.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Shape</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionGroupShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionGroupShapeConfigurationSectionPropertiesTitle" xml:space="preserve">
+    <value>Configuration Sections</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ConfigurationSectionGroupShapeConfigurationSectionGroupPropertiesTitle" xml:space="preserve">
+    <value>Configuration Section Groups</value>
+    <comment>Compartment title</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentBoxShape.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainClass &apos;CommentBoxShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentBoxShape.DisplayName" xml:space="preserve">
+    <value>Comment Box Shape</value>
+    <comment>DisplayName for DomainClass &apos;CommentBoxShape&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemTypeConnector.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemTypeConnector</value>
+    <comment>Description for DomainClass &apos;ConfigurationElementCollectionHasItemTypeConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemTypeConnector.DisplayName" xml:space="preserve">
+    <value>Configuration Element Collection Has Item Type Connector</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationElementCollectionHasItemTypeConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationElementCollectionHasItemTypeConnectorNameDecoratorDefaultText" xml:space="preserve">
+    <value>Item Type</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasTypeConnector.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ElementPropertyHasTypeConnector</value>
+    <comment>Description for DomainClass &apos;ElementPropertyHasTypeConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ElementPropertyHasTypeConnector.DisplayName" xml:space="preserve">
+    <value>Element Property Has Type Connector</value>
+    <comment>DisplayName for DomainClass &apos;ElementPropertyHasTypeConnector&apos;</comment>
+  </data>
+  <data name="ElementPropertyHasTypeConnectorNameDecoratorDefaultText" xml:space="preserve">
+    <value>NameDecorator</value>
+    <comment>Text decorator default text</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSectionConnector.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSectionConnector</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionPropertyHasConfigurationSectionConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSectionConnector.DisplayName" xml:space="preserve">
+    <value>Configuration Section Property Has Configuration Section Connector</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionPropertyHasConfigurationSectionConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupPropertiesConnector.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupPropertiesConnector</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionGroupHasConfigurationSectionGroupPropertiesConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupPropertiesConnector.DisplayName" xml:space="preserve">
+    <value>Configuration Section Group Has Configuration Section Group Properties Connector</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionGroupHasConfigurationSectionGroupPropertiesConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.InheritanceConnector.Description" xml:space="preserve">
+    <value>Description for ConfigurationSectionDesigner.InheritanceConnector</value>
+    <comment>Description for DomainClass &apos;InheritanceConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.InheritanceConnector.DisplayName" xml:space="preserve">
+    <value>Inheritance Connector</value>
+    <comment>DisplayName for DomainClass &apos;InheritanceConnector&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentLink.Description" xml:space="preserve">
+    <value></value>
+    <comment>Description for DomainClass &apos;CommentLink&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.CommentLink.DisplayName" xml:space="preserve">
+    <value>Comment Link</value>
+    <comment>DisplayName for DomainClass &apos;CommentLink&apos;</comment>
+  </data>
+  <data name="FormatList" xml:space="preserve">
+    <value>ConfigurationSectionDesigner (*.csd)|*.csd</value>
+    <comment>A list of file format specifiers for the Save dialog box</comment>
+  </data>
+  <data name="ModelExplorerTitle" xml:space="preserve">
+    <value>Configuration Section Explorer</value>
+    <comment>Model Explorer Toolwindow title</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionDesignerDiagram.Description" xml:space="preserve">
+    <value>The diagram representing a Configuration Section</value>
+    <comment>Description for DomainClass &apos;ConfigurationSectionDesignerDiagram&apos;</comment>
+  </data>
+  <data name="ConfigurationSectionDesigner.ConfigurationSectionDesignerDiagram.DisplayName" xml:space="preserve">
+    <value>Configuration Section Diagram</value>
+    <comment>DisplayName for DomainClass &apos;ConfigurationSectionDesignerDiagram&apos;</comment>
+  </data>
+  <data name="Configuration Section DesignerToolboxTab" xml:space="preserve">
+    <value>Configuration Section Designer</value>
+    <comment>Toolbox item tab name</comment>
+  </data>
+  <data name="ConfigurationSectionToolboxItem" xml:space="preserve">
+    <value>Configuration Section</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConfigurationSectionToolboxTooltip" xml:space="preserve">
+    <value>Defines a Configuration Section</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ConfigurationElementToolboxItem" xml:space="preserve">
+    <value>Configuration Element</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConfigurationElementToolboxTooltip" xml:space="preserve">
+    <value>Defines a Configuration Element</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ConfigurationElementCollectionToolboxItem" xml:space="preserve">
+    <value>Configuration Element Collection</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConfigurationElementCollectionToolboxTooltip" xml:space="preserve">
+    <value>Defines a collection of Configuration Elements</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CollectionItemTypeToolboxItem" xml:space="preserve">
+    <value>Collection Item Type</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CollectionItemTypeToolboxTooltip" xml:space="preserve">
+    <value>Defines the item type of a collection by linking a Configuration Element Collection to its Configuration Element item type</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="ConfigurationSectionGroupToolboxItem" xml:space="preserve">
+    <value>Configuration Section Group</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="ConfigurationSectionGroupToolboxTooltip" xml:space="preserve">
+    <value>Defines a Configuration Section Group. Groups allow you to organize configuration sections into logical groups in the XML. When accessing sections that are part of groups via code, the section will be accessible in the root namespace (nesting of groups will not be represented in code behind). When a section in the group is accessed, the code behind will properly send the full XML path (with groups included) to the configuration manager during lookup.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CommentToolboxItem" xml:space="preserve">
+    <value>Comment</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CommentToolboxTooltip" xml:space="preserve">
+    <value>Add a Comment box to the diagram. Comments will only be shown in the diagram and will not be part of any generated code.</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="CommentConnectorToolboxItem" xml:space="preserve">
+    <value>Comment Connector</value>
+    <comment>Toolbox item name</comment>
+  </data>
+  <data name="CommentConnectorToolboxTooltip" xml:space="preserve">
+    <value>Connect a Comment to its subject(s).</value>
+    <comment>Toolbox tooltip text</comment>
+  </data>
+  <data name="UnresolvedToolboxItem" xml:space="preserve">
+    <value>ToolboxItem {0} was not found</value>
+    <comment>Invalid toolId</comment>
+  </data>
+  <data name="UnsupportedToolboxFormat" xml:space="preserve">
+    <value>Unsupported toolbox format: {0}</value>
+    <comment>Unsupported format Id</comment>
+  </data>
+  <data name="UnrecognizedElementType" xml:space="preserve">
+    <value>ElementType {0} is not recognized as a type of domain class which belongs to this domain model.</value>
+    <comment>Incorrect ElementType passed in to Model.CreateElement method</comment>
+  </data>
+  <data name="UnrecognizedElementLinkType" xml:space="preserve">
+    <value>ElementLinkType {0} is not recognized as a type of domain relationship which belongs to this domain model.</value>
+    <comment>Incorrect ElementLinkType passed in to Model.CreateElementLink method</comment>
+  </data>
+  <data name="AmbiguousSchema" xml:space="preserve">
+    <value>More than one schema found for target namespace &apos;{0}&apos;, use the first one at &apos;{1}&apos;.</value>
+    <comment>Serialization Warning: AmbiguousSchema</comment>
+  </data>
+  <data name="ExpectingFullFormRelationship" xml:space="preserve">
+    <value>Element &apos;{0}&apos; is treated as the target role-player of a relationship &apos;{1}&apos; instance, which should be serialized in full-form.</value>
+    <comment>Serialization Warning: ExpectingFullFormRelationship</comment>
+  </data>
+  <data name="ExpectingShortFormRelationship" xml:space="preserve">
+    <value>Instances of relationship &apos;{0}&apos; should be serialized in short-form.</value>
+    <comment>Serialization Warning: ExpectingShortFormRelationship</comment>
+  </data>
+  <data name="IgnoredPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;, ignored.</value>
+    <comment>Serialization Warning: IgnoredPropertyValue</comment>
+  </data>
+  <data name="MissingId" xml:space="preserve">
+    <value>Missing &apos;Id&apos; attribute, a new Guid &apos;{0}&apos; is auto-generated.</value>
+    <comment>Serialization Warning: MissingId</comment>
+  </data>
+  <data name="MonikerResolvedToDuplicateLink" xml:space="preserve">
+    <value>Resolving moniker &apos;{0}&apos; causes a duplicate link to be created, so the link and the moniker are ignored.</value>
+    <comment>Serialization Warning: MonikerResolvedToDuplicateLink</comment>
+  </data>
+  <data name="NoSchema" xml:space="preserve">
+    <value>Cannot find a schema that defines target namespace &apos;{0}&apos;, schema validation skipped.</value>
+    <comment>Serialization Warning: NoSchema</comment>
+  </data>
+  <data name="UnexpectedXmlElement" xml:space="preserve">
+    <value>Unexpected XML element &apos;{0}&apos;, ignored.</value>
+    <comment>Serialization Warning: UnexpectedXmlElement</comment>
+  </data>
+  <data name="AmbiguousMoniker" xml:space="preserve">
+    <value>Ambiguous moniker &apos;{0}&apos; encountered. It is used for both &apos;{1}&apos; and &apos;{2}&apos;.</value>
+    <comment>Serialization Error: AmbiguousMoniker</comment>
+  </data>
+  <data name="CannotMonikerizeElement" xml:space="preserve">
+    <value>Instances of DomainClass &apos;{0}&apos; cannot be serialized as a moniker.
+A DomainClass can be serialized as a moniker only if 
+1) it has a defined/inherited DomainProperty marked as IsMonikerKey=true, or 
+2) it is marked/inherited with SerializeId=true.</value>
+    <comment>Serialization Error: CannotMonikerizeElement</comment>
+  </data>
+  <data name="CannotOpenDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotOpenDocument</comment>
+  </data>
+  <data name="CannotSaveDocument" xml:space="preserve">
+    <value>Error encountered, check Error List window for details.</value>
+    <comment>Serialization Error: CannotSaveDocument</comment>
+  </data>
+  <data name="DanglingRelationship" xml:space="preserve">
+    <value>Relationship &apos;{0}&apos; instance is missing target role-player.</value>
+    <comment>Serialization Error: DanglingRelationship</comment>
+  </data>
+  <data name="InvalidPropertyValue" xml:space="preserve">
+    <value>Invalid property value &apos;{0}&apos; for property &apos;{1}&apos; with type &apos;{2}&apos;.</value>
+    <comment>Serialization Error: InvalidPropertyValue</comment>
+  </data>
+  <data name="MissingMoniker" xml:space="preserve">
+    <value>Missing moniker. A moniker is expected in attribute &apos;{0}&apos;.</value>
+    <comment>Serialization Error: MissingMoniker</comment>
+  </data>
+  <data name="MissingTransaction" xml:space="preserve">
+    <value>This must be called within the context of an active transaction.</value>
+    <comment>Serialization Error: MissingTransaction</comment>
+  </data>
+  <data name="UnresolvedMoniker" xml:space="preserve">
+    <value>Cannot resolve moniker &apos;{0}&apos;.</value>
+    <comment>Serialization Error: UnresolvedMoniker</comment>
+  </data>
+  <data name="VersionMismatch" xml:space="preserve">
+    <value>Unsupported version &apos;{0}&apos;, can only support &apos;{1}&apos;.</value>
+    <comment>Serialization Error: VersionMismatch</comment>
+  </data>
+  <data name="CannotCloseExistingDiagramDocument" xml:space="preserve">
+    <value>Diagram file &apos;{0}&apos; cannot be closed.</value>
+    <comment>User cancel closing diagram file. Hence, the DSL model file cannot be opened</comment>
+  </data>
+  <data name="BindingErrorOccurred" xml:space="preserve">
+    <value>Extensions for this designer may not be found as a MEF binding error has occurred. The error that occurred was:
+{0}</value>
+    <comment>MEF binding error occurred - exception message being logged in the error window so the user is aware.</comment>
+  </data>
+  <data name="InvalidSaveRootElementType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid root element type.</value>
+    <comment>Exception message used if an invalid root element type is passed to IDomainModelSerializer.SaveModel / SaveModelAndDiagram</comment>
+  </data>
+  <data name="InvalidSaveDiagramType" xml:space="preserve">
+    <value>&apos;{0}&apos; is not a valid diagram type.</value>
+    <comment>Exception message used if an invalid diagram type is passed to IDomainModelSerializer.SaveModelAndDiagram</comment>
+  </data>
+  <data name="MinimumMultiplicityMissingLink" xml:space="preserve">
+    <value>{0} {1} has no {2}.</value>
+    <comment>Multiplicity underflow validation.</comment>
+  </data>
+  <data name="SaveOperationCancelled" xml:space="preserve">
+    <value>Save operation cancelled.</value>
+    <comment>Message when save is cancelled on validation errors</comment>
+  </data>
+  <data name="SaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors, continue save?</value>
+    <comment>Message when validation errors are found on save</comment>
+  </data>
+  <data name="UnloadableSaveValidationFailed" xml:space="preserve">
+    <value>There were validation errors. Continuing to save may cause the file to become unloadable, do you want to continue?</value>
+    <comment>Message when validation errors are found on save that will cause file to become unloadable</comment>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ConfigurationShapeIconDecoratorConfigurationElementDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationElement.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ConfigurationShapeIconDecoratorConfigurationSectionDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationSection.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ConfigurationShapeIconDecoratorConfigurationElementCollectionDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationElementCollection.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ConfigurationShapeIconDecoratorConfigurationSectionGroupDefaultImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationSectionGroup.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Icon decorator default image</comment>
+  </data>
+  <data name="ConfigurationElementExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationElement.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConfigurationElementCollectionExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationElementCollection.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConfigurationSectionExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationSection.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EnumerationLiteralExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EnumerationLiteral.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="EnumeratedTypeExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EnumeratedType.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ExternalTypeExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ExternalType.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConfigurationSectionGroupExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationSectionGroup.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConfigurationSectionModelExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationSection.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="PropertyValidatorsExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Validators.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="PropertyValidatorExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Validator.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CustomTypeConverterExplorerImage" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\Converter.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConfigurationSectionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationSection.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConfigurationElementToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationElement.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConfigurationElementCollectionToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationElementCollection.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CollectionItemTypeToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\CollectionItemType.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="ConfigurationSectionGroupToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\ConfigurationSectionGroup.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CommentToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\EnumerationLiteral.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+  <data name="CommentConnectorToolboxBitmap" type="System.Resources.ResXFileRef, System.Windows.Forms" xml:space="preserve">
+    <value>..\Resources\CollectionItemType.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <comment>Toolbox item image</comment>
+  </data>
+</root>
+
+

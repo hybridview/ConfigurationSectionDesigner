@@ -1,0 +1,36 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+
+<#
+	//DSL assembly name - used for toolbox item registration.
+	//This value is initially set to the default AssemblyName of the Dsl.csproj 
+	//If you update the DSL Assembly name, please update the following string value to the new name.
+	// Failure to do so may result in your Toolbox items not appearing correctly.
+	string dslAssembly = "ConfigurationSectionDesigner.Dsl.dll";#>
+<#@ include file="DslPackage\Package.tt" #>
+<#
+	string directiveName = "ConfigurationSectionDesigner";
+#>
+//
+// Package attributes which may need to change are placed on the partial class below, rather than in the main include file.
+//
+namespace <#= CodeGenerationUtilities.GetPackageNamespace(this.Dsl) #>
+{
+	/// <summary>
+	/// Double-derived class to allow easier code customization.
+	/// </summary>
+	/// <remarks>
+	/// A package load key is required to allow this package to load when the Visual Studio SDK is not installed.
+	/// Package load keys may be obtained from http://msdn.microsoft.com/vstudio/extend.
+	/// Consult the Visual Studio SDK documentation for more information.
+	/// [VSShell::ProvideLoadKey("Standard", Constants.ProductVersion, Constants.ProductName, Constants.CompanyName, 1)]
+	/// </remarks>
+	[VSShell::ProvideLoadKey("Standard", Constants.ProductVersion, Constants.ProductName, Constants.CompanyName, 1)]
+	[VSShell::ProvideMenuResource("1000.ctmenu", version: 2)]
+	[VSShell::ProvideToolboxItems(1)]
+	[global::Microsoft.VisualStudio.TextTemplating.VSHost.ProvideDirectiveProcessor(typeof(global::<#= this.Dsl.Namespace #>.<#= directiveName #>DirectiveProcessor), global::<#= this.Dsl.Namespace #>.<#= directiveName #>DirectiveProcessor.<#= directiveName #>DirectiveProcessorName, "A directive processor that provides access to <#= directiveName #> files")]
+	[global::System.Runtime.InteropServices.Guid(Constants.<#= dslName #>PackageId)]
+	[FileGenerationRegistrationAttribute(Constants.<#= dslName #>PackageId, "{D8760704-A993-40ee-89B9-FB77764D99AF}", "{" + Constants.<#= dslName #>EditorFactoryId + "}", typeof(<#= this.Dsl.Namespace #>.CsdFileGenerator))]
+	internal sealed partial class <#= dslName #>Package : <#= dslName #>PackageBase
+	{
+	}
+}

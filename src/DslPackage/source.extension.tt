@@ -1,0 +1,54 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Dsl\DslDefinition.dsl'" #>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".vsixmanifest" #>
+<#
+/***************************************************************************
+	Rather than following the normal DSL practice of including most of the
+	template from a common include file, this template is deliberately inlined 
+	in the DslPackage project to make it easier to customise. 
+	
+	If you wish to edit the vsix manifest with its designer, then simply copy 
+	the current content of the generated manifest, delete this template from
+	the project, and add back the copied source.extension.vsixmanifest. Note
+	that if you do this you will lose automatic tracking of certain properties
+	of the DSL such as the name, description and version, and will have to 
+	edit these in your custom manifest as well should you wish to change them.
+***************************************************************************/
+
+  // The name of the Dsl Project - Must be updated if the project is renamed.
+  string dslProjectName = "Dsl.VS2015";
+
+  string localeId = "1033";
+#>
+<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="<#= this.Dsl.PackageGuid #>">
+    <Name><#= this.Dsl.DisplayName #></Name>
+    <Author>The Community</Author>
+    <Version>2.0.2.0</Version>
+    <Description>A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.</Description>
+    <Locale><#= localeId #></Locale>
+    <MoreInfoUrl>http://csd.codeplex.com/</MoreInfoUrl>
+    <GettingStartedGuide>http://csd.codeplex.com/documentation</GettingStartedGuide>
+    <Icon>Resources\File.ico</Icon>
+    <PreviewImage>Resources\ConfigurationSectionDesigner.jpg</PreviewImage>
+	<License>MSPL.TXT</License> 
+    <SupportedProducts>
+	  <VisualStudio Version="14.0">
+        <Edition>Community</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.5" />
+  </Identifier>
+  <References/>  
+  <Content>
+   <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+    <!--<VsPackage>Additional.pkgdef</VsPackage>-->
+	  <Assembly AssemblyName="Dsl.Wizard;AssemblyName|">|Dsl.Wizard|</Assembly>
+    <MefComponent>|<#= dslProjectName #>|</MefComponent>
+    <MefComponent>|%CurrentProject%|</MefComponent>
+    <ItemTemplate>ItemTemplates</ItemTemplate>
+	  <ProjectTemplate>ProjectTemplates</ProjectTemplate>
+  </Content>
+</Vsix>

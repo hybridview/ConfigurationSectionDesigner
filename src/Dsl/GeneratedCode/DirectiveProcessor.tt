@@ -1,0 +1,5 @@
+<#
+	string directiveName = "ConfigurationSectionDesigner";
+#>
+<#@ include file="Dsl\ModelDirectiveProcessor.tt" #>
+<#@ Dsl processor="DslDirectiveProcessor"  requires="fileName='..\DslDefinition.dsl'" #>

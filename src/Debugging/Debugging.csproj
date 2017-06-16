@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1CE83EA0-531D-47DC-9D35-F8AE5EFC9E01}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Debugging</RootNamespace>
+    <AssemblyName>Debugging</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>2</WarningLevel>
+    <DocumentationFile>bin\Debug\Debugging.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomType.cs" />
+    <Compile Include="Demos\IsDefaultCollectionDemo.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IsDefaultCollectionDemo.csd</DependentUpon>
+    </Compile>
+    <Compile Include="Inheritance1.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Inheritance.csd</DependentUpon>
+    </Compile>
+    <Compile Include="IssueTests\WorkItem6053.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkItem6053.csd</DependentUpon>
+    </Compile>
+    <Compile Include="IssueTests\Workitem9747.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Workitem9747.csd</DependentUpon>
+    </Compile>
+    <Compile Include="KeylessCollection1.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KeylessCollection.csd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Dsl\GeneratedCode\ConfigurationSectionDesignerSchema.xsd">
+      <Link>ConfigurationSectionDesignerSchema.xsd</Link>
+    </None>
+    <None Include="Demos\IsDefaultCollectionDemo.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>IsDefaultCollectionDemo.csd.cs</LastGenOutput>
+    </None>
+    <None Include="Demos\IsDefaultCollectionDemo.csd.config">
+      <DependentUpon>IsDefaultCollectionDemo.csd</DependentUpon>
+    </None>
+    <None Include="Demos\IsDefaultCollectionDemo.csd.diagram">
+      <DependentUpon>IsDefaultCollectionDemo.csd</DependentUpon>
+    </None>
+    <None Include="Demos\IsDefaultCollectionDemo.csd.xsd">
+      <DependentUpon>IsDefaultCollectionDemo.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssueTests\WorkItem6053.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>WorkItem6053.csd.cs</LastGenOutput>
+    </None>
+    <None Include="IssueTests\WorkItem6053.csd.config">
+      <DependentUpon>WorkItem6053.csd</DependentUpon>
+    </None>
+    <None Include="IssueTests\WorkItem6053.csd.diagram">
+      <DependentUpon>WorkItem6053.csd</DependentUpon>
+    </None>
+    <None Include="IssueTests\WorkItem6053.csd.xsd">
+      <DependentUpon>WorkItem6053.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="IssueTests\Workitem9747.config">
+      <DependentUpon>Workitem9747.csd</DependentUpon>
+    </None>
+    <None Include="IssueTests\Workitem9747.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>Workitem9747.csd.cs</LastGenOutput>
+    </None>
+    <None Include="IssueTests\Workitem9747.csd.config">
+      <DependentUpon>Workitem9747.csd</DependentUpon>
+    </None>
+    <None Include="IssueTests\Workitem9747.csd.diagram">
+      <DependentUpon>Workitem9747.csd</DependentUpon>
+    </None>
+    <None Include="IssueTests\Workitem9747.csd.xsd">
+      <DependentUpon>Workitem9747.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KeylessCollection.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>KeylessCollection1.csd.cs</LastGenOutput>
+    </None>
+    <None Include="KeylessCollection.csd.config">
+      <DependentUpon>KeylessCollection.csd</DependentUpon>
+    </None>
+    <None Include="KeylessCollection.csd.xsd">
+      <DependentUpon>KeylessCollection.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Sample.csd">
+      <Generator>CsdFileGenerator</Generator>
+    </None>
+    <None Include="Sample.csd.diagram">
+      <DependentUpon>Sample.csd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Inheritance.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>Inheritance1.csd.cs</LastGenOutput>
+    </None>
+    <None Include="Inheritance.csd.config">
+      <DependentUpon>Inheritance.csd</DependentUpon>
+    </None>
+    <None Include="Inheritance.csd.diagram">
+      <DependentUpon>Inheritance.csd</DependentUpon>
+    </None>
+    <None Include="Inheritance.csd.xsd">
+      <DependentUpon>Inheritance.csd</DependentUpon>
+    </None>
+    <None Include="Sample.csd.config">
+      <DependentUpon>Sample.csd</DependentUpon>
+    </None>
+    <None Include="Sample.csd.xsd">
+      <DependentUpon>Sample.csd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

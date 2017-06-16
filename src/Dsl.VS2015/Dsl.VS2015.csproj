@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\DSLTools\Microsoft.DslTools.settings.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{188243A7-A7B0-4BF4-9C53-087E103F958F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConfigurationSectionDesigner</RootNamespace>
+    <AssemblyName>ConfigurationSectionDesigner.Dsl</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <AssemblyOriginatorKeyFile>..\Key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <SignAssembly>true</SignAssembly>
+    <GacTargetOutput>false</GacTargetOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;VS2015</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- Project specific properties to control T4/DSL targets -->
+  <PropertyGroup>
+    <TransformOnBuild>True</TransformOnBuild>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.DslDefinition$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.SDK.Integration$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating$(T4VersionSuffix)" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.11.0" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces$(DslToolsVersionSuffix)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Dsl\CustomCode\Connectors\ConfigurationElementCollectionHasItemTypeConnector.cs">
+      <Link>CustomCode\Connectors\ConfigurationElementCollectionHasItemTypeConnector.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Connectors\ConfigurationSectionGroupHasConfigurationSectionGroupPropertiesConnector.cs">
+      <Link>CustomCode\Connectors\ConfigurationSectionGroupHasConfigurationSectionGroupPropertiesConnector.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Connectors\ConfigurationSectionPropertyHasConfigurationSectionConnector.cs">
+      <Link>CustomCode\Connectors\ConfigurationSectionPropertyHasConfigurationSectionConnector.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Connectors\ElementPropertyHasTypeConnector.cs">
+      <Link>CustomCode\Connectors\ElementPropertyHasTypeConnector.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Connectors\InheritanceConnector.cs">
+      <Link>CustomCode\Connectors\InheritanceConnector.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\CustomAttributes\Attribute.cs">
+      <Link>CustomCode\CustomAttributes\Attribute.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\CustomAttributes\AttributeEditor.cs">
+      <Link>CustomCode\CustomAttributes\AttributeEditor.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\CustomAttributes\AttributesForm.cs">
+      <Link>CustomCode\CustomAttributes\AttributesForm.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\CustomAttributes\AttributesForm.Designer.cs">
+      <Link>CustomCode\CustomAttributes\AttributesForm.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\CustomAttributes\LabelEditEnhancedTreeView.cs">
+      <Link>CustomCode\CustomAttributes\LabelEditEnhancedTreeView.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Diagram\AutoArrangeHelper.cs">
+      <Link>CustomCode\Diagram\AutoArrangeHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Diagram\ConfigurationSectionDesignerDiagram.cs">
+      <Link>CustomCode\Diagram\ConfigurationSectionDesignerDiagram.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Diagram\ConfigurationSectionDesignerDiagramBase.cs">
+      <Link>CustomCode\Diagram\ConfigurationSectionDesignerDiagramBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Diagram\FixUpDiagram.cs">
+      <Link>CustomCode\Diagram\FixUpDiagram.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\AttributeProperty.cs">
+      <Link>CustomCode\DomainClasses\AttributeProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\BaseConfigurationType.cs">
+      <Link>CustomCode\DomainClasses\BaseConfigurationType.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ConfigurationElement.cs">
+      <Link>CustomCode\DomainClasses\ConfigurationElement.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ConfigurationElementCollection.cs">
+      <Link>CustomCode\DomainClasses\ConfigurationElementCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ConfigurationProperty.cs">
+      <Link>CustomCode\DomainClasses\ConfigurationProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ConfigurationSection.cs">
+      <Link>CustomCode\DomainClasses\ConfigurationSection.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ConfigurationSectionGroup.cs">
+      <Link>CustomCode\DomainClasses\ConfigurationSectionGroup.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ConfigurationSectionGroupProperty.cs">
+      <Link>CustomCode\DomainClasses\ConfigurationSectionGroupProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ConfigurationSectionProperty.cs">
+      <Link>CustomCode\DomainClasses\ConfigurationSectionProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ConfigurationShape.cs">
+      <Link>CustomCode\DomainClasses\ConfigurationShape.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\ElementProperty.cs">
+      <Link>CustomCode\DomainClasses\ElementProperty.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\EnumeratedType.cs">
+      <Link>CustomCode\DomainClasses\EnumeratedType.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\EnumerationLiteral.cs">
+      <Link>CustomCode\DomainClasses\EnumerationLiteral.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\IConfigSectionElement.cs">
+      <Link>CustomCode\DomainClasses\IConfigSectionElement.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\TypeBase.cs">
+      <Link>CustomCode\DomainClasses\TypeBase.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainClasses\TypeDefinition.cs">
+      <Link>CustomCode\DomainClasses\TypeDefinition.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\DomainModel\ConfigurationSectionDesignerDomainModel.cs">
+      <Link>CustomCode\DomainModel\ConfigurationSectionDesignerDomainModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Rules\ConfigurationElementCollectionHasItemTypeAddRule.cs">
+      <Link>CustomCode\Rules\ConfigurationElementCollectionHasItemTypeAddRule.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Rules\ConfigurationElementCollectionHasItemTypeDeleteRule.cs">
+      <Link>CustomCode\Rules\ConfigurationElementCollectionHasItemTypeDeleteRule.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Rules\ConfigurationElementCollectionHasItemTypeRolePlayerChangeRule.cs">
+      <Link>CustomCode\Rules\ConfigurationElementCollectionHasItemTypeRolePlayerChangeRule.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Shapes\ConfigurationElementShape.cs">
+      <Link>CustomCode\Shapes\ConfigurationElementShape.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Shapes\ConfigurationSectionGroupShape.cs">
+      <Link>CustomCode\Shapes\ConfigurationSectionGroupShape.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Utils\NamingHelper.cs">
+      <Link>CustomCode\Utils\NamingHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Utils\StyleSetExtension.cs">
+      <Link>CustomCode\Utils\StyleSetExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Utils\VsUtils.cs">
+      <Link>CustomCode\Utils\VsUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Validators\CallbackValidator.cs">
+      <Link>CustomCode\Validators\CallbackValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Validators\IntegerValidator.cs">
+      <Link>CustomCode\Validators\IntegerValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Validators\LongValidator.cs">
+      <Link>CustomCode\Validators\LongValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Validators\RegexStringValidator.cs">
+      <Link>CustomCode\Validators\RegexStringValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Validators\StringValidator.cs">
+      <Link>CustomCode\Validators\StringValidator.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\Validators\TimeSpanValidator.cs">
+      <Link>CustomCode\Validators\TimeSpanValidator.cs</Link>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\ConnectionBuilders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConnectionBuilders.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\Connectors.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Connectors.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\Diagram.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Diagram.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\DirectiveProcessor.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DirectiveProcessor.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\DomainClasses.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainClasses.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\DomainModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\DomainRelationships.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainRelationships.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\HelpKeywordHelper.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpKeywordHelper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\MultiplicityValidation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiplicityValidation.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\PropertiesGrid.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PropertiesGrid.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\SerializationHelper.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SerializationHelper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\Serializer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Serializer.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\Shapes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Shapes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\ToolboxHelper.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ToolboxHelper.tt</DependentUpon>
+    </Compile>
+    <Compile Include="..\Dsl\GlobalSuppressions.cs">
+      <Link>GlobalSuppressions.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\ConfigurationSectionModel.cs">
+      <Link>CustomCode\ConfigurationSectionModel.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\ConfigurationSectionModelSerializer.cs">
+      <Link>CustomCode\ConfigurationSectionModelSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\CustomEnumConverters.cs">
+      <Link>CustomCode\CustomEnumConverters.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\CustomOutlineDashPatterns.cs">
+      <Link>CustomCode\CustomOutlineDashPatterns.cs</Link>
+    </Compile>
+    <Compile Include="..\Dsl\CustomCode\WrappedCommentText.cs">
+      <Link>CustomCode\WrappedCommentText.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Dsl\CustomCode\CustomAttributes\AttributesForm.resx">
+      <Link>CustomCode\CustomAttributes\AttributesForm.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneratedCode\DomainModelResx.resx">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DomainModelResx.tt</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Dsl\DslDefinition.dsl">
+      <Link>DslDefinition.dsl</Link>
+    </None>
+    <None Include="GeneratedCode\ConfigurationSectionDesignerSchema.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ConfigurationSectionDesignerSchema.xsd</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\ConnectionBuilders.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ConnectionBuilders.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Connectors.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Connectors.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Diagram.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Diagram.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DirectiveProcessor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DirectiveProcessor.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DomainClasses.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DomainClasses.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DomainModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DomainModel.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DomainModelResx.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DomainModelResx.resx</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\DomainRelationships.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DomainRelationships.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\HelpKeywordHelper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>HelpKeywordHelper.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\MultiplicityValidation.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MultiplicityValidation.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\PropertiesGrid.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PropertiesGrid.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\SerializationHelper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SerializationHelper.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Serializer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Serializer.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Shapes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Shapes.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\ToolboxHelper.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ToolboxHelper.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\CollectionItemType.bmp" />
+    <Content Include="Resources\Comma.bmp" />
+    <Content Include="Resources\ConfigurationElement.bmp" />
+    <Content Include="Resources\ConfigurationElementCollection.bmp" />
+    <Content Include="Resources\ConfigurationSection.bmp" />
+    <Content Include="Resources\ConfigurationSectionDesigner.ico" />
+    <Content Include="Resources\ConfigurationSectionGroup.bmp" />
+    <Content Include="Resources\Converter.bmp" />
+    <Content Include="Resources\DoubleBrace.bmp" />
+    <Content Include="Resources\Element.bmp" />
+    <Content Include="Resources\EnumeratedType.bmp" />
+    <Content Include="Resources\EnumerationLiteral.bmp" />
+    <Content Include="Resources\ExternalType.bmp" />
+    <Content Include="Resources\KeyElement.bmp" />
+    <Content Include="Resources\KeyProperty.bmp" />
+    <Content Include="Resources\LeftBrace.bmp" />
+    <Content Include="Resources\Property.bmp" />
+    <Content Include="Resources\RequiredElement.bmp" />
+    <Content Include="Resources\RequiredProperty.bmp" />
+    <Content Include="Resources\RightBrace.bmp" />
+    <Content Include="Resources\Validator.bmp" />
+    <Content Include="Resources\Validators.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Dsl\DslDefinition.dsl.diagram">
+      <Link>DslDefinition.dsl.diagram</Link>
+      <DependentUpon>DslDefinition.dsl</DependentUpon>
+    </None>
+    <None Include="GeneratedCode\ConfigurationSectionDesignerSchema.xsd">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConfigurationSectionDesignerSchema.tt</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Key.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
