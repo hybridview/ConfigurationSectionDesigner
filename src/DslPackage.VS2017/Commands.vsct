@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- -->
+  <!-- This file contains custom command definitions. -->
+  <!-- -->
+  <!-- NOTE: Each time commands are added or changed, the "version" parameter to the -->
+  <!-- ProvideMenuResource attribute in Shell\Package.tt should be incremented. -->
+  <!-- This causes Visual Studio to re-merge the menu definitions for the package. -->
+  <!-- Otherwise, changes won't take effect until the next time devenv /setup is run. -->
+  <!-- -->
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+  <!--  -->
+  <Extern href="virtkeys.h"/>
+  <Extern href="DSLToolsCmdID.h"/>
+  <Include href="GeneratedCode\GeneratedVsct.vsct"/>
+
+  <!-- 
+  [NOTE by a.moore 20120628]
+  The original tt code that generates these commands is pretty nice, but I made the code static for now since 
+  it fixed the right-click problem when trying to enable "move up" and "move down".
+  The original tt code can be fixed by making sure that the generated commands.vsct file has <ResourceName> set to 
+  1000.ctmenu in the .csproj file (I don't know how to set this using the VS UI, so did it manually in text editor).
+  -->
+  <Commands package="guidPkg">
+    
+    <!--
+    [Note by Max 20140906] since vsct is not easy (at least for me) following is displayed the intended result. Groups aren't displayed (they have no ui)
+    and are required to group one or more ui elements (commands/buttons)
+    
+    <Menu>
+      <Group guid="TopLevelMenuGroup" id="MenuGroup">
+        <Menu guid="TopLevelMenuGroup" id="TopLevelMenu">
+          <Group guid="AddCommandsGroup" id="MenuGroup">
+            <Button guid="AddCommandsGroup" id="NewConfigurationElement" />
+            <Button guid="AddCommandsGroup" id="NewConfigurationSection" />
+          </Groups>
+        </Menu>
+      </Groups>
+      
+      <Button guid="MovePropertyUpGUID" id="MovePropertyUpID" />
+      <Button guid="MovePropertyDownGUID" id="MovePropertyDownID" />
+      <Button guid="ImportExternalEnumGUID" id="ImportExternalEnumID" />
+      <Button guid="LayoutDiagramGUID" id="cmdIdLayoutDiagram" />
+      
+      other buttons here...
+    <Menu>
+    
+    -->
+    
+    <!-- Groups Section-->
+    <Groups>
+      <!-- Top Level Group, container of menu -->
+      <Group guid="TopLevelMenuGroup" id="MenuGroup" priority="0xFEFF">
+        <Parent guid="guidCmdSet" id="menuidContext" />
+      </Group>
+
+      <!-- Child Group, used for nesting items -->
+      <Group guid="AddCommandsGroup" id="AddNewGroup" priority="0xFEFF">
+        <Parent guid="TopLevelMenuGroup" id="TopLevelMenu"/>
+      </Group>
+    </Groups>
+    
+    <!-- Menu Section -->
+    <Menus>
+      <Menu guid="TopLevelMenuGroup" id="TopLevelMenu" priority="0x000" type="Menu">
+        <Parent guid="TopLevelMenuGroup" id="MenuGroup" />
+        <CommandFlag>AlwaysCreate</CommandFlag>
+        <Strings>
+          <ButtonText>Add New...</ButtonText>
+        </Strings>
+      </Menu>
+    </Menus>
+
+    <!-- Button Section -->
+    <Buttons>
+      <!-- Add new ConfigurationElement -->
+      <Button guid="AddCommandsGroup" id="NewConfigurationElement" priority="0x0200" type="Button">
+        <Parent guid="AddCommandsGroup" id="AddNewGroup" />
+        <Strings>
+          <CanonicalName>ConfigurationElement</CanonicalName>
+          <ButtonText>Configuration Element</ButtonText>
+          <ToolTipText>Add new Configuration Element</ToolTipText>
+        </Strings>
+      </Button>
+      
+      <!-- Add new ConfigurationSection -->
+      <Button guid="AddCommandsGroup" id="NewConfigurationSection" priority="0x0200" type="Button">
+        <Parent guid="AddCommandsGroup" id="AddNewGroup" />
+        <Strings>
+          <CanonicalName>ConfigurationSection</CanonicalName>
+          <ButtonText>Configuration Section</ButtonText>
+          <ToolTipText>Add new Configuration Section</ToolTipText>
+        </Strings>
+      </Button>      
+      
+      <!-- Add new ConfigurationSection -->
+      <Button guid="AddCommandsGroup" id="NewConfigurationElementCollection" priority="0x0300" type="Button">
+        <Parent guid="AddCommandsGroup" id="AddNewGroup" />
+        <Strings>
+          <CanonicalName>ConfigurationElementCollection</CanonicalName>
+          <ButtonText>Configuration Element Collection</ButtonText>
+          <ToolTipText>Add new Configuration Element Collection</ToolTipText>
+        </Strings>
+      </Button>      
+      
+      <!-- Add new ConfigurationSectionGroup -->
+      <Button guid="AddCommandsGroup" id="NewConfigurationSectionGroup" priority="0x0400" type="Button">
+        <Parent guid="AddCommandsGroup" id="AddNewGroup" />
+        <Strings>
+          <CanonicalName>ConfigurationSectionGroup</CanonicalName>
+          <ButtonText>Configuration Section Group</ButtonText>
+          <ToolTipText>Add new Configuration Section Group</ToolTipText>
+        </Strings>
+      </Button>
+
+      
+      <Button guid="MovePropertyUpGUID" id="MovePropertyUpID" priority="0x0902" type="Button">
+        <Parent guid="guidCmdSet" id="grpidContextMain" />
+        <Strings>
+          <CanonicalName>MovePropertyUp</CanonicalName>
+          <ButtonText>Move Up</ButtonText>
+          <ToolTipText>Move the selected property up</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="MovePropertyDownGUID" id="MovePropertyDownID" priority="0x0902" type="Button">
+        <Parent guid="guidCmdSet" id="grpidContextMain" />
+        <Strings>
+          <CanonicalName>MovePropertyDown</CanonicalName>
+          <ButtonText>Move Down</ButtonText>
+          <ToolTipText>Move the selected property down</ToolTipText>
+        </Strings>
+      </Button>
+      <Button guid="ImportExternalEnumGUID" id="ImportExternalEnumID" priority="0x0902" type="Button">
+        <Parent guid="guidCmdSet" id="grpidContextMain" />
+        <Strings>
+          <CanonicalName>ImportExternalEnum</CanonicalName>
+          <ButtonText>Import External Enum</ButtonText>
+          <ToolTipText>Imports an enum defined elsewhere to be used in the CS Designer</ToolTipText>
+        </Strings>
+      </Button>
+
+      <Button guid="LayoutDiagramGUID" id="cmdIdLayoutDiagram" priority="0x0902" type="Button">
+        <Parent guid="guidCmdSet" id="grpidContextMain" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>&amp;Layout Diagram</ButtonText>
+          <ToolTipText>Layout Diagram</ToolTipText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <KeyBindings>
+    <KeyBinding guid="MovePropertyUpGUID" id="MovePropertyUpID" editor="guidEditor" key1="VK_UP" mod1="Alt" />
+    <KeyBinding guid="MovePropertyDownGUID" id="MovePropertyDownID" editor="guidEditor" key1="VK_DOWN" mod1="Alt" />
+  </KeyBindings>
+
+  <Symbols>
+    <!-- Top Level Symbols -->
+    <GuidSymbol name="TopLevelMenuGroup" value="{65780CF5-50B3-44A5-8D78-C8166A509760}">
+      <!-- Group -->
+      <IDSymbol name="MenuGroup" value="0x1020" />
+
+      <!-- Menu -->
+      <IDSymbol name="TopLevelMenu" value="0x201"/>
+    </GuidSymbol>
+
+    <!-- Command Symbols. -->
+    <GuidSymbol name="AddCommandsGroup" value="{CFBA0A77-538C-4571-A582-32D34BB30BA0}">
+      <!-- Group -->
+      <IDSymbol name="AddNewGroup" value="0x100"/>
+
+      <!-- Buttons -->
+      <IDSymbol name="NewConfigurationElement" value="0x0101" />
+      <IDSymbol name="NewConfigurationSection" value="0x0102" />
+      <IDSymbol name="NewConfigurationSectionGroup" value="0x0103" />
+      <IDSymbol name="NewConfigurationElementCollection" value="0x0104" />
+    </GuidSymbol>
+
+    <GuidSymbol name="LayoutDiagramGUID" value="{A9B79FB0-E9F0-46B2-8BAA-A8CBC8717870}">
+      <IDSymbol name="cmdIdLayoutDiagram" value="0x813"/>
+    </GuidSymbol>
+    <GuidSymbol name="MovePropertyUpGUID" value="{EC4ABFA5-460E-4604-9945-BD53D0BD6FC0}">
+      <IDSymbol name="MovePropertyUpID" value="0x810" />
+    </GuidSymbol>
+    <GuidSymbol name="MovePropertyDownGUID" value="{E41AB78D-FC72-43e9-8AB9-CDCBA5CB383B}">
+      <IDSymbol name="MovePropertyDownID" value="0x811" />
+    </GuidSymbol>
+    <GuidSymbol name="ImportExternalEnumGUID" value="{CDE66367-F304-4cd6-AF5C-9B5222B29F2B}">
+      <IDSymbol name="ImportExternalEnumID" value="0x812" />
+    </GuidSymbol>
+
+    <GuidSymbol name="guidEditor" value="{548a5f67-a0b1-4c78-84f0-508456f45157}" />
+  </Symbols>
+</CommandTable>

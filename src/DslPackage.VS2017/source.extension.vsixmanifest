@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
+  <Identifier Id="9f16956e-2232-4f80-9ebb-4165929ef3ef">
+    <Name>ConfigurationSectionDesigner</Name>
+    <Author>The Community</Author>
+    <Version>2.0.2.0</Version>
+    <Description>A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.</Description>
+    <Locale>1033</Locale>
+    <MoreInfoUrl>http://csd.codeplex.com/</MoreInfoUrl>
+    <GettingStartedGuide>http://csd.codeplex.com/documentation</GettingStartedGuide>
+    <Icon>Resources\File.ico</Icon>
+    <PreviewImage>Resources\ConfigurationSectionDesigner.jpg</PreviewImage>
+	<License>MSPL.TXT</License> 
+    <SupportedProducts>
+	  <VisualStudio Version="15.0">
+        <Edition>Community</Edition>
+        <Edition>Pro</Edition>
+      </VisualStudio>
+    </SupportedProducts>
+    <SupportedFrameworkRuntimeEdition MinVersion="4.6.2" />
+  </Identifier>
+  <References/>  
+  <Content>
+   <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
+    <!--<VsPackage>Additional.pkgdef</VsPackage>-->
+	  <Assembly AssemblyName="Dsl.Wizard;AssemblyName|">|Dsl.Wizard|</Assembly>
+    <MefComponent>|Dsl.VS2017|</MefComponent>
+    <MefComponent>|%CurrentProject%|</MefComponent>
+    <ItemTemplate>ItemTemplates</ItemTemplate>
+	  <ProjectTemplate>ProjectTemplates</ProjectTemplate>
+  </Content>
+</Vsix>
