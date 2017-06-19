@@ -17,38 +17,36 @@
 
   // The name of the Dsl Project - Must be updated if the project is renamed.
   string dslProjectName = "Dsl.VS2017";
-
+  string dslWizardProjectName = "Dsl.Wizard.VS2017";
   string localeId = "1033";
 #>
 <?xml version="1.0" encoding="utf-8"?>
-<Vsix xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="1.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2010">
-  <Identifier Id="<#= this.Dsl.PackageGuid #>">
-    <Name><#= this.Dsl.DisplayName #></Name>
-    <Author>The Community</Author>
-    <Version>2.0.2.0</Version>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="<#= this.Dsl.PackageGuid #>" Version="1.0" Language="en-US" Publisher="The Community" />
+    <DisplayName><#= this.Dsl.DisplayName #></DisplayName>
     <Description>A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.</Description>
-    <Locale><#= localeId #></Locale>
-    <MoreInfoUrl>http://csd.codeplex.com/</MoreInfoUrl>
-    <GettingStartedGuide>http://csd.codeplex.com/documentation</GettingStartedGuide>
-    <Icon>Resources\File.ico</Icon>
-    <PreviewImage>Resources\ConfigurationSectionDesigner.jpg</PreviewImage>
-	<License>MSPL.TXT</License> 
-    <SupportedProducts>
-	  <VisualStudio Version="15.0">
-        <Edition>Community</Edition>
-        <Edition>Pro</Edition>
-      </VisualStudio>
-    </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.6.2" />
-  </Identifier>
-  <References/>  
-  <Content>
-   <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
-    <!--<VsPackage>Additional.pkgdef</VsPackage>-->
-	  <Assembly AssemblyName="Dsl.Wizard.VS2017;AssemblyName|">|Dsl.Wizard.VS2017|</Assembly>
-    <MefComponent>|<#= dslProjectName #>|</MefComponent>
-    <MefComponent>|%CurrentProject%|</MefComponent>
-    <ItemTemplate>ItemTemplates</ItemTemplate>
-	  <ProjectTemplate>ProjectTemplates</ProjectTemplate>
-  </Content>
-</Vsix>
+	<PreviewImage>Resources\ConfigurationSectionDesigner.jpg</PreviewImage>
+	
+	<MoreInfoUrl>http://csd.codeplex.com/documentation</MoreInfoUrl>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[15.0,16.0)" />
+    <InstallationTarget Version="[15.0,16.0)" Id="Microsoft.VisualStudio.Enterprise" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.6.1,)" />
+  </Dependencies>
+  <Assets>
+	<Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="<#= dslProjectName #>" Path="|<#= dslProjectName #>|" />
+	<Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="<#= dslWizardProjectName #>" Path="|<#= dslWizardProjectName #>|" AssemblyName="|<#= dslWizardProjectName #>;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="%CurrentProject%" d:TargetPath="|%CurrentProject%;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="%CurrentProject%" d:TargetPath="|%CurrentProject%;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />
+    
+  </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.TextTemplating" Version="[15.0,16.0)" DisplayName="Text Template Transformation" />
+  </Prerequisites>
+</PackageManifest>
