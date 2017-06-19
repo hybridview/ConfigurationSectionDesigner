@@ -1,0 +1,11 @@
+# Creating a new Configuration Section Designer diagram
+
+Start Visual Studio. Open the solution/project you want to add a Configuration Section Designer to (**NOTE:** The project type must either be a C# or Visual Basic project. Other languages are not supported by the Configuration Section Designer). Right click the project and select **Add -> New Item...**. The **Add New Item** window comes up. 
+
+![](Creating a new Configuration Section Designer diagram_new-item.png)
+
+The Configuration Section Designer file template can be found in the **Visual C# Items** (for C#) and **Common Items** (for Visual Basic) categories. Give your diagram file a name and click **Add**. Congratulations, you now have a blank Configuration Section Designer diagram to work with.
+
+![](Creating a new Configuration Section Designer diagram_new-project-item.png)
+
+Next, you may want to [add some elements to your designer](Adding-elements-to-the-Configuration-Section-Designer-diagram)

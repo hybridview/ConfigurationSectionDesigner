@@ -1,0 +1,11 @@
+! Creating a new Configuration Section Designer project
+
+Start Visual Studio. If you want to start a whole new Configuration Section Designer solution, select *File -> New -> Project...*. If you want to add a Configuration Section Designer project to an existing solution, right click the solution in the Solution Explorer and select *Add -> New Project...*. In both cases, you get the *Add New Project* window.
+
+[image:new-project.png]
+
+ The Configuration Section Designer project template can be found in the *Visual C#* and *Visual Basic* project types. Give your project a name, select any other options you want, then click *OK*. Congratulations, you now have a clean Configuration Section Designer project to work with.
+
+[image:new-solution-explorer.png]
+
+Next, you may want to [add some elements to your designer|Adding elements to the Configuration Section Designer diagram].

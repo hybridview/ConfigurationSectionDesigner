@@ -1,0 +1,20 @@
+## Visual Studio 2013
+#  Download and Install the Visual Studio 2013 SDK [http://www.microsoft.com/en-us/download/details.aspx?id=40758](http://www.microsoft.com/en-us/download/details.aspx?id=40758)
+# Download and Install the Visual Studio 2013 Visualization and Modeling SDK [http://www.microsoft.com/en-us/download/details.aspx?id=40754](http://www.microsoft.com/en-us/download/details.aspx?id=40754)
+# Download and Install MS Build Community Tasks [https://github.com/loresoft/msbuildtasks](https://github.com/loresoft/msbuildtasks) _See note *1 below for details._
+# Download the Latest Source Code
+
+## Visual Studio 2012
+#  Download and Install the Visual Studio 2012 SDK [http://www.microsoft.com/en-us/download/details.aspx?id=30668](http://www.microsoft.com/en-us/download/details.aspx?id=30668)
+# Download and Install the Visual Studio 2012 Visualization and Modeling SDK [http://www.microsoft.com/en-us/download/details.aspx?id=30680](http://www.microsoft.com/en-us/download/details.aspx?id=30680)
+# Download and Install MS Build Community Tasks [https://github.com/loresoft/msbuildtasks](https://github.com/loresoft/msbuildtasks) _See note *1 below for details._
+# Download the Latest Source Code
+
+## Visual Studio 2010
+# Download and Install the Visual Studio 2010 SDK [http://www.microsoft.com/en-us/download/details.aspx?id=2680](http___www.microsoft.com_en-us_download_details.aspx_id=2680)
+# Download and Install the Visual Studio 2010 Visualization and Modeling SDK [http://www.microsoft.com/en-us/download/details.aspx?id=23025](http://www.microsoft.com/en-us/download/details.aspx?id=23025)
+# Download and Install MS Build Community Tasks [https://github.com/loresoft/msbuildtasks](https://github.com/loresoft/msbuildtasks) See note *1 below for details.
+# Download the Latest Source Code
+
+_Note *1_
+There is a bug in VS2010 (not yet verified for VS2012) when trying to deploy a custom code generator via VSIX. During build, VS2010 will add an incorrect location path to the package. To fix this issue, an MSBuild task is used to fix the path during the build process. I added a new dependency for "MS Build Community Tasks", which supports the file search/replace functionality that I needed. I have included the urls for the download of this project in the "Main-VS2010" folder. Simply download and install the MSI to allow the project to build properly.

@@ -1,0 +1,5 @@
+! Configuring Configuration Section Protection
+
+In the _Code Generation Options_ flags on the Configuration Sections, there's a flag called _Protection_. Enabling this flag makes the code generator create two methods, _Protect_ and _Unprotect_. In addition to this code generation flag, the Configuration Sections have a _Protection Provider_ property and a _Custom Protection Provider_ property.
+
+The _Protection Provider_ shows the built-in providers of the .NET Framework, as well as a _Custom_ setting. Selecting the _Custom_ setting makes the code generator use the _Custom Protection Provider_ property. In order to use a custom protection provider, it must first be implemented. [url:Instructions on how to do this can be found on MSDN|http://msdn.microsoft.com/en-us/library/wfc2t3az.aspx], as well as through web searches.
