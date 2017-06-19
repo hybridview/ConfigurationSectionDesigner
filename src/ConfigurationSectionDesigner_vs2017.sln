@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl.VS2017", "Dsl.VS2017\Dsl.VS2017.csproj", "{53CE0112-2220-43BB-B202-C09158E590E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl.Wizard", "Dsl.Wizard.VS2017\Dsl.Wizard.csproj", "{B4DA261D-C7D4-4DA4-B0E0-8C8A450DB478}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsl.Wizard.VS2017", "Dsl.Wizard.VS2017\Dsl.Wizard.VS2017.csproj", "{B4DA261D-C7D4-4DA4-B0E0-8C8A450DB478}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DslPackage", "DslPackage.VS2017\DslPackage.csproj", "{94F8A22C-41CF-4784-A82B-CBB8A1EB4166}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DslPackage.VS2017", "DslPackage.VS2017\DslPackage.VS2017.csproj", "{94F8A22C-41CF-4784-A82B-CBB8A1EB4166}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

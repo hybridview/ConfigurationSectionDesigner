@@ -16,7 +16,7 @@
 ***************************************************************************/
 
   // The name of the Dsl Project - Must be updated if the project is renamed.
-  string dslProjectName = "Dsl.VS2017";
+  string dslProjectName = "Dsl.VS2015";
 
   string localeId = "1033";
 #>
@@ -34,18 +34,18 @@
     <PreviewImage>Resources\ConfigurationSectionDesigner.jpg</PreviewImage>
 	<License>MSPL.TXT</License> 
     <SupportedProducts>
-	  <VisualStudio Version="15.0">
+	  <VisualStudio Version="14.0">
         <Edition>Community</Edition>
         <Edition>Pro</Edition>
       </VisualStudio>
     </SupportedProducts>
-    <SupportedFrameworkRuntimeEdition MinVersion="4.6.2" />
+    <SupportedFrameworkRuntimeEdition MinVersion="4.5" />
   </Identifier>
   <References/>  
   <Content>
    <VsPackage>|%CurrentProject%;PkgdefProjectOutputGroup|</VsPackage>
     <!--<VsPackage>Additional.pkgdef</VsPackage>-->
-	  <Assembly AssemblyName="Dsl.Wizard.VS2017;AssemblyName|">|Dsl.Wizard.VS2017|</Assembly>
+	  <Assembly AssemblyName="Dsl.Wizard.VS2015;AssemblyName|">|Dsl.Wizard.VS2015|</Assembly>
     <MefComponent>|<#= dslProjectName #>|</MefComponent>
     <MefComponent>|%CurrentProject%|</MefComponent>
     <ItemTemplate>ItemTemplates</ItemTemplate>

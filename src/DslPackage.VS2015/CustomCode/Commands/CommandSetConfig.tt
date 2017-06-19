@@ -1,0 +1,95 @@
+﻿<#@ import namespace = "System.Collections.Generic" #>
+<#@ import namespace = "System.Collections.ObjectModel" #>
+<#
+
+/*
+   This file contains custom command definitions.
+   
+   NOTE: Each time commands are added or changed, the Commands.tt and CommandSet.tt
+   files must be run through the text tempating file generator.
+   
+   -- then: --
+   
+   The "version" parameter to the ProvideMenuResource attribute in Shell\Package.tt
+   should be incremented. This causes Visual Studio to re-merge the menu definitions
+   for the package. Otherwise, changes won't take effect until the next time
+   devenv /setup is run. 
+*/   
+
+// List of additional commands
+Collection<Dictionary<string,string>> commands = new Collection<Dictionary<string,string>>();
+Dictionary<string,string> command;
+
+// Command MovePropertyUp
+command = new Dictionary<string,string>();
+command["CanonicalName"] = "MovePropertyUp";
+command["ButtonText"] = "Move Up";
+command["ToolTipText"] = "Move the selected property up";
+command["Id"] = "{EC4ABFA5-460E-4604-9945-BD53D0BD6FC0}";
+command["SupportedCommandTypes"] = "Property";
+commands.Add(command);
+
+// Command MovePropertyDown
+command = new Dictionary<string,string>();
+command["CanonicalName"] = "MovePropertyDown";
+command["ButtonText"] = "Move Down";
+command["ToolTipText"] = "Move the selected property down";
+command["Id"] = "{E41AB78D-FC72-43e9-8AB9-CDCBA5CB383B}";
+command["SupportedCommandTypes"] = "Property";
+commands.Add(command);
+
+// Command ImportExternalEnum
+command = new Dictionary<string,string>();
+command["CanonicalName"] = "ImportExternalEnum";
+command["ButtonText"] = "Import External Enum";
+command["ToolTipText"] = "Imports an enum defined elsewhere to be used in the CS Designer";
+command["Id"] = "{CDE66367-F304-4cd6-AF5C-9B5222B29F2B}";
+command["SupportedCommandTypes"] = "Diagram";
+commands.Add(command);
+
+// Command Layout
+command = new Dictionary<string,string>();
+command["CanonicalName"] = "LayoutDiagram";
+command["ButtonText"] = "Layout Diagram";
+command["ToolTipText"] = "Auto layout diagram";
+command["Id"] = "{A9B79FB0-E9F0-46B2-8BAA-A8CBC8717870}";
+command["SupportedCommandTypes"] = "Diagram";
+commands.Add(command);
+
+// Command Add new ConfigurationElement
+command = new Dictionary<string,string>();
+command["CanonicalName"] = "NewConfigurationElement";
+command["Id"] = "{CFBA0A77-538C-4571-A582-32D34BB30BA0}";
+command["CommandId"] = "0x0101";
+command["SupportedCommandTypes"] = "Diagram";
+commands.Add(command);
+
+// Command Add new ConfigurationSection
+command = new Dictionary<string,string>();
+command["CanonicalName"] = "NewConfigurationSection";
+command["Id"] = "{CFBA0A77-538C-4571-A582-32D34BB30BA0}";
+command["CommandId"] = "0x0102";
+command["SupportedCommandTypes"] = "Diagram";
+commands.Add(command);
+
+// Command Add new ConfigurationElementCollection
+command = new Dictionary<string,string>();
+command["CanonicalName"] = "NewConfigurationElementCollection";
+command["Id"] = "{CFBA0A77-538C-4571-A582-32D34BB30BA0}";
+command["CommandId"] = "0x0103";
+command["SupportedCommandTypes"] = "Diagram";
+commands.Add(command);
+
+// Command Add new ConfigurationSectionGroup
+command = new Dictionary<string,string>();
+command["CanonicalName"] = "NewConfigurationSectionGroup";
+command["Id"] = "{CFBA0A77-538C-4571-A582-32D34BB30BA0}";
+command["CommandId"] = "0x0104";
+command["SupportedCommandTypes"] = "Diagram";
+commands.Add(command);
+
+// Command ID base value
+int index = 2064;
+// Hack to prevent VS from failing the build due to "var not used" warning... Ugh..
+int tmp = index;
+#>

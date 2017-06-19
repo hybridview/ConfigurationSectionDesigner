@@ -1,0 +1,26 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".vstemplate" #>
+<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>
+<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{<#= this.Dsl.PackageGuid #>}" ID="103"></Name>
+		<!--<TemplateGroupID>General</TemplateGroupID>-->
+		<Description Package="{<#= this.Dsl.PackageGuid #>}" ID="102"/>
+		<Icon Package="{<#= this.Dsl.PackageGuid #>}" ID="201" />
+		<TemplateID><#= this.Dsl.Namespace #>.CSharp</TemplateID>
+		<ProjectType>CSharp</ProjectType>
+		<!--<ProjectSubType>General</ProjectSubType>-->
+		<SortOrder>360</SortOrder>
+		<DefaultName><#=  this.Dsl.Name #>.<#=this.Dsl.Editor.FileExtension#></DefaultName>
+		<NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.<#=this.Dsl.Editor.FileExtension#>" ReplaceParameters="true"><#=this.Dsl.Editor.FileExtension#>.<#=this.Dsl.Editor.FileExtension#></ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.<#=this.Dsl.Editor.FileExtension#>.diagram"><#=this.Dsl.Editor.FileExtension#>.diagram</ProjectItem>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Dsl.Wizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=null</Assembly>
+		<FullClassName>Dsl.Wizard.ConfigurationSectionDesignerWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>
