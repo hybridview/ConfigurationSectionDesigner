@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{343607BD-B8D6-486E-95AA-A9C50FA410CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Samples.Configuration</RootNamespace>
+    <AssemblyName>Samples.Configuration</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildCopSample.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BuildCopSample.csd</DependentUpon>
+    </Compile>
+    <Compile Include="BuildCopSampleCustom.cs" />
+    <Compile Include="CollectionsSample.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CollectionsSample.csd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomValidators\CustomValidatorsCallbackValidatorClass.cs" />
+    <Compile Include="ExternalConfigurations\ExternalSharedElement.cs" />
+    <Compile Include="ExternalTypeConverters\CustomBlockTypeConverter.cs" />
+    <Compile Include="ExternalTypeSample.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExternalTypeSample.csd</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTypes\CustomBlock.cs" />
+    <Compile Include="InheritanceSample.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InheritanceSample.csd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedElementsSample.CONCEPT.cs" />
+    <Compile Include="SharedElementsSample.csd.cs">
+      <SubType>Code</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SharedElementsSample.csd</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleSample.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SimpleSample.csd</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationSample.csd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationSample.csd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BuildCopSample.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>BuildCopSample.csd.cs</LastGenOutput>
+    </None>
+    <None Include="BuildCopSample.csd.config">
+      <DependentUpon>BuildCopSample.csd</DependentUpon>
+    </None>
+    <None Include="BuildCopSample.csd.diagram">
+      <DependentUpon>BuildCopSample.csd</DependentUpon>
+    </None>
+    <None Include="BuildCopSample.csd.xsd">
+      <DependentUpon>BuildCopSample.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CollectionsSample.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>CollectionsSample.csd.cs</LastGenOutput>
+    </None>
+    <None Include="CollectionsSample.csd.config">
+      <DependentUpon>CollectionsSample.csd</DependentUpon>
+    </None>
+    <None Include="CollectionsSample.csd.diagram">
+      <DependentUpon>CollectionsSample.csd</DependentUpon>
+    </None>
+    <None Include="CollectionsSample.csd.xsd">
+      <DependentUpon>CollectionsSample.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExternalTypeSample.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>ExternalTypeSample.csd.cs</LastGenOutput>
+    </None>
+    <None Include="ExternalTypeSample.csd.config">
+      <DependentUpon>ExternalTypeSample.csd</DependentUpon>
+    </None>
+    <None Include="ExternalTypeSample.csd.diagram">
+      <DependentUpon>ExternalTypeSample.csd</DependentUpon>
+    </None>
+    <None Include="ExternalTypeSample.csd.xsd">
+      <DependentUpon>ExternalTypeSample.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InheritanceSample.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>InheritanceSample.csd.cs</LastGenOutput>
+    </None>
+    <None Include="InheritanceSample.csd.config">
+      <DependentUpon>InheritanceSample.csd</DependentUpon>
+    </None>
+    <None Include="InheritanceSample.csd.diagram">
+      <DependentUpon>InheritanceSample.csd</DependentUpon>
+    </None>
+    <None Include="InheritanceSample.csd.xsd">
+      <DependentUpon>InheritanceSample.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SharedElementsSample.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>SharedElementsSample.csd.cs</LastGenOutput>
+    </None>
+    <None Include="SharedElementsSample.csd.diagram">
+      <DependentUpon>SharedElementsSample.csd</DependentUpon>
+    </None>
+    <None Include="SharedElementsSample.csd.xsd">
+      <DependentUpon>SharedElementsSample.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SimpleSample.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>SimpleSample.csd.cs</LastGenOutput>
+    </None>
+    <None Include="SimpleSample.csd.config">
+      <DependentUpon>SimpleSample.csd</DependentUpon>
+    </None>
+    <None Include="SimpleSample.csd.diagram">
+      <DependentUpon>SimpleSample.csd</DependentUpon>
+    </None>
+    <None Include="SimpleSample.csd.xsd">
+      <DependentUpon>SimpleSample.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ValidationSample.csd">
+      <Generator>CsdFileGenerator</Generator>
+      <LastGenOutput>ValidationSample.csd.cs</LastGenOutput>
+    </None>
+    <None Include="ValidationSample.csd.config">
+      <DependentUpon>ValidationSample.csd</DependentUpon>
+    </None>
+    <None Include="ValidationSample.csd.diagram">
+      <DependentUpon>ValidationSample.csd</DependentUpon>
+    </None>
+    <None Include="ValidationSample.csd.xsd">
+      <DependentUpon>ValidationSample.csd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
