@@ -35,6 +35,12 @@
   <PropertyGroup>
     <TransformOnBuild>True</TransformOnBuild>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -445,6 +451,7 @@
       <DependentUpon>ConfigurationSectionDesignerSchema.tt</DependentUpon>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Key.snk" />
   </ItemGroup>
   <ItemGroup />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
