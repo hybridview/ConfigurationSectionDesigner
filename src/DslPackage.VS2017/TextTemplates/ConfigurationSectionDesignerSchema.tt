@@ -199,7 +199,7 @@ foreach (BaseConfigurationType type in this.ConfigurationSectionModel.Configurat
 			string[] xsdRestrictions = null;
 			string xsdTypeName = "";
 
-			ConfigurationProperty keyProperty = itemType.KeyProperties.SingleOrDefault();
+			ConfigurationProperty keyProperty = collectionElement.ItemType.KeyProperties.SingleOrDefault();
 			if (keyProperty != null) {
 				xsdTypeName = GetXsdTypeName(keyProperty as AttributeProperty, out xsdRestrictions);
 				if (!string.IsNullOrEmpty(xsdTypeName))
@@ -245,7 +245,7 @@ foreach (BaseConfigurationType type in this.ConfigurationSectionModel.Configurat
 		}
 	}
 	
-} // End loop over all configuration elements.
+ // End loop over all configuration elements.
 
 foreach (TypeDefinition type in this.ConfigurationSectionModel.TypeDefinitions)
 {
