@@ -301,33 +301,8 @@ namespace ConfigurationSectionDesigner
 
                 if (_textTemplateFolder == null)
                 {
-                    Diagnostics.DebugWrite("FileGeneration.TextTemplateFolder_get >> NULL... Loading from Registry...");
-
-                    //#if DEBUG
-                    // Fetch the install location from the registry
-                    string key = string.Format("{0}\\ExtensionManager\\EnabledExtensions",
-                            this.Project.DTE.RegistryRoot);
-                    RegistryKey csd = Registry.CurrentUser.OpenSubKey(key);
-                    if (csd != null)
-                    {
-                        string kn = string.Format("{0},{1}",
-                                          Constants.ConfigurationSectionDesignerPackageId,
-                                          Assembly.GetExecutingAssembly().GetName().Version.ToString()
-                                      );
-                        string extensionRootDir = csd.GetValue(kn) as string;
-                        if (!string.IsNullOrEmpty(extensionRootDir))
-                        {
-                            _textTemplateFolder = Path.Combine(extensionRootDir, "TextTemplates");
-                        }
-                        else
-                        {
-                            Diagnostics.DebugWrite("FileGeneration.TextTemplateFolder_get >> ERROR >> Result is NULL! RegKeyName={0}, RegKeyValue={1}", kn, "NULL");
-                            throw new InvalidOperationException("Could not find TextTemplate directory. Try reinstalling the Configuration Section Designer.");
-                        }
-                    }
-                    else
-                        throw new InvalidOperationException("Could not find TextTemplate directory. Try reinstalling the Configuration Section Designer.");
-                    //#endif
+                     Diagnostics.DebugWrite("Loading _textTemplateFolder from executable path");
+                    _textTemplateFolder = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "TextTemplates");
                 }
                 return _textTemplateFolder;
             }
