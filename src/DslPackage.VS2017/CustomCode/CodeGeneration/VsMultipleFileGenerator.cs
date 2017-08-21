@@ -15,9 +15,6 @@ using Microsoft.VisualStudio;
 using Microsoft.VisualStudio.Shell.Interop;
 using System.CodeDom.Compiler;
 using EnvDTE;
-using EnvDTE80;
-using EnvDTE90;
-using EnvDTE100;
 using Microsoft.VisualStudio.Designer.Interfaces;
 
 

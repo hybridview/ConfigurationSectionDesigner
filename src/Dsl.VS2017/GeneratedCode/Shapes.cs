@@ -241,8 +241,8 @@ namespace ConfigurationSectionDesigner
 			shapeFields.Add(field1);
 			
 			DslDiagrams::ChevronButtonField field2 = new DslDiagrams::ChevronButtonField("ExpandCollapseDecorator");
-			field2.DefaultSelectable = false;
-			field2.DefaultFocusable = false;
+			field2.DefaultSelectable = true;
+			field2.DefaultFocusable = true;
 			shapeFields.Add(field2);
 			
 			DslDiagrams::TextField field3 = new DslDiagrams::TextField("DescriptionDecorator");

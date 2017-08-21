@@ -11,9 +11,6 @@ using System.Diagnostics;
 using Microsoft.VisualStudio.Shell;
 using System.Text.RegularExpressions;
 using EnvDTE;
-using EnvDTE80;
-using EnvDTE90;
-using EnvDTE100;
 
 /*
  * Based on the code found here:
