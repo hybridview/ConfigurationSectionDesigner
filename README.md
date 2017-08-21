@@ -1,6 +1,8 @@
 # ConfigurationSectionDesigner
 Moved from CodePlex, which is closing.
 
+## IMPORTANT: Download the compiled extension by clicking the "Releases" tab.
+
 ## Project Description
 
 A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.
