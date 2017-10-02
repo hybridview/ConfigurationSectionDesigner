@@ -1,7 +1,7 @@
 # ConfigurationSectionDesigner
 Moved from CodePlex, which is closing.
 
-## IMPORTANT: Download the compiled extension by clicking the "Releases" tab.
+## IMPORTANT: Download the compiled extension by clicking the [Releases] (https://github.com/hybridview/ConfigurationSectionDesigner/releases)  tab.
 
 ## Project Description
 
