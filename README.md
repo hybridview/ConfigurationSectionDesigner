@@ -7,6 +7,8 @@ Moved from CodePlex, which is closing.
 
 A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.
 
+![](https://github.com/hybridview/ConfigurationSectionDesigner/wiki/Home_CSD_Screen01_800_FX.png)
+
 For installation, usage instructions, and more info, see the [project Wiki](https://github.com/hybridview/ConfigurationSectionDesigner/wiki).
 
 
