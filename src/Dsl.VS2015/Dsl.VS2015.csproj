@@ -428,6 +428,7 @@
     <Content Include="Resources\RightBrace.bmp" />
     <Content Include="Resources\Validator.bmp" />
     <Content Include="Resources\Validators.bmp" />
+    <None Include="Key.snk" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -443,7 +444,6 @@
       <DependentUpon>ConfigurationSectionDesignerSchema.tt</DependentUpon>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Key.snk" />
   </ItemGroup>
   <ItemGroup />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

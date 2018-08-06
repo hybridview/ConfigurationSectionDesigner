@@ -25,7 +25,7 @@
   <Identifier Id="<#= this.Dsl.PackageGuid #>">
     <Name><#= this.Dsl.DisplayName #></Name>
     <Author>The Community</Author>
-    <Version>2.0.2.0</Version>
+    <Version>2.0.2.1</Version>
     <Description>A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.</Description>
     <Locale><#= localeId #></Locale>
     <MoreInfoUrl>http://csd.codeplex.com/</MoreInfoUrl>
