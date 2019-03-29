@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Duplicate of workitem 3906",
+    "ClosedDate": "2009-12-11T16:48:41.37-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The c# code transformer is not enclosing quotes around the DefaultValue string type values on the ConfigurationProperty attribute.\nExample:\n\t\t/// <summary>\n\t\t/// The XML name of the <see cref=\"Format\"/> property.\n\t\t/// </summary>\n\t\t[global::System.CodeDom.Compiler.GeneratedCode( \"Microsoft.Samples.DslTools.ConfigurationSectionDesigner.CsdFileGenerator\", \"1.0.0.0\" )]\n\t\tinternal const global::System.String FormatPropertyName = \"format\";\n\t\t\n\t\t/// <summary>\n\t\t/// Gets or sets the Format.\n\t\t/// </summary>\n\t\t[global::System.CodeDom.Compiler.GeneratedCode( \"Microsoft.Samples.DslTools.ConfigurationSectionDesigner.CsdFileGenerator\", \"1.0.0.0\" )]\n\t\t[global::System.ComponentModel.Description(\"The Format.\")]\n//*************************\n\t\t[global::System.Configuration.ConfigurationProperty(FormatPropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false, DefaultValue = Html)] //***NOT ENCLOSING QUOTATION MARKS AROUND THE TEXT \"Html\"\n//*************************\n\t\tpublic global::System.String Format\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\treturn (global::System.String)base[FormatPropertyName];\n\t\t\t}\n\t\t\tset\n\t\t\t{\n\t\t\t\tbase[FormatPropertyName] = value;\n\t\t\t}\n\t\t}\n \nThere is a work around.  After I manually put the quotes around my string type DefaultValues, everything works great.\n \nI have my configuration sections working in my app now and I can consume the data.  Thanks for the fast work on the last issue.\n \nPlease let me know if I can be of further assistance.",
+    "LastUpdatedDate": "2013-05-16T04:04:53.313-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-11T11:16:38.987-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ConfigurationProperty attribute not enclosing quotation marks around string type DefaultValue",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5581
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This report is identical to the one here: http://csd.codeplex.com/WorkItem/View.aspx?WorkItemId=3906",
+      "PostedDate": "2009-12-11T11:50:52.96-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-11T16:48:41.37-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I added the quotation marks in the Default Value property and that is the workaround.  However I do not think it is intuitive.\r\n\r\nIf the type could be checked to see if it is a String and then make sure there are no quotes, you could then slap some quotes around it which would keep knuckleheads like me from having to remember the quotes.\r\n\r\nThanks for your help.  This is a very nice tool.\r\n",
+      "PostedDate": "2009-12-14T10:44:09.007-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:35.433-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:53.313-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

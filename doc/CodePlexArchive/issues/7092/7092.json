@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "see title",
+    "LastUpdatedDate": "2013-02-21T16:30:30.307-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-08-09T04:49:16.7-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Feature: Add Access Modifier for attribute/element",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 7092
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Would be great to have that feature!",
+      "PostedDate": "2011-08-13T02:44:02.3-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I think it's impossible to achive this while using CodeMemberProperty.\r\nThis is the code from the CSharpCodeGenerator:\r\n\tif (e.HasSet)\r\n\t{\r\n\t\tif (this.IsCurrentInterface || (e.Attributes & MemberAttributes.ScopeMask) == MemberAttributes.Abstract)\r\n\t\t{\r\n\t\t\tthis.Output.WriteLine(\"set;\");\r\n\t\t}\r\n\t\telse\r\n\t\t{\r\n\t\t\tthis.Output.Write(\"set\");\r\n\t\t\tthis.OutputStartingBrace();\r\n\t\t\tthis.Indent++;\r\n\t\t\tthis.GenerateStatements(e.SetStatements);\r\n\t\t\tthis.Indent--;\r\n\t\t\tthis.Output.WriteLine(\"}\");\r\n\t\t}\r\n\t}",
+      "PostedDate": "2011-08-13T04:59:43.163-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-10-15T10:07:10.91-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:30.307-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

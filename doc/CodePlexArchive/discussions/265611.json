@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "643895",
+    "ThreadId": "265611",
+    "Html": "\r\n<p>I've installed the visx and can see the CSD extension installed when I look in visual studio, however, I cannot create a CSD project. I don't have the option. I've tried copying around the template, running as admin, etc. but the project template does not\r\n show.</p>\r\n",
+    "PostedDate": "2011-07-18T12:41:45.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "644543",
+    "ThreadId": "265611",
+    "Html": "<p>I've never created a new CSD project (I always add CSD's to existing projects), so never noticed this issue. I will look into fixing it. For now, you can just create a new project (library, etc) and add the new CSDs. It pretty much does the same thing as the project template would.</p>",
+    "PostedDate": "2011-07-19T11:15:53.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

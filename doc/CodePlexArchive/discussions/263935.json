@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "637434",
+    "ThreadId": "263935",
+    "Html": "<p>Hello,</p>\n<p>&nbsp;</p>\n<p>I noticed that the old patch I wrote for decorating generated classes with GeneratedCodeAttribute&nbsp;has been applied (TheRHCP is my previous login).</p>\n<p>Actually experience taught that this is really wrong in this case. In fact it should not happen here simply because the classes are partial which means they are not fully generated. If the types were regular closed types then it would be alright.</p>\n<p>&nbsp;</p>\n<p>I reported the issue here before creating the patch and here is the reply of the original developer:&nbsp;<a href=\"http://csd.codeplex.com/workitem/5504\">http://csd.codeplex.com/workitem/5504</a></p>\n<p>&nbsp;</p>\n<p>Anyway, it is good to hear that this project in moving again.</p>\n<p>&nbsp;</p>\n<p>Thanks.</p>",
+    "PostedDate": "2011-07-05T05:15:52.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "637617",
+    "ThreadId": "263935",
+    "Html": "<p>I didn't see the discussion regarding work item 5504. Thanks for the info. I'll revert the change.</p>\r\n<p>&nbsp;</p>\r\n<p>-A</p>",
+    "PostedDate": "2011-07-05T10:00:08.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

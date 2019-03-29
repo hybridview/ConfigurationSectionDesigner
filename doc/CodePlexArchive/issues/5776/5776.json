@@ -1,0 +1,156 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "I merged my fixes from the VS2010 version to the 1.6.1 version. It appears to have resolved the issue.",
+    "ClosedDate": "2011-06-30T08:17:57.27-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi, \n \nI was using a previous version of Csd in a project and I upgraded to the latest version this afternoon. After installing the new version, I had to recreate the config sections using v1.6.1, but it fails to generate a schema, sample code or source code.  Visual Studio displays a warning:\n \nThe custom tool 'CsdFileGenerator' failed.  Unable to retrieve Visual Studio ProjectItem. Try running the tool again.\n \nThe project this is being used in is a standard class library and I used the project item to create the config sections file.  I created a new solution and tried your custom project template and it works.  I tried creating a new Csd project in my existing solution and it fails.\n \nI'm using Visual Studio 2008 Team Suite, with VS 2008 SDK 1.1 installed.\n \nCheers,\n \n \nMatt",
+    "LastUpdatedDate": "2013-05-16T04:04:51.587-07:00",
+    "PlannedForRelease": "1.7",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-01-21T05:59:50.427-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The custom tool 'CsdFileGenerator' failed.  Unable to retrieve Visual Studio ProjectItem. Try running the tool again.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 7,
+    "Id": 5776
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1931,
+      "FileName": "CsdDebugging.zip",
+      "DownloadUrl": ".\\1931"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Would you be able to zip up your solution and attach it to this issue? That would be very helpful in my pursuit of the problem.",
+      "PostedDate": "2010-01-21T08:56:29.147-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hi Alex,\r\n\r\nThis is a commercial project, so I've been relunctant to send you my solution.  Instead, I did some investigating/testing in a seperate solution.  I was able to reproduce my error as well as finding a bunch of 'new' issues.  Here's the summary:\r\n\r\n•\tClass Library project\r\no\tIn a default configuration, is not compatible with Csd\r\no\tAfter manually adding service to end of file, is compatible.\r\n•\tCsd Project Template\r\no\tWorks at solution root\r\no\tFails in a solution folder\r\n•\tCsd Project Item\r\no\tWorks when the project is not in a solution folder and after service entry has been added.\r\no\tFails when the project is moved to a solution folder\r\n\tWorks when it’s moved back.\r\no\tFails when created in a project folder\r\no\tWorks if created in at project root and then moved to a project folder.\r\n\r\nI tried about 17 scenarios, with 12 scenarios failing, 5 working and 1 workaround.  They're all listed in the document 'Debugging Csd.docx' and the test solution is attached.  ",
+      "PostedDate": "2010-01-21T22:07:21.61-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-01-21T22:07:28.373-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Wow, that's quite a comprehensive testing you've done there. I appreciate that very much.\r\n\r\nI'll get to fixing these things the next time I work on CSD. As a temporary workaround, all I can really suggest is that you use one of the configurations you found that work when using CSD... I guess. :-)",
+      "PostedDate": "2010-01-22T05:11:30.02-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-01-25T01:25:47.053-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-02-20T08:12:15.57-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-02-20T10:21:53.317-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I can confirm this issue when the configuration project is within a solution folder. My first guess would be that the templates assume that the project is in one directory deeper than the solution file. So something like would work:\r\n\r\nsolutiondir\r\n  - <solutionname>.sln\r\n  - configurationprojectname\r\n    - <configurationprojectname>.csproj\r\n\r\nI can add as a workaround creating a solution, which you use only and especially for editing the configuration project. So you can create one solution that only contains your configuration project. As long as you make sure that this solution is one level up from the configuration project (like shown above).",
+      "PostedDate": "2010-02-28T05:50:29.943-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-03-11T02:12:14.273-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-03-29T01:59:50.577-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-04-20T08:00:49.387-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Could you create a seperate solution that generates the problem that I can add as a regression test?",
+      "PostedDate": "2010-06-04T16:09:43.3-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-06-25T01:45:04.42-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-12-01T05:48:54.263-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I figured out what is causing the failures when \"solution folders\" exist and create an ugly and \"hacky\" solution. What's happening, is solution folders are being returned as project items, but they are actually containers for the project items we are looking for. In my \"hack\", I simply do a check for a SubProject on the ProjectItem and use the SubProject instead (if found).  I didn't bother to clean up my ugly code since it already solved my problems, but I'm sure someone else might want to build upon it. Modify the \"VsMultipleFileGenerator.cs\" file like below at the \"Generate\" method:\r\n\r\n public int Generate(string wszInputFilePath, string bstrInputFileContents, string wszDefaultNamespace, IntPtr[] rgbOutputFileContents, out uint pcbOutput, \r\n            Microsoft.VisualStudio.Shell.Interop.IVsGeneratorProgress pGenerateProgress)\r\n        {\r\n            this.bstrInputFileContents = bstrInputFileContents;\r\n            this.wszInputFilePath = wszInputFilePath;\r\n            this._generatorProgress = pGenerateProgress;\r\n            this.newFileNames.Clear();\r\n\r\n            // Look through all the projects in the solution\r\n            DTE dte = (DTE)Package.GetGlobalService(typeof(DTE));\r\n            VSDOCUMENTPRIORITY[] pdwPriority = new VSDOCUMENTPRIORITY[1];\r\n            ProjectItem item = null;\r\n\r\n            \r\n            \r\n\r\n            foreach( Project __project in dte.Solution.Projects )\r\n            {\r\n                try\r\n                {\r\n                    int iFound = 0;\r\n                    uint itemId = 0;\r\n\r\n                    // ABM FIX: Fixes bug where solution folders caused tool to fail.\r\n                    // TODO: Clean up code, especially in case multiple project items exist.\r\n                    // TODO: Fix annoyance where generated file name has \"1\" appended.\r\n                    Project project = __project;\r\n                    if (__project.ProjectItems.Count > 0)\r\n                    {\r\n                        foreach (ProjectItem projectItem in __project.ProjectItems)\r\n                        {\r\n                            if (projectItem.SubProject != null)\r\n                            {\r\n                                project = projectItem.SubProject;\r\n                            }\r\n                        }\r\n                    }\r\n                    \r\n                    if( string.IsNullOrEmpty( project.FileName ) || !File.Exists( project.FileName ) )\r\n                        continue;\r\n\r\n.... .. . .. . . . . . . ALL CODE BELOW HERE IS UNCHANGED",
+      "PostedDate": "2011-03-31T12:48:35.663-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks, andym1978, for your input, but I've already re-written most of that code you were looking at there. I haven't checked it in yet, because I haven't been able to test it all thoroughly yet, but I believe my new way of pulling out the Project is much cleaner and less prone to weird errors like this than before.",
+      "PostedDate": "2011-03-31T21:26:58.893-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "@alexschrod\r\n\r\nThats great to hear! Even with the bugs, I love this project. The ONLY problem I am still having is the \"Value does not fall within expected range\" error when right clicking the designer window in VS2010. If you have a solution to this issue, even an ugly one, I would be extremely grateful if you could point me in the right direction on a resolution. Currently, this issue has made the designer unusable for me in VS2010 (I cannot add attributes). Thank you for the work on this project.",
+      "PostedDate": "2011-04-11T06:25:45.18-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I found the workaround for adding attributes in another post. This will work fine for now until a fix is found.\r\n\r\nFROM: http://csd.codeplex.com/discussions/73703\r\n\r\nLEFT click the Attributes section of the configuration item to add attributes to\r\npress INSERT on keyboard and enter a valid name\r\nchoose Type in properties window\r\nsave",
+      "PostedDate": "2011-04-11T07:09:47.583-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have fixed this issue on the Visual Studio 2010 version (2.0). It has not yet been integrated into the 1.x builds.",
+      "PostedDate": "2011-06-23T14:50:34.847-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-30T08:17:57.27-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:33.173-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:51.587-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

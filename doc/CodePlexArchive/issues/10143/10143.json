@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The ability to set the inheritance to sealed is great, but when setting an element to sealed, it causes errors as child elements and attributes are declared virtual, and I can find no way to not declare them as virtual.",
+    "LastUpdatedDate": "2014-09-10T07:52:23.033-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-05-28T11:28:38.213-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Sealed Inheritance",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 10143
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Yes, This is a serious problem and I think it is easy to fix.",
+      "PostedDate": "2013-06-28T10:30:24.88-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-08-20T11:36:33.657-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "If this setting generates unfix-able code, then it is indeed a big issue. I'll take a look.",
+      "PostedDate": "2014-09-09T15:22:08.883-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T15:22:26.06-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "MS code generator adds \"virtual\" on its own. I see some notes about this online, but with no solution. There might be a reason for this, but I will keep it open for investigation. My latest check-in warns the user if they select this setting.",
+      "PostedDate": "2014-09-10T07:52:23.033-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

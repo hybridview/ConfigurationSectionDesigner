@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-12-16T04:34:15.137-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I saw in another issue - Accessing collection item by key (http://csd.codeplex.com/WorkItem/View.aspx?WorkItemId=2767) that this was addressed and Resolved with changeset 14978.\n \nHowever it would be nice to add an overloaded indexer on the Key of an item in the collection if the Key's type is not an int.  The default ordinal value indexer would still stay in place.\n \nThen we could access an item this way:\nDataConfiguration data = (DataConfiguration)ConfigurationManager.GetSection(\"dataConfiguration\");\nstring cs = data.Servers[\"someServer\"].ConnectionString;\n \nThanks.",
+    "LastUpdatedDate": "2017-12-09T05:48:19.197-08:00",
+    "PlannedForRelease": "1.4",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-14T10:33:24.7-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support for overloaded indexer in collection classes for item.Key",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5598
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Will do. :-)",
+      "PostedDate": "2009-12-15T01:41:36.563-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "You know, I've actually wondered why this wasn't done instead of the GetItemByKey method in the first place.",
+      "PostedDate": "2009-12-15T02:08:10.703-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm going to make the type of the indexer 'object'. That way, even *when* using ints for keys, one can do\r\n\r\nstring cs = data.Servers[(object)3].ConnectionString;\r\n\r\nif needed.",
+      "PostedDate": "2009-12-15T02:12:39.507-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-16T03:50:15.14-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 32486.",
+      "PostedDate": "2009-12-16T04:34:15.137-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:34.897-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:52.86-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:19.197-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

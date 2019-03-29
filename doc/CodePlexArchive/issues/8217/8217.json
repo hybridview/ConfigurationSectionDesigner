@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When creating elements and adding them to a section, they are defined in the config schema as xsd:sequence.  This means that they must appear in the .config file in the specified order.  These elements should be defined as xsd:all to avoid having to specify config elements in a pre-defined order.\n \nBTW, this add-in is wonderful and has saved me a great deal of time and wrote coding!  Thanks!",
+    "LastUpdatedDate": "2014-09-15T13:44:43.187-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-05-06T14:17:28.3-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Section elements are defined as xsd:sequence instead of xsd:all in schema",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8217
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Alex,\r\n\r\nThanks for getting this fixed so quickly!  I don't see a changeset for it though.  Is it included in the download source for version 2.0?\r\n\r\nThanks for your time.",
+      "PostedDate": "2011-05-09T07:17:05.667-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "It's in the last changeset I checked in (March 5). I used an unbounded xsd:choice rather than xsd:all, but as far as I know, it gives the same result. I don't actively work on this project currently, so I have no schedule for when this will be part of a release.",
+      "PostedDate": "2011-05-09T14:47:47.02-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:29.57-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:49.183-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Fixed in source.\r\n\r\n\n\n** Closed by alexschrod 5/7/2011 11:03 PM",
+      "PostedDate": "2014-09-15T13:38:23.82-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-15T13:38:28.44-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I was validating some generated schemas and saw a potential issue with this change. The unbounded attributes in the \"choice\" element are allowing duplicate collection elements to be entered. By removing the minOccurs and maxOccurs from the \"choice\" attributes (leave them in elements), expected behavior is restored. There may be a reason why this is valid behavior (I haven't tested behavior in the generated classes), but I am re-opening for now so we can look into this.",
+      "PostedDate": "2014-09-15T13:44:43.187-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

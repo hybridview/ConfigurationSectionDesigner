@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "291747",
+    "ThreadId": "85661",
+    "Html": "<p>Hi,</p>\r\n<p>In case anyone else is wondering, you can use the configSource attribute in your custom section in order to split out sections into separate files.</p>\r\n<p>If you want the intellisense to work on this attribute in your section, just add the configSource attribute in the section designer.&nbsp;</p>\r\n<p>e.g.</p>\r\n<p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">environment</span> <span style=\"color:Red\">configSource</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">Environment1.config</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Blue\">/&gt;</span>\r\n</pre>\r\n</div>\r\n</p>\r\n<p>There is a <a href=\"http://blog.andreloker.de/post/2008/06/Keep-your-config-clean-with-external-config-files.aspx\">good article about splitting your config files</a> if you want further info.</p>",
+    "PostedDate": "2010-02-17T08:32:01.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291782",
+    "ThreadId": "85661",
+    "Html": "<p>Actually, DON'T add the attribute to your section in the design, this causes an exception when loading the config.</p>\r\n<p>It won't have intellisense but should work fine.</p>",
+    "PostedDate": "2010-02-17T09:46:17.753-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

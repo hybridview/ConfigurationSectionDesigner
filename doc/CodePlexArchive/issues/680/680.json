@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Text Templates",
+      "DisplayName": "Text Templates"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "See http://www.iis.net/articles/view.aspx/IIS7/Extending-IIS7/Extending-IIS7-Configuration/Extending-IIS7-Schema-and-Accessing-the-custom-sec?Page=1.\nIf there is enough semantic overlap (i.e. if the same designer schema could be valid) then it would just be a question of having different code generators for these two artifacts.\n \nSo\n- use a different ConfigurationSection class to derive from\n- configuration schema goes into a separate file instead of attributes",
+    "LastUpdatedDate": "2014-12-12T02:15:51.963-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-01-30T02:07:43.937-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support IIS7 Configuration Sections",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 6,
+    "Id": 680
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have no plans of implementing this feature. Just FYI to those who would happen to be waiting for it.",
+      "PostedDate": "2009-12-24T15:42:26.49-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-30T08:13:46.017-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-03-09T12:24:25.313-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-05-10T07:33:39.89-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:39.76-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-12-12T02:15:51.963-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

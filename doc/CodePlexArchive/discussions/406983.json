@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "956888",
+    "ThreadId": "406983",
+    "Html": "\r\n<p>[This question originally asked on StackOverflow.com, but got no attention <a href=\"http://stackoverflow.com/q/13863411/11545\">\r\nthere</a>]</p>\r\n<p>&nbsp;</p>\r\n<p>I'm using&nbsp;<a rel=\"nofollow\" href=\"http://csd.codeplex.com/\">Configuration Section Designer (CSD)</a>&nbsp;to manage my .NET app.config file structure, and so far I'm lovin' it.</p>\r\n<p>Problem is, I need a collection of items that doesn't lend itself to having a key. This is a list of permissions having a type {User | Group} and a name. There can be several items of the same type and several items of the same name.</p>\r\n<p>It makes sense not to be able to do this using a collection of type&nbsp;<code>BasicMap</code>; but what about&nbsp;<code>AddRemoveClearMap</code>&nbsp;collections? (Ok, the 'map' in&nbsp;<code>AddRemoveClearMap</code>&nbsp;doesn't help, I need list semantics).</p>\r\n<p>This is what CSD says when I try to configure it like this:</p>\r\n<blockquote>\r\n<p>The Item Type of this collection does not have a key property.</p>\r\n</blockquote>\r\n<p>Here's a <a href=\"http://i.stack.imgur.com/ADChI.png\">screenshot</a>.</p>\r\n<p>Any pointers are welcome.</p>\r\n<p>PS.&nbsp;<a href=\"http://stackoverflow.com/a/1471051/11545\">This StackOverflow answer</a>&nbsp;suggests I add a bogus (unique) GUID property to the objects in the collection and use that as the key. Is there a way to bend CSD to allow that, short of editing\r\n the CSD source code?</p>\r\n",
+    "PostedDate": "2012-12-17T04:07:38.553-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "956980",
+    "ThreadId": "406983",
+    "Html": "\r\n<p>Thank you for the comment. This is currently an active work item for this project, so will hopefully be completed soon.</p>\r\n",
+    "PostedDate": "2012-12-17T06:39:19.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "957058",
+    "ThreadId": "406983",
+    "Html": "\r\n<p>I have applied a user submitted patch that may help with this issue. I've uploaded the source code. If no issues found, we will include this in next build.</p>\r\n",
+    "PostedDate": "2012-12-17T08:42:15.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "957467",
+    "ThreadId": "406983",
+    "Html": "\r\n<p>Is this tracked somewhere? Can you share a link to the bug/patch/...? Need a beta-tester? B-)&nbsp;</p>\r\n",
+    "PostedDate": "2012-12-18T01:43:12.747-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "957864",
+    "ThreadId": "406983",
+    "Html": "\r\n<p>I had to rollback the changes temporarily due to some issues. We will let you know when it is ready.</p>\r\n",
+    "PostedDate": "2012-12-18T11:20:41.7-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "958455",
+    "ThreadId": "406983",
+    "Html": "\r\n<p>IlMax is now working on this one.</p>\r\n",
+    "PostedDate": "2012-12-19T07:12:59.59-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "983903",
+    "ThreadId": "406983",
+    "Html": "\r\n<p>I'll fix it during this week (i hope)</p>\r\n",
+    "PostedDate": "2013-01-07T14:58:36.7-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1068419",
+    "ThreadId": "406983",
+    "Html": "Any news on this? <br />\n",
+    "PostedDate": "2013-07-15T07:24:25.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1068436",
+    "ThreadId": "406983",
+    "Html": "Looks like @iLMaX added the patch for this in March - <a href=\"https://csd.codeplex.com/SourceControl/changeset/72099\" rel=\"nofollow\">https://csd.codeplex.com/SourceControl/changeset/72099</a>\r<br />\n<br />\nUnfortunately, the latest release is from January. Could you please create another release to include this?<br />\n",
+    "PostedDate": "2013-07-15T07:39:47.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1068490",
+    "ThreadId": "406983",
+    "Html": "Compiled from source and tested in VS2012. Happy to report that it seems to work just fine :)<br />\n<br />\nThanks iLMaX! I'd buy you a beer for this!<br />\n<br />\nThe enhancement can be found in the properties for &quot;Configuration Element Collection&quot; types as the new property &quot;Use Hash For Element Key&quot;<br />\n<img src=\"http://i.imgur.com/hTtTV08.png\" alt=\"Image\" /><br />\n",
+    "PostedDate": "2013-07-15T08:51:28.203-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1068491",
+    "ThreadId": "406983",
+    "Html": "<strong>fdsaasdf wrote:</strong><br />\n<blockquote>\nCompiled from source and tested in VS2012. Happy to report that it seems to work just fine :)<br />\n<br />\nThanks iLMaX! I'd buy you a beer for this!<br />\n</blockquote>\nWaiting for the beer :)<br />\n",
+    "PostedDate": "2013-07-15T08:53:28.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1073672",
+    "ThreadId": "406983",
+    "Html": "Awesome change, just remember that you have to override the GetHashCode method on your custom configuration element when using it (thank god for partial classes)<br />\n",
+    "PostedDate": "2013-07-26T13:46:09.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1073716",
+    "ThreadId": "406983",
+    "Html": "\r\n<div dir=\"ltr\">Why does <span style=\"font-family:arial,sans-serif; font-size:12.800000190734863px\">\r\nGetHashCode() need to be overridden?</span></div>\r\n",
+    "PostedDate": "2013-07-26T16:21:05.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1073720",
+    "ThreadId": "406983",
+    "Html": "\r\n<div dir=\"ltr\">@<span style=\"font-family:arial,sans-serif; font-size:12.800000190734863px\">iLMaX: I'll make true on my promise :) Got a PayPal account or smth?</span></div>\r\n",
+    "PostedDate": "2013-07-26T16:33:35.23-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

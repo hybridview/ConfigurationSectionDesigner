@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "81894",
+    "ThreadId": "24416",
+    "Html": "\r\nThe msi is installed successfully, <br />After ConfigurationSectionDesigner is added in my project, csd and 3 .tt file do created<br />but I received an alert as below:<br /><br />---------------------------<br />Microsoft Visual Studio<br />---------------------------<br />Package Load Failure<br /><br />Package 'Microsoft.Samples.DslTools.ConfigurationSectionDesigner.ConfigurationSectionDesignerPackage, Microsoft.Samples.DslTools.ConfigurationSectionDesigner.DslPackage, Version=1.0.0.0, Culture=neutral, PublicKeyToken=5181b181589b6989' has failed to load properly ( GUID = {9F16956E-2232-4F80-9EBB-4165929EF3EF} ). Please contact package vendor for assistance. Application restart is recommended, due to possible environment corruption. Would you like to disable loading this package in the future? You may use 'devenv /resetskippkgs' to re-enable package loading.<br /><br /><br />//vs2008, vista ultimate<br />I've checked the GAC that the two dll are already installed , I've no idea what's wrong with it<br />how can I get it work<br />",
+    "PostedDate": "2008-03-20T08:45:28.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "82000",
+    "ThreadId": "24416",
+    "Html": "\r\nI am having the same problem/message.  Any solutions?<br />",
+    "PostedDate": "2008-03-20T19:44:50.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "82034",
+    "ThreadId": "24416",
+    "Html": "\r\nThis discussion has been copied to a work item. Click here to <a href=\"http://www.codeplex.com/csd/WorkItem/View.aspx?WorkItemId=1477\">go to the work item and continue the discussion</a>.<br />",
+    "PostedDate": "2008-03-21T05:13:06.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "82036",
+    "ThreadId": "24416",
+    "Html": "\r\nI have fixed this in the 1.1.1 release that I just uploaded, so that new installer should no longer show the Package Load Failure. I forgot to test the scenario for people that don't have the SDK installed - I'm sorry for the inconvenience!<br />",
+    "PostedDate": "2008-03-21T05:34:57.54-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "82344",
+    "ThreadId": "24416",
+    "Html": "\r\nVery good to know that. <br />I just introduced CSD in my chinese blog.  Some people downloaded 1.1 but can not work fine. I had to told them use 1.0.2. :-(<br />",
+    "PostedDate": "2008-03-23T20:14:46.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

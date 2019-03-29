@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "I'm aware of that, but it's non-trivial to retrieve the assembly name of the project that the designer is part of. It's possible, but I decided to leave it like that since (1) it is just a sample file and (2) the assembly name isn't required to be present in the configuration file (unless the project is strong-named if I'm not mistaken).\n\nSo unless you have a really compelling reason to go the extra mile for that sample file, I'm closing this issue - sorry.",
+    "ClosedDate": "2008-02-24T03:25:58.667-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The name of the assembly where the configuration section can be found should be included in the sample configuration file.",
+    "LastUpdatedDate": "2013-05-16T04:04:56.937-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-02-20T15:27:58.84-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Assembly name missing from sample configuration file",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 898
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm aware of that, but it's non-trivial to retrieve the assembly name of the project that the designer is part of. It's possible, but I decided to leave it like that since (1) it is just a sample file and (2) the assembly name isn't required to be present in the configuration file (unless the project is strong-named if I'm not mistaken).\r\n\r\nSo unless you have a really compelling reason to go the extra mile for that sample file, I'm closing this issue - sorry.",
+      "PostedDate": "2008-02-24T03:25:18.793-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-02-24T03:25:58.667-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:39.543-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:56.937-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

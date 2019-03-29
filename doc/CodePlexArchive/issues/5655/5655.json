@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "This is not possible because the abstract ConfigurationElementCollection requires you to override the GetElementKey&#40;&#41; method, which returns the key of the ConfigurationElements that is in the ConfigurationElementCollection. Therefore, ConfigurationElementCollections must have ConfigurationElements with a key property set.",
+    "ClosedDate": "2009-12-26T10:02:17.08-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Allow non-keyed ConfigurationElementCollection.",
+    "LastUpdatedDate": "2013-05-16T04:04:52.277-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-26T05:21:08.347-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Allow non-keyed ConfigurationElementCollection",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5655
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2060,
+      "FileName": "keyless_collections.patch",
+      "DownloadUrl": ".\\2060"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I've made an attempt to allow key-less collections by automatically generating a key (GUID) for elements in collections that don't have a key property set. It seems to work pretty well. Patch attached.",
+      "PostedDate": "2010-03-25T06:47:55.043-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-03-25T06:47:57.597-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:34.223-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:52.277-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

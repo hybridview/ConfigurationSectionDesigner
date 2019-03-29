@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Installer",
+      "DisplayName": "Installer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2011-03-04T05:22:36.06-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Downloaded and placed msi in c:\\temp. Opened a cmd window as admin, set directory to c:\\temp, ran installer. Installers does its thing but halts unable to find c:\\temp\\readme.htm. The file is not there and you have to cancel the installation.\n \nA workaround is to simply creating an empty readme.htm file in the same directory as the msi file.\n \nWho reads readme's anyways!?! :)",
+    "LastUpdatedDate": "2017-12-09T05:48:20.92-08:00",
+    "PlannedForRelease": "1.7",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-12-06T19:39:31.94-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Installer Asks For Non-Existant Readme",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7652
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Just realized there's one in the zip, but I had moved the msi. Such a hard dependency on the htm file in the installer is not a good thing.",
+      "PostedDate": "2010-12-06T20:21:16.6-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "For posterity, what I did was:\r\nOn Windows 7 Professional and Windows Vista Ultimate (two different machines I've tried), installing Configuration Section Designer 1.6.1  fails with message:\r\n\"Source file not found C:\\users\\ACCOUNT\\AppData\\Local\\Temp\\Temp1_ConfigurationSectionDesigner.zip\\Readme.htm. Verify that the file exists and that you can access it.\"\r\n(where ACCOUNT is your username) \r\nWhat I have to do is go to that location, open the zip file and create a blank Readme.htm inside of it, then click the installer's [Try Again] button for it to complete.",
+      "PostedDate": "2011-02-28T10:12:22.597-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-03-04T05:18:33.29-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 56230.",
+      "PostedDate": "2011-03-04T05:22:36.06-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:29.753-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:49.35-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:20.92-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

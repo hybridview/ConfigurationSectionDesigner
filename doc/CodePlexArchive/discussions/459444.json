@@ -1,0 +1,154 @@
+[
+  {
+    "Id": "1100068",
+    "ThreadId": "459444",
+    "Html": "Hi\r<br />\nI was wondering if this project will be compliant with VS 2013? Right the designer fails.<br />\n",
+    "PostedDate": "2013-09-27T04:43:03.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1110413",
+    "ThreadId": "459444",
+    "Html": "Hope so too, this is an indispensable tool for me.<br />\n",
+    "PostedDate": "2013-10-22T01:18:59.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1116504",
+    "ThreadId": "459444",
+    "Html": "Yes, we need to keep using this tool in VS 2013.<br />\n",
+    "PostedDate": "2013-11-01T06:41:07.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117121",
+    "ThreadId": "459444",
+    "Html": "Hi,\r<br />\n<br />\nI can make an &quot;unofficial&quot; release for VS2013 and post here, hope to get ti working soon.<br />\n",
+    "PostedDate": "2013-11-04T02:48:03.29-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117503",
+    "ThreadId": "459444",
+    "Html": "Hi.\r<br />\nI agree we need this tool for VS 2013. Looking forward to it.<br />\n",
+    "PostedDate": "2013-11-04T23:31:33.58-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1117964",
+    "ThreadId": "459444",
+    "Html": "Hi,<br />\n<br />\n<a href=\"https://csd.codeplex.com/SourceControl/changeset/73980\" rel=\"nofollow\">this changeset</a> add VS2013 initial support.<br />\nI would like to fully support VS2013, including CSD's icons, but unfortunately I'm not good at photoshop, so any help making CSD's icons looks like VS2013 ones is really appreciated. For contributing with icons leave a message on this thread.<br />\n<br />\nRegards, Max<br />\n",
+    "PostedDate": "2013-11-05T11:07:08.23-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1118047",
+    "ThreadId": "459444",
+    "Html": "Great work, do you have a compiled version too?\r<br />\n<br />\nI just downloaded the latest source, it seems that you want to update the icons in: \r<br />\nMain-VS2013\\Source\\Dsl\\Resources\r<br />\n<br />\nThese icons look like they were ripped from an older version of VS, would you mind if they were replaced by rips from icons in current VS?\r<br />\nI guess the icons should be 16x16 bmp, where #FF00FF is the indexed transparency, or would regluar alpha transparent PNGs work too?\r<br />\n<br />\nI extracted all the icons in VS2013, leaving me with these:\r<br />\n<br />\n<img src=\"http://snag.gy/BdckG.jpg\" alt=\"Image\" />\r<br />\n<br />\n(link: <a href=\"http://snag.gy/BdckG.jpg\" rel=\"nofollow\">http://snag.gy/BdckG.jpg</a>)\r<br />\n<br />\nAny icons usable or usable to derive icons from?<br />\n",
+    "PostedDate": "2013-11-05T11:58:09.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1118297",
+    "ThreadId": "459444",
+    "Html": "Hi Altrejoe,\r<br />\n<br />\nI have a compiled version, but since i'm not a project coordinator, i wouldn't create a release, eventually i can share a compiled version via SkyDrive shared folder to, let me know if it could be useful.\r<br />\n<br />\nAbout icons, looks like there are a tons of icons for the DSL project (the editor itself) and a bunch of icons for VSIX and one for the item template. All DSL icons are 16 x 16 and for now can remain unchanged, but VSIX and Template icons should change.<br />\n",
+    "PostedDate": "2013-11-05T14:34:20.87-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1119288",
+    "ThreadId": "459444",
+    "Html": "A compiled version would be great.\r<br />\n<br />\nCan you specify what icons exactly would have to be replaced?\r<br />\n<br />\n<em>(I replied this earlier via mail, but the forum didn't pick that up)</em><br />\n",
+    "PostedDate": "2013-11-06T12:40:59.86-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1120666",
+    "ThreadId": "459444",
+    "Html": "As soon as I get a stable version, I will post a link, now I'm currently working on a small set of features so maybe it can take a while before the first beta.\r<br />\n<br />\nAbout icons, I changed my mind, so I think it's better to change them all. <br />\n",
+    "PostedDate": "2013-11-08T13:41:42.203-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122118",
+    "ThreadId": "459444",
+    "Html": "<a href=\"https://skydrive.live.com/?cid=26C51FBA2140CA25&amp;id=26C51FBA2140CA25%21493\" rel=\"nofollow\">Here</a> there is the first (I'm hoping stable) version of CSD with support for VS2013.<br />\n<br />\nChangelog:<br />\n<br />\n<strong>Beta 1</strong><br />\n<ul>\n<li>VS 2013 support</li>\n<li>VS Theming support</li>\n<li>\nModified Shapes Look &amp; Feel<br />\n</li>\n</ul>\n<strong>Backlog</strong><br />\n<ul>\n<li>Fix Move Up &amp; Move Down selection</li>\n<li>New Attribute editor</li>\n<li>\nNew Add menu item (Add ConfigurationSection, ConfigurationElement, ecc...)<br />\n</li>\n</ul>\nFeedbacks are wellcome.<br />\n",
+    "PostedDate": "2013-11-11T13:47:20.21-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122138",
+    "ThreadId": "459444",
+    "Html": "Works as advertised! You're a hero!\r<br />\n<br />\nIf I'm not mistaken, 'comments' have been added too, or that quite some time ago?\r<br />\nCode generation works, generator version number has been bumped.\r<br />\n<br />\nSome of the icons still in old look and feel.<br />\n",
+    "PostedDate": "2013-11-11T14:44:04.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1122139",
+    "ThreadId": "459444",
+    "Html": "Glad to see that it works ;)\r<br />\n<br />\nWhat comments are you taking about?\r<br />\nFor now no icons has been changed, I need an help to replace them all!\r<br />\n<br />\n(Hey, have you tried to change VS Theme :) )?<br />\n",
+    "PostedDate": "2013-11-11T14:49:04.24-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1201384",
+    "ThreadId": "459444",
+    "Html": "He may be talking about the &quot;Comments&quot; feature I added a while back. It allows you to add comment text boxes to your diagrams.\r<br />\n<br />\n<br />\niLMax,\r<br />\n<br />\nI really appreciate the work you have put into this, and am embarrassed that I have been inactive through it all. It is natural that you should thus be a coordinator. You can now post official downloads, among other things.\r<br />\n<br />\n I started making a &quot;Planned Release&quot; download for the 2013 support, but will let you finish it since you did all of this work. The version number I added is just a place holder, so feel free to change it to the version you have set in the VS 2013 build. Feel free to add your release notes too.\r<br />\n<br />\nThanks again!<br />\n",
+    "PostedDate": "2014-01-31T08:44:33.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1250834",
+    "ThreadId": "459444",
+    "Html": "iLMaX Thanks for this you are amazing!!<br />\n",
+    "PostedDate": "2014-05-29T05:38:39.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1252414",
+    "ThreadId": "459444",
+    "Html": "Thanks Harouny ;) unfortunately I'm running out of time :( so I cannot improve the extension anymore for the next 2/3 months, but I plan to do some work asap.\r<br />\n<br />\nCheers, Max<br />\n",
+    "PostedDate": "2014-06-03T07:49:07.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1302524",
+    "ThreadId": "459444",
+    "Html": "I uploaded a package for VS 2013 (see downloads). This release also attempts to resolve some issues related to &quot;invalid GUID&quot; or &quot;not a vs project&quot;. It has received limited testing, so please report issues.<br />\n",
+    "PostedDate": "2014-09-08T10:57:06.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1302627",
+    "ThreadId": "459444",
+    "Html": "IMPORTANT! After release of 2.0.1.5, I realized that my VStudio settings had partially hidden an issue that I had introduced. My setting was 'currently active document in window auto-selects related file in solution explorer'. Please update to 2.0.1.6 if you are using 2.0.1.5. <br />\n<br />\nThis is the problem for those who are interested. Consider this scenario:<br />\n<ul>\n<li>Solution has 2 or more projects.</li>\n<li>Diagram designer is open.</li>\n<li>You click on a file in a DIFFERENT project.</li>\n<li>\nSave the diagram by File-&gt;Save or Ctrl+s<br />\n</li>\n</ul>\nPROBLEM: The Code generator will hang because it thinks the diagram is in the other project.<br />\n<br />\nSOLUTION: I removed the new function call that used dte.Solution.ActiveSolutionProjects which caused this issue. I now locate the parent project by finding the project object that is hosting the CSD filename. I was able to do this using more API calls, so did not have to activate the ugly recursive code. HOPEFULLY, there are no issues this time.<br />\n<br />\nThe VStudio API is quite a mess when it comes to good documentation...<br />\n",
+    "PostedDate": "2014-09-08T15:22:10.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1302696",
+    "ThreadId": "459444",
+    "Html": "Let me quote your last sentence <a href=\"mailto:@andym1978\" rel=\"nofollow\">@andym1978</a>. No documentation and ugly apis... WTF!<br />\n",
+    "PostedDate": "2014-09-08T23:08:52.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

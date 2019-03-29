@@ -1,0 +1,294 @@
+Index: Main/Source/Dsl/CustomCode/ConfigurationElementCollection.cs
+===================================================================
+--- Main/Source/Dsl/CustomCode/ConfigurationElementCollection.cs	(revision 38819)
++++ Main/Source/Dsl/CustomCode/ConfigurationElementCollection.cs	(working copy)
+@@ -58,14 +58,8 @@
+             else
+             {
+                 // Make sure that the type of the item in this collection has exactly one key property.
+-                int numKeys = this.ItemType.KeyProperties.Count;
+-
+-                if( numKeys == 0 )
++				if( this.ItemType.KeyProperties.Count > 1 )
+                 {
+-                    context.LogError( "The Item Type of this collection does not have a key property.", "InvalidItemKey", this, this.ItemType );
+-                }
+-                else if( numKeys > 1 )
+-                {
+                     context.LogError( "The Item Type of this collection has more than one key property.", "InvalidItemKey", this, this.ItemType );
+                 }
+             }
+Index: Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/CodeFileGeneration.cs
+===================================================================
+--- Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/CodeFileGeneration.cs	(revision 38819)
++++ Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/CodeFileGeneration.cs	(working copy)
+@@ -144,7 +144,7 @@
+                             element.IsReadOnly ? _true : _false
+                         )
+                     );
+-                    isReadOnlyMethod.EndDirectives.Add( EndRegion() );
++                    isReadOnlyMethod.EndDirectives.Add( EndRegion() );					
+ 
+                     // Add all the element's properties
+                     foreach( ConfigurationProperty property in element.Properties )
+@@ -152,6 +152,13 @@
+                         GenerateProperty( element, elementClass, property );
+                     }
+ 
++					// Add automatic key generation for without an explicitly set key property.
++					if ( element.ReferringConfigurationElementCollections.Count > 0 &&
++						 element.KeyProperties.Count == 0 )
++					{
++						GenerateAutomaticKeyProperty( element, elementClass );
++					}
++
+                     if( element.HasCustomChildElements )
+                     {
+                         GenerateCustomChildElementHandler( elementClass );
+Index: Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/ConfigurationElementCollectionGenerator.cs
+===================================================================
+--- Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/ConfigurationElementCollectionGenerator.cs	(revision 38819)
++++ Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/ConfigurationElementCollectionGenerator.cs	(working copy)
+@@ -11,8 +11,13 @@
+         private void GenerateConfigurationElementCollectionCode( ConfigurationElement element, CodeTypeDeclaration elementClass )
+         {
+             ConfigurationElementCollection collectionElement = (ConfigurationElementCollection)element;
+-            ConfigurationProperty keyProperty = collectionElement.ItemType.KeyProperties.Single();
++            ConfigurationProperty keyProperty = null;
+ 
++			if (collectionElement.ItemType.KeyProperties.Count == 1)
++			{
++				keyProperty = collectionElement.ItemType.KeyProperties.Single();
++			}
++
+             string xmlPropertyName = string.Format( "{0}PropertyName", collectionElement.ItemType.Name );
+ 
+             string configurationElementTypeReference = GetTypeReferenceString( typeof( System.Configuration.ConfigurationElement ) );
+@@ -138,18 +143,36 @@
+             getElementKeyMethod.ReturnType = _object;
+             getElementKeyMethod.Name = "GetElementKey";
+             getElementKeyMethod.Parameters.Add( new CodeParameterDeclarationExpression( GlobalReference( typeof( System.Configuration.ConfigurationElement ) ), "element" ) );
+-            getElementKeyMethod.Statements.Add(
+-                new CodeMethodReturnStatement(
+-                    new CodeFieldReferenceExpression(
+-                        new CodeCastExpression(
+-                            GlobalSelfReference( collectionElement.ItemType.FullName ),
+-                            new CodeArgumentReferenceExpression( "element" )
+-                        ),
+-                        keyProperty.Name
+-                    )
+-                )
+-            );
+ 
++			if ( keyProperty != null )
++			{
++				getElementKeyMethod.Statements.Add(
++					new CodeMethodReturnStatement(
++						new CodeFieldReferenceExpression(
++							new CodeCastExpression(
++								GlobalSelfReference(collectionElement.ItemType.FullName),
++								new CodeArgumentReferenceExpression("element")
++							),
++							keyProperty.Name
++						)
++					)
++				);
++			}
++			else
++			{
++				getElementKeyMethod.Statements.Add(
++					new CodeMethodReturnStatement(
++						new CodePropertyReferenceExpression(
++							new CodeCastExpression(
++								GlobalSelfReference(collectionElement.ItemType.FullName),
++								new CodeArgumentReferenceExpression("element")
++							),
++							"AutoGeneratedKey"
++						)
++					)
++				);
++			}
++
+             // Add CreateNewElement method
+             CodeMemberMethod createNewElementMethod = new CodeMemberMethod();
+             elementClass.Members.Add( createNewElementMethod );
+@@ -198,31 +221,39 @@
+                     )
+                 );
+ 
+-                // Add GetItemByKey method
+-                CodeMemberProperty keyIndexerProperty = new CodeMemberProperty();
+-                elementClass.Members.Add( keyIndexerProperty );
+-                keyIndexerProperty.Comments.Add( DocComment( "<summary>" ) );
+-                keyIndexerProperty.Comments.Add( DocComment( string.Format( "Gets the <see cref=\"{0}\"/> with the specified key.", collectionItemTypeReference ) ) );
+-                keyIndexerProperty.Comments.Add( DocComment( "</summary>" ) );
+-                keyIndexerProperty.Comments.Add( DocComment( string.Format( "<param name=\"{0}\">The key of the <see cref=\"{1}\"/> to retrieve.</param>", keyProperty.XmlName, collectionItemTypeReference ) ) );
+-                keyIndexerProperty.CustomAttributes.Add( _generatedCodeAttribute );
+-                keyIndexerProperty.Attributes = MemberAttributes.Public | MemberAttributes.Final | MemberAttributes.Overloaded;
+-                keyIndexerProperty.Type = collectionItemType;
+-                keyIndexerProperty.Name = "Item";
+-                keyIndexerProperty.Parameters.Add( new CodeParameterDeclarationExpression( _object, keyProperty.XmlName ) );
+-                keyIndexerProperty.GetStatements.Add(
+-                    new CodeMethodReturnStatement(
+-                        new CodeCastExpression(
+-                            collectionItemType,
+-                            new CodeMethodInvokeExpression(
+-                                _base,
+-                                "BaseGet",
+-                                new CodeArgumentReferenceExpression( keyProperty.XmlName )
+-                            )
+-                        )
+-                    )
+-                );
+-                keyIndexerProperty.EndDirectives.Add( EndRegion() );
++				if (keyProperty != null)
++				{
++					// Add GetItemByKey method for collections have an explicitly set key property
++					CodeMemberProperty keyIndexerProperty = new CodeMemberProperty();
++					elementClass.Members.Add(keyIndexerProperty);
++					keyIndexerProperty.Comments.Add(DocComment("<summary>"));
++					keyIndexerProperty.Comments.Add(DocComment(string.Format("Gets the <see cref=\"{0}\"/> with the specified key.", collectionItemTypeReference)));
++					keyIndexerProperty.Comments.Add(DocComment("</summary>"));
++					keyIndexerProperty.Comments.Add(DocComment(string.Format("<param name=\"{0}\">The key of the <see cref=\"{1}\"/> to retrieve.</param>", keyProperty.XmlName, collectionItemTypeReference)));
++					keyIndexerProperty.CustomAttributes.Add(_generatedCodeAttribute);
++					keyIndexerProperty.Attributes = MemberAttributes.Public | MemberAttributes.Final | MemberAttributes.Overloaded;
++					keyIndexerProperty.Type = collectionItemType;
++					keyIndexerProperty.Name = "Item";
++					keyIndexerProperty.Parameters.Add(new CodeParameterDeclarationExpression(_object, keyProperty.XmlName));
++					keyIndexerProperty.GetStatements.Add(
++						new CodeMethodReturnStatement(
++							new CodeCastExpression(
++								collectionItemType,
++								new CodeMethodInvokeExpression(
++									_base,
++									"BaseGet",
++									new CodeArgumentReferenceExpression(keyProperty.XmlName)
++								)
++							)
++						)
++					);
++
++					keyIndexerProperty.EndDirectives.Add(EndRegion());
++				}
++				else
++				{
++					locationIndexerProperty.EndDirectives.Add(EndRegion());
++				}
+             }
+ 
+             if( (collectionElement.CodeGenOptions & ConfigurationElementCollectionCodeGenOptions.AddMethod) == ConfigurationElementCollectionCodeGenOptions.AddMethod )
+@@ -307,34 +338,42 @@
+                     )
+                 );
+ 
+-                // Add GetItemByKey method
+-                CodeMemberMethod getItemByKeyMethod = new CodeMemberMethod();
+-                elementClass.Members.Add( getItemByKeyMethod );
+-                getItemByKeyMethod.Comments.Add( DocComment( "<summary>" ) );
+-                getItemByKeyMethod.Comments.Add( DocComment( string.Format( "Gets the <see cref=\"{0}\"/> with the specified key.", collectionItemTypeReference ) ) );
+-                getItemByKeyMethod.Comments.Add( DocComment( "</summary>" ) );
+-                getItemByKeyMethod.Comments.Add( DocComment( string.Format( "<param name=\"{0}\">The key of the <see cref=\"{1}\"/> to retrieve.</param>", keyProperty.XmlName, collectionItemTypeReference ) ) );
+-                getItemByKeyMethod.CustomAttributes.Add( _generatedCodeAttribute );
+-                getItemByKeyMethod.Attributes = MemberAttributes.Public | MemberAttributes.Final;
+-                getItemByKeyMethod.ReturnType = collectionItemType;
+-                getItemByKeyMethod.Name = "GetItemByKey";
+-                getItemByKeyMethod.Parameters.Add( new CodeParameterDeclarationExpression( GlobalReference( keyProperty.TypeName ), keyProperty.XmlName ) );
+-                getItemByKeyMethod.Statements.Add(
+-                    new CodeMethodReturnStatement(
+-                        new CodeCastExpression(
+-                            collectionItemType,
+-                            new CodeMethodInvokeExpression(
+-                                _base,
+-                                "BaseGet",
+-                                new CodeCastExpression(
+-                                    _object,
+-                                    new CodeArgumentReferenceExpression( keyProperty.XmlName )
+-                                )
+-                            )
+-                        )
+-                    )
+-                );
+-                getItemByKeyMethod.EndDirectives.Add( EndRegion() );
++				if (keyProperty != null)
++				{
++					// Add GetItemByKey method for collections have an explicitly set key property
++					CodeMemberMethod getItemByKeyMethod = new CodeMemberMethod();
++					elementClass.Members.Add(getItemByKeyMethod);
++					getItemByKeyMethod.Comments.Add(DocComment("<summary>"));
++					getItemByKeyMethod.Comments.Add(DocComment(string.Format("Gets the <see cref=\"{0}\"/> with the specified key.", collectionItemTypeReference)));
++					getItemByKeyMethod.Comments.Add(DocComment("</summary>"));
++					getItemByKeyMethod.Comments.Add(DocComment(string.Format("<param name=\"{0}\">The key of the <see cref=\"{1}\"/> to retrieve.</param>", keyProperty.XmlName, collectionItemTypeReference)));
++					getItemByKeyMethod.CustomAttributes.Add(_generatedCodeAttribute);
++					getItemByKeyMethod.Attributes = MemberAttributes.Public | MemberAttributes.Final;
++					getItemByKeyMethod.ReturnType = collectionItemType;
++					getItemByKeyMethod.Name = "GetItemByKey";
++					getItemByKeyMethod.Parameters.Add(new CodeParameterDeclarationExpression(GlobalReference(keyProperty.TypeName), keyProperty.XmlName));
++					getItemByKeyMethod.Statements.Add(
++						new CodeMethodReturnStatement(
++							new CodeCastExpression(
++								collectionItemType,
++								new CodeMethodInvokeExpression(
++									_base,
++									"BaseGet",
++									new CodeCastExpression(
++										_object,
++										new CodeArgumentReferenceExpression(keyProperty.XmlName)
++									)
++								)
++							)
++						)
++					);
++
++					getItemByKeyMethod.EndDirectives.Add(EndRegion());
++				}
++				else
++				{
++					getItemAtMethod.EndDirectives.Add(EndRegion());
++				}                
+             }
+         }
+     }
+Index: Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/PropertyCodeGeneration.cs
+===================================================================
+--- Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/PropertyCodeGeneration.cs	(revision 38819)
++++ Main/Source/DslPackage/CustomCode/CodeGeneration/CodeFileGeneration/PropertyCodeGeneration.cs	(working copy)
+@@ -8,6 +8,39 @@
+ {
+     internal partial class CodeFileGenerator
+     {
++		private void GenerateAutomaticKeyProperty(ConfigurationElement element, CodeTypeDeclaration elementClass )
++		{
++			const string FIELD_NAME = "_autoKey";
++
++			CodeMemberField keyField = new CodeMemberField( typeof(Guid), FIELD_NAME );
++
++			keyField.InitExpression = new CodeMethodInvokeExpression(
++											new CodeMethodReferenceExpression(
++												new CodeTypeReferenceExpression( typeof(Guid)), "NewGuid" ));
++
++			CodeMemberProperty keyProperty = new CodeMemberProperty();
++						
++			// Set modifiers, type and name
++			keyProperty.Attributes = MemberAttributes.Public | MemberAttributes.Final;
++			keyProperty.Type = new CodeTypeReference( typeof( Guid ) );
++			keyProperty.Name = "AutoGeneratedKey";
++
++			keyProperty.Comments.Add( DocComment( "<summary>" ) );
++			keyProperty.Comments.Add( DocComment( "An automatically generated key for this element.") );
++			keyProperty.Comments.Add( DocComment( "</summary>" ) );
++
++			keyProperty.HasGet = true;
++
++			keyProperty.GetStatements.Add( new CodeMethodReturnStatement(
++				new CodeFieldReferenceExpression( new CodeThisReferenceExpression(), FIELD_NAME )));
++
++			keyField.StartDirectives.Add( Region( string.Format( "{0} Property", keyProperty.Name )));
++			keyProperty.EndDirectives.Add( EndRegion() );
++
++			elementClass.Members.Add( keyField );
++			elementClass.Members.Add( keyProperty );
++		}
++
+         private void GenerateProperty( ConfigurationElement element, CodeTypeDeclaration elementClass, ConfigurationProperty property )
+         {
+             CodeAttributeDeclarationCollection customAttributes = new CodeAttributeDeclarationCollection();

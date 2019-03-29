@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1297940",
+    "ThreadId": "564900",
+    "Html": "It's been a long time since my last commit on this code base, I think now it's time to do some more work on this extension (and maybe a VS14 version ;) ).\r<br />\n<br />\nActually the code behind code generation does not allows extensibility in fact there are no hooks to pull in your custom code generator and this (IMO) could be super useful to extend/modify the default behavior. I really would like to give the end user the capability to customize the generated code via a simple extensibility model based on T4 templates similar to <a href=\"http://www.hanselman.com/blog/ModifyingTheDefaultCodeGenerationscaffoldingTemplatesInASPNETMVC.aspx\" rel=\"nofollow\">MVC scaffolding customization</a>\r<br />\n<br />\nThe point of this post (if any) is to get some feedback from the community if this improvement can be a nice addition to this extension.\r<br />\n<br />\nThe other point is a call for developers :) if anyone would like to waste a small (no, definitely not small at all, maybe large) amount of time working on the VS extensibility model (I love you DTE) and on the architecture side of this small feature to achieve a good result. Any help/feedback/suggestion is greatly appreciated.\r<br />\n<br />\nMax<br />\n",
+    "PostedDate": "2014-09-01T14:37:40.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298270",
+    "ThreadId": "564900",
+    "Html": "I really like your ideas Max. At work, we have been working on a massive configuration project and having flexibility, say, for loading settings from an XML file instead of web.config, would be very useful. Custom code generators would allow for such functionality.\r<br />\n<br />\nThanks again for your contributions. We all encounter points in our life where time is scarce, so getting some extra help once in a while is important for these open source projects. My new baby is almost 6 months old, so I may have some spare time in the near future for contributions.<br />\n",
+    "PostedDate": "2014-09-02T11:45:40.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1298273",
+    "ThreadId": "564900",
+    "Html": "Ok Andrew,\r<br />\n<br />\nI hope to discuss some architectural aspect with you (and the whole community as well) soon :)\r<br />\n<br />\nToday I was planning to start coding again, I would like to target some UI enhancements (especially for the Attribute editor) and some fixes (Move Up &amp; Move down command).\r<br />\n<br />\nMax<br />\n",
+    "PostedDate": "2014-09-02T11:50:59.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

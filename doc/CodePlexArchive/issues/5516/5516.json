@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Just keep in mind that CSD writes the whole XML schema for you, which is what provides the intellisense in the primary configuration file. Without CSD you wouldn&#39;t have any intellisense at all unless you wrote the schema manually.After researching the issue, I&#39;ve come to the conclusion that implementing support for intellisense in external files is more or less impossible. However, anybody may feel free to prove me wrong by uploading a patch to the contrary.",
+    "ClosedDate": "2009-12-24T15:34:11.88-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When editing the Xml configuration the intellisense is only available within the primary configuration file. When using external config files using the configSource mechanism the intellisence does not work anymore.\nI would love to keep using CSD its a great tool.",
+    "LastUpdatedDate": "2013-05-16T04:04:54.563-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-11-28T09:06:35.2-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Intellisense breaks when having multiple config files",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5516
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

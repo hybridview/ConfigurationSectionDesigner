@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1019984",
+    "ThreadId": "437734",
+    "Html": "I have an optional element hanging off my configuration called cnfNotes; my intention is to have this node basically be a free text field like so:<br />\n<pre><code>&lt;account id=&quot;someid&quot; name=&quot;somename&quot; ...&gt;\n    &lt;bankInfo id=&quot;someid&quot; name=&quot;somename&quot;... /&gt;\n    &lt;notes&gt;\n        blah blah blah...\n    &lt;/notes&gt;\n&lt;/account&gt;</code></pre>\n\n...but I cannot figure out how to access this value programmatically.  Is this not supported?<br />\n",
+    "PostedDate": "2013-03-23T06:50:25.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1027126",
+    "ThreadId": "437734",
+    "Html": "It would be also nice if CSD would allow to use CData elements.\r<br />\n<br />\nI found sample implementation here \r<br />\n<a href=\"http://devpinoy.org/blogs/jakelite/archive/2009/03/22/how-to-add-cdata-or-text-in-a-configurationelement.aspx\" rel=\"nofollow\">Sample article</a><br />\n",
+    "PostedDate": "2013-04-08T03:57:03.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1027141",
+    "ThreadId": "437734",
+    "Html": "Ok I missed that this is currently possible by setting flag &quot;Has Custom Child Elements&quot; to true.\r<br />\nIf I have for example configuration element named OperationElement with such flag I have to write partial class<br />\n<pre><code>public partial class OperationElement\n{\n    public string Script { get; set; }\n    private bool HandleUnrecognizedElement(string elementName, global::System.Xml.XmlReader reader)\n    {\n        this.Script = reader.ReadString();\n        return true;\n    }\n}\n</code></pre>\n\nAnd all works as expected<br />\n",
+    "PostedDate": "2013-04-08T04:34:33.137-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215140",
+    "ThreadId": "437734",
+    "Html": "+1 for element text from body<br />\n",
+    "PostedDate": "2014-02-26T06:29:40.587-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

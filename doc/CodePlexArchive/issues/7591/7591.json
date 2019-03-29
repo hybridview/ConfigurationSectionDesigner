@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Installer",
+      "DisplayName": "Installer"
+    },
+    "ClosedComment": "The changes I posted today may have fixed this issue. Download the 1.6.2 beta from the downloads page. If this installer doesn&#39;t work for everyone, this issue can be reopened. It worked great on my machine.",
+    "ClosedDate": "2011-06-30T12:25:44.543-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The installer does not ask for elevated priviledges when installing and installation fail because of this. It needs this even when running as administrator on the operating systems. The settings are ignored on operating systems not supporting this.\n \nFix:\nThe installer package does not display the property needed for this but it is in the msi text\n \nOpen the setup \nFind\n       \"MsiBootstrapper\"\n        {\n        \"LangId\" = \"3:1033\"\n        \"RequiresElevation\" = \"11:FALSE\"\n        }\n \nChange the above to this\n       \"MsiBootstrapper\"\n        {\n        \"LangId\" = \"3:1033\"\n        \"RequiresElevation\" = \"11:TRUE\"\n        }\n \nThe installer will now ask for elevated priviledges on windows 7 and server 2008",
+    "LastUpdatedDate": "2013-05-16T04:04:49.547-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-11-24T23:25:34.983-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Installer does not ask for elevated priviledges (Windows 7 + Server 2008 issue)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 7591
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "If you can give me the fix in the WiX code the installer uses, I'll implement it. Otherwise just run it from an elevated command prompt or some other elevated application. I might look deeper into it later.",
+      "PostedDate": "2011-03-04T05:41:57.15-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I am not an expert in WiX'\r\n\r\nin the package the InstallPrivileges needs to be set to elevated\r\nin a custom action it might need to be set to to no for impersonation to not impersonate the current user",
+      "PostedDate": "2011-03-10T01:43:51.277-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Having this issue too, using Win7 32b.",
+      "PostedDate": "2011-03-31T08:55:58.977-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Workaround until fixed:\r\n1. search for cmd in the start menu\r\n2. rightclick and select \"Run as administrator\" which makes the command prompt both elevated and with administrative priviledges\r\n3. go to the folder that you downloaded the installer into and run it\r\n",
+      "PostedDate": "2011-03-31T10:01:21.43-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I think we are going to need a boostrapper to elevate the installer. I've looked everywhere for info and this is the only working solution I've found. Surprisingly, I've found WiX help to be a little lacking, and have not been able to find examples of how to do this. Don't other developers run into this issue??? It may be as simple as upgrading to Wix 3.5, but I'll have to see.",
+      "PostedDate": "2011-06-30T08:25:50.253-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-30T12:25:44.543-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:29.957-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:49.547-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

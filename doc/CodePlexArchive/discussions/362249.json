@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "858277",
+    "ThreadId": "362249",
+    "Html": "\r\n<p>Firstly, thanks for the great work!</p>\r\n<p>I'm having a problem with optional attributes. This may not be an issue with CSD but with the underlying Configuration subsystem (or my understanding of it!).</p>\r\n<p>I have an optional boolean attribute and I want to know whether it has been supplied or not in the config file. If it hasn't, then I want my code to default it to true. I don't see any way to see if the attribute exists.</p>\r\n<p>Any help much appreciated!</p>\r\n",
+    "PostedDate": "2012-07-06T03:44:52.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "862164",
+    "ThreadId": "362249",
+    "Html": "<p>You can set default values for attributes in the CSD designer. If the attribute is not found in your config file, the default value will be used. Was this the behavior that &nbsp;you wanted?</p>",
+    "PostedDate": "2012-07-12T13:34:08.237-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "704418",
+    "ThreadId": "281097",
+    "Html": "\r\n<p>I was able to download, install, create my own custom sections, validate them, see intellisense work in the config file generated.</p>\r\n<p>How would I add this to another project. Lets say I have a console application which would need custom sections created by the CSD project. I don't seem to find any documentation around it. Also I tried to get the .csd.cs file, add it to my Console application,\r\n that does not seem to work. Please assist.</p>\r\n",
+    "PostedDate": "2011-11-28T14:03:57.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "712590",
+    "ThreadId": "281097",
+    "Html": "<p>Could you please be more specific: Did it work in ANY project at all? &nbsp;If yes, did you copy over ALL generated files?</p>",
+    "PostedDate": "2011-12-15T01:50:58.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

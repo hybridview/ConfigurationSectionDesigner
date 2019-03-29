@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed in latest release.",
+    "ClosedDate": "2012-06-21T12:17:54.183-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When selecting the ICollection code generation option for a COnfigurationElementCollection, the generated XML documentation is incorrectly generated.  The summary opening tag is missing the closing angle bracket.  This generates a badly formed XML warning. Minor annoyance, except when you like to compile with Treat Errors As Warnings turned on, it is frustrating.\n \nUsing V2.0.0 r4 on Visual Studio 2010 SP1 (v10.0.40219.1)",
+    "LastUpdatedDate": "2013-05-16T04:04:46.957-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-02-13T16:51:57.407-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ConfigurationElementCollection Code Generation Options broken for ICollections",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9168
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I fixed this in source code. Will be part of next release.",
+      "PostedDate": "2012-03-16T07:27:42.057-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-21T12:17:54.183-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:26.403-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:46.957-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

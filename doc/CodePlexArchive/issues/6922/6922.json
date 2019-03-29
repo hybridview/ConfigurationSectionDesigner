@@ -1,0 +1,326 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "... and I reopened the wrong issue. I should have had my morning coffee first. Closing again...",
+    "ClosedDate": "2011-06-24T06:11:35.777-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have downloaded the latest source code and built the project in Main-2010 folder. I installed the created vsix file.\n \nI opened VS2010 but could not find new project template. I then created a new class library project and added a new item to it using teh Configuration Section Designer item. I am able to access the toolbox items. But when I insert a configuration element and right click on it to add attributes, I get the following error and I am not able to do any further.\n \n1. Error on right-clicking on a configuration element or right-clicking on the \"Configuration Section Model\" item of the Configuration Section Explorer view: \"Value does not fall within the expected range\"\n2. Error on right-clicking on empty area on the designer or right-clicking on any child items of \"Configuration Section Model\" item of the Configuration Section Explorer view: \"The parameter is incorrect (Exception from HRESULT: 0x80070057 (E_INVALIDARG))\"\n \nI am not able to do anything further. Is this a configuration error or a known problem?\n \nTo Add, I have VS2008 also installed on the same PC and the configuration section designer is working fine in VS2008.\n \nThanks\nRavi",
+    "LastUpdatedDate": "2013-05-16T04:04:50.1-07:00",
+    "PlannedForRelease": "2.0.0 r1 for Visual Studio 2010",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-06-30T08:14:48.923-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Right-click on the VS 2010 designer shows error",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 23,
+    "Id": 6922
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2644,
+      "FileName": "ConfigurationSectionDesigner.DslPackage.vsix.zip",
+      "DownloadUrl": ".\\2644"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Got the same problem. I googled about the HRESULT. it is FileNotFoundException. I opened fusionlog and even tried to debug but I didn't found the missed dependency. I'm guessing it is a call for bad resource.. Waiting for final version 2010 :S",
+      "PostedDate": "2010-07-20T14:36:29.943-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-08-06T04:41:04.257-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-08-09T13:26:44.953-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-08-16T11:48:38.347-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-08-30T04:19:58.207-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-09-01T13:45:22.033-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-10-07T17:49:17.34-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Same problem here. Visual Studio 2010 Ultimate, Windows 7 Ulitima x64",
+      "PostedDate": "2010-10-07T17:50:28.023-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-10-20T06:31:13.183-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-10-20T23:51:51.257-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Same problem here. Visual Studio 2010, Windows Vista x64",
+      "PostedDate": "2010-10-20T23:52:09.82-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-11-10T06:39:44.99-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I encountered the same problem as well. I wondering that my csd projected created in VS2008 is causing problems. Looking at the source of my .csd file I see a reference http://schemas.microsoft.com/VisualStudio/2010/DslTools/Core if that has anything to do with this problem.",
+      "PostedDate": "2010-11-16T12:25:52.787-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-11-16T12:35:35.913-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hello,\r\n\r\nI am also using the VS2010 version and I also encounter the right-click problem in the Designer. Been having this problem for every VM that I test it on. I was about to give up using the tool because of the error, so I decided to try it for the last time on another VM. This time the CSD tool worked perfectly and I can see/use the context menu after a right click. I don't know why it worked in this other VM because all of the VMs I tested it on came from the same image.\r\n\r\nDoes anyone have any idea on what's causing this error? Do you have any suggestions on how to fix this?\r\n\r\nThanks.",
+      "PostedDate": "2010-11-22T05:52:14.213-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-11-22T11:16:29.073-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-11-30T04:43:18.413-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Same problem here ",
+      "PostedDate": "2010-12-05T11:19:08.913-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-12-05T11:19:28.647-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-12-24T06:13:44.177-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-12-31T03:04:08.077-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-01-07T01:32:28.78-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-01-25T04:29:57.937-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-01-26T08:44:42.887-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-02-23T01:35:24.553-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-04-05T16:27:17.95-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-05-10T07:32:38.273-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-05-13T10:53:14.773-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Same problem. I get \"Value does not fall within the expected range\" whenever I right-click anywhere on the diagram. I get \"The parameter is incorrect (Exception from HRESULT: 0x80070057 (E_INVALIDARG))\" when right-clicking on anything in the Configuration Section Explorer.  Makes it impossible to use the tool.\r\nEverything worked fine in VS 2008. I'm now running VS2010 Premium on Win7 x64.",
+      "PostedDate": "2011-05-13T10:58:24.247-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-05-17T08:16:12.417-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I fixed this issue by creating a new DSL solution (Using the VStudio wizard) and carefully moving the old files into the new projects. Now, the designer works perfectly. I spent hours trying to fix the existing project without any success. Recreating the whole solution and moving the files in took only an hour.\r\n\r\nTo fix the file generation problem for solutions containing \"solution folders\", I made changes to 2 files, which I am attaching to this post.",
+      "PostedDate": "2011-05-17T08:16:14.4-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Could you maybe also attach the binaries/installer?  I'm having trouble opening the DSL project.",
+      "PostedDate": "2011-05-17T10:48:27.57-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-05-19T10:16:54.857-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Here is the whole solution with the updates that fixed these issues. You can use it to build a vsix package that will install a working CSD (working right-click, solution folders support, and item templates now visible). The primary fix in this upload is a rebuilt VsPackage project file. Let me know if this works for anyone. I hope I didn't make changes to my system throughout this process that will cause it to only work for me. Also, perhaps someone might want to take the time to figure out what attributes in the original project file caused the right-click issue. Then, the codeplex version can be fixed.",
+      "PostedDate": "2011-05-19T10:16:56.813-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-05-19T10:18:35.21-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Here is the compiled VSIX package created from the source files I posted. I hope this works for people.",
+      "PostedDate": "2011-05-19T10:18:36.733-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "andym1978: Your vsix was installed flawlessly. I didn't use the designer for more complex tasks yet (like custom types, validators or converters), but for the basic tasks it works like a charm. Many thanks for you efforts.",
+      "PostedDate": "2011-06-09T03:18:33.79-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "@andym1978 Sorry for the late reply, but your fix works like a charm! Thank you very much.",
+      "PostedDate": "2011-06-13T00:47:55.033-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-23T14:42:16.953-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-23T14:46:06.107-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-23T14:47:18.203-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-23T14:47:24.253-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-23T14:47:28.67-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-23T14:48:54.44-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Until a release is posted, you can download the VSIX from the attachments section at the top of this post.",
+      "PostedDate": "2011-06-23T14:48:56.583-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have rebuilt the entire project file to resolve this issue. Hopefully, this should resolve the issue for everyone. Download the latest source code to compile the VSIX (until a build is released).\r\n\r\n\n\n** Closed by andym1978 6/23/2011 2:46 PM",
+      "PostedDate": "2011-06-24T06:08:12.67-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I shouldn't have closed this yet. The 1.x versions have not yet received this fix (only 2.x). I will try to have that ready soon.",
+      "PostedDate": "2011-06-24T06:08:13.843-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-24T06:11:35.777-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-24T06:37:04.3-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-24T06:38:16.563-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Adding the correct VSIX file attachment. Previous one was missing MSPL.txt.",
+      "PostedDate": "2011-06-24T06:38:18.12-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-24T09:46:56.813-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-24T09:48:26.04-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Latest build containing a fix for project locating in certain scenarios...",
+      "PostedDate": "2011-06-24T09:48:27.59-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:30.64-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:50.1-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

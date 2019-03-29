@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "170993",
+    "ThreadId": "51025",
+    "Html": "Hi,<div><br></div><div>Is there a way to use custom enum types in the CSD?</div><div><br></div><div>If there is no direct way, does someone have a &quot;best practice&quot; for doing it?</div><div><br></div><div>Thanks</div>",
+    "PostedDate": "2009-03-23T13:14:24.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "173357",
+    "ThreadId": "51025",
+    "Html": "It's possible, you can define a custom enum type in the Configuration Section Explorer tool window (see &quot;Defining Types&quot; on the homepage).<br>\r\n<br>\r\nCheers,<br>\r\n<br>\r\nJelle\r\n",
+    "PostedDate": "2009-03-30T00:31:37.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "173535",
+    "ThreadId": "51025",
+    "Html": "Thanks,<div><br></div><div>I scanned that page a little too quickly :)</div><div><br></div><div>-A</div>",
+    "PostedDate": "2009-03-30T09:50:48.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

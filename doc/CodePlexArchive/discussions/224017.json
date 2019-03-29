@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "482065",
+    "ThreadId": "224017",
+    "Html": "<p>I installed the VS 2010 version on a Win7 Pro x64 system with VS 2010 (v10.0.30319.1 RTMRel). Can't see anything related to CSD under either Add/New Item... (for any platform) or under Add/New Project...</p>\r\n<p>I used the default installation directory, and &quot;C:\\Program Files (x86)\\Configuration Section Designer&quot; is there, contains among other things two DLLs and a TextTemplates directories.&nbsp;</p>\r\n<p>What am I missing? What can I check?</p>",
+    "PostedDate": "2010-08-18T15:12:50.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "521541",
+    "ThreadId": "224017",
+    "Html": "\r\n<p>This might be related to <a href=\"http://csd.codeplex.com/workitem/6127\">http://csd.codeplex.com/workitem/6127</a>&nbsp;if your version of VS is non-English.</p>\r\n",
+    "PostedDate": "2010-11-13T10:24:40.117-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "608686",
+    "ThreadId": "224017",
+    "Html": "<p>I am experiencing the same issue. I have installed the VS 2010 SDK and the VS 2010 Modeling SDK, built a release version of the CSD solution and installed the vsix. The extension manager indicates that it is installed. I have uninstalled and reinstalled from the extension manger, placed the zip project template in program files and in My Documents to no avail. The project type simply does not show up. I have restarted VS multiple times...nothing.</p>\r\n<p>Can anyone assist?</p>",
+    "PostedDate": "2011-05-06T12:52:38.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "610263",
+    "ThreadId": "224017",
+    "Html": "<p>It would be useful to know if anyone has ever gotten this to work in VS 2010. From my research, it seems to be a problem with the VSIX package generation (I already found some bugs with image resource and pkgdef paths). The whole package is very complex, which makes it hard to troubleshoot. &nbsp;I've already spent too much time trying to fix it, so&nbsp;may try to start a new project from scratch with the hope of simplifying everything (While learning more about DSL and VStudio extensions). I really love this project, but the VStudio 2010 related issues haven't been touched in a very long time. It's up to us fans to get this project going again.</p>",
+    "PostedDate": "2011-05-10T08:10:23.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "611154",
+    "ThreadId": "224017",
+    "Html": "<p>I finally bit the bullet and learned how DSL packages work in Visual Studio 2010. It turns out that the \"complex\" code is all due to t4 templates, and is present even when creating a new DSL project. I created a new solution from scratch and tried adding files from the existing project. This fixed the right-click problem and made the item template show up in VS create new item, but I'm now running into a snag when it actually adds the files upon the aformentioned \"VS create new item\". It's a serialization error. I'm still working on it, but it shouldn't be too difficult.</p>",
+    "PostedDate": "2011-05-11T12:03:40.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "613989",
+    "ThreadId": "224017",
+    "Html": "<p>FYI&gt; I got it all working perfectly. My serialization issue was a dumb mistake (forget to set&nbsp;ReplaceParameters to true in the CSharp.tt file for the first project item). Just use the DSL new project wizard and carefully move the files over.</p>",
+    "PostedDate": "2011-05-17T08:09:39.023-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "616225",
+    "ThreadId": "224017",
+    "Html": "<p>Where can I get the VS2010 installation version?</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2011-05-21T07:14:22.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "616905",
+    "ThreadId": "224017",
+    "Html": "<p>I posted my files in the Issue Tracker at the following link:</p>\n<p>[ REMOVED LINK ]</p>\n<p>[ Updated 201000714 by andym1978 ]</p>\n<p>A VS2010 version is available in the Downloads section. Go there to find the latest.</p>\n<p><a href=\"http://csd.codeplex.com/releases\">http://csd.codeplex.com/releases</a></p>",
+    "PostedDate": "2011-05-23T11:07:31.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "761629",
+    "ThreadId": "224017",
+    "Html": "<p>I still can't see the project template.</p>",
+    "PostedDate": "2012-02-13T16:59:55.457-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "763139",
+    "ThreadId": "224017",
+    "Html": "<p>Which version of Visual Studio are you using? Also, which version of this tool are you using?</p>",
+    "PostedDate": "2012-02-14T06:10:19.327-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "771759",
+    "ThreadId": "224017",
+    "Html": "<p>I have installed and used the tool in VS2010. In my system in a solution I say I want to add a new project; in the \"Add New Project\" dialog box under \"Installed Templates\" I open the Visual C# header to show the folder&nbsp;list that has \"Windows\" and \"Silverlight\" and similar folders. Among them is a \"General\" folder. In the \"General\" folder is \"Configuration Section Project.\"</p>",
+    "PostedDate": "2012-02-16T16:39:06.9-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

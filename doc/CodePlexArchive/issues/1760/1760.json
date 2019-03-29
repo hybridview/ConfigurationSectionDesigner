@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Cannot reproduce",
+    "ClosedDate": "2008-08-08T09:02:22.43-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\n \nIn my application I create new AppDomains and each AppDomain has its own config file. When I use the generated code in an AppDomain different then the default one the \"Instance\" property returns null, other configurations (wcf, appsettings...) are working correctly.\n \nIs this a bug or am I missing something?\n \nThanks,\nSteven Hillaert",
+    "LastUpdatedDate": "2013-05-16T04:04:56.313-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-04-11T00:22:04.113-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Instance returns null when used in different AppDomain",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 1760
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi Steven,\r\n\r\nSorry for getting back to you so late. I've tried out your scenario and couldn't reproduce it. I've created a separate AppDomain with a different config file, and in that AppDomain I call the \"Instance\" property - and it correctly returns a configuration instance I can use to read out the alternative config file...\r\n\r\nCan you let me know more details or upload a sample so I can double check?\r\n\r\nThanks!\r\n\r\nJelle",
+      "PostedDate": "2008-04-29T07:07:01.587-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-08-08T09:02:22.43-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:38.84-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:56.313-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "266200",
+    "ThreadId": "77835",
+    "Html": "<p>Hi all</p>\r\n<p>Nice product, one problem - Ive created a new config section designer, can add section configs, collections and elements but the .cs, .config and .xsd file are empty when I save.....plus how do I then use this designer in my own App.config.</p>\r\n<p>Thank you.</p>\r\n<p>GE</p>",
+    "PostedDate": "2009-12-11T05:07:05.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266230",
+    "ThreadId": "77835",
+    "Html": "<p>Check your error list. Does it show any problems? It should tell you if there's something that's wrong.</p>",
+    "PostedDate": "2009-12-11T06:22:35.45-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266233",
+    "ThreadId": "77835",
+    "Html": "<p>I get:<br><br>Warning&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;The custom tool 'CsdFileGenerator' failed.&nbsp; Project unavailable.&nbsp;&nbsp;&nbsp; ConfigurationSectionDesigner.csd&nbsp;&nbsp;&nbsp;</p>\r\n<p>Warning&nbsp;&nbsp; &nbsp;2&nbsp;&nbsp; &nbsp;The 'codeGenOptions' attribute is invalid - The value 'Singleton, XmlnsProperty' is invalid according to its datatype 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner:ConfigurationSectionCodeGenOptions' - The Enumeration constraint failed.&nbsp;&nbsp; ConfigurationSectionDesigner.csd</p>\r\n<p>Warning&nbsp;&nbsp; &nbsp;3&nbsp;&nbsp; &nbsp;The 'codeGenOptions' attribute is invalid - The value 'Indexer, AddMethod, RemoveMethod, GetItemMethods' is invalid according to its datatype 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner:ConfigurationElementCollectionCodeGenOptions' - The Enumeration constraint failed.&nbsp;&nbsp; ConfigurationSectionDesigner.csd</p>\r\n<p>GE</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-11T06:29:37.587-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266237",
+    "ThreadId": "77835",
+    "Html": "<p>I've changed the Property &quot;codeGenOptions&quot; to be None now so I only get the top error now.</p>\r\n<p>GE</p>",
+    "PostedDate": "2009-12-11T06:37:58.747-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266250",
+    "ThreadId": "77835",
+    "Html": "<p>The codeGenOptions warnings are harmless, they are shown because Microsoft attempts to place more than one enum value in the XML while the XML schema they generate says it only allows one.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-11T06:53:35.333-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266251",
+    "ThreadId": "77835",
+    "Html": "<p>The files are still empty though.</p>\r\n<p>GE</p>",
+    "PostedDate": "2009-12-11T06:56:11.223-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266257",
+    "ThreadId": "77835",
+    "Html": "<p>To fix the above - exit Visual Studio, reopen Solution, select the .csd file, right click, select &quot;Run Custom Tool&quot;.</p>\r\n<p>GE</p>",
+    "PostedDate": "2009-12-11T07:14:38.19-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266573",
+    "ThreadId": "77835",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>garethevans1986 wrote:</strong><br>\r\n<p>how do I then use this designer in my own App.config.</p>\r\n</blockquote>\r\n<p>I wrote <a href=\"http://csd.codeplex.com/Thread/View.aspx?ThreadId=61849\">an example in a different thread</a> that might help you figure out the way. I hope that helps. If not, feel free to ask some more. I'll be happy to be of assistance.</p>",
+    "PostedDate": "2009-12-12T01:54:03.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

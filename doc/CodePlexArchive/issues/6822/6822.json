@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Just added to gallery.",
+    "ClosedDate": "2011-07-15T13:00:16.413-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "To be done with final release of 2.0",
+    "LastUpdatedDate": "2013-05-16T04:04:50.847-07:00",
+    "PlannedForRelease": "2.0.0 Release for Visual Studio 2010",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-06-04T16:17:19.303-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add to Extension Gallery",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 6,
+    "Id": 6822
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I was looking through the VStudio extension gallery and found an extension recently posted that aims to do what CSD does. Let's give them some friendly competition sooner than later. :)\r\nhttp://visualstudiogallery.msdn.microsoft.com/def289f1-377d-4cd0-802a-80c8be8b6758?SRC=VSIDE\r\n",
+      "PostedDate": "2011-06-28T13:32:45.95-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-06T17:15:14.637-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-07T01:03:18.41-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "VSIX has been added to the gallery!\r\n\r\nhttp://visualstudiogallery.msdn.microsoft.com/2a69f74e-83df-4eb0-8cac-cd83b451cd1d\r\n",
+      "PostedDate": "2011-07-15T12:59:49.437-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-15T13:00:16.413-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:31.707-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:50.847-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

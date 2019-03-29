@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "249833",
+    "ThreadId": "73125",
+    "Html": "<div id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl00_BodyDiv\">After installation of&nbsp;CSD and I am unable to see&nbsp;ConfigurationSectionDesigner project&nbsp;or&nbsp;Configuration Section Designer item in&nbsp;an existing project.<br>Please help me out.</div>",
+    "PostedDate": "2009-10-26T10:22:45.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "257428",
+    "ThreadId": "73125",
+    "Html": "<p>Hello,</p>\r\n<p>&nbsp; I got the same issue this morning. I solve it with the help of this post : <a href=\"http://csd.codeplex.com/Thread/View.aspx?ThreadId=26790\">http://csd.codeplex.com/Thread/View.aspx?ThreadId=26790</a></p>\r\n<p>&nbsp;Just copy</p>\r\n<ul>\r\n<li>&nbsp;ConfigurationSectionProject.zip from &quot;<span style=\"font-family:Consolas, Courier New, Courier, Monospace\">C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE\\ProjectTemplates\\CSharp\\1033\\&quot; to &quot;&lt;My Documents&gt;\\Visual Studio 2008\\Templates\\ProjectTemplates\\Visual C#\\&quot;</span></li>\r\n<li>ConfigurationSectionDesigner.zip from &quot;<span style=\"font-family:Consolas, Courier New, Courier, Monospace\">C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE\\ItemTemplates\\CSharp\\1033&quot; to &quot;&lt;My Documents&gt;\\Visual Studio 2008\\Templates\\ItemTemplate\\Visual C#\\&quot;</span></li>\r\n</ul>\r\n<p>Hope this will work for you too</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-11-16T02:24:29.99-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

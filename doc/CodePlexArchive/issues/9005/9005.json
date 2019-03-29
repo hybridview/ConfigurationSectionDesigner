@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Tried creating a pretty basic configuration: a single collection of strings. The files generated fine, and I copied over the config info to my web.config. However at run time, when accessing values, I get this exception: \n \n\"An error occurred creating the configuration section handler for javaScriptSettings: Could not load file or assembly 'WebDemo.Lib' or one of its dependencies. The system cannot find the file specified.\"\n \nWhat's going on here? I've double and triple checked that I copied over the config section handlers properly.",
+    "LastUpdatedDate": "2014-09-12T13:09:58.223-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-12-13T10:06:57.89-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Could not load file or assembly... The system cannot find the file specified.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 9005
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Your config must be failing during the configSections load where it loads all assemblies specified in the \"type\" attributes (example below). Make sure that all assemblies that are references by your WebDemo.Lib are also referenced in your web project, since CSD needs to see them all.\r\n\r\n<?xml version=\"1.0\"?>\r\n<configuration>\r\n  <configSections>\r\n    <section name=\"MyConfigSection\" type=\"MyLib.MyConfigSection, MyLib\"/>",
+      "PostedDate": "2012-01-10T07:27:14.643-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-02-20T09:00:03.587-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I had exactly the same issue:\r\nthe workaround is to change type=\"MyLib.MyConfigSection, MyLib\" to type=\"MyLib.MyConfigSection, WebDemo\" as WebDemo is your assembly name!!",
+      "PostedDate": "2012-02-20T09:03:17.597-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "NOTE: You'd only use WebDemo as your assembly name IF the WebDemo assembly contained the configuration section.\r\n\r\nIf this is the case, it's generally best practice to match namespace naming conventions with assembly name to avoid confusion. My configs always follow the \"MyLib.MyConfigSection, MyLib\" pattern (as do many Microsoft open source projects).",
+      "PostedDate": "2012-06-21T11:56:06.453-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This relates to issue 8662 by the way.",
+      "PostedDate": "2012-06-21T11:56:51.607-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:26.74-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Might make this more clear in documentation, but resolving for now as the tool is not at fault.",
+      "PostedDate": "2014-09-12T13:09:58.223-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

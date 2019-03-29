@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "It would be nice to be able to support other configuration designs, such as those used by ASPNetCore. The tool would be able to generate simple config classes that do not inherit from System.Configuration, and would support loading/validation of JSON config files.\n\n This would be a significant project as CSD is geared towards System.Configuration. We would need to support validation/constraint attributes like those used for System.Configuration. Or perhaps, a simple implementation might be beneficial. Something for a good discussion.",
+    "LastUpdatedDate": "2016-09-13T09:11:17.677-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2016-09-13T09:11:17.677-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support AspNetCore style configuration (JSON).",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 11114
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

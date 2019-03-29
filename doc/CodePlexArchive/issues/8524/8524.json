@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "This feature is now added and submitted to TFS. Will be part of next release.",
+    "ClosedDate": "2012-06-28T10:39:02.137-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I can't see an easy way to reorder Elements and Attributes.  The xsd that is generated causes all elements to be in sequence, which in my case is not desired.  I feel there should be a way manually re-order elements and attributes, or have a way to set how the elements appear in xsd (ie sequence, choice, all).  \n \nThanks",
+    "LastUpdatedDate": "2013-05-16T04:04:48.033-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-07-27T05:24:07.597-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Reorder Elements and Attributes",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 8524
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This would be a nice feature. I will look into it.",
+      "PostedDate": "2011-07-27T18:13:48.317-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-02-24T01:33:03.827-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "FYI: The workaround I currently use for reordering is to manually edit the CSD file. This is the way to go until this feature can be added.",
+      "PostedDate": "2012-06-21T12:03:23.253-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-28T10:39:02.137-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:28.56-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:48.033-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

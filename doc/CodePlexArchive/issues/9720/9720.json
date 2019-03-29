@@ -1,0 +1,85 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed in latest changeset. Will be included in next release &#40;after 2.0.0.8&#41;.",
+    "ClosedDate": "2012-12-19T07:08:37.93-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Added a ConfigurationElement, used the < and > characters in the Documentation attribute in the Config Section Designer properties for an attribute in the ConfigurationElement. The resulting XSD did not escape these characters, creating a parsing error in the resulting XSD file.",
+    "LastUpdatedDate": "2013-05-16T04:04:46.203-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-11-15T12:52:45.537-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "< and > characters in Documentation attribute are not escaped in XSD",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9720
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Unsurpr",
+      "PostedDate": "2012-11-15T12:53:52.933-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-11-15T12:54:21.277-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-11-15T12:54:49.663-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Version 1.6.3 of designer used in Visual Studio 2008",
+      "PostedDate": "2012-11-15T13:04:03.55-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Should be fixed (for VS2012 branch) starting from changeset 71265",
+      "PostedDate": "2012-12-12T01:52:54.577-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-12-13T10:09:48.623-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-12-19T07:08:37.93-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:25.123-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:46.203-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Is support of VS2013 planned?",
+    "LastUpdatedDate": "2014-09-08T11:04:51.923-07:00",
+    "PlannedForRelease": "2.0.1 r6 for Visual Studio 2013",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-11-19T02:03:40.6-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support for Visual Studio 2013",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 3,
+    "Id": 10438
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Per [this](https://csd.codeplex.com/discussions/459444) discussion a beta version for VS 2013 is available [here](https://skydrive.live.com/?cid=26C51FBA2140CA25&id=26C51FBA2140CA25%21493). I tried it out and it seems to work as advertised.\r\n\r\nSean",
+      "PostedDate": "2013-11-19T12:15:35.197-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Support for VS 2013 has been added by iLMax. It should be added to the downloads section soon, but for now, you can take it from a link posted by IlMax in another thread.\r\n\r\n[TEXT](https://skydrive.live.com/?cid=26C51FBA2140CA25&id=26C51FBA2140CA25%21493)",
+      "PostedDate": "2014-01-31T08:47:38.57-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I just noticed that SeanJSeymour already posted this, so check out the links in his post.",
+      "PostedDate": "2014-01-31T08:49:19.017-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-06-17T01:26:00.857-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I will finish implementation and ask the project leader to deploy on visual studio gallery.",
+      "PostedDate": "2014-09-01T15:25:24.433-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-02T04:12:49.147-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Ahh.. The VS gallery... It's not a fun place to deploy updates.  I will need to provide Max with the gallery login credentials for this tool. I'll look it up.",
+      "PostedDate": "2014-09-02T11:51:27.677-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Of course, the VS Gallery strikes again. Email address expired and was deleted. I recreated it with SAME name and password. Now, VS Gallery refuses to link up the re-created email address. We may need to create a new project page for this extension on the vs gallery site...",
+      "PostedDate": "2014-09-02T12:17:45.25-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I agree whe should create a different page even since is impossible to upload multiple extension that support different editions of visual studio on the same page. Usually the pattern is :\nMy Supercool extension : only support VS2012\nMy Supercool extension 2013 only support VS2013\r\n\r\nand so on.",
+      "PostedDate": "2014-09-02T12:42:38.213-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I uploaded a package for VS 2013 (see downloads). This release also attempts to resolve some issues related to \"invalid GUID\" or \"not a vs project\". It has received limited testing, so please report issues.",
+      "PostedDate": "2014-09-08T10:53:53.323-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-08T11:04:51.923-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

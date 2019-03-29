@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I get this error when using GenericEnumConverter:\nAn error occurred creating the configuration section handler for Importer: No parameterless constructor defined for this object.\n \nIt seems this person is having the same problem:\nhttp://stackoverflow.com/questions/9687795/error-reading-custom-configuration-section-no-parameterless-constructor-defined",
+    "LastUpdatedDate": "2014-09-12T12:57:11.98-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-04-12T01:30:28.467-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Using GenericEnumConverter throws exception at runtime",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 6,
+    "Id": 9321
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Need to be able to pass a type to GenericEnumConverter. Current method attribute does not do this. Will look into this issue. Might have to disable this converter temporarily until it can be properly supported.",
+      "PostedDate": "2014-09-09T15:08:38.553-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T15:09:03.453-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "The stackoverflow post pointed me to the answer. For enums, the generic converter is auto applied by the framework and is not meant to be applied manually. I have removed this attribute and will post the code change after quick testing.",
+      "PostedDate": "2014-09-12T12:57:11.98-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

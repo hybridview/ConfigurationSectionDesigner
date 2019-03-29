@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "77482",
+    "ThreadId": "23153",
+    "Html": "\r\nHi,<br />I've tried installing the designer several times, but it does not seem to show up anywhere in the New Project window.  Which section should it be listed int?<br /><br />I'm running vs2008 Pro with the sdk installed.  Are there any other requirements?<br />",
+    "PostedDate": "2008-02-29T13:19:21.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "77760",
+    "ThreadId": "23153",
+    "Html": "\r\nThat's strange, you shouldn't have any prerequisites other than Visual Studio 2008 Standard or better. You shouldn't even need the SDK.<br /><br />When you install it, it should show up in the \"Visual C#\" root node in the New Project window. If you have an existing project, you should also have something in the Add New Item dialog, all the way at the bottom in the \"My Templates\" group.<br /><br />If you have neither, can you check if at least the templates are installed inside your installation directory?<br />",
+    "PostedDate": "2008-03-02T23:44:11.443-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "79227",
+    "ThreadId": "23153",
+    "Html": "\r\nI have installed it, and it is available anywhere except for in web projects.  Is there a reason we can't use this in web projects?<br />",
+    "PostedDate": "2008-03-09T07:27:59.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "79653",
+    "ThreadId": "23153",
+    "Html": "\r\nNormally it should be available in the \"Visual C#\" root node (and in its Windows child node), so at least you should be able to add it from there. The only exception I can think of is if you're using <i>Web Site projects</i> (not <i>Web Application Projects</i>). In that case I can imagine it doesn't work by default because Web Sites are a special type of project. If that's the case for you, let me know and I'll look into it. Otherwise, if you're using Web Application Projects, are you able to see the item in the Visual C# root node?<br />",
+    "PostedDate": "2008-03-11T03:08:02.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

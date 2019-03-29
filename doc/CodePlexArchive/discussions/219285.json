@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "466756",
+    "ThreadId": "219285",
+    "Html": "<p>Hi All,</p>\r\n<p>After managing to get the custom tool to chrun out all the files i need and adding all the necessary references i am finding that i am unable to get a handle on an instance of the custom section i have just created.</p>\r\n<p>check list;</p>\r\n<ul>\r\n<li>I have imported the project correctly to use the generated .cs file.</li>\r\n<li>I have placed a .config file which conforms to the schema i have designed in the root folder of the code and the exe output fold</li>\r\n</ul>\r\n<p>is there anything else i am missing?</p>\r\n<p>&nbsp;</p>\r\n<p>the line of code i am calling to get the handle is;</p>\r\n<p>ScriptShareConfigurationSection ssConfig = ScriptShareConfigurationSection.Instance; // ScriptShareConfigurationSection is the custom section i created.</p>\r\n<p>but this line;&nbsp;ScriptShareConfigurationSection.Instance, returns null.</p>\r\n<p>&nbsp;</p>\r\n<p>any ideas?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>&nbsp;</p>\r\n<p>Mr. Ocelot.</p>",
+    "PostedDate": "2010-07-13T05:30:11.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "467638",
+    "ThreadId": "219285",
+    "Html": "<p>the problem was in the config file, it was not generated properly, the element which contains the definition for the custom section did not include a reference to the assembly which defines the custom section programmatically.</p>\r\n<p>&nbsp;</p>\r\n<p>thanks</p>\r\n<p>&nbsp;</p>\r\n<p>zafar</p>",
+    "PostedDate": "2010-07-15T02:05:23.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

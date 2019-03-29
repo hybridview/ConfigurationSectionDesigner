@@ -1,0 +1,85 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Installer",
+      "DisplayName": "Installer"
+    },
+    "ClosedComment": "I&#39;m closing this issue since the newer revisions fix the issue for 99&#37;&#43; of windowsxp users, and a further fix would require changing the project name to something shorter.",
+    "ClosedDate": "2012-06-21T11:47:53.77-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "[[ Same issue as 9202 ]]\n \nThis is a strange one. In Windows XP, the path to Visual Studio templates is rather huge. The long name of this project pushes the path length over the edge and causes a failure on install for some users. My initial assumption is that we may have to shorten the name of the template, unless someone has another idea.\n \nSee original report below:\n \n------------------- Snipped from MSDN Q/A Post ---------------------------\nIgor Skomorokh writes:\n \n18.07.2011 16:48:00 - Searching for applicable products...\n 18.07.2011 16:48:00 - Found installed product - Microsoft Visual Studio 2010 Ultimate\n 18.07.2011 16:48:00 - The extension with ID '9f16956e-2232-4f80-9ebb-4165929ef3ef' is not installed to Microsoft Visual Studio 2010 Ultimate.\n 18.07.2011 16:48:07 - The following target products have been selected...\n 18.07.2011 16:48:07 - Microsoft Visual Studio 2010 Ultimate\n 18.07.2011 16:48:07 - \n 18.07.2011 16:48:07 - Beginning to install extension to Microsoft Visual Studio 2010 Ultimate...\n 18.07.2011 16:48:07 - Install Error : System.IO.PathTooLongException: C:\\Documents and Settings\\i.skomorokh\\Local Settings\\Application Data\\Microsoft\\VisualStudio\\10.0\\Extensions\\The Community\\ConfigurationSectionDesigner\\2.0.0.0\\ItemTemplates\\VisualBasic\\General\\1033\\ConfigurationSectionDesigner.zip: VisualBasic.vstemplate\n at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.BeginInstall(IInstallableExtension installableExtension, Boolean perMachine, AsyncOperation asyncOp)\n at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.InstallWorker(IInstallableExtension extension, Boolean perMachine, AsyncOperation asyncOp)",
+    "LastUpdatedDate": "2013-05-16T04:04:48.36-07:00",
+    "PlannedForRelease": "2.0.0 r2 for Visual Studio 2010",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-07-18T12:43:39.137-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "For some Windows XP users, the extension path exceeds the char limit.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8494
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Some more info I posted to the MSDN QA page:\r\n\r\nI just did some more research on this issue. It turns out that a lot of VSIX extension developers run into this issue on Windows XP. The problem occurs because Windows XP requires an astonishing 75 ADDITIONAL characters to create the same path as Windows Vista/7 (Due to 'documents and settings' etc...). The main solution I have seen is quite a Kludge, so I'm going to opt to create an installer to wrap around this package to handle this issue. I will try to have this ready this week. For those who want to try the kludge, I learned about it at the following URL: \r\n\r\nhttp://www.telerik.com/community/forums/wpf/vs-extensions/error-installing-wpf-vsextensions-2011-1-422-0.aspx",
+      "PostedDate": "2011-07-18T13:56:16.593-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have fixed this issue for the majority of Windows XP users, and uploaded the package as an R3 version. It's not a permanent fix, so I'm leaving this open for now. Here is the info I posted to MSDN:\r\n\r\nI uploaded a new VSIX package that fixes this \"path too long\" issue for most Windows XP users. The fix involved shortening the template ZIP file name. If you have successfully installed the 2.0.0 R2 release, there is no need to install this update. For those with unusually long user account names, this fix may not be enough. Please let me know if you encounter this issue and I will prioritize my permanent fix, which will use an installer wrapper.",
+      "PostedDate": "2011-07-20T13:28:03.657-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I had to remove the R3 release for now. The \"fix\" I added broke something else. I will find a better solution for Windows XP users...",
+      "PostedDate": "2011-07-22T07:06:07.56-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I spoke too soon... The fix did not cause any defects. The defect I encountered was related to a change I was working on locally. See the downloads section for the latest version.",
+      "PostedDate": "2011-07-22T07:54:03.783-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Big thanks for the find andym1978.  Was able to install several problem extensions this way. - Jeff",
+      "PostedDate": "2011-08-18T11:06:18.793-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-21T11:45:27.573-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-21T11:47:53.77-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:28.907-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:48.36-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

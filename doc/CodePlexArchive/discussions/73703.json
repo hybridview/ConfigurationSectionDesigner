@@ -1,0 +1,362 @@
+[
+  {
+    "Id": "252005",
+    "ThreadId": "73703",
+    "Html": "<p>Dear Developers.&nbsp;</p>\r\n<p>I was unable to install the designer on Visual Studio 2010 beta 2. I copied .cs files to project and it works... But it is impossible to develop sections. Is there any plans to move instalation of the designer for VS 2010?</p>\r\n<p>Is it possible to set maually?</p>",
+    "PostedDate": "2009-10-31T12:24:01.843-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "257522",
+    "ThreadId": "73703",
+    "Html": "<p>I would also be very interested in a 2010 build as this tool in invaluable! It's the last stumbling block before I move some of my own projects to 2010 :-)</p>",
+    "PostedDate": "2009-11-16T07:14:27.513-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "264326",
+    "ThreadId": "73703",
+    "Html": "<p>So would I</p>\r\n<p>--Avi</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-06T22:19:35.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "265582",
+    "ThreadId": "73703",
+    "Html": "<p>I will look into this as soon as I'm moving to VS2010 myself. Until then, the tool will be targeted towards VS2008, unless somebody feels like contributing a VS2010 compatibility patch or something like that.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-09T23:51:46.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266015",
+    "ThreadId": "73703",
+    "Html": "<p>What will it take to contribute to the compatibility patch?</p>\r\n<p>--Avi</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-10T17:47:54.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266125",
+    "ThreadId": "73703",
+    "Html": "<p>I'm not even sure it's technically possible to create a tool in 2008 that also works in 2010. I think, when the time comes that I move to 2010, two separate versions of the tool will have to be maintained. Not exactly looking forward to that, though...</p>\r\n<p>In the meantime, if using or upgrading to 2010 is very important to you, I suggest creating the configuration section designer as a separate project in 2008, compile it into a class library, and use said library from your 2010 solution.</p>",
+    "PostedDate": "2009-12-11T01:07:43.07-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266169",
+    "ThreadId": "73703",
+    "Html": "<p>I suspect part of the reason the tool does not work in VS2010 is that it only registers for VS2008. It may be possible to coax it to work in VS2010 simply by changing the registry entries. If you want to try, download the source code, and in the DslSetup project, there's a file Registry.wsx. Change everything that says &quot;SOFTWARE\\Microsoft\\VisualStudio\\9.0&quot; to &quot;SOFTWARE\\Microsoft\\VisualStudio\\10.0&quot; and build the setup. Just beware that I haven't tested this, and that I don't recommend trying it on production code.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-11T03:39:24.237-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290821",
+    "ThreadId": "73703",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>alexschrod wrote:</strong><br>\r\n<p>I suspect part of the reason the tool does not work in VS2010 is that it only registers for VS2008. It may be possible to coax it to work in VS2010 simply by changing the registry entries. If you want to try, download the source code, and in the DslSetup project, there's a file Registry.wsx. Change everything that says &quot;SOFTWARE\\Microsoft\\VisualStudio\\9.0&quot; to &quot;SOFTWARE\\Microsoft\\VisualStudio\\10.0&quot; and build the setup. Just beware that I haven't tested this, and that I don't recommend trying it on production code.</p>\r\n<p>&nbsp;</p>\r\n</blockquote>\r\n<p>Has anyone tried doing this, and are we any closer to getting a VS2010 version? With RC1 being out it'd be handy if there was an upgrade path for existing VS2008 projects.</p>\r\n<p>Thanks,</p>\r\n<p>Totalester.</p>",
+    "PostedDate": "2010-02-15T05:56:14.053-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "433133",
+    "ThreadId": "73703",
+    "Html": "<p>Hi,</p>\r\n<p>has anyone got this great tool working with VS2010 RTM yet?</p>\r\n<p>Thanks,</p>\r\n<p>/Howard</p>",
+    "PostedDate": "2010-04-20T04:39:43.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "434069",
+    "ThreadId": "73703",
+    "Html": "Hi,\r\n\r\nI started looking into this last night - but it got quite nasty, quite quickly. But I thought I'd document where I got to in case anyone decided to try it...\r\n\r\nIf you have 2010 - you'll need to install Visual Studio 2010 SDK - http://bit.ly/czkKHa & Visualization & Modeling SDK: http://bit.ly/91XbVf - this is the new home of the DSL SDK.\r\n\r\nOnce installed - there is actually a DSL Migration Tool that will update your previous code - simply run the tool located here:\r\n\r\nC:\\Program Files\\Microsoft Visual Studio 2010 SDK\\VisualStudioIntegration\\Tools\\DSLTools\\DslProjectsMigrationTool.exe\r\n\r\nBrowse to the CSD solution root then click &quot;convert&quot; - this will update all the t4 templates. Next you'll have to search for any T4 templates that set the language to .NET 3.5 - you can delete this and the templates start to gen properly.\r\n\r\nNext you need to update the t4 references to the new VS2010 built in types (I think it's Microsoft.VisualStudio.TextTemplating.Interfaces.10.0) - at this point you will need to update the references to the types - at and this point I have up because some pretty gnarly coding updates were required and it was getting late.\r\n\r\nHope this helps whoever tries to update this.\r\n\r\nHoward",
+    "PostedDate": "2010-04-22T01:34:21.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "434122",
+    "ThreadId": "73703",
+    "Html": "\r\n<div>Howard,</div>\r\n<div> </div>\r\n<div>Many thanks, I will take a look later on \r\ntonight.</div>\r\n<div> </div>\r\n<div>Cheers,</div>\r\n<div>Avi</div>\r\n<div> </div>\r\n<div style=\"font:10pt Tahoma\">\r\n<div><br></div>\r\n<div style=\"background:#f5f5f5\">\r\n<div style=\"font-color:black\"><b>From:</b> [email removed] </div>\r\n<div><b>Sent:</b> Thursday, April 22, 2010 4:34 AM</div>\r\n<div><b>To:</b> [email removed] </div>\r\n<div><b>Subject:</b> Re: Visual Studio 2010 beta 2 [csd:73703]</div></div></div>\r\n<div><br></div>\r\n\r\n\r\n<p>From: HowardvanRooijen</p>\r\n<div id=ThreadNotificationPostBody>Hi, I started looking into this last night - \r\nbut it got quite nasty, quite quickly. But I thought I'd document where I got to \r\nin case anyone decided to try it... If you have 2010 - you'll need to install \r\nVisual Studio 2010 SDK - <a href=\"http://bit.ly/czkKHa\">http://bit.ly/czkKHa</a> \r\n& Visualization & Modeling SDK: <a href=\"http://bit.ly/91XbVf\">http://bit.ly/91XbVf</a> - this is the new home of \r\nthe DSL SDK. Once installed - there is actually a DSL Migration Tool that will \r\nupdate your previous code - simply run the tool located here: C:\\Program \r\nFiles\\Microsoft Visual Studio 2010 \r\nSDK\\VisualStudioIntegration\\Tools\\DSLTools\\DslProjectsMigrationTool.exe Browse \r\nto the CSD solution root then click &quot;convert&quot; - this will update all the t4 \r\ntemplates. Next you'll have to search for any T4 templates that set the language \r\nto .NET 3.5 - you can delete this and the templates start to gen properly. Next \r\nyou need to update the t4 references to the new VS2010 built in types (I think \r\nit's Microsoft.VisualStudio.TextTemplating.Interfaces.10.0) - at this point you \r\nwill need to update the references to the types - at and this point I have up \r\nbecause some pretty gnarly coding updates were required and it was getting late. \r\nHope this helps whoever tries to update this. Howard</div>\r\n",
+    "PostedDate": "2010-04-22T03:44:46.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443816",
+    "ThreadId": "73703",
+    "Html": "<p>Has anyone been able to figure out a way to use the designer in VS 2010?&nbsp; Any help will be much appreciated.</p>",
+    "PostedDate": "2010-05-17T07:53:35.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "446282",
+    "ThreadId": "73703",
+    "Html": "<p>I submited a patch for 2010 support</p>",
+    "PostedDate": "2010-05-22T18:01:54.933-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "447117",
+    "ThreadId": "73703",
+    "Html": "<p>I will take another look at it, I used the debuging project to verify it would still generate code. I am sure I missed something.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-25T07:38:02.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "447252",
+    "ThreadId": "73703",
+    "Html": "<p>Uploaded another patch see comments in vs 2010 issue.</p>",
+    "PostedDate": "2010-05-25T11:47:04.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "447763",
+    "ThreadId": "73703",
+    "Html": "<p>Ah.....</p>\r\n<p>I did&nbsp; not remove dslsetup from my zip I should have. Remove dsl setup, and any other references to csd. Then run DslPackage\\bin\\Debug\\ConfigurationSectionDesigner.DslPackage the &quot;setup&quot; projects are not used in 2010 any more. I don't know what the ramification would be to somone who needs both the 2008 and 2010 versions installed. I only run 2010.</p>",
+    "PostedDate": "2010-05-26T10:31:37.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "447838",
+    "ThreadId": "73703",
+    "Html": "<p>Interesting...I will try to get this installed on a system that has never seen it before.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Do you also have vs 2008 with the old csd installed?</p>",
+    "PostedDate": "2010-05-26T13:28:54.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "450967",
+    "ThreadId": "73703",
+    "Html": "<p>I can reproduce the problem, looking into the solution will be a few days.</p>",
+    "PostedDate": "2010-06-02T21:15:44.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "451364",
+    "ThreadId": "73703",
+    "Html": "<p>Hi all,</p>\r\n<p>I'm the original author of this project so I'm sorry it took me so long to jump in but I really haven't had the time to look into this yet. Anyway, since TheMrKeys has been busy working on VS2010 support (which I agree would be awesome) I've made him coordinator on this project too so he should be able to check his changes in directly and publish new versions of this project and such. Hopefully by eliminating myself as a bottleneck his great work will be able to make it into the project much quicker.</p>\r\n<p>Thanks in advance!</p>\r\n<p>-Jelle</p>",
+    "PostedDate": "2010-06-03T12:37:43.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "451365",
+    "ThreadId": "73703",
+    "Html": "<div class=WordSection1><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\">The tool is great I have come to use it a lot. The core of the code is a great concept I had never thought of. Would you like to create a separate branch for the 2010 code?</span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><div><div style=\"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in 0in 0in\"><p class=MsoNormal><b><span style=\"font-size:10.0pt;font-family:'Tahoma','sans-serif'\">From:</span></b><span style=\"font-size:10.0pt;font-family:'Tahoma','sans-serif'\"> jelled [mailto:notifications@codeplex.com] <br><b>Sent:</b> Thursday, June 03, 2010 3:38 PM<br><b>To:</b> Ryan Faircloth<br><b>Subject:</b> Re: Visual Studio 2010 beta 2 [csd:73703]</span></p></div></div><p class=MsoNormal> </p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">From: jelled</span></p><div style=\"margin-bottom:24.0pt\" id=ThreadNotificationPostBody><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">Hi all,</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">I'm the original author of this project so I'm sorry it took me so long to jump in but I really haven't had the time to look into this yet. Anyway, since TheMrKeys has been busy working on VS2010 support (which I agree would be awesome) I've made him coordinator on this project too so he should be able to check his changes in directly and publish new versions of this project and such. Hopefully by eliminating myself as a bottleneck his great work will be able to make it into the project much quicker.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">Thanks in advance!</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">-Jelle</span></p></div><div style=\"border:none;border-top:solid #CCCCCC 1.0pt;padding:0in 0in 0in 0in\" id=ThreadNotificationFooter><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">Read the <a href=\"http://csd.codeplex.com/Thread/View.aspx?ThreadId=73703&ANCHOR#Post451364\">full discussion online</a>.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">To add a post to this discussion, reply to this email (<a href=\"mailto:csd@discussions.codeplex.com?subject=[csd:73703]\">csd@discussions.codeplex.com</a>)</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">To start a new discussion for this project, email <a href=\"mailto:csd@discussions.codeplex.com\">csd@discussions.codeplex.com</a></span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/thread/unsubscribe/73703\">unsubscribe</a> on CodePlex.com.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com</span></p></div></div>",
+    "PostedDate": "2010-06-03T12:39:51.88-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "451984",
+    "ThreadId": "73703",
+    "Html": "<p>The VS 2010 beta release has been posted, please give it a shot, log issues in issue tracker.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-06-05T06:58:14.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452436",
+    "ThreadId": "73703",
+    "Html": "It's marked beta first not release. The code gen worked for me but so did some other things you reported before. I'm sure it's a deployment issue.<br><br>1.x will be maintained for vs 08<br>2. Will be vs 2010<br><br>The project template was just the library with the csd item added. For beta I didn't bother with it.<br><br><span style=\"font-family:Prelude, Verdana, san-serif\"><br><br></span><span id=signature><div style=\"font-family:arial, sans-serif;font-size:12px;color:#999999\">-- Sent from my Palm Pre</div><br></span><span style=\"color:navy;font-family:Prelude, Verdana, san-serif\"><hr align=left style=\"width:75%\">On Jun 7, 2010 9:16 AM, TheRHCP &lt;notifications@codeplex.com&gt; wrote: <br><br>\r\n\r\n<p>From: TheRHCP</p>\r\n<div id=ThreadNotificationPostBody>\r\n<p>I finally tried it.</p>\r\n<p> </p>\r\n<p>What is surprising is that code generation does not work anymore. I first tried on an existing project without results and then I created a new project, added some sections no CS file has been generated.</p>\r\n<p>I also noticed that when I tried to add something in a Section (right click), an error message is poping up (&quot;Value does not fall within the expected value&quot;).</p>\r\n<p>Then I also noticed that the project template disappeared, only the item template stayed.</p>\r\n<p> </p>\r\n<p>I know that this is a beta version, but I do not think that this is right to make a realease for it as it is almost unusable.</p>\r\n<p>Same thing concerning the version number, no major changes so why a major version ?</p>\r\n</div>\r\n\r\n\r\n\r\n</span>",
+    "PostedDate": "2010-06-07T06:21:21.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452450",
+    "ThreadId": "73703",
+    "Html": "<div class=WordSection1><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\">I can recreate this on my second machine but not the machine I did the development on so this is a deployment issue. I’m learning the VS experimental shell for debugging is not as isolated as I thought. </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\">I will try to work on this tonight I can’t this morning.</span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><div><div style=\"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in 0in 0in\"><p class=MsoNormal><b><span style=\"font-size:10.0pt;font-family:'Tahoma','sans-serif'\">From:</span></b><span style=\"font-size:10.0pt;font-family:'Tahoma','sans-serif'\"> TheRHCP [mailto:notifications@codeplex.com] <br><b>Sent:</b> Monday, June 07, 2010 9:16 AM<br><b>To:</b> Ryan Faircloth<br><b>Subject:</b> Re: Visual Studio 2010 beta 2 [csd:73703]</span></p></div></div><p class=MsoNormal> </p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">From: TheRHCP</span></p><div style=\"margin-bottom:24.0pt\" id=ThreadNotificationPostBody><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">I finally tried it.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\"> </span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">What is surprising is that code generation does not work anymore. I first tried on an existing project without results and then I created a new project, added some sections no CS file has been generated.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">I also noticed that when I tried to add something in a Section (right click), an error message is poping up (&quot;Value does not fall within the expected value&quot;).</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">Then I also noticed that the project template disappeared, only the item template stayed.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\"> </span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">I know that this is a beta version, but I do not think that this is right to make a realease for it as it is almost unusable.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">Same thing concerning the version number, no major changes so why a major version ?</span></p></div><div style=\"border:none;border-top:solid #CCCCCC 1.0pt;padding:0in 0in 0in 0in\" id=ThreadNotificationFooter><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">Read the <a href=\"http://csd.codeplex.com/Thread/View.aspx?ThreadId=73703&ANCHOR#Post452434\">full discussion online</a>.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">To add a post to this discussion, reply to this email (<a href=\"mailto:csd@discussions.codeplex.com?subject=[csd:73703]\">csd@discussions.codeplex.com</a>)</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">To start a new discussion for this project, email <a href=\"mailto:csd@discussions.codeplex.com\">csd@discussions.codeplex.com</a></span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/thread/unsubscribe/73703\">unsubscribe</a> on CodePlex.com.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com</span></p></div></div>",
+    "PostedDate": "2010-06-07T06:58:52.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452490",
+    "ThreadId": "73703",
+    "Html": "<p>I too find the decision to make the VS2010 version 2.0 a bit weird. It's not like you'd make an application that was made with .NET 1.1 be v1.x and as soon as you switched to .NET 2.0 make your application v2.x. I find it particularly bothersome, because I was&nbsp;considering making a 2.0 release of the VS2008 tool sometime, which now won't be possible, or at the very least get rather confusing.</p>",
+    "PostedDate": "2010-06-07T08:12:35.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452497",
+    "ThreadId": "73703",
+    "Html": "<p>Since naming the VS2010 edition v2.0 was my idea I guess I should chime in :-)</p>\r\n<p>I agree that there aren't a lot of new features to warrant a major version number update, but I would also find it very confusing to have a v1.6.1 that works with VS2008 and a v1.7 for example that works with VS2010. And then a v2.0 for VS2008 and a v2.1 for VS2010? I don't know... So maybe it would be better to keep the real version number the same then (as long as the functionality is the same) and just name the releases on CodePlex differently, e.g. &quot;v1.7 for VS2008&quot; and &quot;v1.7 for VS2010&quot;? But then these should be functionally equivalent or it will be even more confusing. So Alex, if you'd add a bunch of features for v2.0 then I hope a VS2010 edition with the same features would be on the roadmap?</p>\r\n<p>In the end, you guys do what you think is best, at this point I'm just not involved enough to push any opinion either way.</p>\r\n<p>Cheers,</p>\r\n<p>Jelle</p>",
+    "PostedDate": "2010-06-07T08:21:42.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452506",
+    "ThreadId": "73703",
+    "Html": "<p>Since I have not yet used VS2010, I cannot really give good input here, but if (and only&nbsp;if)&nbsp;most of the code is the same still, it should be possible to merge changes made in either branch back and forth as they are being made. That way, the two branches would stay in sync. Alternatively, it could be made a policy that any feature added in one branch also has to be added in the other. The final option is to let the two branches divert and&nbsp;become&nbsp;separate tools, meaning that you can't expect things to work the same in the VS2008 version and the VS2010 version. I've put my alternatives in the order that <em>I</em> prefer things take place... i.e. kept-in-sync-by-merge branches are best, kept-in-sync-but-not-by-merge branches are the second best, and diverting tools the least good option.</p>\r\n<p>That's my opinion, anyway. I've already given my opinion on the versioning issue, meaning I don't think a VS2010 release automatically makes the tool v2.0. Honestly, I think more discussion should be done on the whole versioning&nbsp;issue before a final decision is made.</p>",
+    "PostedDate": "2010-06-07T08:37:28.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452548",
+    "ThreadId": "73703",
+    "Html": "<p>The conversion process from the old SDK to the new DSL sdk makes breaking changes from the looks of it. The &quot;generated code&quot; tt files are very different from the old once. While someone may know of a way to include both the old and new files and conditionally generate code I don't. While I am interested in working out the 2010 version. I don't think I would have the time or interest to back port changes to the 2008 version. The deployment also changes a lot. the VSIX does all the lifting now in ways the 08 VSIX could not. We don't use the setup at all any more in 2010.</p>\r\n<p>&nbsp;</p>\r\n<p>Jelle suggested the branch I agreed with him, I am open to suggestions, we could do something like 2010 v1.7 and 2008 v1.7 but the differences in deployment could be very confusing over time. I think any way we go confusion will occur.</p>",
+    "PostedDate": "2010-06-07T09:43:41.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459331",
+    "ThreadId": "73703",
+    "Html": "<p>Hello guys</p>\r\n<p>anyone can point me where can I download v2.0 for VS 2010? :(</p>\r\n<p>thanks</p>",
+    "PostedDate": "2010-06-24T00:04:40.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459487",
+    "ThreadId": "73703",
+    "Html": "<p>Error\t1\tThe type or namespace name 'CoreCopyClosure' does not exist in the namespace 'Microsoft.VisualStudio.Modeling' (are you missing an assembly reference?)\tC:\\Users\\Davita\\Desktop\\Main-VS2010\\Source\\Dsl\\GeneratedCode\\DomainModel.cs\t523\t44\tDsl<br>Error\t2\tThe type or namespace name 'CoreDeleteClosure' does not exist in the namespace 'Microsoft.VisualStudio.Modeling' (are you missing an assembly reference?)\tC:\\Users\\Davita\\Desktop\\Main-VS2010\\Source\\Dsl\\GeneratedCode\\DomainModel.cs\t543\t46\tDsl<br>Error\t3\tCould not load file or assembly 'VSCTCompress.dll' or one of its dependencies. The specified module could not be found.\tDslPackage<br>Error\t4\t'Microsoft.VisualStudio.Modeling.SerializationUtilities' does not contain a definition for 'WriteExtensions'\tC:\\Users\\Davita\\Desktop\\Main-VS2010\\Source\\Dsl\\GeneratedCode\\SerializationHelper.cs\t149\t40\tDsl<br>Error\t5\t'Microsoft.VisualStudio.Modeling.SerializationUtilities' does not contain a definition for 'ExtensionsXmlElementName'\tC:\\Users\\Davita\\Desktop\\Main-VS2010\\Source\\Dsl\\GeneratedCode\\SerializationHelper.cs\t175\t84\tDsl<br>Error\t6\t'Microsoft.VisualStudio.Modeling.SerializationUtilities' does not contain a definition for 'ReadExtensions'\tC:\\Users\\Davita\\Desktop\\Main-VS2010\\Source\\Dsl\\GeneratedCode\\SerializationHelper.cs\t177\t41\tDsl<br>Error\t7\t'Microsoft.VisualStudio.Modeling.SerializationResult' does not contain a definition for 'Encoding' and no extension method 'Encoding' accepting a first argument of type 'Microsoft.VisualStudio.Modeling.SerializationResult' could be found (are you missing a using directive or an assembly reference?)\tC:\\Users\\Davita\\Desktop\\Main-VS2010\\Source\\Dsl\\GeneratedCode\\SerializationHelper.cs\t430\t31\tDsl<br>Error\t8\t'Microsoft.VisualStudio.Modeling.SerializationResult' does not contain a definition for 'Encoding' and no extension method 'Encoding' accepting a first argument of type 'Microsoft.VisualStudio.Modeling.SerializationResult' could be found (are you missing a using directive or an assembly reference?)\tC:\\Users\\Davita\\Desktop\\Main-VS2010\\Source\\Dsl\\GeneratedCode\\SerializationHelper.cs\t586\t24\tDsl<br><br>I'm unable to compile with VS SDK Beta 1 and DSL Sdk Beta 1. Of course I'm using VS 2010 :D (stable)</p>\r\n<p>any help? :(</p>",
+    "PostedDate": "2010-06-24T06:49:42.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459739",
+    "ThreadId": "73703",
+    "Html": "<p>I would agree with TheRHCP, I would leave this version as a VS2008 version 1.7 being the final major release for VS2008 then start a new project for Configuration Section Designer 2010 which is VS2010 support for the new DSL SDK which might hopefully also work on the next iteration of VS.</p>\r\n<p>Personally it will just be confusing otherwise as they don't really branch from a common base due to the differences between VS2008 and VS2010.</p>\r\n<p>&nbsp;</p>\r\n<p>Just my two cents</p>",
+    "PostedDate": "2010-06-24T17:02:07.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "476032",
+    "ThreadId": "73703",
+    "Html": "I agree with aussiealf.  I don't think having a &quot;Configuration Section Designer 2010&quot; is confusing at all ... either that or just break off on another name altogether.",
+    "PostedDate": "2010-08-03T10:12:33.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "477770",
+    "ThreadId": "73703",
+    "Html": "<p>Do not put so much thought in what number is has to have, it does not matter for the users anyways. They will click on the button that has the right visual studio version :)  </p>\r\n\r\n\r\n<p>You need to consider that in a couple of years, another VS version will come out. How long do you expect to work on/support the VS2008 version.  Do you plan on extending the functionality, or do you want to make it rock stable?</p>\r\n\r\n\r\n<p>Imho, make a VS2008 branch and put it in maintenance-mode. Only fix bugs and issues. Make that 1.X. Make VS2010 2.0.</p>\r\n\r\n\r\n<p>Great work by the way, i love it.</p>\r\n",
+    "PostedDate": "2010-08-08T07:46:01.393-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "488143",
+    "ThreadId": "73703",
+    "Html": "<p>That would be my suggestion, too.</p>\r\n<p>Also I just wanted to let you know: We are currently using Configuration Section Designer from the latest SVN revision (48968) under VS2010 in a <strong>productive environment</strong>! Although there are some minor issues that can be worked around (like clicking right mouse button), it's working great. We built up all the configuration sections over different namespaces from scratch, and added validator-methods in partial class files.</p>\r\n<p>We even made the .xsd Style Sheet be referenced in App.config, with code hint and syntax check working! For this it is necessary to add xmlns=&quot;your_xml_namespace&quot; attribute to the configuration sections in App.config. After that, the generated code fails to work, because &quot;xmlns&quot; is not known configuration attribute obviously. Don't try to add a dummy &quot;xmlns&quot; attribute to every configuration section in the modeller! Even though this will make your project compile again, it will break code-hint and syntax check in App.config. Instead add a partial class with the same name and add an xmlns property to it manually. You could first create it in the modeller and then move the code for it over to your own class. This way you can design and generate freely in the modeller, even in multiple csd files, and the App.config syntax is checked instantly against the newly generated xsd files.</p>\r\n<p>Long story short: I can recommend using latest CSD in VS2010 and hope there is a stable release soon.</p>",
+    "PostedDate": "2010-09-02T03:59:32.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "492498",
+    "ThreadId": "73703",
+    "Html": "<p>@BobBaum:</p>\r\n<p>I'm not seeing the success that you are.&nbsp; I've downloaded the revision, compiled the .vsix, and then created a new project and added a .csd to it.&nbsp; I add a configuration section and try to build and I get errors in the generated code about identifiers being expected.&nbsp; It seems to want to try and create a type name from a namespace, which seems completely wrong to me.</p>\r\n<p>Could you give more detail on either what you did to get to this &quot;working&quot; state or on what gotchas/issues there are?</p>\r\n<p>Also, without being able to right click, how can one add attributes to their elements without having to code them in the csd file by hand?&nbsp; That seems like a pretty big issue.</p>\r\n<p>Thanks for all the great work.</p>\r\n<p>- Nick</p>",
+    "PostedDate": "2010-09-12T10:22:07.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "507142",
+    "ThreadId": "73703",
+    "Html": "<p>I miss the old times where nobody had a mouse and everybody knew   intuitively that inserting an attribute would work by pressing INSERT on   the keyboard. ;-)</p>\r\n<p>Simply adding a configuration section doesn't make a valid configuration. You have to at least ...</p>\r\n<p>- add the section (mouse drag'n'drop from tool bar)<br>- click at a blank spot outside the section and define the &quot;Xml schema namespace&quot; and the &quot;Namespace&quot; in the Properties for the Configuration Section Model<br>- Save the model (by that the custom tool will generate your files)</p>\r\n<p>At least that's how it worked for us. Of course not with the first try, but after some testing with blank projects we worked it out...</p>\r\n<p>Bob</p>",
+    "PostedDate": "2010-10-14T02:49:04.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "509215",
+    "ThreadId": "73703",
+    "Html": "<p>No news for VS 2010 build?</p>",
+    "PostedDate": "2010-10-19T02:00:03.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "509283",
+    "ThreadId": "73703",
+    "Html": "<div class=WordSection1><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\">No I haven’t been able to work on it </span><span style=\"font-size:11.0pt;font-family:Wingdings;color:#1F497D\">L</span><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"></span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p><div><div style=\"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in 0in 0in\"><p class=MsoNormal><b><span style=\"font-size:10.0pt;font-family:'Tahoma','sans-serif'\">From:</span></b><span style=\"font-size:10.0pt;font-family:'Tahoma','sans-serif'\"> Dato0011 [mailto:notifications@codeplex.com] <br><b>Sent:</b> Tuesday, October 19, 2010 5:00 AM<br><b>To:</b> Ryan Faircloth<br><b>Subject:</b> Re: Visual Studio 2010 beta 2 [csd:73703]</span></p></div></div><p class=MsoNormal> </p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">From: Dato0011</span></p><div style=\"margin-bottom:24.0pt\" id=ThreadNotificationPostBody><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">No news for VS 2010 build?</span></p></div><div style=\"border:none;border-top:solid #CCCCCC 1.0pt;padding:0in 0in 0in 0in\" id=ThreadNotificationFooter><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">Read the <a href=\"http://csd.codeplex.com/Thread/View.aspx?ThreadId=73703&ANCHOR#Post509215\">full discussion online</a>.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">To add a post to this discussion, reply to this email (<a href=\"mailto:csd@discussions.codeplex.com?subject=[csd:73703]\">csd@discussions.codeplex.com</a>)</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">To start a new discussion for this project, email <a href=\"mailto:csd@discussions.codeplex.com\">csd@discussions.codeplex.com</a></span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/thread/unsubscribe/73703\">unsubscribe</a> on CodePlex.com.</span></p><p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com</span></p></div></div>",
+    "PostedDate": "2010-10-19T04:17:00.563-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "522908",
+    "ThreadId": "73703",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I recently migrated my solution to 2010. I was successfully compiled and installed version 2.0 for VS2010. I am encountering the known issues:</p>\r\n<p>&nbsp;</p>\r\n<p>-Unable to Create a new csd project in vs2010</p>\r\n<p>-Designer shows an error with right clicking in the Designer.</p>\r\n<p>&nbsp;</p>\r\n<p>I am big fan of this project and has help me tremendously. Do you know if there is a work around or a update planned?</p>\r\n<p>&nbsp;</p>\r\n<p>I am using vs2010 ultimate on windows 7 x64. I also have vs2008 installed on my machine</p>\r\n",
+    "PostedDate": "2010-11-16T13:10:55.833-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "524544",
+    "ThreadId": "73703",
+    "Html": "\r\n<p>I love this concept but need it for 2010, I've tried to install it but it have the same right click issues.</p>\r\n<p>&nbsp;</p>\r\n<p>Do you have an ETA for the next release?</p>\r\n",
+    "PostedDate": "2010-11-19T13:38:13.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "524979",
+    "ThreadId": "73703",
+    "Html": "\r\n<p>In the absence of a solid version that works with VS 2010, the source code would be nice.&nbsp; {-o)</p>\r\n",
+    "PostedDate": "2010-11-21T10:45:27.527-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "525273",
+    "ThreadId": "73703",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I am also using the VS2010 version and I also encounter the right-click problem in the Designer. Been having this problem for every VM that I test it on.&nbsp;I was about to give up using the tool because of the error, so&nbsp;I decided to try it for the\r\n last time on another VM. This time&nbsp;the CSD tool worked perfectly and I can see/use the context menu after a right click. I don't know why it worked in this other VM because all of the VMs I tested it on came from the same image.</p>\r\n<p>Does anyone have any idea on what's causing this error? Do you have any suggestions on how to fix this?</p>\r\n<p>&nbsp;These are the errors I am getting:</p>\r\n<ul>\r\n<li>Value does not fall within the expected range </li><li>The parameter is incorrect (Exception from HRESULT: 0x80070057 (E_INVALIDARG))\r\n</li></ul>\r\n<p>Thanks.</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2010-11-22T05:46:20.85-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "525407",
+    "ThreadId": "73703",
+    "Html": "\r\n<p>hi Idiz,</p>\r\n<p>&nbsp;</p>\r\n<p>You were able to get it to work in one vm?&nbsp;&nbsp; What version did you compile. I tried using 2.0.0 and Main-vs2010 had no luck =(</p>\r\n",
+    "PostedDate": "2010-11-22T10:17:36.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "525440",
+    "ThreadId": "73703",
+    "Html": "\r\n<p>The known issue with the right click can be found here. Please continue to vote this issue</p>\r\n<p>&nbsp;</p>\r\n<p>http://csd.codeplex.com/workitem/6922</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2010-11-22T11:13:59.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "550278",
+    "ThreadId": "73703",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>&nbsp;</p>\r\n<p>Was wondering if there has been any plans for updates to the VS2010 version.&nbsp; I tried the Main-VS2010 version on two different systems and get the same right click error previously mentioned.&nbsp; I'd like to be able to use this tool myself.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks,</p>\r\n<p>&nbsp;</p>\r\n<p>WedgeBones</p>\r\n",
+    "PostedDate": "2011-01-16T18:10:54.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "550311",
+    "ThreadId": "73703",
+    "Html": "\r\n<p>Today I was able to generate a version from VS2010 using BobBaum advice (once I read the full text of the post).</p>\r\n<ol>\r\n<li>Create a new project (I used VB as that is what I need at work ATM) </li><li>Add new item, choose &quot;Configuration Section Designer&quot; </li><li>Open the *.csd file </li><li>Drag Configuration Section to canvas </li><li>Left Click in the white area of the canvas </li><li>Add Assembly Name, Namespace and Xml Schema Namespace properties </li><li>Drag Configuration Element to canvas\r\n<ol>\r\n<li>give it a name </li></ol>\r\n</li><li>LEFT click the Elements item of the configuration Section </li><li>press INSERT on keyboard (thanks @BobBaum) enter a valid name </li><li>LEFT click the new item and move to the Properties window to select the Type)\r\n</li></ol>\r\n<p>the same thing will work for adding a Collection</p>\r\n<p>to add an attribute</p>\r\n<ol>\r\n<li>LEFT click the Attributes section of the configuration item to add attributes to\r\n</li><li>press INSERT on keyboard and enter a valid name </li><li>choose Type in properties window </li><li>save </li></ol>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-01-16T20:47:47.393-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

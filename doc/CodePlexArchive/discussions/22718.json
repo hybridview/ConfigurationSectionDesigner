@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "75895",
+    "ThreadId": "22718",
+    "Html": "\r\nAt most moment, I want to define config section in some \"Configration\" namespace and Element types in some other namespace. Couse Element type will always been used by some components.<br />I think it's good to add an \"ElementTypeNamespace\" attribute to ConfigurationSectionModel.<br /><br />The tool is great, thanks a lot.<br />",
+    "PostedDate": "2008-02-22T20:29:55.373-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "76032",
+    "ThreadId": "22718",
+    "Html": "\r\nThis discussion has been copied to a work item. Click here to <a href=\"http://www.codeplex.com/csd/WorkItem/View.aspx?WorkItemId=1006\">go to the work item and continue the discussion</a>.<br />",
+    "PostedDate": "2008-02-24T03:23:17.433-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

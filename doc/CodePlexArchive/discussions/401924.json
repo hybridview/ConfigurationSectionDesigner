@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "936629",
+    "ThreadId": "401924",
+    "Html": "\r\n<p>How to read configuration file using NetOffice?</p>\r\n<p>&nbsp;i have added Basic HTTP Bindings key and values but can,t read the keys and values via c# MS Office add-in Projects</p>\r\n<p>&nbsp;&lt;binding name=&quot;BasicHttpBinding_IVS&quot; closeTimeout=&quot;00:01:00&quot; openTimeout=&quot;00:01:00&quot; receiveTimeout=&quot;00:10:00&quot; sendTimeout=&quot;00:01:00&quot; allowCookies=&quot;false&quot; bypassProxyOnLocal=&quot;false&quot; hostNameComparisonMode=&quot;StrongWildcard&quot; maxBufferSize=&quot;2147483647&quot;\r\n maxBufferPoolSize=&quot;524288&quot; maxReceivedMessageSize=&quot;2147483647&quot; messageEncoding=&quot;Text&quot; textEncoding=&quot;utf-8&quot; transferMode=&quot;Buffered&quot; useDefaultWebProxy=&quot;true&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;readerQuotas maxDepth=&quot;2147483647&quot; maxStringContentLength=&quot;2147483647&quot;\r\n maxArrayLength=&quot;2147483647&quot; maxBytesPerRead=&quot;2147483647&quot; maxNameTableCharCount=&quot;2147483647&quot; /&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;security mode=&quot;None&quot;&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;transport clientCredentialType=&quot;None&quot; proxyCredentialType=&quot;None&quot;\r\n realm=&quot;&quot; /&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;message clientCredentialType=&quot;UserName&quot; algorithmSuite=&quot;Default&quot; /&gt;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/security&gt; &lt;/binding&gt;</p>\r\n<p>&nbsp;Please let it me know.....</p>\r\n",
+    "PostedDate": "2012-11-05T03:04:55.557-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "937687",
+    "ThreadId": "401924",
+    "Html": "<p>What does this have to do with our project? You're obviously dealing with WCF bindings, not making your own configuration.</p>",
+    "PostedDate": "2012-11-06T22:34:25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "937765",
+    "ThreadId": "401924",
+    "Html": "<p>Hi Alexschrod.</p>\r\n<p>Thanks ...........</p>\r\n<p>How to read App.config file key and value &nbsp;in Using Netoffice?</p>\r\n<p>So let it me know &nbsp;</p>",
+    "PostedDate": "2012-11-07T01:22:53.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

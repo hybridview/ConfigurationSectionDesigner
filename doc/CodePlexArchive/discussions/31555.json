@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "104827",
+    "ThreadId": "31555",
+    "Html": "Everytime I try and save the configuration I have created in the designer Visual Studio 2008 crashes, there is no error message it's just shuts down.<br>\r\nWhen I start it up again the changes in the designer has been saved but no .cs file is ever created.<br>\r\nI have tried uninstalling and reinstalling the Configuration Section Designer but it has made no difference. I am using Visual Studio 2008 Developer and Test edition with SP1 Beta.<br>\r\nI would really like to get this working as it looks really useful. Any help would be very much appreciated.\r\n",
+    "PostedDate": "2008-07-15T09:09:37.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "109083",
+    "ThreadId": "31555",
+    "Html": "First of all, sorry for the delay in responding but I've been out for a couple of weeks. Unfortunately, I haven't seen that issue anywhere yet so I don't know what might be causing it. It might be related to the beta version of service pack 1, can you reproduce it on a machine without SP1 beta installed?<br>\r\n<br>\r\nThanks!<br>\r\n<br>\r\n-Jelle\r\n",
+    "PostedDate": "2008-08-05T05:57:52.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "120362",
+    "ThreadId": "31555",
+    "Html": "<blockquote dir=ltr style=\"margin-right:0px\">\r\n<p>Jelle, same problem here. The error (in Dutch) is the following:<br>\r\n<br>\r\n{System.InvalidOperationException: Het token StartAttribute in de status Content zou leiden tot een ongeldig XML-document.<br>\r\n&nbsp;&nbsp; bij System.Xml.XmlTextWriter.AutoComplete(Token token)<br>\r\n&nbsp;&nbsp; bij System.Xml.XmlTextWriter.WriteStartAttribute(String prefix, String localName, String ns)<br>\r\n&nbsp;&nbsp; bij System.Xml.XmlWriter.WriteAttributeString(String localName, String value)<br>\r\n&nbsp;&nbsp; bij System.Configuration.ConfigurationElement.SerializeElement(XmlWriter writer, Boolean serializeCollectionKey)<br>\r\n&nbsp;&nbsp; bij System.Configuration.ConfigurationElementCollection.SerializeElement(XmlWriter writer, Boolean serializeCollectionKey)<br>\r\n&nbsp;&nbsp; bij System.Configuration.ConfigurationElement.SerializeToXmlElement(XmlWriter writer, String elementName)<br>\r\n&nbsp;&nbsp; bij System.Configuration.ConfigurationElement.SerializeElement(XmlWriter writer, Boolean serializeCollectionKey)<br>\r\n&nbsp;&nbsp; bij System.Configuration.ConfigurationElement.SerializeToXmlElement(XmlWriter writer, String elementName)<br>\r\n&nbsp;&nbsp; bij System.Configuration.ConfigurationSection.SerializeSection(ConfigurationElement parentElement, String name, ConfigurationSaveMode saveMode)<br>\r\n&nbsp;&nbsp; bij System.Configuration.MgmtConfigurationRecord.GetConfigDefinitionUpdates(Boolean requireUpdates, ConfigurationSaveMode saveMode, Boolean forceSaveAll, ConfigDefinitionUpdates&amp; definitionUpdates, ArrayList&amp; configSourceUpdates)}</p>\r\n</blockquote>\r\n",
+    "PostedDate": "2008-09-23T06:06:19.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "120380",
+    "ThreadId": "31555",
+    "Html": "Maarten, if you don't also have a beta of the service pack, feel free to create an issue through the Issue Tracker and attach the project that shows the error.\r\n",
+    "PostedDate": "2008-09-23T07:49:18.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "120534",
+    "ThreadId": "31555",
+    "Html": "Issue has been created (<a href=\"http://www.codeplex.com/csd/WorkItem/View.aspx?WorkItemId=3018\">http://www.codeplex.com/csd/WorkItem/View.aspx?WorkItemId=3018</a>), a reproducing project is on its way.\r\n",
+    "PostedDate": "2008-09-23T23:09:58.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

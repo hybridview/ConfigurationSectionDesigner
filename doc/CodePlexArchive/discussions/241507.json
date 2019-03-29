@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "548279",
+    "ThreadId": "241507",
+    "Html": "\r\n<p>On Windows 7 Professional and Windows Vista Ultimate (two different machines I've tried), installing Configuration Section Designer&nbsp;<a id=\"x_x_ReleaseLinkStable0\" title=\"Recommended Release: 1.6.1\">1.6.1 &nbsp;fails with message:</a></p>\r\n<p><em>&quot;Source file not found C:\\users\\ACCOUNT\\AppData\\Local\\Temp\\Temp1_ConfigurationSectionDesigner.zip\\Readme.htm. Verify that the file exists and that you can access it.&quot;</em></p>\r\n<p>What I have to do is go to that location, open the zip file and create a blank Readme.htm inside of it, then click the installer's [Try Again] button for it to complete.</p>\r\n",
+    "PostedDate": "2011-01-12T14:11:18.45-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "575563",
+    "ThreadId": "241507",
+    "Html": "<p>This problem was reported in <span id=\"WikiLinkLabel\"><a title=\"workitem 7652\" href=\"/workitem/7652\">workitem 7652</a> and has since been fixed. The installer, starting with version 1.7 will no longer have this problem.<br /> </span></p>",
+    "PostedDate": "2011-03-04T06:49:51.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

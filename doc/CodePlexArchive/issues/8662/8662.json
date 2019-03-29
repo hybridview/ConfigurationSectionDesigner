@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Closing since it&#39;s the same as issue 8511, which has more comments. Please refer to that issue for updates.",
+    "ClosedDate": "2012-06-21T12:27:06.4-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When the sample configuration file is generated, the declaraction of configuration section is using the type namespace as assembly name. This causes a configuration exception when the section type namespace is not the same as the assembly.\n \nFor example if I a have a ReportingSection in MyNamespace.Configuration located in MyCompany.MyAssembly, the sample configuration file will show:\n \n<configSections>\n\t<section name=\"reporting\" type=\"MyNamespace.Configuration.ReportingSection, MyNamespace.Configuration\"/>\n</configSections>\n \nInstead of :\n \n<configSections>\n\t<section name=\"reporting\" type=\"MyNamespace.Configuration.ReportingSection, MyCompany.MyAssembly\"/>\n</configSections>",
+    "LastUpdatedDate": "2013-05-16T04:04:47.707-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-09-01T16:47:48.523-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Generated configuration uses type namespace instead of type assembly name for section declaration",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8662
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This is related to issue 8511.",
+      "PostedDate": "2011-09-02T07:45:43.09-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-21T12:27:06.4-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:28.24-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:47.707-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

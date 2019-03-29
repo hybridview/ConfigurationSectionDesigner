@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "695173",
+    "ThreadId": "278683",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I use CSD in VS2008. Now, I want migrate my project to VS 2010, and I have installed&nbsp; CSD 2.0.0 r4.</p>\r\n<p>Now, when I try Run Custom Tool over .tt file , I get the following&nbsp;error:</p>\r\n<p>&nbsp;</p>\r\n<p>Error&nbsp;3&nbsp;An Exception was thrown while processing a directive named 'ConfigurationSectionDesigner'. The transformation will not be run.&nbsp; The following Exception was thrown:<br>\r\nSystem.IO.FileNotFoundException: Unable to locate file</p>\r\n<p>File name: 'E:\\TFS\\pro\\Arquitectura\\Main\\Frk4.0\\WebNsi\\Web\\Configuration\\$inputFileName$'</p>\r\n<p><br>\r\n&nbsp;&nbsp; at Microsoft.VisualStudio.TextTemplating.VSHost.TextTemplatingService.ResolvePath(String path)<br>\r\n&nbsp;&nbsp; at ConfigurationSectionDesigner.ConfigurationSectionDesignerDirectiveProcessorBase.PostProcessArguments(String directiveName, IDictionary`2 requiresArguments, IDictionary`2 providesArguments)<br>\r\n&nbsp;&nbsp; at Microsoft.VisualStudio.TextTemplating.RequiresProvidesDirectiveProcessor.ProcessDirective(String directiveName, IDictionary`2 arguments)<br>\r\n&nbsp;&nbsp; at Microsoft.VisualStudio.TextTemplating.Engine.ProcessCustomDirectives(ITextTemplatingEngineHost host, TemplateProcessingSession session, List`1 directivesToBeProcessed)&nbsp;C:\\Documents and Settings\\xxx\\Configuraci&oacute;n local\\Datos de programa\\Microsoft\\VisualStudio\\10.0\\Extensions\\The\r\n Community\\ConfigurationSectionDesigner\\2.0.0.0\\TextTemplates\\ConfigurationSectionDesignerSchema.tt&nbsp;5&nbsp;4&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>any suggestions ?</p>\r\n",
+    "PostedDate": "2011-11-08T01:10:12.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

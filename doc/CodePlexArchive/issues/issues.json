@@ -1,0 +1,462 @@
+[
+  {
+    "Id": 128,
+    "Title": "Support for Validators"
+  },
+  {
+    "Id": 129,
+    "Title": "Incorrect XML comment in custom child elements code generator"
+  },
+  {
+    "Id": 140,
+    "Title": "Installation requires VB"
+  },
+  {
+    "Id": 141,
+    "Title": "DslDefinition.dsl has a hardcoded path to the ConfigurationSectionDesigner.ico file"
+  },
+  {
+    "Id": 175,
+    "Title": "Support for Visual Studio 2005?"
+  },
+  {
+    "Id": 680,
+    "Title": "Support IIS7 Configuration Sections"
+  },
+  {
+    "Id": 898,
+    "Title": "Assembly name missing from sample configuration file"
+  },
+  {
+    "Id": 1006,
+    "Title": "Allow configuration elements to have their own namespace"
+  },
+  {
+    "Id": 1427,
+    "Title": "global:: missing on basic types for attributes"
+  },
+  {
+    "Id": 1477,
+    "Title": "Package Load Failure"
+  },
+  {
+    "Id": 1760,
+    "Title": "Instance returns null when used in different AppDomain"
+  },
+  {
+    "Id": 2736,
+    "Title": "The element cannot contain text. Content model is empty."
+  },
+  {
+    "Id": 2767,
+    "Title": "Accessing collection item by key"
+  },
+  {
+    "Id": 3005,
+    "Title": "Resx and dbml files in solution are also transformed when saving diagram"
+  },
+  {
+    "Id": 3018,
+    "Title": "InvalidOperationException on save"
+  },
+  {
+    "Id": 3415,
+    "Title": "Support for Converters"
+  },
+  {
+    "Id": 3416,
+    "Title": "Configuration section group"
+  },
+  {
+    "Id": 3888,
+    "Title": "Unable to Remove ConfigurationElement from ConfigurationElementCollection"
+  },
+  {
+    "Id": 3906,
+    "Title": "Problem with DefaultValue property of ConfigurationProperty Attribute"
+  },
+  {
+    "Id": 3907,
+    "Title": "Generated sample config file does not contain assembly name in section type attribute"
+  },
+  {
+    "Id": 4733,
+    "Title": "Allow a ConfigurationElementCollection that is required and is the defaultcollection to have an empty xml name"
+  },
+  {
+    "Id": 5504,
+    "Title": "Decorate generated class with GeneratedCodeAttribute"
+  },
+  {
+    "Id": 5516,
+    "Title": "Intellisense breaks when having multiple config files"
+  },
+  {
+    "Id": 5539,
+    "Title": "Cut/Copy/Paste between designers"
+  },
+  {
+    "Id": 5540,
+    "Title": "Zoom control for designer window"
+  },
+  {
+    "Id": 5561,
+    "Title": "Protection of configuration sections"
+  },
+  {
+    "Id": 5562,
+    "Title": "Language-neutral code generation"
+  },
+  {
+    "Id": 5563,
+    "Title": "KeyValueConfigurationCollection"
+  },
+  {
+    "Id": 5565,
+    "Title": "The 'codeGenOptions' attribute is invalid - The value '*' is invalid according to its datatype"
+  },
+  {
+    "Id": 5573,
+    "Title": "Allow customization of the generated files"
+  },
+  {
+    "Id": 5581,
+    "Title": "ConfigurationProperty attribute not enclosing quotation marks around string type DefaultValue"
+  },
+  {
+    "Id": 5589,
+    "Title": "Documentation"
+  },
+  {
+    "Id": 5596,
+    "Title": "Support for IsReadOnly override in order to set and save configuration settings."
+  },
+  {
+    "Id": 5598,
+    "Title": "Support for overloaded indexer in collection classes for item.Key"
+  },
+  {
+    "Id": 5614,
+    "Title": "Inheritance support"
+  },
+  {
+    "Id": 5653,
+    "Title": "Set ConfigurationSection public key token in App.config sample for signed assemblies"
+  },
+  {
+    "Id": 5654,
+    "Title": "Add .diagram file to project template for diagram layout persistance over Source Control"
+  },
+  {
+    "Id": 5655,
+    "Title": "Allow non-keyed ConfigurationElementCollection"
+  },
+  {
+    "Id": 5659,
+    "Title": "Reorder attributes in config section"
+  },
+  {
+    "Id": 5669,
+    "Title": "adding values to web.config"
+  },
+  {
+    "Id": 5671,
+    "Title": "Generated class visibility"
+  },
+  {
+    "Id": 5692,
+    "Title": "ReadOnlyAttribute in generated code is missing argument"
+  },
+  {
+    "Id": 5776,
+    "Title": "The custom tool 'CsdFileGenerator' failed.  Unable to retrieve Visual Studio ProjectItem. Try running the tool again."
+  },
+  {
+    "Id": 6032,
+    "Title": "Support for existing enums"
+  },
+  {
+    "Id": 6053,
+    "Title": "Section singleton instance returns null if section within group"
+  },
+  {
+    "Id": 6074,
+    "Title": "Toolbox elements doesn't exist"
+  },
+  {
+    "Id": 6127,
+    "Title": "Can't found  the project template and Item template in VS2008"
+  },
+  {
+    "Id": 6162,
+    "Title": "Configuration section shape resizes so that the right side aligns to any referenced configuration element"
+  },
+  {
+    "Id": 6281,
+    "Title": "Visual Studio 2010 support"
+  },
+  {
+    "Id": 6822,
+    "Title": "Add to Extension Gallery"
+  },
+  {
+    "Id": 6823,
+    "Title": "DefaultExtension  method returning constants verify for correctness"
+  },
+  {
+    "Id": 6824,
+    "Title": "Branch 2.0.0 Beta Release"
+  },
+  {
+    "Id": 6834,
+    "Title": "Down level dsldefinition.dsl included in release"
+  },
+  {
+    "Id": 6836,
+    "Title": "Inherit from \"designer external\" base class"
+  },
+  {
+    "Id": 6837,
+    "Title": "Configuration Error loading Section"
+  },
+  {
+    "Id": 6922,
+    "Title": "Right-click on the VS 2010 designer shows error"
+  },
+  {
+    "Id": 7078,
+    "Title": "Current code does not correctly install the Custom Tool"
+  },
+  {
+    "Id": 7092,
+    "Title": "Feature: Add Access Modifier for attribute/element"
+  },
+  {
+    "Id": 7458,
+    "Title": "Element name issues with ConfigurationElementCollection using AddRemoveClearMapAlternate"
+  },
+  {
+    "Id": 7591,
+    "Title": "Installer does not ask for elevated priviledges (Windows 7 + Server 2008 issue)"
+  },
+  {
+    "Id": 7652,
+    "Title": "Installer Asks For Non-Existant Readme"
+  },
+  {
+    "Id": 8217,
+    "Title": "Section elements are defined as xsd:sequence instead of xsd:all in schema"
+  },
+  {
+    "Id": 8401,
+    "Title": "NullReferenceException running custom tool, when there is a project that can't be loaded in the solution"
+  },
+  {
+    "Id": 8476,
+    "Title": "VS 2010 VSIX will not register csd icon."
+  },
+  {
+    "Id": 8493,
+    "Title": "CSD wont generate sample configuration VS2010"
+  },
+  {
+    "Id": 8494,
+    "Title": "For some Windows XP users, the extension path exceeds the char limit."
+  },
+  {
+    "Id": 8511,
+    "Title": "Demo config files have assembly name set to namespace."
+  },
+  {
+    "Id": 8524,
+    "Title": "Reorder Elements and Attributes"
+  },
+  {
+    "Id": 8659,
+    "Title": "White space in XSD file between namespace and class name"
+  },
+  {
+    "Id": 8662,
+    "Title": "Generated configuration uses type namespace instead of type assembly name for section declaration"
+  },
+  {
+    "Id": 8729,
+    "Title": "GeneratedCodeAttribute on generated classes to avoid conflicts with code analysis rules"
+  },
+  {
+    "Id": 8823,
+    "Title": "MultiType element collection"
+  },
+  {
+    "Id": 8857,
+    "Title": "Element name issues with ConfigurationElementCollection using AddRemoveClearMapAlternate in Visual Studio 2010"
+  },
+  {
+    "Id": 8858,
+    "Title": "Element name issues with ConfigurationElementCollection using AddRemoveClearMapAlternate in Visual Studio 2010"
+  },
+  {
+    "Id": 8859,
+    "Title": "Element name issues with ConfigurationElementCollection using AddRemoveClearMapAlternate in Visual Studio 2010"
+  },
+  {
+    "Id": 8892,
+    "Title": "Generated XSD to include list of available enum values for a defined type"
+  },
+  {
+    "Id": 8984,
+    "Title": "Use of native xsd derivation for abstract classes"
+  },
+  {
+    "Id": 9005,
+    "Title": "Could not load file or assembly... The system cannot find the file specified."
+  },
+  {
+    "Id": 9062,
+    "Title": "TypeNameConverter doesn't work"
+  },
+  {
+    "Id": 9168,
+    "Title": "ConfigurationElementCollection Code Generation Options broken for ICollections"
+  },
+  {
+    "Id": 9202,
+    "Title": "PathTooLong Installing from VSIX (WinXP Only)"
+  },
+  {
+    "Id": 9321,
+    "Title": "Using GenericEnumConverter throws exception at runtime"
+  },
+  {
+    "Id": 9479,
+    "Title": "Element-as-Key for collections"
+  },
+  {
+    "Id": 9510,
+    "Title": "Elements list is generated in XSD as \"<xs:sequence>\""
+  },
+  {
+    "Id": 9547,
+    "Title": "Configuration Section Designer on Visual Studio 2012"
+  },
+  {
+    "Id": 9642,
+    "Title": "Extend Configuration Collections to support IEnumerable"
+  },
+  {
+    "Id": 9720,
+    "Title": "< and > characters in Documentation attribute are not escaped in XSD"
+  },
+  {
+    "Id": 9737,
+    "Title": "PathTooLong Exception on installation"
+  },
+  {
+    "Id": 9739,
+    "Title": "I installed but do not see project type"
+  },
+  {
+    "Id": 9747,
+    "Title": "Generated XSD does not produce 'Add', 'Remove' or 'Clear' entries"
+  },
+  {
+    "Id": 9841,
+    "Title": "The custom tool 'CsdFileGenerator' failed.  Unrecognized Guid format."
+  },
+  {
+    "Id": 9851,
+    "Title": "IOException and ArgumentOutOfRangeException when trying to install 2.0.1 r0 for Visual Studio 2012 (alpha)"
+  },
+  {
+    "Id": 9936,
+    "Title": "Export diagram as image"
+  },
+  {
+    "Id": 10143,
+    "Title": "Sealed Inheritance"
+  },
+  {
+    "Id": 10231,
+    "Title": "Theme Colors Ignored"
+  },
+  {
+    "Id": 10234,
+    "Title": "Bug: config sections eclosed by groups"
+  },
+  {
+    "Id": 10240,
+    "Title": "Ability to make ConfigurationElements and Collections implement interfaces"
+  },
+  {
+    "Id": 10275,
+    "Title": "Can somebody document how to include the resource inside a new solution"
+  },
+  {
+    "Id": 10286,
+    "Title": "Cannot generate cs file.   Misleading error message."
+  },
+  {
+    "Id": 10292,
+    "Title": "ConfigurationElementCollection item type has more than one key property"
+  },
+  {
+    "Id": 10294,
+    "Title": "Setting has custom child elements disables all schema checking"
+  },
+  {
+    "Id": 10326,
+    "Title": "PathTooLongException when installing (Win XP/Server2003)"
+  },
+  {
+    "Id": 10435,
+    "Title": "The custom tool 'CsdFileGenerator' failed. Unrecognized Guid format"
+  },
+  {
+    "Id": 10438,
+    "Title": "Support for Visual Studio 2013"
+  },
+  {
+    "Id": 10540,
+    "Title": "The custom tool 'CsdFileGenerator' failed.  Unrecognized Guid format."
+  },
+  {
+    "Id": 10722,
+    "Title": "PolymorphicConfigurationElementCollection in CSD?"
+  },
+  {
+    "Id": 10781,
+    "Title": "CSD files not generated and \"TextTemplating service unavailable\" error is shown."
+  },
+  {
+    "Id": 10883,
+    "Title": "Custom Elements"
+  },
+  {
+    "Id": 10954,
+    "Title": "Support for Visual Studio 2015"
+  },
+  {
+    "Id": 10958,
+    "Title": "External/separate config files via configSource attribute"
+  },
+  {
+    "Id": 11011,
+    "Title": "Can not install (required version of .Net-Framework issue)"
+  },
+  {
+    "Id": 11076,
+    "Title": "Validation of Xml Namespace in version 2.0.1.801 VS2015"
+  },
+  {
+    "Id": 11114,
+    "Title": "Support AspNetCore style configuration (JSON)."
+  },
+  {
+    "Id": 11159,
+    "Title": "XSD generated with error (ErrorGeneratingOutput)"
+  },
+  {
+    "Id": 11194,
+    "Title": "BizTalkCop/CodePlex RuleSet 2016"
+  }
+]

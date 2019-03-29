@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "291374",
+    "ThreadId": "85559",
+    "Html": "<p>Does the csd generated code provide true singleton behaviour and do I get this behaviour by default if I simply use the generated code like:</p>\r\n<p>MyConfig.MyListOfStuff</p>\r\n<p>?</p>\r\n<p>&nbsp;</p>\r\n<p>Cheers in advance -&nbsp; great piece of kit so far!</p>",
+    "PostedDate": "2010-02-16T12:01:50.277-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "292034",
+    "ThreadId": "85559",
+    "Html": "<p>I'm not sure what you mean when you ask for singleton behavior. Would you please elaborate? Which behavior are you looking for, exactly?</p>",
+    "PostedDate": "2010-02-18T00:48:14.97-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "292038",
+    "ThreadId": "85559",
+    "Html": "<p>Hi,</p>\r\n<p>I mean singleton behaviour in the Gang of Four design pattern sense. For example,&nbsp;when I access any of my config elements, singleton behaviour would ensure that one and only one instance of the config class would ever be instantiated and responsible for returning the elements.</p>\r\n<p>The reason I ask is that I noticed a method called 'GetSingletonInstance' in the generated code, and this made me realise I might not have to design in my own singleton behaviour around the generated code.</p>\r\n<p>Cheers.</p>",
+    "PostedDate": "2010-02-18T00:55:40.303-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "292052",
+    "ThreadId": "85559",
+    "Html": "<p>I've never seen the <strong>GetSingletonInstance </strong>method you speak of. The CSD code generator creates a property called <strong>Instance</strong>. I'm not sure if it truly is a singleton; it was added before I started working on the project. It is very easy to test, however. Just make two calls to the property, so you have two variables that hold your configuration section, then modify a value in one of them and check that it's been modified in the other one.</p>",
+    "PostedDate": "2010-02-18T01:34:41.07-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "292179",
+    "ThreadId": "85559",
+    "Html": "<p>Tried it - and it is exhibiting singleton behaviour</p>\r\n<p>bravo!</p>",
+    "PostedDate": "2010-02-18T07:06:02.127-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

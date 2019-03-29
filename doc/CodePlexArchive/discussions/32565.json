@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "107982",
+    "ThreadId": "32565",
+    "Html": "I've got VS2008 with the VS2008 SDK installed.&nbsp; When I try to build the DslSetup project, I get an error as follows:<br>\r\n<br>\r\nDslSetup\\Files.wxs(19): warning LGHT1010: Found orphaned Component 'SupportingFiles'.&nbsp; Every Component should have at lease one parent Feature.<br>\r\n<br>\r\nAm I doing something wrong, or is there an error in the InstallerDefinition.dslsetup file?<br>\r\n<br>\r\nThanks, Scott\r\n",
+    "PostedDate": "2008-07-30T08:33:35.367-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "109923",
+    "ThreadId": "32565",
+    "Html": "Hi Scott,<br>\r\n<br>\r\nApparently I missed this warning before but it seems that it's not a problem: it's been in the source code from the beginning and it is generated like that from the DSL Tools. The warning basically appears because I don't have any supporting files (such as a readme document) but the DSL Tools need to generate that WiX component anyway since the EULA is part of it. However, the EULA is not installed anywhere (only shown during installation) and neither is there any other content, which is why you get the warning. Long story short: it's fine to ignore the warning although I would also love not to see it at all then. I'll consider adding a simple readme document to avoid it altogether...<br>\r\n<br>\r\nCheers,<br>\r\n<br>\r\nJelle\r\n",
+    "PostedDate": "2008-08-08T05:29:19.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

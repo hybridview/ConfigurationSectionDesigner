@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi!\n \nIt would be great if we could declare an element of an abstract type.\nIt means the XSD schema should use the extensions, as described in this page\nhttp://www.w3schools.com/schema/el_extension.asp\n \nFor example, if I had an element of an abstract type like PersonBase, herited by FemalePerson and MalePerson,\nwhen I will writing my configuration file, when I open the element I will able to choose between the two types.",
+    "LastUpdatedDate": "2013-02-21T16:30:26.927-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-12-07T06:46:49.797-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Use of native xsd derivation for abstract classes",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8984
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

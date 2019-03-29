@@ -1,0 +1,171 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The section.Instance property returns null if the section is nested within groups.  This is because you need to pass the path including groups to the GetSection method. E.g. for:\n \n  <myCompany xmlns=\"myCompany.Configuration\">\n    <Web>\n      <UITesting>\n        <environment name=\"Test1\" >\n          <location url=\"http://host.domain.com/app.html\"/>\n          <login enabled=\"true\" username=\"user\" password=\"password\"/>\n        </environment>\n      </UITesting>\n    </Web>\n  </myCompany>\n \nYou need to call ConfigurationManager.GetSection(\"myCompany/Web/UITesting/environment\");\n \nFor now I don't generate the singleton and just instatiate the sections myself.\n \nThanks!",
+    "LastUpdatedDate": "2017-12-09T05:48:20.197-08:00",
+    "PlannedForRelease": "1.7",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-02-18T00:43:07.063-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Section singleton instance returns null if section within group",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 7,
+    "Id": 6053
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2661,
+      "FileName": "ConfigurationSectionCodeGenerator.cs",
+      "DownloadUrl": ".\\2661"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Thank you for reporting this behavior. I will fix this for the next release.",
+      "PostedDate": "2010-02-18T00:46:18.987-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-05-09T09:29:38.783-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-12T14:59:53.237-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Also if you used the designer to add a sectiongroup, the only places this appears is in the csd file and the sample config file (which thus gives unexplained null pointer exceptions BTW).\r\nThe sectiongroup should have an Xml Name property, and it should generate a const C# code.",
+      "PostedDate": "2011-06-12T15:04:17.44-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-08T06:18:08.96-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "It was a little more difficult to perform a DIFF on this patch because there were formatting changes (spaces removed) from the source. I cleaned up the patch to better show the relevant changes and have attached the file to this post.",
+      "PostedDate": "2011-07-08T06:18:12.18-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm having a tough time reproducing on the 1.6x builds. Can someone create a test case that reproduces this behavior and upload the files?",
+      "PostedDate": "2011-07-08T07:24:43.61-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-26T07:37:17.16-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-08-01T13:44:37.43-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Evidently, this issue still affects the 2.0.0 r4 release.  I tried downloading the source and applying the patched ConfigurationSectionCodeGenerator.cs, but apparently, while it does solve the nested ConfigurationSection (up to one level), the graphical designer now doesn't allow modification of any Attributes or Elements in the ConfigurationSection or modification of the Config Sections (receive an exception \"The parameter is incorrect. (Exception from HRESULT:0x80070057 (E-INVALIDARG)).  I'll see if I can get into the source to find the fix, but in the mean time, one can just modify the xml directly.",
+      "PostedDate": "2011-08-01T13:58:19.243-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks for putting effort into this. I will try to reproduce this issue using the extra info that I've received.",
+      "PostedDate": "2011-08-02T18:24:03.913-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-01-12T04:57:56.78-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Any progress for this issue? I discovered this awesome project recently and have immediatly started using it in my projects. This all went fine until this beast showed it's ugly head.",
+      "PostedDate": "2012-01-12T05:00:04.21-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm going to revisit this issue very soon. I've been pretty busy since last summer (new house, new baby, etc), but will try to devote some spare time to this.",
+      "PostedDate": "2012-02-14T06:13:37.887-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Is there any progress on this as it has been outstanding for some time?  Do you have time to deal with contributions if I make an effort to resolve this?",
+      "PostedDate": "2012-11-07T05:27:12.333-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-11-09T06:23:17.653-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I've added the patch to the source code repository for evaluation/testing.",
+      "PostedDate": "2012-12-12T06:51:37.967-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:32.633-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "How can i download a release with this patch ?\nThanks, keep up the good work !",
+      "PostedDate": "2014-06-12T03:17:04.72-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I've integrated this patch into my local version, but the solution is not complete as only 1 level of groups is honored. For a proper fix, it must support multiple levels of grouping. I'll look at this again in the near future.",
+      "PostedDate": "2014-09-08T15:32:35.443-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I've added support for multiple-levels. Will publish after more testing.",
+      "PostedDate": "2014-09-09T15:28:02.147-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Potential Fix is checked in to TFS and in latest VS2013 package. Will close once it is deployed as download package for VS2012 and confirmed.",
+      "PostedDate": "2014-09-12T13:11:06.537-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-12T13:11:16.88-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Still have this problem... I am working on VS2013 Premium and CSD 2.0.1.7...\r\n\r\nIf I put my section inside a Group I receive null when I try to execute following line\r\n\r\n```\nConfigs.MySettingsSection.Instance //<- Instance is null;\n```\nIf I remove group everything works...\r\n\r\nHere how I have tried:\n```\n<sectionGroup name=\"mySectionGroup \" type=\"Configs.MediaCommunications\">\n      <section name=\"settings\" type=\"Configs.Settings, Website\" allowLocation=\"true\" allowDefinition=\"Everywhere\" />\n    </sectionGroup>\n```\r\n\r\nor in this way:\n```\n<sectionGroup name=\"mySectionGroup \" type=\"Configs.MediaCommunications\">\n      <section name=\"settings\" type=\"System.Configuration.ConfigurationSectionGroup, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\" allowLocation=\"true\" allowDefinition=\"Everywhere\" />\n    </sectionGroup>\n```\r\n\r\nCan you help me please?",
+      "PostedDate": "2015-03-06T04:29:24.937-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:20.197-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

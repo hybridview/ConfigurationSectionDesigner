@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have selected the Visual C# node in the New Project dialog and don't see it. I have installed and uninstalled it to no avail.",
+    "LastUpdatedDate": "2013-06-14T00:26:35.82-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-11-26T09:12:33.357-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "I installed but do not see project type",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9739
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Select the \"General\" sub-item to see the CSD project type. This SHOULD be included under the default view, so leaving this open.",
+      "PostedDate": "2012-12-10T08:52:47.57-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "For now, I recommend we simply change the documentation to instruct users to select the \"General\" project sub-type.",
+      "PostedDate": "2012-12-11T13:55:13.44-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "As I started to change the documentation, it became clear that my first thought was probably the best. General doesn't seem like a good fit for this... Sorry for the flip-flopping.",
+      "PostedDate": "2012-12-11T16:41:17.02-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Fixed in VS2012 release.",
+      "PostedDate": "2013-01-04T07:41:01.59-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:24.773-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:45.63-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:46.063-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:26:35.82-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

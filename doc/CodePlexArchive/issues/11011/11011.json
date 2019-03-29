@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I'm having troubles installing 2.0.1 r7 for Visual Studio 2013. I'm running Visual Studio 2013 Community. The installation fails with \"The extension 'ConfigurationSectionDesigner' requires a version of the .NET Framework that is not installed.\"\n\nHere's the log:\n> 23.09.2015 10:02:05 - Microsoft VSIX Installer\n23.09.2015 10:02:05 - -------------------------------------------\n23.09.2015 10:02:05 - Initializing Install...\n23.09.2015 10:02:05 - Extension Details...\n23.09.2015 10:02:05 - \tIdentifier      : 9f16956e-2232-4f80-9ebb-4165929ef3ef\n23.09.2015 10:02:05 - \tName            : ConfigurationSectionDesigner\n23.09.2015 10:02:05 - \tAuthor          : The Community\n23.09.2015 10:02:05 - \tVersion         : 2.0.1.7\n23.09.2015 10:02:05 - \tDescription     : A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.\n23.09.2015 10:02:05 - \tLocale          : en-US\n23.09.2015 10:02:05 - \tMoreInfoURL     : http://csd.codeplex.com/\n23.09.2015 10:02:05 - \tInstalledByMSI  : False\n23.09.2015 10:02:05 - \tSupportedFrameworkVersionRange : [4.5]\n23.09.2015 10:02:05 - \n23.09.2015 10:02:05 - \tSupported Products : \n23.09.2015 10:02:05 - \t\tMicrosoft.VisualStudio.Pro\n23.09.2015 10:02:05 - \t\t\tVersion : [12.0]\n23.09.2015 10:02:05 - \n23.09.2015 10:02:05 - \tReferences      : \n23.09.2015 10:02:05 - \n23.09.2015 10:02:05 - Searching for applicable products...\n23.09.2015 10:02:05 - Found installed product - Microsoft Visual Studio Community 2013\n23.09.2015 10:02:06 - The extension with ID '9f16956e-2232-4f80-9ebb-4165929ef3ef' is not installed to Microsoft Visual Studio Community 2013.\n23.09.2015 10:02:06 - Found installed product - Microsoft Visual Studio 2013 Shell (Integrated)\n23.09.2015 10:02:06 - Found installed product - Global Location\n23.09.2015 10:02:10 - The following target products have been selected...\n23.09.2015 10:02:10 - \tMicrosoft Visual Studio Community 2013\n23.09.2015 10:02:10 - \n23.09.2015 10:02:10 - Beginning to install extension to Microsoft Visual Studio Community 2013...\n23.09.2015 10:02:10 - Install Error : Microsoft.VisualStudio.ExtensionManager.MissingTargetFrameworkException: The extension 'ConfigurationSectionDesigner' requires a version of the .NET Framework that is not installed.\n   bei Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.CheckForValidDotNetFramework(IExtension extension)\n   bei Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.CheckForInstallBlockers(InstallableExtensionImpl extension, IInstalledExtensionList modifiedInstalledExtensionsList, Boolean isNestedExtension, Boolean& olderVersionInstalled)\n   bei Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.InstallInternal(InstallableExtensionImpl extension, Boolean perMachine, Boolean isNestedExtension, IDictionary`2 extensionsInstalledSoFar, List`1 extensionsUninstalledSoFar, IInstalledExtensionList modifiedInstalledExtensionsList, AsyncOperation asyncOp, UInt64 totalBytesToWrite, UInt64& totalBytesWritten)\n   bei Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.BeginInstall(IInstallableExtension installableExtension, Boolean perMachine, AsyncOperation asyncOp)\n   bei Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.InstallWorker(IInstallableExtension extension, Boolean perMachine, AsyncOperation asyncOp)\n\nAs I understand the log, the extension requires .Net 4.5, doesn't it? .Net 4.5 is installed on my machine (Windows 10 Prof.) since it is already included in Visual Studio 2013. Any ideas?\n\nThis is urgent because I need to update an existing model in a legacy project.",
+    "LastUpdatedDate": "2015-09-23T05:35:27.737-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2015-09-23T01:10:32.697-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Can not install (required version of .Net-Framework issue)",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 11011
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Follow up from myself: Today I installed VS Community 2015 to try the package from Ray1984, see https://csd.codeplex.com/discussions/641721. It installed to both VS 2013 and 2105. But I got an error on opening the model in VS 2013 \"The type initializer for 'Microsoft.Internal.VisualStudio.Shell.TelemetryHelper' threw an exception. The exception did not occur in VS 2015.\r\n\r\nSo I uninstalled the extension via _Tools->Extension and Updates_ and retried the installation of 2.0.1 r7 for Visual Studio 2013 and it installed this time!!!\r\n\r\nI'm confused. Now I'm running v2.0.1.7 in VS 2013 and v2.0.1.0 in VS 2015. It seems that Ray1984's for VS 2015 patch is based on an older version. I also assume that the VS 2015 installation fixed somehow the initial .Net-Framework issue.\r\n\r\nWhat the heck... ;-)\n",
+      "PostedDate": "2015-09-23T03:14:11.043-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Well....it seems that I did modify the package based on an older version :(\r\n\r\nIn fact, the .vsextension file of the original shows that the VSIX only works on the VS version it's compiled for. \nIf you want to install CSD for both VS2013 & VS2015, you have to install two vsixs, one for 2013, one for 2015.\r\n\r\nSo.....my patch should only works on VS2015. The reason why it can be installed on VS2013 is that I didn't delete the that configuration in .vsextension file  :P\nBTW...maybe I should download the HEAD version codes and recompile one  :D",
+      "PostedDate": "2015-09-23T05:35:27.737-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

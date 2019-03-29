@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "481311",
+    "ThreadId": "223796",
+    "Html": "<p>Hi,</p>\r\n<p>The default method for instantiating a configuration section does not seem to work design-time:</p>\r\n<p>\r\n<pre>System.Configuration.ConfigurationManager.GetSection(&quot;MySectionName&quot;)</pre>\r\nreturns a null-reference when accessed design-time.</p>\r\n<p>I've found some resources on this subject, but they only seem to work for classes that inherit\r\n<pre>System.Web.UI.Design.WebControls.ControlDesigner</pre>\r\n</p>\r\n<p>, and therefore any initialization would not be static nor its behaviour singleton anymore. The 'correct' way to do this would be:</p>\r\n<p>\r\n<pre>public CustomResourceProvider Instance()\r\n{\r\n<span style=\"white-space:pre\">\t</span>IWebApplication webApp = (IWebApplication)base.Component.Site.GetService(typeof(IWebApplication));\r\n<span style=\"white-space:pre\">\t</span>if (webApp == null) return null;\r\n       <span style=\"white-space:pre\">\t</span>System.Configuration.Configuration config = webApp.OpenWebConfiguration(true);\r\n\treturn (CustomResourceProvider)config.GetSection(&quot;MySectionName&quot;);\r\n}</pre>\r\n</p>\r\n<p>Where &quot;MySectionName&quot; would refer to the constant as defined by CSD.</p>\r\n<p>Any ideas on this?</p>",
+    "PostedDate": "2010-08-17T03:28:28.13-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

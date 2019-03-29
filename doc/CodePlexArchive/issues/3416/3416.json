@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-12-09T09:29:19.26-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Section group item in designer.",
+    "LastUpdatedDate": "2017-12-09T05:48:17.333-08:00",
+    "PlannedForRelease": "1.2",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-11-25T22:38:28.977-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Configuration section group",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 3,
+    "Id": 3416
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 32075.",
+      "PostedDate": "2009-12-09T09:29:19.26-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-09T09:58:14.84-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:37.77-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:55.447-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:17.333-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

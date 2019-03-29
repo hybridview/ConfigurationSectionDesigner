@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "850716",
+    "ThreadId": "360094",
+    "Html": "\r\n<p>By default, the generate code is not able to persist the edits back to the .config, so is there any way to generate persistent configuration classes or modify the code generation strategy (e.g plug in some T4 somewhere)?</p>\r\n",
+    "PostedDate": "2012-06-19T00:12:30.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "851929",
+    "ThreadId": "360094",
+    "Html": "<p>I'm not sure what you're asking to do here. Could you be more specific?</p>",
+    "PostedDate": "2012-06-20T22:48:25.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "852506",
+    "ThreadId": "360094",
+    "Html": "\r\n<p>I'll try to explain better:</p>\r\n<p>When i create a custom section, the tool automatically generate for me a list of classes with the properties that i have added in the designer with getter and setter by default.</p>\r\n<p>Since i have the setter, i can override at run time the value of the setting stored in the app.config (e.g MyCustomSection.Instance.MyProperty = someValue;) but i'm not able to persist it to the app.config, what i want is the ability to save to the app.config\r\n all the edits were made (e.g. like&nbsp;<span>ConfigurationManager</span><span>.</span><span>Save</span><span>(...</span><span>) do).</span></p>\r\n<p><span>It would be also nice to have the ability to use custom T4 template for classes generation (like EF)</span></p>\r\n",
+    "PostedDate": "2012-06-22T02:33:46.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "852544",
+    "ThreadId": "360094",
+    "Html": "<p>Saving configuration sections that have been modified during run-time is not our responsibility. That feature is already perfectly possible using the .NET configuration classes. The \"MyCustomSection.Instance\" property is a shortcut access only meant for reading the configuration. If you mean to be able to change it during run-time, you must code your own opening and saving.</p>\r\n<p>We do what you're asking for in the company I work for. We store our settings in machine.config, but this code is relatively easy to adopt for using a local app.config. Here's some sample code that should help you get started:</p>\r\n<pre style=\"font-family: Consolas; font-size: 13; color: black; background: white;\"><span style=\"color: green;\">//&nbsp;Open&nbsp;the&nbsp;configuration&nbsp;file&nbsp;you&nbsp;want&nbsp;to&nbsp;work&nbsp;with.</span>\r\n<span style=\"color: green;\">//&nbsp;If&nbsp;you&nbsp;are&nbsp;working&nbsp;with&nbsp;a&nbsp;local&nbsp;app.config&nbsp;and&nbsp;not&nbsp;machine&nbsp;config,</span>\r\n<span style=\"color: green;\">//&nbsp;look&nbsp;into&nbsp;using&nbsp;ConfigurationManager.OpenExeConfiguration(string);&nbsp;instead.</span>\r\n<span style=\"color: blue;\">var</span>&nbsp;machineConfiguration&nbsp;=&nbsp;<span style=\"color: #2b91af;\">ConfigurationManager</span>.OpenMachineConfiguration();\r\n \r\n<span style=\"color: green;\">//&nbsp;Get&nbsp;your&nbsp;configuration&nbsp;section&nbsp;this&nbsp;way.&nbsp;(Or&nbsp;however&nbsp;you&nbsp;want,&nbsp;really...)</span>\r\n<span style=\"color: blue;\">var</span>&nbsp;myCustomSection&nbsp;=&nbsp;machineConfiguration.Sections[<span style=\"color: #a31515;\">\"myCustomSection\"</span>];\r\n \r\n<span style=\"color: green;\">//&nbsp;At&nbsp;my&nbsp;company,&nbsp;we&nbsp;actually&nbsp;do&nbsp;it&nbsp;this&nbsp;way:</span>\r\n<span style=\"color: blue;\">var</span>&nbsp;configType&nbsp;=&nbsp;<span style=\"color: blue;\">typeof</span>(MyCustomSection);\r\n<span style=\"color: blue;\">var</span>&nbsp;myCustomSection&nbsp;=&nbsp;machineConfiguration.FindConfigurationSectionOfType(configType);\r\n \r\n<span style=\"color: green;\">//&nbsp;Where&nbsp;FindConfigurationSectionOfType&nbsp;is&nbsp;an&nbsp;extension&nbsp;method&nbsp;that&nbsp;looks&nbsp;like&nbsp;this:</span>\r\n<span style=\"color: blue;\">public</span>&nbsp;<span style=\"color: blue;\">static</span>&nbsp;<span style=\"color: #2b91af;\">ConfigurationSection</span>&nbsp;FindConfigurationSectionOfType(&nbsp;<span style=\"color: blue;\">this</span>&nbsp;<span style=\"color: #2b91af;\">ConfigurationSectionCollection</span>&nbsp;sectionCollection,&nbsp;<span style=\"color: #2b91af;\">Type</span>&nbsp;sectionType&nbsp;)\r\n{\r\n\t<span style=\"color: blue;\">for</span>(&nbsp;<span style=\"color: blue;\">int</span>&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;sectionCollection.Count;&nbsp;i++&nbsp;)\r\n\t{\r\n\t\t<span style=\"color: blue;\">try</span>\r\n\t\t{\r\n\t\t\t<span style=\"color: blue;\">if</span>(&nbsp;sectionCollection[i].GetType()&nbsp;==&nbsp;sectionType&nbsp;)\r\n\t\t\t\t<span style=\"color: blue;\">return</span>&nbsp;sectionCollection[i];\r\n\t\t}\r\n\t\t<span style=\"color: blue;\">catch</span>(&nbsp;<span style=\"color: #2b91af;\">ConfigurationException</span>&nbsp;)\r\n\t\t{&nbsp;}\r\n\t}\r\n\t<span style=\"color: blue;\">return</span>&nbsp;<span style=\"color: blue;\">null</span>;\r\n}\r\n \r\n<span style=\"color: green;\">//&nbsp;Anyway,&nbsp;to&nbsp;the&nbsp;point.&nbsp;After&nbsp;you&nbsp;have&nbsp;yourSection,&nbsp;you&nbsp;can&nbsp;make&nbsp;changes&nbsp;to&nbsp;it:</span>\r\nmyCustomSection.MyProperty&nbsp;=&nbsp;someValue;\r\n \r\n<span style=\"color: green;\">//&nbsp;And&nbsp;finally,&nbsp;you&nbsp;can&nbsp;save&nbsp;it:</span>\r\nmachineConfiguration.Save();</pre>\r\n<p>I hope that helps you figure it out. :) Let me know if you have any further questions.</p>",
+    "PostedDate": "2012-06-22T04:29:09.48-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

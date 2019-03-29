@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-03-09T12:24:19.05-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "There is a visual layout bug in the designer that certain shapes resize as soon as you reference another item on the designer. This is due to a connector that \"has custom source\", which apparently makes the source shape wider until it reaches the edge of the referenced shape.",
+    "LastUpdatedDate": "2017-12-09T05:53:40.203-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-03-09T12:21:33.683-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Configuration section shape resizes so that the right side aligns to any referenced configuration element",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 0,
+    "Id": 6162
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 37971.",
+      "PostedDate": "2010-03-09T12:24:19.05-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:32.06-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:51.123-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:53:40.203-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

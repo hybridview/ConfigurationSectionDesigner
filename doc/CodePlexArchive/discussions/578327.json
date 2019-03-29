@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1345065",
+    "ThreadId": "578327",
+    "Html": "Hi,\r<br />\n<br />\nIs there anyway to utilise / pass in a configuration section from another assemblies app.config?  I have a base application which would have common configuration settings, but am loading another assembly which inherits from the base, but performs specific functions and hence would need specific configuration.\r<br />\n<br />\nThere will be multiple assemblies, each performing a different action.  Kind of like a &quot;plugin&quot; type approach.\r<br />\n<br />\nWhat I would like to do is define the generic configuration in the base assembly, but then define the specific configuration in the app.config of the plugin assembly.\r<br />\n<br />\nWould this be possible?\r<br />\n<br />\nMany thanks\r<br />\n<br />\nMark<br />\n",
+    "PostedDate": "2015-01-22T03:30:56.913-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

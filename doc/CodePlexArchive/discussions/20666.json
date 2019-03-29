@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "68634",
+    "ThreadId": "20666",
+    "Html": "\r\nI know it is silly that there are two different formats - but supporting IIS7 config sections would make my life much easier...<br />",
+    "PostedDate": "2008-01-17T21:29:24.81-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "68704",
+    "ThreadId": "20666",
+    "Html": "\r\nI was new to IIS7 config sections but looking at the documentation on <a href=\"http://www.iis.net/articles/view.aspx/IIS7/Extending-IIS7/Extending-IIS7-Configuration/Extending-IIS7-Schema-and-Accessing-the-custom-sec?Page=1\" class=\"externalLink\">extending the IIS7 configuration system<span class=\"externalLinkIcon\" style=\"font-family:Consolas, Courier New, Courier, Monospace;\"></span></a>, it seems that you basically would like the schema XML generated and probably the strongly typed wrapper classes as well?<br /><br />If there is enough semantic overlap (i.e. if the same designer schema could be valid) then it would just be a question of having different code generators for these two artifacts, so maybe it's possible... Let me know your exact requirements (if there's more than what I described above) and I'll see what I can do.<br /><br />Or, as always, if you want to build it yourself let me know and I'll make you a contributor :-)<br />",
+    "PostedDate": "2008-01-18T06:37:41.623-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "68752",
+    "ThreadId": "20666",
+    "Html": "\r\nHi, <br /><br />yeah - basically it is this:<br /><br />- use a different ConfigurationSection class to derive from<br />- configuration schema goes into a separate file instead of attributes<br /><br />It should be very similar - but i haven't looked into details like collections etc...<br /><br />Unfortunately I don't have the cycles to contribute. Just found this project here and thought that it's excellent work ;)<br /><br />",
+    "PostedDate": "2008-01-18T11:45:32.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "70776",
+    "ThreadId": "20666",
+    "Html": "\r\nThis discussion has been copied to a work item. Click here to <a href=\"http://www.codeplex.com/csd/WorkItem/View.aspx?WorkItemId=680\">go to the work item and continue the discussion</a>.<br />",
+    "PostedDate": "2008-01-30T02:07:48.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

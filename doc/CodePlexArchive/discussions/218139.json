@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "462620",
+    "ThreadId": "218139",
+    "Html": "<p>We've just compiled the 2.0 version to try to get it to work with StarterSTS project...but we are unable to generate any templates.The problem seems to be the $inputFileName variable in the</p>\r\n<p>ConfigurationSectionDesignerSample.tt and ConfigurationSectionDesignerSchema.tt files.</p>\r\n<p>Does anyone know how to set this...or if they are actually used in VS 2010 ?</p>\r\n<p>Even better:did anyone get this to work in visual studio 2010?</p>\r\n<div id=\"_mcePaste\" style=\"width:1px;height:1px;overflow:hidden;top:0px;left:-10000px\">﻿</div>",
+    "PostedDate": "2010-07-02T06:11:56.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

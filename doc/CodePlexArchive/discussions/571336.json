@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1319272",
+    "ThreadId": "571336",
+    "Html": "I have designed the csd.\r<br />\n<br />\nI read that there's a feature to generate dummy config/xml file, but I can't figure out how to do this<br />\n",
+    "PostedDate": "2014-11-05T01:05:31.647-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1322453",
+    "ThreadId": "571336",
+    "Html": "You should expand your .csd file, and under it you will see .csd.config file which is sample file for the configuration.\r<br />\nalso you will see .csd.xsd file which could be used inside Visual Studio XML designer.<br />\n",
+    "PostedDate": "2014-11-15T01:51:15-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

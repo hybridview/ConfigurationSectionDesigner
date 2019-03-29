@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "776477",
+    "ThreadId": "324223",
+    "Html": "<p>Can someone please post the code to actually retrieve the information from the Config File.&nbsp;&nbsp; I followed the tutorial and&nbsp;it was great, and the intellisense in the config file&nbsp;is awesome, but there is no reference to the call to retreive the data from the config file in the documentation or any of the discussions.&nbsp;&nbsp; I've searched elsewhere and I've even coded the classes&nbsp;by hand in a&nbsp;similar manner using an example on the internet and was able to use the Confguration.GetSection call to load a variable from the config.&nbsp; But no matter what I try&nbsp;with the one created by the designer&nbsp;it returns a null object.&nbsp;&nbsp; Help is&nbsp;greatly appreciated.</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>",
+    "PostedDate": "2012-02-17T16:06:10.627-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "778910",
+    "ThreadId": "324223",
+    "Html": "<p>Use &lt;NameOfYourSection&gt;.Instance</p>",
+    "PostedDate": "2012-02-19T02:43:29.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "942426",
+    "ThreadId": "403423",
+    "Html": "\r\n<p>The generated code allways asume that is easy convert the origin type from his string representation:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">Return</span> <span style=\"color:blue\">Me</span>.ConvertFromStringMyType(context, culture, <span style=\"color:blue\">CType</span>(value,<span style=\"color:blue\">String</span>))\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>But I want to convert from an arbitrary configuration element directly. &nbsp;The generated code must be:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">Return</span> <span style=\"color:blue\">Me</span>.ConvertFromConfigurationElementGeneratedTypeToMyType(context, culture, value)</pre>\r\n</div>\r\n",
+    "PostedDate": "2012-11-15T16:42:38.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "942550",
+    "ThreadId": "403423",
+    "Html": "\r\n<p>The type of the value parameter will always be a string. This value comes straight from an XML attribute, it's always going to be a string. Feel free to correct me if I'm wrong, but if you step through that code, I'm pretty sure you'll see that the value\r\n parameter is always going to be a string.</p>\r\n",
+    "PostedDate": "2012-11-16T00:04:43.017-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

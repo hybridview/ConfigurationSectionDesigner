@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I set this flag on one configuration element collection and after that there was no IntelliSense functionality (no error messages, no highlighting) for any part of the config file.",
+    "LastUpdatedDate": "2014-09-12T13:03:53.5-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-08-22T19:40:18.08-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Setting has custom child elements disables all schema checking",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 1,
+    "Id": 10294
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Here is the problem. When this flag is set, we are forced to generate a schema that is ambiguous (because of unknown child elements). An ambiguous schema will prevent intellisense from working. Unfortunately, I don't see a way around this at the moment without some very clever (and possibly complex) development work.",
+      "PostedDate": "2014-09-09T12:52:04.48-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm leaving this active for now, in case someone has a clever way to get around this. A warning should probably be added to inform users in the future.",
+      "PostedDate": "2014-09-09T12:53:33-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-12T13:03:02.28-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Added warning about this in the tool.\n\n** Closed by andym1978 9/12/2014 1:03 PM",
+      "PostedDate": "2014-09-12T13:03:28.733-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-12T13:03:28.973-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Warning msg is checked in to TFS. Will close once it is deployed as download package and confirmed.",
+      "PostedDate": "2014-09-12T13:03:53.5-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "954030",
+    "ThreadId": "406262",
+    "Html": "\r\n<p>I see a way to achieve this:</p>\r\n<p>&lt;filesSection&gt;<span>&lt;files&gt;</span>&lt;file&gt;&lt;records&gt;&lt;record&gt;&lt;fields&gt;&lt;field&gt;&lt;/fields&gt;&lt;/record&gt;&lt;/records&gt;&lt;/file&gt;&lt;/files&gt;&lt;/filesSection&gt;</p>\r\n<p>but I want this:</p>\r\n<p>&lt;filesSection&gt;&lt;file(s)&gt;&lt;record(s)&gt;&lt;field(s)&gt;&lt;/record&gt;&lt;/file&gt;&lt;/filesSection&gt;</p>\r\n<p>I suspect this requires some kind of self-referential Element or Collection but I can't seem to get there.</p>\r\n<p>Hints? (Or am I barking up the wrong tree?)</p>\r\n",
+    "PostedDate": "2012-12-10T08:01:48.71-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "985523",
+    "ThreadId": "406262",
+    "Html": "\r\n<p>In case there is anyone else as dense as me. &nbsp;This is easy just by chaining Collections together and ending with an element.</p>\r\n",
+    "PostedDate": "2013-01-11T08:53:48.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1046407",
+    "ThreadId": "406262",
+    "Html": "I'm afraid I'm denser than you: could you elaborate on how you go about &quot;Chaining collections together&quot;?  I'm trying to achieve the same effect as you describe in your original post.<br />\n",
+    "PostedDate": "2013-05-21T02:47:25.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

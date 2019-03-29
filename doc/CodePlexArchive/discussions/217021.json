@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "458911",
+    "ThreadId": "217021",
+    "Html": "<p>Hi All,</p>\r\n<p>I recently downloaded this fantastic tool. i added and ConfigurationSectionDesigner to an existing project, using the add item option. When i completed my diagram and validated it, there were no extra files generated such as;</p>\r\n<p>ConfigurationSectionCode.tt</p>\r\n<p>ConfigurationSectionSample.tt</p>\r\n<p>ConfigurationSectionSchema.tt</p>\r\n<p>&nbsp;</p>\r\n<p>How do i get these files to appear?, the tutorial does not even mention where these files come from.</p>\r\n<p>so far i only have;</p>\r\n<p>ConfigurationSectionDesigner1.csd</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks.</p>\r\n<p>&nbsp;</p>\r\n<p>Mr. Ocelot.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-06-23T05:01:16.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459024",
+    "ThreadId": "217021",
+    "Html": "<p>i think the tools which generate those files are missing, can anyone tell me why this might be the case?, i made sure i installed the csd while VS 2008 TS was off. i also tried reinstalling it.</p>",
+    "PostedDate": "2010-06-23T09:14:15.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459340",
+    "ThreadId": "217021",
+    "Html": "<p>It should be set automatically but can you make sure that the .csd file has the &quot;Custom Tool&quot; set to &quot;CsdFileGenerator&quot; (without the quotes)? So right-click the .csd file and choose Properties, then set the Custom Tool property. If you now save the .csd file it should generate those files.</p>",
+    "PostedDate": "2010-06-24T00:28:19.107-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459353",
+    "ThreadId": "217021",
+    "Html": "<p>Those .tt files have not been included (or required) with CSD projects since version 1.2. They are therefore not mentioned in the tutorial. Where are they mentioned, since you ask about them? And jelled is right, if you set the custom tool to &quot;CsdFileGenerator&quot; and your diagram is valid, it should generate files for you.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-06-24T01:18:54.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459371",
+    "ThreadId": "217021",
+    "Html": "<p>thanks for your input.</p>\r\n<p><strong>Jelled</strong>, i have made sure that the .csd file has the custom tool set to&nbsp;CsdFileGenerator, but files are still not being generated. I right clicked on the file and selected; Run Custom Tool and i got the error; &quot;The custom tool 'CsdFileGenerator' failed. Unable to retrieve Visual Studio ProjectItem. Try running the tool again.&quot;. this leads me to believe that the tool has not been installed, i have tried uninstalling CSD and then doing a fresh install but i get the same problem.</p>\r\n<p><strong>alexschrod</strong>, i have a colleague who can run this tool successfully on his VS and the files i mentioned are generated for him. also at the end of the tutorial i can see those files in the solution explorer window screen shot.</p>",
+    "PostedDate": "2010-06-24T02:13:06.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459381",
+    "ThreadId": "217021",
+    "Html": "<p>Could you give me a link to the tutorial page you're talking of? I can't find it myself.</p>\r\n<p>&nbsp;</p>\r\n<p>That error message;&nbsp;&quot;The custom tool 'CsdFileGenerator' failed. Unable to retrieve Visual Studio ProjectItem. Try running the tool again.&quot;; is well known to me and is documented fairly well in <a href=\"http://csd.codeplex.com/workitem/5776\">this bug report</a>. I recently checked in a (partial) fix to this bug that might help your issue, but it's only in source code yet, there has been no new release with it included. I'm not going to expect you to download and build the source for CSD yourself (it's quite a hassle for a &quot;regular user&quot;) so all I can say is that I should perhaps make a new release soon (1.6.2) with the small bug fixes that have been applied in since 1.6.1.</p>",
+    "PostedDate": "2010-06-24T02:28:36.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459383",
+    "ThreadId": "217021",
+    "Html": "<p>sorry alexschrod i just went back to that page and realised that it didn't have those files listed.</p>\r\n<p>in the mean time would you recommend me using an older version?</p>",
+    "PostedDate": "2010-06-24T02:39:04.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459400",
+    "ThreadId": "217021",
+    "Html": "<p>Not really, because that problem has existed since 1.2, so you'd have to revert to 1.1.1 to get one without it. What is your solution's layout? That's all that really matters. That bug only occurs with certain solution layouts.</p>",
+    "PostedDate": "2010-06-24T03:31:52.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459403",
+    "ThreadId": "217021",
+    "Html": "<p>its a very big solution, consisting of around 37 projects, but the configuration designer is only included within one of the projects. that project is a class library type project.</p>",
+    "PostedDate": "2010-06-24T03:34:23.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459422",
+    "ThreadId": "217021",
+    "Html": "<p>Yeah... that is probably the problem. I'm not going to go into detail, because it won't help you, but currently the CsdFileGenerator is very sensitive to every other project in your solution... among other things, it fails completely if your solution contains a VC++ project. So your best bet for now would be to put the configuration section project in a separate solution and then reference it as an assembly where required from there. When 1.6.2 comes out, you might be able to include it in the big solution.</p>",
+    "PostedDate": "2010-06-24T04:08:59.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

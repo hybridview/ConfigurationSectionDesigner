@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "837207",
+    "ThreadId": "356004",
+    "Html": "\r\n<p>I'm using version 2.0.0 in VS2010</p>\r\n<p>I have sucessfuly created the configuration, and I created a &lt;assemblyname&gt;.dll.config&nbsp; in my project and populated it with my data successfuly using the Intellisense functionality.</p>\r\n<p>However every time I try to access my Config section's by name.Instance, I get a null.</p>\r\n<p>I have read other people with the same issue, but none of their solutions work for me.</p>\r\n<p>My project is a Command Line executable.</p>\r\n",
+    "PostedDate": "2012-05-16T07:21:30.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "850414",
+    "ThreadId": "356004",
+    "Html": "<p>I've gotten that error before when the config section was missing from my config file. I've never created a config file based on DLL (only app config), so i wonder if that specific config file is not being read.</p>",
+    "PostedDate": "2012-06-18T08:59:50.217-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

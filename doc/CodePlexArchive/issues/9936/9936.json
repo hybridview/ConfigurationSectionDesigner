@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "It would be very useful to be able to export the diagram as an image.\nWhile small diagrams may be captured using a screenshot and then cropped, in case of large diagrams (or small screens!) the diagram may not fit the screen at a zoom level high enough for things to be readable.\n\nThis functionality is available in other similar diagrams, e.g. EntityFramework's edmx editor, as a right-click-on-the-canvas menu option.\n\nI'm hoping the actual functionality is provided by Visual Studio's diagramming module, and it just needs to be exposed by CSD.",
+    "LastUpdatedDate": "2013-03-06T01:46:07.79-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-03-06T01:46:07.79-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Export diagram as image",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9936
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

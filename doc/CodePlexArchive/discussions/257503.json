@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "612276",
+    "ThreadId": "257503",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>The installation document refers to the VS 2010 installation (V2?), but the downloads are for VS2008 only (V1.6).</p>\r\n<p>So - where is the VS2010 installation?</p>\r\n<p>Thanks,</p>\r\n<p>ron</p>\r\n",
+    "PostedDate": "2011-05-13T03:05:05.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "633657",
+    "ThreadId": "257503",
+    "Html": "<p>For those who are also looking for the Visual Studio 2010 package,&nbsp;it is being actively developed and is almost ready for release.</p>\n<p>We want to make sure that the VS2010 version is very stable and will not impact users of the previous versions before an official release is initiated.</p>\n<p>For those willing to try the pre-release version, a recent download can be found in the downloads section (2.x versions)</p>\n<p>Thanks!</p>\n<p>( Edited 20110706 to instruct users to go to \"downloads\" section. )</p>",
+    "PostedDate": "2011-06-27T11:13:19.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

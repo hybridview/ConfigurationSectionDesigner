@@ -1,0 +1,86 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "Fixed the issue and added some other null checks to potential problem areas. Fix has been committed to latest source. This issue report is a perfect example of how to submit issues. Though demus essentially reported AND provided a solution in one post, simply providing detailed info about the state of your solution, and actions taken leading up to the error, make problem solving MUCH easier. &#58;&#41;",
+    "ClosedDate": "2011-06-27T10:22:14.64-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Line 251 of Main-VS2010\\Source\\DslPackage\\CustomCode\\CodeGeneration\\VsHelper.cs:\n \nDiagnostics.DebugWrite(\"VsHelper.TryFindProjectItemAndParentProject >> Current project = '{0}'. Number of project items = {1}.\", project.Name, project.ProjectItems.Count);\n \nFor projects that VS can't load, ProjectItems is null. If there is such a project in your solution that is higher up (ie. in the root of the solution or in a solution folder that is higher up), the above code throws an NullReferenceException.\n \nI can see, that there are also instances in the Main branch where Project.ProjectItems is used wihtout a null check.",
+    "LastUpdatedDate": "2013-05-16T04:04:48.847-07:00",
+    "PlannedForRelease": "2.0.0 r1 for Visual Studio 2010",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-06-27T05:01:10.627-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "NullReferenceException running custom tool, when there is a project that can't be loaded in the solution",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8401
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2646,
+      "FileName": "ConfigurationSectionDesigner.DslPackage.vsix.zip",
+      "DownloadUrl": ".\\2646"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Interesting. I will take a look.",
+      "PostedDate": "2011-06-27T09:28:08.203-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I was able to reproduce the issue by adding a dummy project to the \"Debugging\" solution, then using the \"Unload Project\" command. The unloaded project (dimmed in gray) ends up causing the exact same problem as mentioned in this issue report. Thanks to the excellent details reported by demus, namely the location of the \"unloaded\" project in the solution tree, I was able to solve the issue quickly. After a few more tests, I will commit the fix to source control.\r\n\r\n",
+      "PostedDate": "2011-06-27T09:45:14.13-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-27T10:14:28.977-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-27T10:22:14.64-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-06-27T10:55:23.377-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Latest VSIX package with this fix for VisualStudio 2010 users.",
+      "PostedDate": "2011-06-27T10:55:25.24-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:29.4-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:48.847-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

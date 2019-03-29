@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Closing due to lack of participation from the submitter.",
+    "ClosedDate": "2010-02-20T08:13:23.457-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi All,\n          I created a csd file to access the errors as follow.\n \n  <empPortal xmlns=\"urn:empPortal\">\n    <Errors>\n      <Error ID=\"3001\" Message=\"Config File Reader Error. Failed to read one or more config entries. \"/>\n      <Error ID=\"3002\" Message=\"Failed to Authenticate. Signed XML Validation Error. RequestXML failed at verifying its signature. \"/>\n    </Errors>\n  </empPortal>\n \nwhen i run the application i always get this error.\n*********************\nDescription: An error occurred during the processing of a configuration file required to service this request. Please review the specific error details below and modify your configuration file appropriately. \n \nParser Error Message: Unrecognized configuration section empPortal.\n \nSource Error: \n \n \nLine 179:\nLine 180:\nLine 181:  <empPortal xmlns=\"urn:empPortal\">\nLine 182:    <Errors>\nLine 183:      <Error ID=\"3001\" Message=\"Config File Reader Error. Failed to read one or more config entries. \"/>\n \n*********************** \nAny help ?",
+    "LastUpdatedDate": "2013-05-16T04:04:51.997-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-29T16:05:57.12-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "adding values to web.config",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5669
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "What file contains the empPortal XML? What code are you using to access the file? There's far from enough information in your report for me to be of any assistance.",
+      "PostedDate": "2010-01-14T05:44:49.55-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-02-20T08:13:23.457-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:33.793-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:51.997-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "Fixed with changeset &#35;32614",
+    "ClosedDate": "2009-12-20T00:12:34.213-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Based on forum topic http://www.codeplex.com/csd/Thread/View.aspx?ThreadId=31555\n \nException is thrown when updating a configuration element (or argument) and aving it back to the configuration file.\n \nException stack trace (in Dutch):\n------------------------------------------------------------------------------------------\n{System.InvalidOperationException: Het token StartAttribute in de status Content zou leiden tot een ongeldig XML-document.\n   bij System.Xml.XmlTextWriter.AutoComplete(Token token)\n   bij System.Xml.XmlTextWriter.WriteStartAttribute(String prefix, String localName, String ns)\n   bij System.Xml.XmlWriter.WriteAttributeString(String localName, String value)\n   bij System.Configuration.ConfigurationElement.SerializeElement(XmlWriter writer, Boolean serializeCollectionKey)\n   bij System.Configuration.ConfigurationElementCollection.SerializeElement(XmlWriter writer, Boolean serializeCollectionKey)\n   bij System.Configuration.ConfigurationElement.SerializeToXmlElement(XmlWriter writer, String elementName)\n   bij System.Configuration.ConfigurationElement.SerializeElement(XmlWriter writer, Boolean serializeCollectionKey)\n   bij System.Configuration.ConfigurationElement.SerializeToXmlElement(XmlWriter writer, String elementName)\n   bij System.Configuration.ConfigurationSection.SerializeSection(ConfigurationElement parentElement, String name, ConfigurationSaveMode saveMode)\n   bij System.Configuration.MgmtConfigurationRecord.GetConfigDefinitionUpdates(Boolean requireUpdates, ConfigurationSaveMode saveMode, Boolean forceSaveAll, ConfigDefinitionUpdates& definitionUpdates, ArrayList& configSourceUpdates)}",
+    "LastUpdatedDate": "2013-05-16T04:04:55.747-07:00",
+    "PlannedForRelease": "1.4",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-09-23T23:09:15.423-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "InvalidOperationException on save",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 3018
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1181,
+      "FileName": "CsdFailing.zip",
+      "DownloadUrl": ".\\1181"
+    },
+    {
+      "FileId": 1236,
+      "FileName": "AtosSvcConfig.exe.config",
+      "DownloadUrl": ".\\1236"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Seems I can't reproduce this in a separate solution :-(",
+      "PostedDate": "2008-09-23T23:34:25.127-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Jelle, can I send you the solution via e-mail?",
+      "PostedDate": "2008-09-24T00:50:18.807-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Check the attached file, in Program.cs put a breakpoint near the end and check the saved configuration file which is faulty.",
+      "PostedDate": "2008-09-24T01:03:55.523-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-09-24T01:03:56.54-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hello\r\nI treat to build an application that modified the configuration file (.exe.config) of another application.\r\nI'm using the class ConfigurationManager but when I save the changes with Configuration.Save(...) method, the result file is completely disrupted, and haven’t the same structure.\r\nPlease I'm really need help!!!\r\n\r\n",
+      "PostedDate": "2008-11-06T09:28:45.343-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-11-06T09:28:48.22-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "my email is \r\nyan.amaross@gmail.com\r\n",
+      "PostedDate": "2008-11-06T10:08:29.533-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I had the same problem, and realized that I had to add the following code to the ConfigurationElementCollection classes:\r\n\r\n        protected override string ElementName\r\n        {\r\n            get\r\n            {\r\n                return [CollectionType]PropertyName;\r\n            }\r\n        }\r\n",
+      "PostedDate": "2009-03-30T02:08:41.307-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-03-30T02:11:00.243-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I will add this property for a fix as per tmyklebust's patch #2694 for release 1.4.",
+      "PostedDate": "2009-12-17T08:38:21.043-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-20T00:12:34.213-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:38.127-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:55.747-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

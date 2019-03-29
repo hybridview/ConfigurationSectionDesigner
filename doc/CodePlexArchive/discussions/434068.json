@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1005049",
+    "ThreadId": "434068",
+    "Html": "I get the following warning:<br />\n<pre><code>Warning 1   Cannot find a schema that defines target namespace 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner', schema validation skipped. M:\\Dok\\Visual Studio 2012\\Projects\\ServiceBrokerLib\\ServiceBrokerLib\\ConfigurationDesigner.csd  2   2\n</code></pre>\n\nI use the latest version of the VS2012 extension.<br />\n",
+    "PostedDate": "2013-02-21T22:45:53.5-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1211228",
+    "ThreadId": "434068",
+    "Html": "I get the same warning (twice) with the latest version (csd-74006) of CSD for VS2013 .<br />\n<br />\nOnce for .csd file, second time for .csd.diagram file.<br />\n",
+    "PostedDate": "2014-02-20T08:34:02.23-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

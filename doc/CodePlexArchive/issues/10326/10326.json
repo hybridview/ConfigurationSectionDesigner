@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Installer",
+      "DisplayName": "Installer"
+    },
+    "ClosedComment": "Cannot support this OS with current resources.",
+    "ClosedDate": "2014-09-12T13:00:51.373-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Getting a PathTooLongExtension, even when installing the extension from the C:-drive\n\n-begin log-\n\n09-09-2013 10:15:55 - Microsoft Visual Studio Extension Installer\n09-09-2013 10:15:55 - -------------------------------------------\n09-09-2013 10:15:55 - Initializing Install...\n09-09-2013 10:15:56 - Extension Details...\n09-09-2013 10:15:56 - \tIdentifier      : 9f16956e-2232-4f80-9ebb-4165929ef3ef\n09-09-2013 10:15:56 - \tName            : ConfigurationSectionDesigner\n09-09-2013 10:15:56 - \tAuthor          : The Community\n09-09-2013 10:15:56 - \tVersion         : 2.0.0.5\n09-09-2013 10:15:56 - \tDescription     : A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.\n09-09-2013 10:15:56 - \tLocale          : en-US\n09-09-2013 10:15:56 - \tMoreInfoURL     : http://csd.codeplex.com/\n09-09-2013 10:15:56 - \tInstalledByMSI  : False\n09-09-2013 10:15:56 - \tMinFramework    : 4.0\n09-09-2013 10:15:56 - \tMaxFramework    : 4.0\n09-09-2013 10:15:56 - \n09-09-2013 10:15:56 - \tSupported Visual Studio Editions : \n09-09-2013 10:15:56 - \t\tVersion : 10.0\n09-09-2013 10:15:56 - \t\t\tUltimate\n09-09-2013 10:15:56 - \t\t\tPremium\n09-09-2013 10:15:56 - \t\t\tPro\n09-09-2013 10:15:56 - \n09-09-2013 10:15:56 - \tSupported Isolated Shells : \n09-09-2013 10:15:56 - \n09-09-2013 10:15:56 - \tReferences      : \n09-09-2013 10:15:56 - \n09-09-2013 10:15:56 - Searching for applicable products...\n09-09-2013 10:15:56 - Found installed product - Microsoft Visual Studio 2010 Professional\n09-09-2013 10:15:56 - The extension with ID '9f16956e-2232-4f80-9ebb-4165929ef3ef' is not installed to Microsoft Visual Studio 2010 Professional.\n09-09-2013 10:15:57 - The following target products have been selected...\n09-09-2013 10:15:57 - \tMicrosoft Visual Studio 2010 Professional\n09-09-2013 10:15:57 - \n09-09-2013 10:15:57 - Beginning to install extension to Microsoft Visual Studio 2010 Professional...\n09-09-2013 10:15:57 - Install Error : System.IO.PathTooLongException: C:\\Documents and Settings\\Administrator\\Lokale indstillinger\\Application Data\\Microsoft\\VisualStudio\\10.0\\Extensions\\The Community\\ConfigurationSectionDesigner\\2.0.0.5\\ItemTemplates\\VisualBasic\\General\\1033\\ConfigurationSectionDesigner.zip: VisualBasic.vstemplate\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.BeginInstall(IInstallableExtension installableExtension, Boolean perMachine, AsyncOperation asyncOp)\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.InstallWorker(IInstallableExtension extension, Boolean perMachine, AsyncOperation asyncOp)\n\n-end log-",
+    "LastUpdatedDate": "2014-09-12T13:00:51.373-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-09-09T01:20:45.467-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Not supported"
+    },
+    "Summary": "PathTooLongException when installing (Win XP/Server2003)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 10326
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm sorry that you're experiencing this problem, but this problem is unavoidable on some computer systems due to the silly limitations Microsoft has placed on system file path length in their APIs. Never mind that NTFS supports paths up to roughly 32,000 characters long, the Windows API is coded such that most applications can't handle paths longer than 259.",
+      "PostedDate": "2013-10-26T23:31:36.82-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This was reported previously. I will merge the 1st soon.\r\n\r\nThere is no way to fix this without renaming the tool. I will leave open for reference, but this will likely not be addressed, since limited resources are not available for  a discontinued os. My apologies.",
+      "PostedDate": "2014-09-09T05:54:39.707-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "My comments from previous report of this issue. It might add something to Alex's response.\r\n\r\nThis is a problem with Windows XP / Server 2003. The windows maximum path char length is exceeded due to how those systems organize the user folders. The VS extension folder structure definitely doesn't help, but we have to live with that.  I made some effort to improve this situation by shortening some file names, but this issue is still possible depending on how long the username is. I see no way to better fix this issue without changing the project names / owner names, which is not a great option. This issue is present on many other VS extensions as well.",
+      "PostedDate": "2014-09-09T10:21:41.27-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T10:23:11.767-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-12T13:00:51.373-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

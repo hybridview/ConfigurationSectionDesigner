@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "698471",
+    "ThreadId": "279531",
+    "Html": "\r\n<p>Hello all,</p>\r\n<p>when I create a new CSD file, holding a collection, whatever the type of the collection (BasicMap, ...) when I write my config file, it does not recognize the elements add / remove / clear.</p>\r\n<p>It only proposes me as element, my collection element name.</p>\r\n<p>Do I have missed something ?</p>\r\n<p>&nbsp;</p>\r\n<p>Many thanks</p>\r\n",
+    "PostedDate": "2011-11-15T08:20:26.943-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "836594",
+    "ThreadId": "279531",
+    "Html": "<p>I'm having this same issue - does anyone know how to solve this?</p>\r\n<p>Thanks,</p>\r\n<p>Adam</p>",
+    "PostedDate": "2012-05-15T04:48:27.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

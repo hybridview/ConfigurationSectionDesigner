@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "695283",
+    "ThreadId": "278721",
+    "Html": "\r\n<p>If you want you configuration to be read-only (e.g. for security reasons), and you have one or more ConfigurationElementCollections&nbsp;and set all your definitions to be readonly, you get the Configuration is Readonly CofigurationErrorException - the cure\r\n appears to be to&nbsp;set the read-only&nbsp;element of the ConfigurationElementCollection(s) to false - I suspect that it's a problem with the framework - it instantiates an instance of the collection and then tries to add elements to it but the read-only\r\n check stops this even though it's an empty collection that's only just being built.</p>\r\n",
+    "PostedDate": "2011-11-08T05:13:34.903-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Installer",
+      "DisplayName": "Installer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I just confirmed that the VS2010 VSIX will not register the csd icon (only if you have never installed the VS2005/2008 version). The reason is that VSIX is not able to do this by itself (I researched it). To fix this, we must create an installer wrapper around the VSIX package that registers the icon to the registry. If you have ever run the VS2005/2008 installer, the icon is already registered for all versions.\n \nThis issue is very low priority. On affected systems, the csd files in the solution view will appear as white squares instead of our special icon.",
+    "LastUpdatedDate": "2017-12-09T05:49:58.527-08:00",
+    "PlannedForRelease": "2.0.0 r2 for Visual Studio 2010",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-07-13T16:08:40.183-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "VS 2010 VSIX will not register csd icon.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8476
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "733605",
+    "ThreadId": "288098",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I wanted to use this designer to create configuration sections to store in Sql Server via the SqlConfigurationSource. &nbsp;The&nbsp;SqlConfigurationSource expects sections to be of SerializableConfigurationSection. &nbsp;Am I out of luck?&nbsp;</p>\r\n<p>thanks,</p>\r\n<p>Kevin&nbsp;</p>\r\n",
+    "PostedDate": "2012-01-31T16:30:56.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "803337",
+    "ThreadId": "288098",
+    "Html": "<p>Interesting... Never thought of that scenario. If it doesn't break anything, it may be worth it to allow this option in a future build.</p>",
+    "PostedDate": "2012-02-29T11:51:27.52-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

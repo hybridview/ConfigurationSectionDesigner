@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "280932",
+    "ThreadId": "81805",
+    "Html": "<p>Hi all,</p>\r\n<p>is there any guidance / best practice on migration Path from v1.1.1 to newest builds?</p>\r\n<p>Thanks a lot in advance and keep up the fantastic job,</p>\r\n<p>Ciao,</p>\r\n<p>Alessio</p>",
+    "PostedDate": "2010-01-23T13:20:50.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "281869",
+    "ThreadId": "81805",
+    "Html": "<p>Hm, I should probably write how to best do that... I'll let you know when I've done so. I know what should be done, but I need to put all my thoughts together before I can give you a proper guide on it.</p>",
+    "PostedDate": "2010-01-26T07:18:08.833-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "455599",
+    "ThreadId": "81805",
+    "Html": "<p>Alex did you ever write a guide on 1.1 to 1.6 migration it would probably help solve a problem I am having with the vs 2010 version.</p>",
+    "PostedDate": "2010-06-15T05:17:25.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459344",
+    "ThreadId": "81805",
+    "Html": "<p>Ah, oh. Sorry for being late. No, I never wrote such a guide. The transformation is quite simple, if I remember correctly, I think the .csd file itself is backwards compatible all the way, but the .csd.diagram file isn't. So what happens when you upgrade from that far back is that your diagram will be all jumbled, but otherwise everything will be there... The only way to really know what to fix would be to install 1.1, make a little experimental .csd, make a copy of the .csd.diagram file, then upgrade to 1.6, and load the project, fix your diagram, and then diff the two .csd.diagram files.</p>",
+    "PostedDate": "2010-06-24T00:54:37.383-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="presentationInfo" type="Datys.SIE.ESB.Configuration.ConfigSectionPresentation.PresentationInfo, AtosSvcConfig"/>
+  </configSections>
+  <presentationInfo xmlns="Config">
+    <descriptors>
+      <!-- Este descriptor es solo para uso interno -->
+      <descriptor name="presentationInfo" category="Internal" displayName="Config de la Config">
+        <elements></elements>
+      </descriptor>
+      <descriptor name="DWF_References" category="Inicio" displayName="Grupos de ETL">
+        <elements>
+          <subDescriptor name="ReferencesCollection" displayName="Grupos"/>
+          <subDescriptor name="DWF_References" displayName="\"/>
+          <subDescriptor name="ReferenceElement" displayName="[GroupName]"/>
+        </elements>
+      </descriptor>
+      <descriptor name="ConfigSection_BookingHab" category="Secciones del Front" displayName="Booking de Habitaciones">
+        <elements>
+          <subDescriptor name="ConfigSection_BookingHab" displayName="\"/>
+          <subDescriptor name="etlInstance" displayName="[groupName]"/>
+          <subDescriptor name="extractor" displayName="Proceso Extractor"/>
+          <subDescriptor name="transformer" displayName="Proceso Transformación"/>
+          <subDescriptor name="trasformer" displayName="Proceso Transformación"/> <!-- Original typo -->
+          <subDescriptor name="loader" displayName="Proceso Carga"/>
+          <subDescriptor name="Group" displayName="ETLs"/>
+        </elements>
+      </descriptor>
+      <descriptor name="appSettings" displayName="Variables globales" category="Inicio">
+        <elements>
+          <subDescriptor name="KeyValueConfigurationElement" displayName="[Key]"/>
+          <subDescriptor name="KeyValueConfigurationCollection" displayName="Variables"/>
+          <subDescriptor name="appSettings" displayName="\"/>
+        </elements>
+      </descriptor>
+      <descriptor name="ConfigSection_BookingPax" displayName="Booking de Paxs" category="Secciones del Front">
+        <elements>
+          <subDescriptor name="etlInstance" displayName="[groupName]"/>
+          <subDescriptor name="extractor" displayName="Proceso Extractor"/>
+          <subDescriptor name="transformer" displayName="Proceso Transformación"/>
+          <subDescriptor name="trasformer" displayName="Proceso Transformación"/>
+          <subDescriptor name="loader" displayName="Proceso Carga"/>
+      </elements>
+      </descriptor>
+      <descriptor name="ConfigSection_BookingHabFOrden" displayName="Hab. F/O">
+        <elements>
+          <subDescriptor name="etlInstance" displayName="[groupName]"/>
+          <subDescriptor name="extractor" displayName="Proceso Extractor"/>
+          <subDescriptor name="transformer" displayName="Proceso Transformación"/>
+          <subDescriptor name="trasformer" displayName="Proceso Transformación"/>
+          <subDescriptor name="loader" displayName="Proceso Carga"/>
+        </elements>
+      </descriptor>
+      <descriptor name="ETL_Schedulers" displayName="Programación de Ejecución de ETLs">
+        <elements>
+          <subDescriptor name="ETL_Schedulers" displayName="\"/>
+          <subDescriptor name="ReferencesCollection" displayName="Programaciones"/>
+          <subDescriptor name="ReferenceElement" displayName="[GroupName]"/>
+        </elements>
+      </descriptor>
+      <descriptor name="ConfigSection_DimAcreedores_Emisores" displayName="Acreedores Emisores">
+        <elements>
+          <subDescriptor name="etlInstance" displayName="[groupName]"/>
+          <subDescriptor name="extractor" displayName="Proceso Extractor"/>
+          <subDescriptor name="transformer" displayName="Proceso Transformación"/>
+          <subDescriptor name="trasformer" displayName="Proceso Transformación"/>
+          <subDescriptor name="loader" displayName="Proceso Carga"/>
+        </elements>
+      </descriptor>
+      <descriptor name="runtime" displayName="runtime">
+        <elements>
+          <subDescriptor name="runtime" displayName="runtime"/>
+          <subDescriptor name="assemblyBinding" displayName="assemblyBinding"/>
+          <subDescriptor name="probing" displayName="probing"/>
+        </elements>
+      </descriptor>
+    </descriptors>
+  </presentationInfo>
+  <appSettings>
+    <add key="DefaultAppPath" value="d:\Nils\Documents\Proyectos\SIE\SIE Capa Media\ETLFlows\bin\Debug\ATOS Service\AtosService.exe" />
+  </appSettings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <probing privatePath="bin\3rd;bin\base;bin\ETLs;bin\ETLs\DWH Hotel DAL;bin\ETLs\eHOTEL;bin\ETLs\eTES;bin\ETLs\Partes GC;bin\ETLs\Sample;bin\ETLs\eHOTEL\conf"/>
+    </assemblyBinding>
+  </runtime>
+</configuration>

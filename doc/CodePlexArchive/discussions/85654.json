@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "291726",
+    "ThreadId": "85654",
+    "Html": "<p>Hi,</p>\r\n<p>Loving your work, by the way!</p>\r\n<p>I found that the section.Instance property returns null if the section is nested within groups.&nbsp; This is because you need to pass the path including groups to the GetSection method.</p>\r\n<p>e.g.</p>\r\n<p>for</p>\r\n<p>&lt;myCompany xmlns=&quot;myCompany.Configuration&quot;&gt;<br>&nbsp;&nbsp;&nbsp; &lt;Web&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;UITesting&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;<span style=\"color:#ff0000\">environment name=&quot;Test1&quot; </span>&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;location url=&quot;http://host.domain.com/app.html&quot;/&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;login enabled=&quot;true&quot; username=&quot;user&quot; password=&quot;password&quot;/&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/environment&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/UITesting&gt;<br>&nbsp;&nbsp;&nbsp; &lt;/Web&gt;<br>&nbsp; &lt;/myCompany&gt;</p>\r\n<p>You need to call ConfigurationManager.GetSection(&quot;myCompany/Web/UITesting/environment&quot;);</p>\r\n<p>(It took me ages to track this down, rubbish documentation by microsoft!)</p>\r\n<p>For now I don't generate the singleton and just instatiate the sections myself.</p>\r\n<p>Thanks!</p>",
+    "PostedDate": "2010-02-17T07:32:43.257-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "292028",
+    "ThreadId": "85654",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://csd.codeplex.com/WorkItem/View.aspx?WorkItemId=6053\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2010-02-18T00:43:08.747-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

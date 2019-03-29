@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2011-03-05T09:54:00.6-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When using a ConfigurationElementCollection with this type, the intention is to support this syntax:\n \n<urls>\n  <add url=\"http://...\"/>\n</urls>\n \nHowever, the code generation for this type (and possibly the other addremove types) explicitly sets the ConfigurationCollectionAttribute parameter \"addItemName\" to the ElementPropertyName that you set in the XmlItemName property in the designer.   This is fine, except this value is also used by the ElementName and IsElementName overrides, which negates the ability to use the add/remove/clear elements within the config since it only validates items with the value set for the addItemName.\n \nThe ElementName and IsElementName overrides either need to be removed entirely or they need to be code-generated to also except the Add/Remove/Clear elements.\n \nThere are several ways to implement this correctly, but the current implementation forces you to use this syntax instead:\n \n<urls>\n   <{whatever my XmlItemName is set to}   url=\"http://...\" />\n</urls>\n \nBy default the XmlItemName will be set to the ConfigurationElement type name (lowercased) such as:  \"urlConfigurationElement\".  This forces you to declare your config like this and does not allow for the Add/Remove/Clear syntax:\n \n<urls>\n    <urlConfigurationElement url=\"http://...\" />\n</urls>",
+    "LastUpdatedDate": "2017-12-09T05:48:20.747-08:00",
+    "PlannedForRelease": "1.7",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-10-29T02:36:06.44-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Element name issues with ConfigurationElementCollection using AddRemoveClearMapAlternate",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7458
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 56234.",
+      "PostedDate": "2011-03-04T07:01:36.767-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-03-05T09:53:38.917-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 56263.",
+      "PostedDate": "2011-03-05T09:54:00.6-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:30.157-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:49.727-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:20.747-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

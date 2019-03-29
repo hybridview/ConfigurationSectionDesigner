@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I tried this tool in VS 2015 (Update 3) and followed up the tutorial. \nI like the idea, however it does not generate proper XSD. The XSD file only contains text: ErrorGeneratingOutput.\n\nThere is warning in \"Error List\" window (not sure if it relates to XSD generation)\n\nWarning |\tCannot find a schema that defines target namespace | 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner', schema validation skipped.\tConfigurationProject1\n\nCan't see any error details. What can be the problem?",
+    "LastUpdatedDate": "2017-06-16T08:37:42.003-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2017-02-15T00:42:21.037-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "XSD generated with error (ErrorGeneratingOutput)",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 4,
+    "Id": 11159
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have the same issue.",
+      "PostedDate": "2017-02-23T13:15:34.88-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-04-06T01:19:59.71-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-06-13T18:11:41.67-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Is this no longer supported. Very disappointed.",
+      "PostedDate": "2017-06-13T18:13:02.293-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Sorry for the late response. Only a few developers work on this project, and we are all very busy with life (new kids, etc). Since CodePlex is shutting down, I will likely move this over to GITHUB,. On GitHub, it is easy for others to contribute, so that will hopefully make this project more active. \r\n\r\nI think I resolved this a while ago, but only uploaded the fix to the source code, not the downloadable build. I'll have to check.\n",
+      "PostedDate": "2017-06-16T08:37:42.003-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

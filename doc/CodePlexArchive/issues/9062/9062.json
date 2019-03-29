@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Exception: Unable to cast object of type 'System.RuntimeType' to type 'System.String'.\n \nCode Gen:\n \n        [global::System.ComponentModel.TypeConverter(typeof(global::System.Configuration.TypeNameConverter))]\n        [global::System.Configuration.ConfigurationPropertyAttribute(global::Interfaces.StockManager.CollectorTypeNamePropertyName, IsRequired=true, IsKey=false, IsDefaultCollection=false)]\n        public string CollectorTypeName\n        {\n            get\n            {\n----->       return ((string)(base[global::Interfaces.StockManager.CollectorTypeNamePropertyName]));\n            }\n            set\n            {\n                base[global::Interfaces.StockManager.CollectorTypeNamePropertyName] = value;\n            }\n        }\n \nThe designer doesn't have 'Type' as an option (and if it did it wouldn't make any sense if the converter wasn't also applied it seems) for an attribute (or element).",
+    "LastUpdatedDate": "2014-09-09T15:11:01.373-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-12-29T02:29:20.403-08:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "TypeNameConverter doesn't work",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 9062
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Similar issue to GenericEnumConverter. Will look into this and/or disable until it can be resolved.",
+      "PostedDate": "2014-09-09T15:10:47.637-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T15:11:01.373-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

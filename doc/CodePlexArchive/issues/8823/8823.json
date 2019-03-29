@@ -1,0 +1,86 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I would appreciate the possibility to design ElementCollection such that it could contain elements of multiple types.\nMaybe it is already implemented, but I was unable to find out how to design it, in that case please tell me so.\n \nIf no such feature is implemented, then next information could be of some use:\nI know this is achievable using standard .NET ConfigurationElementCollection, as long as all possible Element types have the same ancestor.\n \nThe key is to override ConfigurationElementCollection methods:\nbool IsElementName(string elementName) - should return true if the child element name is name of known sub-element\nConfigurationElement CreateNewElement(string elementName) - should return new instance of ConfigurationElement - based on the name\nobject GetElementKey(ConfigurationElement element) - its function is the same as normally\nConfigurationElementCollectionType CollectionType - must be BasicMap or BasicMapAlternate\n \nThe method CreateNewElement() (which is required to implement if class is inherited from ConfigurationElementCollection) could throw NotImplementedException\n \nAttached is sample project, which uses MultiType element collections - in a form I used sometimes.\n \nIf you will implement this feature, please don't forget to remove restriction that ItemType cannot be abstract.\n \nBy the way, thank you very much for this project, I found it just today, but I am amazed and very thankful for it. Keep up the good work.",
+    "LastUpdatedDate": "2014-09-10T08:22:50.517-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-10-13T10:03:59.367-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "MultiType element collection",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 7,
+    "Id": 8823
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2755,
+      "FileName": "ExampleOfMultiTypeCollection.zip",
+      "DownloadUrl": ".\\2755"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Thanks for the detailed post. I'll take a look.",
+      "PostedDate": "2011-10-19T10:04:17.487-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-10-20T02:52:51.3-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-07-02T17:50:42.48-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-01-14T06:41:04.327-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-01-28T05:31:46.053-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:27.923-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-03-03T04:01:51.37-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This is similar to a problem I solved using Microsoft Enterprise Library class PolymorphicConfigurationElementCollection<T> - which unfortunately I could not figure out how to use within a CSD project.",
+      "PostedDate": "2014-09-10T08:22:50.517-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

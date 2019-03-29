@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The documentation seems to stop at the useful bit where you use this within another solution.",
+    "LastUpdatedDate": "2014-09-09T15:17:38.433-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-08-13T10:00:22.62-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Can somebody document how to include the resource inside a new solution",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 10275
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Here's what I've found is needed in order to distribute the generated schema in a NuGet package so that users of my assembly get Intellisense.  Hopefully I've missed something, and there's an easier way out there, but this is what I had to do.  Someone please correct me if there's a better way.\r\n\r\n\n* Create a partial class to extend your main, root configuration element.  Have it contain two readonly properties with ConfigurationPropertyAttributes of \"xmlns:xsi\" and \"xsi:schemaLocation\".  This allows these additional attributes to be on your root element without .Net complaining about them when you try to load the configuration element:\r\n\r\n```\nNamespace Configuration\r\n\r\n    Partial Public Class SmartsConfiguration\r\n\r\n        'To reference the Xsd in a project outside of this solution, a \n        'xmlns:xsi and xsi:schemaLocation attribute have to be added \n        'to the SmartsSettings element.  So that the configuration framework\n        'won't complain about this, we add some additional properties here\n        <Global.System.Configuration.ConfigurationPropertyAttribute( _\n            \"xmlns:xsi\", IsRequired:=False, IsKey:=False,\n            IsDefaultCollection:=False)>\n        Public ReadOnly Property XmlnsXsi() As String\n            Get\n                Return CType(MyBase.Item(\"xmlns:xsi\"), String)\n            End Get\n        End Property\n        <Global.System.Configuration.ConfigurationPropertyAttribute( _\n            \"xsi:schemaLocation\", IsRequired:=False, IsKey:=False,\n            IsDefaultCollection:=False)>\n        Public ReadOnly Property XsiSchemaLocation() As String\n            Get\n                Return CType(MyBase.Item(\"xsi:schemaLocation\"), String)\n            End Get\n        End Property\r\n\r\n    End Class\nEnd Namespace\n```\r\n\r\n* In your .nuspec file, add the generated xsd file to the list of files that your package includes.  This causes the xsd file to be copied into projects that use your package.\r\n\r\n```\n<?xml version=\"1.0\"?>\n<package >\n  ...\n  <files>\n    ...\n    <file src=\"Configuration\\SmartsConfigurationSection.csd.xsd\" \n            target=\"content\\SmartsConfigurationSection.csd.xsd\" />\n  </files>\n</package>\n```\r\n\r\n* In the config section, include the extra xmlns:xsi and xsi:schemaLocation attributes.  The xsi:schemaLocation should contain the xml namespace and then a path to the xsd.\r\n\r\n```\n<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n<configuration>\n  <configSections>\n      <section name=\"SmartsSettings\" \n      type=\"Sentry.Smarts.Configuration.SmartsConfiguration,Sentry.Smarts\"/>\n  </configSections>\n    <SmartsSettings serviceName=\"My Service\" \n                    xmlns=\"urn:Sentry.Smarts.Configuration\"\n                    xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\nxsi:schemaLocation=\"Sentry.Smarts.Configuration SmartsConfigurationSection.csd.xsd\">\n    </SmartsSettings>\n</configuration>\n```\r\n\r\n* (Optional) In order for the xsd to not clutter up the projects of those that use my library, I added a powershell script that NuGet executes when the package is installed that removes the xsd from the project, but leaves it in the folder.\n.nuspec file:\n```\n<?xml version=\"1.0\"?>\n<package >\n   ...\n  <files>\n    ...\n    <file src=\"tools\\**\" target=\"tools\" />\n  </files>\n</package>\n```\r\n\r\nIn the \"tools\" directory, a file called install.ps1:\n```\nparam($installPath, $toolsPath, $package, $project)\r\n\r\n# Selections of items in the project are done with Where-Object rather than\n# direct access into the ProjectItems collection because if the object is\n# moved or doesn't exist then Where-Object will give us a null response rather\n# than the error that DTE will give us.\r\n\r\n# Find the SmartsConfigurationSection.csd.xsd\" file in the project\n$xsd = $project.ProjectItems | Where-Object { $_.Properties.Item(\"Filename\").Value -eq \"SmartsConfigurationSection.csd.xsd\" }\r\n\r\nif($xsd -eq $null)\n{\n    # Upgrade scenario - user has moved/removed the xsd file.\n    return\n}\r\n\r\n# Remove the file from the project\n$xsd.Remove()\n```",
+      "PostedDate": "2013-08-21T09:21:53.137-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I am currently working on some much needed documentation for this project. The response by Andrew will be very helpful.",
+      "PostedDate": "2014-09-09T15:17:15.26-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T15:17:38.433-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

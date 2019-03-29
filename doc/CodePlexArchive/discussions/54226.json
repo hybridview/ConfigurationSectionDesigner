@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "182693",
+    "ThreadId": "54226",
+    "Html": "I have successfully installed CSD and I am able to see and create new ConfigurationSectionDesigner project and add new Configuration Section Designer item in the existing project.<br>\r\nBut when I open the .csd file there is no component in the toolbox. <br>\r\nPlease help me out.\r\n",
+    "PostedDate": "2009-04-23T02:27:55.88-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "265574",
+    "ThreadId": "54226",
+    "Html": "<p>Right click your toolbox and choose &quot;Show All&quot;. Does the &quot;Configuration Section Designer&quot; group show up somewhere in there? If not, I suggest you uninstall the tool and then install it again. Make sure you are not running any instances of Visual Studio while you're installing. I hope that helps.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-09T23:16:43.593-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

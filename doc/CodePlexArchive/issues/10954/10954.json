@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I support for Visual Studio 2015 planned ?",
+    "LastUpdatedDate": "2017-02-23T13:12:28.47-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2015-06-26T08:41:55.383-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support for Visual Studio 2015",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 10,
+    "Id": 10954
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Source has been branched for 2015 support. I have not had a chance to build the binaries and post here yet.",
+      "PostedDate": "2016-09-13T08:38:43.777-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Compiled binaries and added to downloads. Not tested yet, so please report issues.",
+      "PostedDate": "2016-09-13T08:58:17.973-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-02-15T00:43:04.633-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-02-23T13:12:28.47-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

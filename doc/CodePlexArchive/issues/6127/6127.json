@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When i right click the project and select Add -> New Item.\nThe Configuration Section Designer file template can't be found .\n \nMy VS 2008 is Chinese Professional Version,I guess this issue is arise in  No-english VS 2008 version environments.",
+    "LastUpdatedDate": "2014-09-09T15:26:07.77-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-03-05T00:57:35.003-08:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Can't found  the project template and Item template in VS2008",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 6127
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I confirm, the project and item template files get installed into \"1033\" folders instead of the correct VS language folders. Moving them to the right folders and running the repair of CSD afterwards seems to fix it though.",
+      "PostedDate": "2010-11-13T10:23:11.78-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:32.263-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "We should confirm that this tool installs to proper language folder instead of hardcoded \"1033\" folder. Thanks for the report.",
+      "PostedDate": "2014-09-09T15:25:56.457-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T15:26:07.77-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1236818",
+    "ThreadId": "542996",
+    "Html": "It'd be great if CSD would generate an interface alongside the System.Configuration generated classes.\r<br />\n<br />\nThe interface would only include members that are defined by the user.<br />\n",
+    "PostedDate": "2014-04-22T15:34:21.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1305352",
+    "ThreadId": "542996",
+    "Html": "We should consider this<br />\n",
+    "PostedDate": "2014-09-16T13:55:34.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

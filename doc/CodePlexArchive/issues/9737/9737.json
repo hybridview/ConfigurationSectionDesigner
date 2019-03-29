@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-09-09T10:18:36.11-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I just tried to download and execute the VSIX but it refused to install on my machine as the path to my user data folder on the machine was fairly ridiculousC:\\Documents and Settings\\ANDY\\Local Settings\\Application Data\\Microsoft\\VisualStudio\\10.0\\Extensions\\The Community\\ConfigurationSectionDesigner\\2.0.0.5\\ProjectTemplates\\CSharp\\General\\1033\\CSharpConfigurationSectionProject.zipIs there any way to get round/override this?RegardsA",
+    "LastUpdatedDate": "2014-09-09T10:18:36.11-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-11-26T06:14:53.217-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Duplicate"
+    },
+    "Summary": "PathTooLong Exception on installation",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 9737
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This is a problem with Windows XP / Server 2003. The windows maximum path char length is exceeded due to how those systems organize the user folders. I made some effort to improve this situation (by shortening some file names), but this issue is still possible depending on how long the username is. I see no way to better fix this issue without changing the project names / owner names, which is not a great option. This issue is present on many other VS extensions as well.",
+      "PostedDate": "2012-12-10T08:43:07.327-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-01-11T03:59:35.44-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:24.947-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T10:18:36.11-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

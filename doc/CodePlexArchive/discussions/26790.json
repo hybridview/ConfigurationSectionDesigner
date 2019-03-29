@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "89593",
+    "ThreadId": "26790",
+    "Html": "\r\nHi, i have installed the msi successful. In the toolbox can see Configuration Section Designer region, but i can't find it under NewProjects. I have installed a german SV2008. Can this be the problem?<br />How can i create a csd project by hand?<br /><br />Thanks!<br />",
+    "PostedDate": "2008-04-29T05:28:51.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "89692",
+    "ThreadId": "26790",
+    "Html": "\r\nHi Wiesel,<br /><br />Indeed, it's probably because you have the German edition installed. I haven't tested this but you might be able to fix it by going into the following directory and coping the ConfigurationSectionProject.zip file from there:<br /><br /><span class=\"codeInline\" style=\"font-family:Consolas, Courier New, Courier, Monospace;\">C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\IDE\\ProjectTemplates\\CSharp\\1033</span><br /><br />You can then put it in either of these:<br /><ul><li>The same directory tree as above but using the German Locale Id instead of \"1033\" (see if there's another Locale Id present and copy it into that one)</li><li>&lt;My Documents&gt;\\Visual Studio 2008\\Templates\\ProjectTemplates\\Visual C#\\</li></ul><br />The zip file is in effect the project template, and I believe putting it in either of these locations should automatically pick it up. Let me know if it works :-)<br /><br />Thanks,<br /><br />Jelle<br />",
+    "PostedDate": "2008-04-29T12:03:27.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "89784",
+    "ThreadId": "26790",
+    "Html": "\r\nI put it in &lt;My Documents&gt;\\Visual Studio 2008\\Templates\\ProjectTemplates\\Visual C#\\<br /><br />It works!<br /><br />Thank you.<br />",
+    "PostedDate": "2008-04-29T22:28:07.31-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "521544",
+    "ThreadId": "26790",
+    "Html": "\r\n<p>Hi <a id=\"x_ctl00_ctl00_MasterContent_Content_PostRepeater_ctl02_UserNameLink\" href=\"http://www.codeplex.com/site/users/view/jelled\">\r\njelled</a>,</p>\r\n<p>after putting the project template zip file into the first location you mentioned (in the Program Files), the template was not picked up until I run a repair of CSD.</p>\r\n",
+    "PostedDate": "2010-11-13T10:32:18.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

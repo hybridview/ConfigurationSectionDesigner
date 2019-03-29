@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "831319",
+    "ThreadId": "354308",
+    "Html": "\r\n<p>When I run the vsix, I get a simple dialog that says:</p>\r\n<p>&quot;This extension is already installed to all applicable products.&quot;</p>\r\n<p>I did use this configuration section designer a while back, and I can't recall if I got a new PC before or after.</p>\r\n<p>For the life of me I cannot find the config section project type template in Visual Studio 2010 or 2008 (which are both installed).</p>\r\n<p>Maybe I need to uninstall this vsix and reinstall it? &nbsp;But how do I uninstall, I can't find anything on my PC for this, but I probably don't know what I'm looking for.</p>\r\n<p>Please help!<br>\r\nBuzz&nbsp;</p>\r\n",
+    "PostedDate": "2012-05-02T13:47:25.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "831610",
+    "ThreadId": "354308",
+    "Html": "<p>I was able to fix my problem.</p>\r\n<p>I finally found and deleted this extension from:</p>\r\n<p>AppData\\Local\\Microsoft\\VisualStudio\\10.0\\Extensions</p>\r\n<p>I installed again and it worked. &nbsp;Technically I installed from the command line using the admin option, though it very well may have worked without this.</p>\r\n<p>C:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\Common7\\IDE&gt;VSIXInstaller.exe /a \"C:\\mypath\\ConfigurationSectionDesigner.DslPackage.vsix\"</p>",
+    "PostedDate": "2012-05-03T06:26:28.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "855111",
+    "ThreadId": "354308",
+    "Html": "<p>This might have been caused due to ext version not being incremented between releases. I make sure to do this now, and the extension updates correctly without requiring an uninstall.</p>",
+    "PostedDate": "2012-06-28T10:41:46.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

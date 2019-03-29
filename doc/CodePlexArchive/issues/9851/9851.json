@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "On Windows 7 it worked fine.\n\nBut on the windows server 2008 box, it failed.\n\nDuring first install, I received an IOException, stating that a file with a user section was still open.\n\nAfter a restart, I now get this error on startup of the installer. I cannot retry to install.\n\n2013/01/21 09:02:13 AM - Microsoft VSIX Installer\n2013/01/21 09:02:13 AM - -------------------------------------------\n2013/01/21 09:02:13 AM - Initializing Install...\n2013/01/21 09:02:14 AM - Extension Details...\n2013/01/21 09:02:14 AM - \tIdentifier      : 9f16956e-2232-4f80-9ebb-4165929ef3ef\n2013/01/21 09:02:14 AM - \tName            : ConfigurationSectionDesigner\n2013/01/21 09:02:14 AM - \tAuthor          : The Community\n2013/01/21 09:02:14 AM - \tVersion         : 2.0.1.0\n2013/01/21 09:02:14 AM - \tDescription     : A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.\n2013/01/21 09:02:14 AM - \tLocale          : en-US\n2013/01/21 09:02:14 AM - \tMoreInfoURL     : http://csd.codeplex.com/\n2013/01/21 09:02:14 AM - \tInstalledByMSI  : False\n2013/01/21 09:02:14 AM - \tSupportedFrameworkVersionRange : [4.5]\n2013/01/21 09:02:14 AM - \n2013/01/21 09:02:14 AM - \tSupported Products : \n2013/01/21 09:02:14 AM - \t\tMicrosoft.VisualStudio.Ultimate\n2013/01/21 09:02:14 AM - \t\t\tVersion : [11.0]\n2013/01/21 09:02:14 AM - \t\tMicrosoft.VisualStudio.Premium\n2013/01/21 09:02:14 AM - \t\t\tVersion : [11.0]\n2013/01/21 09:02:14 AM - \t\tMicrosoft.VisualStudio.Pro\n2013/01/21 09:02:14 AM - \t\t\tVersion : [11.0]\n2013/01/21 09:02:14 AM - \n2013/01/21 09:02:14 AM - \tReferences      : \n2013/01/21 09:02:14 AM - \n2013/01/21 09:02:14 AM - Searching for applicable products...\n2013/01/21 09:02:14 AM - Found installed product - Microsoft Visual Studio 2010 Professional\n2013/01/21 09:02:14 AM - Found installed product - Microsoft Visual Studio Professional 2012\n2013/01/21 09:02:15 AM - System.ArgumentOutOfRangeException: Specified argument was out of the range of valid values.\nParameter name: zipFileName\n   at MS.Internal.IO.Zip.ZipIOBlockManager.ValidateNormalizeFileName(String zipFileName)\n   at MS.Internal.IO.Zip.ZipIOCentralDirectoryFileHeader.ParseRecord(BinaryReader reader, Encoding encoding)\n   at MS.Internal.IO.Zip.ZipIOCentralDirectoryBlock.ParseRecord(BinaryReader reader, Int64 centralDirectoryOffset, Int32 centralDirectoryCount, Int64 expectedCentralDirectorySize)\n   at MS.Internal.IO.Zip.ZipIOCentralDirectoryBlock.SeekableLoad(ZipIOBlockManager blockManager)\n   at MS.Internal.IO.Zip.ZipIOBlockManager.get_CentralDirectoryBlock()\n   at MS.Internal.IO.Zip.ZipArchive.GetFiles()\n   at System.IO.Packaging.ZipPackage.ContentTypeHelper..ctor(ZipArchive zipArchive, IgnoredItemHelper ignoredItemHelper)\n   at System.IO.Packaging.ZipPackage..ctor(Stream s, FileMode mode, FileAccess access, Boolean streaming)\n   at System.IO.Packaging.Package.Open(Stream stream, FileMode packageMode, FileAccess packageAccess, Boolean streaming)\n   at Microsoft.VisualStudio.ExtensionManager.CachedInstalledExtensionList.GetOrOpenCache(Boolean readOnly)\n   at Microsoft.VisualStudio.ExtensionManager.CachedInstalledExtensionList.StopScan(Int64 timestamp)\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.InitializeList(CachedInstalledExtensionList cachedExtensionsList, IEnumerable`1 enabledExtensions, Boolean safeMode, Boolean isSdkList)\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.InstalledExtensionListData.<>c__DisplayClass6a.b__69()\n   at System.Lazy`1.CreateValue()\n   at System.Lazy`1.LazyInitValue()\n   at System.Lazy`1.get_Value()\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.PartitionedInstalledExtensionList.b__6c(InstalledExtensionListData data)\n   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.PartitionedInstalledExtensionList.TryGetValue(String identifier, IInstalledExtension& result)\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.TryGetInstalledExtension(String identifier, IInstalledExtension& result)\n   at VSIXInstaller.App.GetExtensionManagerForApplicableSKU(SupportedVSSKU supportedSKU, IInstallableExtension installableExtension, List`1 applicableSKUs)\n   at VSIXInstaller.App.InitializeInstall()\n   at System.Threading.Tasks.Task.InnerInvoke()\n   at System.Threading.Tasks.Task.Execute()",
+    "LastUpdatedDate": "2014-09-08T11:10:06.38-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-01-20T23:05:14.567-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "IOException and ArgumentOutOfRangeException when trying to install 2.0.1 r0 for Visual Studio 2012 (alpha)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9851
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You might have to go to your extension directory and manually delete the files that were placed before the  error occurred. I'll keep an eye on this one.",
+      "PostedDate": "2014-09-08T11:10:06.38-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

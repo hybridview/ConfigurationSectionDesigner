@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "This is the same problem reported in issues 7458 and 8857 and has not been fixed by Release 2.0.0 R5.",
+    "LastUpdatedDate": "2014-09-09T15:23:53.17-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-11-28T11:20:06.963-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Generated XSD does not produce 'Add', 'Remove' or 'Clear' entries",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9747
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have addressed this issue in the VS2012 build, but have not tested yet.",
+      "PostedDate": "2013-01-04T07:42:04.447-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:24.617-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have verified the fix by @andym1978.\nIs fixed in latest VS2012 release",
+      "PostedDate": "2013-03-05T13:27:16.11-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T15:23:53.17-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

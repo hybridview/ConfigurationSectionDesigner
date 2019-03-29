@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-02-20T03:51:25.423-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I'd love to be able to reorder the attributes on a config section, after I've created them. One thing would be to sort them alphabetically, but I'd also like to be able to create a custom order, e.g. to group things together that belong together.\n \nRight now, I have to open the *.csd file as an XML file and manually go about reordering.",
+    "LastUpdatedDate": "2017-12-09T05:48:19.503-08:00",
+    "PlannedForRelease": "1.7",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-28T13:38:01.56-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Reorder attributes in config section",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 4,
+    "Id": 5659
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm finding this to be harder to do than I thought...",
+      "PostedDate": "2010-01-16T23:25:02.643-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-02-16T11:20:44.87-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-02-20T01:49:34.513-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 36897.",
+      "PostedDate": "2010-02-20T03:51:25.423-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-02-20T08:10:15.897-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:34.033-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:52.133-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:19.503-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

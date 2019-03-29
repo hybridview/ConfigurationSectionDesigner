@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "894072",
+    "ThreadId": "389833",
+    "Html": "\r\n<p>Hi, why there no option to set the base class of the generated types that derives from the ConfigurationElement with a custom type, e.g. type added with Add New External Type?</p>\r\n<p>Is the problem related to the custom type inheritance, because it should derive from ConfigurationElement?</p>\r\n",
+    "PostedDate": "2012-08-01T03:08:53.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

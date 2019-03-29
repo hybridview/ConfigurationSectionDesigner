@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "It&#39;s done.",
+    "ClosedDate": "2009-12-13T13:02:16.75-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Documentation on the tool is sorely needed. Write the documentation.",
+    "LastUpdatedDate": "2013-05-16T04:04:53.17-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-12T05:22:29.463-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Documentation",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 5589
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "The online documentation is done. Additional documentation can now be added easily if necessary.",
+      "PostedDate": "2009-12-13T12:51:49.423-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-13T13:02:16.75-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:35.26-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:53.17-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "265864",
+    "ThreadId": "77765",
+    "Html": "<p>Hi,</p>\r\n<p>I created an issue for this but I'm not sure if that was the appropriate protocol.</p>\r\n<p>I was trying to figure out how to write custom config sections when I found this tool.&nbsp; I donwloaded and built a cool config group with sections.</p>\r\n<p>I copied the xlm from the .config file into my config and I was able to create all my sections and elements just fine.</p>\r\n<p>However I am getting two warnings and 1 error.</p>\r\n<p>Running transformation: System.NullReferenceException: Object reference not set to an instance of an object.<br>&nbsp;&nbsp; at Microsoft.VisualStudio.TextTemplatingB23DA7D10BAD265D026AA231C0E7AB94.GeneratedTextTransformation.TransformText()</p>\r\n<p>It is not creating the .cs file except for the first partial class line.</p>\r\n<p>I am also getting two warnings from the .csd file:</p>\r\n<p>The 'codeGenOptions' attribute is invalid - The value 'Singleton, XmlnsProperty' is invalid according to its datatype 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner:ConfigurationSectionCodeGenOptions' - The Enumeration constraint failed.</p>\r\n<p>The 'codeGenOptions' attribute is invalid - The value 'Indexer, AddMethod, RemoveMethod' is invalid according to its datatype 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner:ConfigurationElementCollectionCodeGenOptions' - The Enumeration constraint failed.</p>\r\n<p>I'm not sure if the warnings and the error are related.</p>\r\n<p>I will be glad to send any files and help out in anyway that I can.&nbsp; Please let me know.</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2009-12-10T12:11:31.22-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "265959",
+    "ThreadId": "77765",
+    "Html": "<p>I'm sorry that you are having issues with our tool. I would like to take a look at your .csd file and get this fixed as soon as I can. Would you please go to the issue you created and attach your file, so that I may test with it?</p>",
+    "PostedDate": "2009-12-10T14:20:38.667-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "265997",
+    "ThreadId": "77765",
+    "Html": "\r\n\r\n<div class=Section1>\r\n\r\n<p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\">Yes, I am not at work but as soon as I get in the morning, I\r\nwill send It to you.  Thanks!</span></p>\r\n\r\n<p class=MsoNormal><span style=\"font-size:11.0pt;font-family:'Calibri','sans-serif';color:#1F497D\"> </span></p>\r\n\r\n<div>\r\n\r\n<div style=\"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in 0in 0in\">\r\n\r\n<p class=MsoNormal><b><span style=\"font-size:10.0pt;font-family:'Tahoma','sans-serif'\">From:</span></b><span style=\"font-size:10.0pt;font-family:'Tahoma','sans-serif'\"> alexschrod\r\n[mailto:notifications@codeplex.com] <br>\r\n<b>Sent:</b> Thursday, December 10, 2009 5:21 PM<br>\r\n<b>To:</b> bill@billwilliams.biz<br>\r\n<b>Subject:</b> Re: Getting System.NullReferenceException when Running\r\ntransformation [csd:77765]</span></p>\r\n\r\n</div>\r\n\r\n</div>\r\n\r\n<p class=MsoNormal> </p>\r\n\r\n<p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">From:\r\nalexschrod</span></p>\r\n\r\n<div style=\"margin-bottom:24.0pt\" id=ThreadNotificationPostBody>\r\n\r\n<p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif'\">I'm sorry\r\nthat you are having issues with our tool. I would like to take a look at your\r\n.csd file and get this fixed as soon as I can. Would you please go to the issue\r\nyou created and attach your file, so that I may test with it?</span></p>\r\n\r\n</div>\r\n\r\n<div style=\"border:none;border-top:solid #CCCCCC 1.0pt;padding:0in 0in 0in 0in\" id=ThreadNotificationFooter>\r\n\r\n<p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">Read\r\nthe <a href=\"http://csd.codeplex.com/Thread/View.aspx?ThreadId=77765&ANCHOR#Post265959\">full\r\ndiscussion online</a>.</span></p>\r\n\r\n<p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">To\r\nadd a post to this discussion, reply to this email (<a href=\"mailto:csd@discussions.codeplex.com?subject=[csd:77765]\">csd@discussions.codeplex.com</a>)</span></p>\r\n\r\n<p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">To\r\nstart a new discussion for this project, email <a href=\"mailto:csd@discussions.codeplex.com\">csd@discussions.codeplex.com</a></span></p>\r\n\r\n<p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">You\r\nare receiving this email because you subscribed to this discussion on CodePlex.\r\nYou can <a href=\"http://www.codeplex.com/site/discussions/thread/unsubscribe/77765\">unsubscribe</a>\r\non codePlex.com.</span></p>\r\n\r\n<p><span style=\"font-size:9.0pt;font-family:'Verdana','sans-serif';color:gray\">Please\r\nnote: Images and attachments will be removed from emails. Any posts to this\r\ndiscussion will also be available online at codeplex.com</span></p>\r\n\r\n</div>\r\n\r\n</div>\r\n\r\n",
+    "PostedDate": "2009-12-10T16:53:55.34-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266260",
+    "ThreadId": "77765",
+    "Html": "<p>Im getting exactly the same problem.</p>\r\n<p>Error&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;Running transformation: System.NullReferenceException: Object reference not set to an instance of an object.<br>&nbsp;&nbsp; at Microsoft.VisualStudio.TextTemplating210EC225E1C2303A17231CF1427830F8.GeneratedTextTransformation.TransformText()&nbsp;&nbsp; &nbsp;ConfigurationSectionDesigner.csd&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;1&nbsp;</p>\r\n<p>GE</p>",
+    "PostedDate": "2009-12-11T07:16:14.587-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266261",
+    "ThreadId": "77765",
+    "Html": "<p>This issue is being actively worked on at the time, and will be fixed in the soon up-coming 1.2.1 release.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-11T07:19:30.993-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "266271",
+    "ThreadId": "77765",
+    "Html": "<p>Okay guys, I've released a fix, <a href=\"http://csd.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=37141\">please download release 1.2.1</a> and let me know if it fixes your problems.</p>",
+    "PostedDate": "2009-12-11T07:36:54.06-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

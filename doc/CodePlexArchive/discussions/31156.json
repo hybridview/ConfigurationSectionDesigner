@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "103581",
+    "ThreadId": "31156",
+    "Html": "<div>I have an element of type A that have a collection of element of type B. B have a key defined (the Name attribute have the IsKey = true).<br>\r\n<br>\r\nHow can I get B element from the collection using his key?<br>\r\n<br>\r\nThanks,<br>\r\n<br>\r\nL.</div>\r\n",
+    "PostedDate": "2008-07-09T05:56:00.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "106319",
+    "ThreadId": "31156",
+    "Html": "<div>Unfortunitly, it seem that one method is missing to do this.</div>\r\n<div>&nbsp;</div>\r\n<div>When a collection is generated, it must have this method:<br>\r\n<br>\r\n<div><strong>new public TheItemTypeInTheCollection this[string keyname] <br>\r\n&nbsp;{</strong></div>\r\n<div><strong>&nbsp;</strong></div>\r\n<div><strong>&nbsp;&nbsp;&nbsp; get </strong></div>\r\n<div><strong>&nbsp;</strong></div>\r\n<div><strong>&nbsp;&nbsp;&nbsp; { <br>\r\n&nbsp;return (TheItemTypeInTheCollection )this.BaseGet(keyname); </strong></div>\r\n<div><strong>&nbsp;</strong></div>\r\n<div><strong>&nbsp;&nbsp;&nbsp; }</strong></div>\r\n<div><strong>&nbsp;</strong></div>\r\n<div><br>\r\n<strong>&nbsp;}</strong></div>\r\n</div>\r\n",
+    "PostedDate": "2008-07-22T11:57:00.637-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "109088",
+    "ThreadId": "31156",
+    "Html": "First of all, sorry for the delay in responding but I've been out for a couple of weeks. In any case, I agree that having a way to access the collection items by key would be a good idea. I don't like the idea of hiding the existing indexer that takes a string, though (using the new keyword as you're doing), but I propose to add a new option (to the existing Indexer/Add/Remove options) to generate &quot;Get&quot; methods: one by index and one by key. This should get you what you need too. Sounds good?<br>\r\n<br>\r\nThanks,<br>\r\n<br>\r\n-Jelle\r\n",
+    "PostedDate": "2008-08-05T06:19:26.003-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

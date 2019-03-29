@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "232168",
+    "ThreadId": "68266",
+    "Html": "<p>Hi</p>\r\n<p>Is it possible to use collections like KeyValueConfigurationCollection ?</p>",
+    "PostedDate": "2009-09-08T05:08:02.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "265580",
+    "ThreadId": "68266",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://csd.codeplex.com/WorkItem/View.aspx?WorkItemId=5563\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2009-12-09T23:44:46.663-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

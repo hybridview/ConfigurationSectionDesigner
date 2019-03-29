@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi Everybody,\n\nCan anybody provide me with any BizTalk Cop Rule Set compatible with MS Visual studio 2015 and BizTalk Cop 2016.\n\nThank you in advance!\nVik",
+    "LastUpdatedDate": "2017-10-23T14:13:47.17-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2017-10-23T14:13:47.17-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "BizTalkCop/CodePlex RuleSet 2016",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 11194
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

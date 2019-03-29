@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "809716",
+    "ThreadId": "348440",
+    "Html": "\r\n<p>I installed the 2.0.0 r4 for vs2010</p>\r\n<p>I created a new Console Project , and I did like <a href=\"http://mtaulty.com/CommunityServer/blogs/mike_taultys_blog/archive/2008/02/20/10191.aspx\">\r\nthis </a></p>\r\n<p>but I never saw the sample file *.tt like 「MyConfigCode.tt」、「MyConfigSample.tt」、「MyConfigSechma.tt」</p>\r\n<p>how could I generator a sample file ?</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2012-03-13T09:20:28.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "809720",
+    "ThreadId": "348440",
+    "Html": "<p>when I added a new CSD Item ,I only have MyConfig.csd in my project</p>",
+    "PostedDate": "2012-03-13T09:22:25.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "809745",
+    "ThreadId": "348440",
+    "Html": "<p>Oh wow. That article must be old. The CSD project has not used those files in forever. Today the generated files should show up \"underneath\" the csd file, like in the bottom screenshot on <a href=\"https://csd.codeplex.com/wikipage?title=Adding%20elements%20to%20the%20Configuration%20Section%20Designer%20diagram&amp;referringTitle=Creating%20a%20new%20Configuration%20Section%20Designer%20project\">this tutorial page</a>.</p>\r\n<p>Are you using C# or Visual Basic? Visual Basic hides auto-generated files by default. More details at the link I gave.</p>",
+    "PostedDate": "2012-03-13T10:12:52.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "809975",
+    "ThreadId": "348440",
+    "Html": "<p>alexschrod , thank for your help . I find it</p>",
+    "PostedDate": "2012-03-13T19:22:12.943-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Installer",
+      "DisplayName": "Installer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-08-10T07:34:39.31-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "It looks like all of the required parts are available for VS 2005, would it be possible to install 'csd' so that it will also run under vs 2005?",
+    "LastUpdatedDate": "2017-12-09T05:53:39.353-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-01-02T08:44:47.823-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support for Visual Studio 2005?",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 175
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "It could be technically possible to also support VS2005 but that would require quite some additional work and maintenance to keep the two in sync, so I'm not planning on supporting this unless there are more votes or unless somebody else wants to take this task on :-)\r\n\r\nThe main issue is actually the installer project, which has changed a bit from the VS2005 SDK so that I can't use the same project and need to maintain two different installer projects (if it's technically possible at all, that is)...",
+      "PostedDate": "2008-01-08T02:37:37.043-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-01-15T03:35:14.76-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Can you at least give the steps to do a manual install? \r\n",
+      "PostedDate": "2008-01-15T03:40:06.62-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-01-15T04:58:48.917-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "What do you mean by a manual install? Currently, the installer will only work on VS2008 and it's not possible through manual steps or otherwise to make it work on VS2005.\r\n\r\nIf you mean manual steps it would require in the source code to enable support for VS2005, then I believe it might be possible through the following steps:\r\n* Create a new DSL solution in VS2005.\r\n* Add the \"Dsl\" project in the VS2008 solution to the VS2005 solution (this is the only project that you might be able to share).\r\n* Or, if that doesn't work: copy the DslDefinition.dsl, all the custom code and resources from the \"Dsl\" project in the VS2008 solution to the VS2005 solution.\r\n* Copy all the custom code, resources, templates, ... from the \"DslPackage\" project in the VS2008 solution to the \"DslPackage\" project in the VS2005 solution (you cannot reuse the VS2008 project for this).\r\n* Add a new DslSetup project through the VS2005 SDK template (you cannot reuse the VS2008 project for this; note that you need to have C++ installed for this on VS2005) and change it to match the setup project in the original solution.\r\n\r\nSo that's a lot of work and it creates a big maintenance risk to keep the two synchronized so this is why I would like to avoid doing this. Furthermore, as I noted before, I haven't tested this and I'm not sure that it's even possible.\r\n\r\nThat said, I definitely understand that it would be useful but I hope you realize that it's a tough call.",
+      "PostedDate": "2008-01-15T05:26:04.947-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I've seen tools that will install to either vs2005 or vs2008, or both if they are installed.  Unfortunately, they are closed source, so I can't find out how to do it.  I was looking that the CSD installer and thinking that if I knew the appropriate registry entries to define in the installer, then it should be available to install to a vs2005 that had the v4 SDK installed since that is where the DSL tools seem to be added to vs2005.  (Don't know if I'm barking up the wrong tree here, or not....)\r\n\r\nScott",
+      "PostedDate": "2008-02-26T21:20:10.723-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Unfortunately it's not as simple as having a different registry entry or anything, they really target a different version (also assembly version) of the DSL Tools so it's pretty hard to do as far as I can see.\r\n\r\nIt is true that e.g. the latest release of the Guidance Automation Toolkit works both in VS2005 as in VS2008 (which is very cool), but they target the IDE directly, not the intermediate layer that is the DSL Tools - which has different versions for different releases of Visual Studio itself...",
+      "PostedDate": "2008-03-02T23:48:20.413-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Would that be possible to use it with Visual Studio 2008 Shell?",
+      "PostedDate": "2008-03-27T07:16:37.287-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "JakeTheSnake: yes, if I'm not mistaken, it should install and run just fine on the VS 2008 Shell.",
+      "PostedDate": "2008-04-06T06:38:06.317-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I've decided not to implement any support for VS2005 anymore.",
+      "PostedDate": "2008-08-10T07:34:39.31-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:39.963-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:57.113-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:53:39.353-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

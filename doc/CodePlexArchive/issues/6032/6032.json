@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-02-20T08:58:10.537-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "If one wants to take advantage of the xsd generation features where a new type is created for enums, currently the only option is to create a new enum in the designer.  If one wants to use an enum that has already been created (in another dll for instance) then one must import it as a regular type, and lose the niceness of having an enumation defined in the xsd.  Support for importing already-defined enums would be a great feature in this add-on.",
+    "LastUpdatedDate": "2017-12-09T05:48:20.027-08:00",
+    "PlannedForRelease": "1.7",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-02-16T11:20:02.047-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support for existing enums",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 6032
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Importing existing enums is currently not supported, however, you can create the same enum in the designer, using the name and namespace of the enum you want to use. Then, in the \"Code Generation Options\" property on the enum, pick \"None\". When you do this, there will be no code generated for the enum, so it will use the enum you want instead.\r\n\r\nI will look into enum importing, but for now, this is a decent work-around.",
+      "PostedDate": "2010-02-18T00:38:52.54-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-02-20T08:08:10.733-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-02-20T08:10:58.463-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 36915.",
+      "PostedDate": "2010-02-20T08:58:10.537-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:32.79-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:51.403-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:20.027-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

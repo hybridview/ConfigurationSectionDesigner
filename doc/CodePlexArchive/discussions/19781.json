@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "65541",
+    "ThreadId": "19781",
+    "Html": "\r\nHi, I'm trying to understand how to use the \"Has Custom child elements flag.  Can you elaborate?<br />",
+    "PostedDate": "2007-12-31T14:58:59.977-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "65560",
+    "ThreadId": "19781",
+    "Html": "<br /><div class=\"quote\" style=\"border: dotted .1em #aaa; border-left: none; border-right: none; font-style: italic; margin: 1em 0em 2.5em 3em;padding: .2em;\"><br />spascoe64 wrote:<br />Hi, I'm trying to understand how to use the \"Has Custom child elements flag.  Can you elaborate?<br /><br /></div><br />Basically, the idea is that you have a configuration element that has an XML node inside it which can vary and isn't known at design time. I'll make sure to document this properly, but in the meantime: suppose you have a logging section and a logger that is instantiated through reflection. That logger instance then parses the inner XML to define its settings.<br /><br /><pre style=\"background-color:#ECECEC; border:dashed .1em #3E62A6; font-family:Consolas, Courier New, Courier, Monospace; font-size:1em; margin-top:0; padding:.5em; height:auto; overflow:auto; overflow-x:auto; overflow-y:auto;\">\r\n&lt;logger type=\"Logging.FileLogger, CustomLoggingAssembly\"&gt;\r\n  &lt;fileOptions filename=\"c:\\log.txt\" buffered=\"true\" /&gt;\r\n&lt;/logger&gt;\r\n</pre>So the &lt;fileOptions&gt; tag is only something that the FileLogger class would know about. I might as well plug in another logger type without the &lt;fileOptions&gt; but with &lt;databaseOptions&gt; instead. So the child element is custom depending on the logger type.<br /><br />The \"Has Custom Child Elements\" flag does two things to help in this regard:<br /><ul><li>It generates an \"OnDeserializeUnrecognizedElement\" method in the ConfigurationElement class so that a partial class definition can implement the required logic to handle the child XML. You will notice that the generated code does not compile because it calls a \"HandleUnrecognizedElement\" method that you need to implement (the point where the compilation error occurs contains comments on how to implement that).</li><li>It indicates in the generated XSD for the Configuration Section that the XML node that has the flag set can have any inner content (otherwise the XML with the inner tag would not be valid according to the XSD).</li></ul><br />That was the quick explanation, I'll add this to the main documentation (which is admittedly still a bit sparse).<br />",
+    "PostedDate": "2008-01-01T05:06:24.18-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

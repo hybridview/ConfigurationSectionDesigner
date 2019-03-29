@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Behavior is by design.",
+    "ClosedDate": "2009-12-07T15:52:28.183-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The value DefaultValue property in the ConfigurationProperty attribute is no enclosed in quotes and is causing a compiler error. See the example generate code below:\n \n[global::System.Configuration.ConfigurationProperty(ValuePropertyName, IsRequired = true, IsKey = false, IsDefaultCollection = false, DefaultValue = default)]\n \n\"default\" is the text entered into the Default Value property in the designer.",
+    "LastUpdatedDate": "2013-05-16T04:04:55.17-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-03-06T11:15:26.853-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Problem with DefaultValue property of ConfigurationProperty Attribute",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 3906
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You must enclose the value in actual quotes in the designer. I just tried this and got the following output:\r\n\r\n[global::System.Configuration.ConfigurationProperty(ValuePropertyName, IsRequired = false, IsKey = false, IsDefaultCollection = false, DefaultValue = \"default\")]\r\n\r\nThis behavior is required because when the value is not a string, it should not be quoted.",
+      "PostedDate": "2009-12-07T15:52:11.43-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-07T15:52:28.183-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:37.45-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:55.17-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

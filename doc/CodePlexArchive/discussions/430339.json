@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "989959",
+    "ThreadId": "430339",
+    "Html": "\r\n<p>Hi and thank u again for this brilliant tool. We used to use in when we where using VS 2010. and after moving to VS 2012 it was one of those few extensions we were messing a lot :). I am very glad to see this project is still alive and u added support for\r\n VS 2012, but what we can not figure out is, how to add custom types? the only option we have is by right-clicking on designer and selecting import external enum, but even in this case we have to choose external DLL file. what we want to to is to use Types\r\n from same project (In our case configuration section designer is part of our Class Library project). can u explain this a little bit?</p>\r\n<p>in VS 2010 we could right-click on Type Definitions root node and select add from there but now there is no menu entry there.</p>\r\n<p>so let me ask u one more time, how to work with custom types in VS2012 and Config Section Designer?</p>\r\n",
+    "PostedDate": "2013-01-21T12:46:06.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

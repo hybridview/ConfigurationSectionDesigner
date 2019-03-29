@@ -1,0 +1,90 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-01-15T05:30:23.01-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "This line in the DslDefinition.dsl file \n \n<Designer FileExtension=\"csd\" Icon=\"D:\\Personal\\FolderShare\\Projects\\CodePlex\\csd\\Main\\Source\\Dsl\\Resources\\ConfigurationSectionDesigner.ico\" EditorGuid=\"548a5f67-a0b1-4c78-84f0-508456f45157\">\n \nshould maybe be changed to \n \n<Designer FileExtension=\"csd\" Icon=\"Resources\\ConfigurationSectionDesigner.ico\" EditorGuid=\"548a5f67-a0b1-4c78-84f0-508456f45157\">\n \nScott",
+    "LastUpdatedDate": "2017-12-09T05:53:39.21-08:00",
+    "PlannedForRelease": "1.1",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2007-12-31T10:15:04.23-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "DslDefinition.dsl has a hardcoded path to the ConfigurationSectionDesigner.ico file",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 141
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm aware of that, but unfortunately I think it's a bug in the tools: the DSL designer doesn't let me choose a relative path for that icon (it seems to resolve the relative path against the Visual Studio directory). I'll check it out and see if there's a workaround but otherwise you should indeed take care to change the path locally...",
+      "PostedDate": "2008-01-01T04:53:31.69-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "If it makes any difference, I was able to change it in the xml file and it keeps the change there.",
+      "PostedDate": "2008-01-01T09:09:31.203-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-01-11T13:51:11.267-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-01-15T05:29:34.9-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-01-15T05:29:53.867-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 1975.",
+      "PostedDate": "2008-01-15T05:30:23.01-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I'm sorry it took a little while but it's finally done.",
+      "PostedDate": "2008-01-15T05:31:03.023-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:40.177-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:57.267-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:53:39.21-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

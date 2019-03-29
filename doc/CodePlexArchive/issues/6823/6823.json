@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-06-05T06:16:28.95-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "",
+    "LastUpdatedDate": "2017-12-09T05:57:06.947-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-06-04T21:10:58.52-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "DefaultExtension  method returning constants verify for correctness",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 0,
+    "Id": 6823
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Associated with changeset 46703.",
+      "PostedDate": "2010-06-04T21:20:36.07-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 46712.",
+      "PostedDate": "2010-06-05T06:16:28.95-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:50.69-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:57:06.947-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

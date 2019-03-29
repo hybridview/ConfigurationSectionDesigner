@@ -1,0 +1,274 @@
+[
+  {
+    "Id": "827479",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>I really like your tool and hope the support for VS11 will be done soon :)</p>\r\n<p>Keep up the good work!</p>\r\n<p>Max</p>\r\n",
+    "PostedDate": "2012-04-23T11:58:30.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "850411",
+    "ThreadId": "353266",
+    "Html": "<p>I'll be using VS11 soon too, so this will be on my list.</p>",
+    "PostedDate": "2012-06-18T08:55:43.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "851160",
+    "ThreadId": "353266",
+    "Html": "<p>I'm also hoping for VS2012 support soon :-)</p>\r\n<p>Thanks!</p>",
+    "PostedDate": "2012-06-19T14:25:55.157-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "892790",
+    "ThreadId": "353266",
+    "Html": "<p>I was able to get this workig VS2012 rc just by editing the vsix manifest file by:</p>\r\n<p>1) Renaming the .vsix extention to .zip</p>\r\n<p>2)Edit the vsix manifest file and update 2010 to 2011.</p>\r\n<p>3)Compress to zip file</p>\r\n<p>4)Rename to vsix</p>\r\n<p>5)It should now install to VS2012.</p>",
+    "PostedDate": "2012-07-29T12:29:37.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "892806",
+    "ThreadId": "353266",
+    "Html": "<p>Hi rsiva,</p>\r\n<p>&nbsp;</p>\r\n<p>Tried that but it didnt work for me.&nbsp; However I then modified my manifest so that it still referenced the 2010 schema but changed the supported version from 10.0 to 11.0 and it installed OK.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-07-29T13:51:12.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894144",
+    "ThreadId": "353266",
+    "Html": "\r\n<blockquote style=\"border:solid .1em #ccc; font-style:italic; margin:.25em 1em 0 1em; padding:0 .25em 0 .25em\">\r\n<strong>doriandarby wrote:</strong><br>\r\n<p>Hi rsiva,</p>\r\n<p>&nbsp;</p>\r\n<p>Tried that but it didnt work for me.&nbsp; However I then modified my manifest so that it still referenced the 2010 schema but changed the supported version from 10.0 to 11.0 and it installed OK.</p>\r\n<p>&nbsp;</p>\r\n</blockquote>\r\n<p>I've done the same, problem is, that when I double click on csd file, VS opens it as xml file.</p>\r\n<p>So I've checked VS log and there's the problem:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">entry</span><span style=\"color:blue\">&gt;</span>\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">record</span><span style=\"color:blue\">&gt;</span>1657<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">record</span><span style=\"color:blue\">&gt;</span>\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">time</span><span style=\"color:blue\">&gt;</span>2012/08/01 13:37:32.482<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">time</span><span style=\"color:blue\">&gt;</span>\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">type</span><span style=\"color:blue\">&gt;</span>Error<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">type</span><span style=\"color:blue\">&gt;</span>\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">source</span><span style=\"color:blue\">&gt;</span>Microsoft.VisualStudio.CommonIDE.ExtensibilityHosting.VsShellComponentModelHost<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">source</span><span style=\"color:blue\">&gt;</span>\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">description</span><span style=\"color:blue\">&gt;</span>Could not load file or assembly <span style=\"color:red\">&amp;apos;</span>Microsoft.VisualStudio.Modeling.Sdk.Diagrams.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a<span style=\"color:red\">&amp;apos;</span> or one of its dependencies. The system cannot find the file specified.<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">description</span><span style=\"color:blue\">&gt;</span>\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">path</span><span style=\"color:blue\">&gt;</span>C:\\USERS\\USER\\APPDATA\\LOCAL\\MICROSOFT\\VISUALSTUDIO\\11.0\\EXTENSIONS\\CORT3YC3.4OF\\ConfigurationSectionDesigner.Dsl.dll<span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">path</span><span style=\"color:blue\">&gt;</span>\n  <span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">entry</span><span style=\"color:blue\">&gt;</span>\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>I've downloaded source thinking to be able to rebuild it, but it requires modeling sdk, visual studio sdk installed and some community targets, shortly speaking I think there should be a guide how to build it.</p>\r\n<p>And to install modeling sdk for vs 2010 without installing vs 2010 is not possible.</p>\r\n",
+    "PostedDate": "2012-08-01T06:27:31.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "895285",
+    "ThreadId": "353266",
+    "Html": "<p>Installed with these instructions, however, when I start using is, it cannot generate the sample configuration file.</p>\r\n<p>The sample config file only contains:<br />ErrorGeneratingOutput</p>\r\n<p>While the output window states:<br />Error 61 The type 'ConfigurationSectionDesigner.ConfigurationSectionDesignerDirectiveProcessor' of the directive processor named 'ConfigurationSectionDesignerDirectiveProcessor' does not implement Microsoft.VisualStudio.TextTemplating.IDirectiveProcessor. The transformation will not be run.</p>\r\n<p>Ah,</p>\r\n<p>and while switching the project from 4.5 to 4.0, I temporarily got:</p>\r\n<p>An exception occured while running the CsdFileGenerator on this file. See the Error List for details. E=System.NullReferenceException: Object reference not set to an instance of an object.    at Microsoft.VisualStudio.TextTemplating.VSHost.OrchestratorOptionsAutomation.ShowSecurityWarningDialog(IServiceProvider serviceProvider)    at Microsoft.VisualStudio.TextTemplating.VSHost.BaseTemplatedCodeGenerator.ShowWarningDialog()    at Microsoft.VisualStudio.TextTemplating.VSHost.BaseTemplatedCodeGenerator.GenerateCode(String inputFileName, String inputFileContent)    at ConfigurationSectionDesigner.CsdFileGenerator.GenerateAllContent(String fileExtension)    at ConfigurationSectionDesigner.CsdFileGenerator.GenerateContent(String element)    at ConfigurationSectionDesigner.VsMultipleFileGenerator`1.Generate(String wszInputFilePath, String bstrInputFileContents, String wszDefaultNamespace, IntPtr[] rgbOutputFileContents, UInt32&amp; pcbOutput, IVsGeneratorProgress pGenerateProgress)</p>\r\n<p>The version in vs2010 now is disabled, and upon installation and vs restart, it just re-appears... :(</p>",
+    "PostedDate": "2012-08-03T10:46:11.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "898857",
+    "ThreadId": "353266",
+    "Html": "<p>I agree that we need some good instructions on how to build the source of this project. It drives me nuts when I can't get an open source project to build, so I'm a bit ashamed of this. I'll make build instructions a priority.</p>\r\n<p>Regarding VS2012 issues, I have not installed VS2012 so have not been able to investigate. Being pretty busy at work, I don't have as much time to deal with pre-release product issues, so try to wait until official releases. Since I will be able to access the release version of VS2012 in a few days, I should have an environment ready pretty soon. Many thanks to those who have already worked on solving these issues.</p>",
+    "PostedDate": "2012-08-13T10:17:02.233-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "898865",
+    "ThreadId": "353266",
+    "Html": "<p>I added some quick info to the wiki about building this tool youself from source code. It's pretty basic at this point, but should be of some help to others.</p>\r\n<p><a href=\"http://csd.codeplex.com/wikipage?title=Building%20from%20Source&amp;referringTitle=Documentation\">http://csd.codeplex.com/wikipage?title=Building%20from%20Source&amp;referringTitle=Documentation</a></p>",
+    "PostedDate": "2012-08-13T10:41:50.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "913059",
+    "ThreadId": "353266",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>andym1978 wrote:</strong><br />\r\n<p>I added some quick info to the wiki about building this tool youself from source code. It's pretty basic at this point, but should be of some help to others.</p>\r\n<p><a href=\"http://csd.codeplex.com/wikipage?title=Building%20from%20Source&amp;referringTitle=Documentation\">http://csd.codeplex.com/wikipage?title=Building%20from%20Source&amp;referringTitle=Documentation</a></p>\r\n</blockquote>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;     With your info, I build it failed in VS2012. Because&nbsp; missing some assembly.</p>\r\n<p>Need more help. It's a good tool which I can't leave in my work. Now I can only do work in VirtualMachine........T_T</p>",
+    "PostedDate": "2012-09-15T08:40:34.043-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "933671",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>@<a href=\"http://www.codeplex.com/site/users/view/andym1978\">andym1978</a>.<br>\r\nI can't get it to work. Can you please post a installation that works with Visual Studio 2012 somewhere? I would really&nbsp;appreciate&nbsp;it!</p>\r\n",
+    "PostedDate": "2012-10-29T01:56:52.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "936584",
+    "ThreadId": "353266",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>rsiva wrote:</strong><br /></blockquote>\r\n<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\">\r\n<p>I was able to get this workig VS2012 rc just by editing the vsix manifest file by:</p>\r\n<p>1) Renaming the .vsix extention to .zip</p>\r\n<p>2)Edit the vsix manifest file and update 2010 to 2011.</p>\r\n<p>3)Compress to zip file</p>\r\n<p>4)Rename to vsix</p>\r\n<p>5)It should now install to VS2012.</p>\r\n</blockquote>\r\n<p>This worked for me (I am using vs2012 rc until bizspark/websitespark comes out with full version, if ever?). When recompressing. Make sure you don't simply rightclick-&gt;7z-&gt;Zip whole Configuration Section Designer 2.0.0.5 folder. You must open the folder and zip it from there... Else you will get error message: extension.vsixmanifest must be in root.</p>",
+    "PostedDate": "2012-11-05T01:18:10.433-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "937475",
+    "ThreadId": "353266",
+    "Html": "<p>Sorry for the delays in moving this to VS11. End of year is very busy at my work.</p>",
+    "PostedDate": "2012-11-06T12:30:37.027-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "937594",
+    "ThreadId": "353266",
+    "Html": "<p>I'm glad to contribute, if contribution is accepted, i've done some fix/feature like:</p>\r\n<ul>\r\n<li>Fixed virtual property generation in sealed class (result in a build error)</li>\r\n<li>Esc key now close attribute editor</li>\r\n<li>Added support for keyless Element Collection</li>\r\n<li>Added initial support for copy and paste</li>\r\n</ul>\r\n<p>Kind Regards, Max</p>",
+    "PostedDate": "2012-11-06T15:39:37.067-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "940284",
+    "ThreadId": "353266",
+    "Html": "<p>I would love to check out your contributions ilmax.</p>",
+    "PostedDate": "2012-11-12T06:11:03.1-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "944978",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>When trying to run in VS2012:&nbsp;Could not load file or assembly 'Microsoft.VisualStudio.Modeling.Sdk.Shell.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a' or one of its dependencies. The system cannot find the file specified.</p>\r\n<p>You have to download and installed the&nbsp;<a href=\"http://www.microsoft.com/en-us/download/details.aspx?id=30680&WT.mc_id=rss_alldownloads_all\">Microsoft Visual Studio 2012 Visualization &amp; Modeling SDK</a>&nbsp;that contains the dll (and you should\r\n first install the <a href=\"http://www.microsoft.com/en-us/download/details.aspx?id=30668\">\r\nMicrosoft Visual Studio 2012 SDK</a>).</p>\r\n<p>The only thing I'm missing now is the custom tool. When I open a .csd file in Visual Studio 2012 it opens with the Xml (Text) Editor. There is no program in the list 'open with...' for the CS-Designer. Does anyone know how to add this?</p>\r\n",
+    "PostedDate": "2012-11-20T23:34:01.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "946145",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>I've gotten the thing to compile in VS2012 now, and added the&nbsp;&lt;VisualStudio Version=&quot;11.0&quot;&gt; section as supported product in the manifest, allowing installation in VS2012 directly.</p>\r\n<p>Next step is debugging the thing. When I attach a separate instance of VS to the one running the CSD extension (compiled in debug mode) it breaks at the point mentioned before:</p>\r\n<p>Filegeneration.CS, line 55:</p>\r\n<p>In</p>\r\n<p>CsdFileGenerator.TemplateCodeGenerator<br>\r\npublic new byte[] GenerateCode( string inputFileName, string inputFileContent )</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>   at Microsoft.VisualStudio.TextTemplating.VSHost.OrchestratorOptionsAutomation.ShowSecurityWarningDialog(IServiceProvider serviceProvider)\r\n   at Microsoft.VisualStudio.TextTemplating.VSHost.BaseTemplatedCodeGenerator.ShowWarningDialog()\r\n   at Microsoft.VisualStudio.TextTemplating.VSHost.BaseTemplatedCodeGenerator.GenerateCode(String inputFileName, String inputFileContent)\r\n   at ConfigurationSectionDesigner.CsdFileGenerator.TemplateCodeGenerator.GenerateCode(String inputFileName, String inputFileContent)\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>Neither my inputFileName nor inputFileContent are null.</p>\r\n<p>The string inputFileName contains the (correct) path to my csd file.<br>\r\nThe string inputFileContent contains all content from the file 'ConfigurationSectionDesignerSample.tt'&nbsp;</p>\r\n<p>Does anybody have a clue on how to continue more intelligent debugging?</p>\r\n",
+    "PostedDate": "2012-11-23T07:04:29.543-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "952540",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Just an FYI. I am currently converting this to VS 2012. If anyone has any more useful info from their own experiences performing this task, I'd love to hear it. It will help speed up the process.</p>\r\n",
+    "PostedDate": "2012-12-06T14:04:35.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "952544",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Hi andym, converting is easy, just run the conversion tool from&nbsp;C:\\Program Files (x86)\\Microsoft Visual Studio 11.0\\VSSDK\\VisualStudioIntegration\\Tools\\DSLTools (SDK install required).</p>\r\n<p>I have done some changes to code generation, if you are interested, i'm glad to contribute to the the project.</p>\r\n<p>Max</p>\r\n",
+    "PostedDate": "2012-12-06T14:09:29.087-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "952567",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Thanks for the quick response Max!&nbsp;I'm glad you would like to contribute to the project. I'll try to contact the other developers ASAP so I can get you on board.</p>\r\n<p><span style=\"font-size:10pt\">When I opened the solution from VS 2012, it automatically converted it over for me (after SDKs were installed). After that, I just upped the version number, changed config to support .NET up to 4.5, and deployed the VSIX package.\r\n I have posted the package to downloads as an ALPHA release. I have NOT uploaded the source yet because I'd like to see if I can avoid maintaining separate sources for building VS2010 and VS2012 packages. Ideally, I'd like to fork the source to VS2012 and be\r\n able to create packages for both VS 2012 and VS2010 from said VS2012 source.&nbsp;</span></p>\r\n",
+    "PostedDate": "2012-12-06T14:41:14.143-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "952804",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Hurray for you taking this up as a project. When I find time I would like to help you out where I can.</p>\r\n<p>The current version does create the required code, but fails to create a sample config file &#43; the Xsd on my machine. (same error as I mentioned before)</p>\r\n<p>Do you have a separate fork &#43; bugtracking where I can post info to? It appears to be the same as I mentioned before.</p>\r\n",
+    "PostedDate": "2012-12-07T02:40:59.783-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "953288",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Atrejoe,</p>\r\n<p>The problem always seems to be finding time. :) That's why it is good to have more people working on it: Our minimal amount of free time starts to add up.</p>\r\n<p>I'll take a look at the code gen issue you described. If not this weekend, then Monday. Should be a simple issue. I was able to get debugging working decently well in VS2010 (critical for tracking down issues) but have not yet tried in VS2012. At work, I\r\n use a significant amount of trace logging to help track down user reported issues. It may be worthwhile to add this type of tracing to this project so users can submit trace files to us.</p>\r\n<p>There is no&nbsp;separate&nbsp;fork for this version, yet. I plan on doing that ASAP starting Monday.</p>\r\n<p>Regards,</p>\r\n<p>Andrew</p>\r\n",
+    "PostedDate": "2012-12-08T05:34:52.823-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "953944",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>I have debugged the extension to try and track down this issue. I believe this issue is due to UAC. It seems as though we need to elevate permissions when writing files to the project directory in VS 2012. I'd rather not require elevated permissions, so\r\n it would be nice to find another way to do this. For now, users may need to run VS2012 as administrator to get around this issue. What a pain...</p>\r\n",
+    "PostedDate": "2012-12-10T06:28:32.867-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "953950",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Maybe is because of source controlled folder?</p>\r\n",
+    "PostedDate": "2012-12-10T06:32:45.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "953979",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>I believe you are right. That issue is gone after removing R/O attribute to that folder, but I am getting a null ref exception generating content for XSD. All my assembly refs point to VS 2010, so I'm changing to VS 2012 to see if that helps.</p>\r\n",
+    "PostedDate": "2012-12-10T07:11:53.863-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "953987",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>I think that if the folder where code will be generated is under source control, you should get a kind of lock (which&nbsp;removes R/O attribute) over that folder before writing safely something.</p>\r\n<p>I think that VS should be an abstraction over all source control plugin so you can ask to VS something like: &quot;Hey, does this folder is under source control?, if true please get a lock for me&quot;.</p>\r\n",
+    "PostedDate": "2012-12-10T07:20:06.63-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "954000",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Ahh... Now I see why the DSL migration tool must be used... It updates all of those references.</p>\r\n",
+    "PostedDate": "2012-12-10T07:33:27.227-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "954004",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Implementing that source control behavior would be very useful. I now remember that I've had to manually checkout the CSD related files before editing.</p>\r\n",
+    "PostedDate": "2012-12-10T07:36:02.003-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "954019",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Issue now appears to resolved after following Ilmax's directions on running the dsl migration tool. My XSD files are now generated. I have updated the VS 2012 ALPHA download to reflect this fix.</p>\r\n<p>I'll try to find time today to add the new source project folder for VS2012 to source control.</p>\r\n",
+    "PostedDate": "2012-12-10T07:54:23.22-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "954031",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Following code should be an entry point for such feature</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:green\">// Check file</span>\r\n<span style=\"color:blue\">if</span> (sc.IsItemUnderSCC(pahtOfFileThatShouldBeGenerated))\r\n{\r\n<span style=\"white-space:pre\">\t</span>sc.CheckOutItem(pahtOfFileThatShouldBeGenerated);\r\n}\r\n</pre>\r\n</div>\r\n<p>where sc is an instance of&nbsp;<span><a title=\"EnvDte.SourceControl\" href=\"http://msdn.microsoft.com/en-us/library/envdte.sourcecontrol.aspx\">EnvDTE.SourceControl</a>.</span></p>\r\n<p>links with documentation</p>\r\n<ul>\r\n<li><a title=\"msdn\" href=\"http://msdn.microsoft.com/en-us/library/bb165337(v=vs.110).aspx\" target=\"_blank\">msdn</a>\r\n</li></ul>\r\n",
+    "PostedDate": "2012-12-10T08:03:41.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "954041",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Excellent work Max. I have created the VS 2012 branch in source control, so please feel free to make changes. Have you been able to login to TFS for this project?</p>\r\n",
+    "PostedDate": "2012-12-10T08:29:13.953-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "954051",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Yes Andrew, I'm already connected to source control.</p>\r\n<p>As soon as I have some free time, i will try to add this functionality.</p>\r\n",
+    "PostedDate": "2012-12-10T08:45:40.987-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "954058",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Great. Thanks for the help.</p>\r\n",
+    "PostedDate": "2012-12-10T08:55:46.34-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "954131",
+    "ThreadId": "353266",
+    "Html": "\r\n<p>Same here, great work!</p>\r\n",
+    "PostedDate": "2012-12-10T11:46:52.987-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

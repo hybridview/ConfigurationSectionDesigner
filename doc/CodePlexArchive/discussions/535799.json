@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1215707",
+    "ThreadId": "535799",
+    "Html": "I am writing a configuration file which handles the layouts of identity cards (which might change over time).\r<br />\n<br />\nTo do this, I basically need three different types of &quot;Shape&quot; - Rectangle, Text and Image, all of which have common attributes (eg. Top, Left, Width, Height, Name, Order) and which have additional attributes specific to their implementation.\r<br />\n<br />\nI've created an abstract type (Shape) and derived Rectangle, Text and Image from it.\r<br />\n<br />\nEffectively, I then want to be able to specify something like this:<br />\n<pre><code>&lt;card name=&quot;Pre2014&quot;&gt;\n    &lt;design&gt; &lt;!--ShapeCollection--&gt;\n         &lt;rectangle top=&quot;1&quot; left=&quot;2&quot; height=&quot;250&quot; width=&quot;350&quot; name=&quot;rectBackground&quot; order=&quot;1&quot; backgroundColour=&quot;Green&quot; /&gt;\n         &lt;image name&quot;imageLogo&quot; order=&quot;2&quot; type=&quot;Logo&quot; ... /&gt;\n         &lt;text name=&quot;textName&quot; order=&quot;3&quot; textValue=&quot;Name&quot; ... /&gt;\n    &lt;/design&gt;\n&lt;/card&gt;\n</code></pre>\n\nAs far as I can see, though, I can't create a collection of an abstract object; have I missed something?<br />\n",
+    "PostedDate": "2014-02-27T08:47:18.377-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304225",
+    "ThreadId": "535799",
+    "Html": "Hmm... I understand the principal in code, but I think it gets a little more complicated in the configuration/schema part of it. I'll look at it a bit more, but it might need to use the brute force &quot;Has Custom Child Elements&quot; property.<br />\n",
+    "PostedDate": "2014-09-12T13:48:51.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

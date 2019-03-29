@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-01-13T05:32:38.427-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Chance of choosing the visibility of generated classes(internal,public,protected)",
+    "LastUpdatedDate": "2017-12-09T05:48:19.68-08:00",
+    "PlannedForRelease": "1.6",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-30T08:12:57.647-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Generated class visibility",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 2,
+    "Id": 5671
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'll add that for release 1.6. Thanks for the suggestion. :-)",
+      "PostedDate": "2009-12-30T16:16:27.213-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-01-12T15:36:06.61-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 33342.",
+      "PostedDate": "2010-01-13T05:32:38.427-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:33.64-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:51.86-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:19.68-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

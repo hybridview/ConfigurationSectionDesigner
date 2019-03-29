@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "271109",
+    "ThreadId": "79176",
+    "Html": "<p>I'd love to be able to reorder the attributes on a config section, after I've created them. One thing would be to sort them alphabetically, but I'd also like to be able to create a custom order, e.g. to group things together that belong together.</p>\r\n<p>Right now, I have to open the *.csd file as an XML file and manually go about reordering - would be great if we could do this in the visual designer by 2010 ! :-)</p>\r\n<p>Marc</p>",
+    "PostedDate": "2009-12-28T03:15:12.777-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "271257",
+    "ThreadId": "79176",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://csd.codeplex.com/WorkItem/View.aspx?WorkItemId=5659\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2009-12-28T13:38:03.23-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

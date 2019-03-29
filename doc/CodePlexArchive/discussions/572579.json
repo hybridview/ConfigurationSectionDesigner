@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1324070",
+    "ThreadId": "572579",
+    "Html": "Hi,\r<br />\n<br />\nThis is a brilliant add on, it's saved me hours of work and research. \r<br />\n<br />\nIt should be added to NuGet, it would raise the visibility and help spot updates.\r<br />\n<br />\nRegs<br />\n",
+    "PostedDate": "2014-11-19T22:20:52.51-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1326095",
+    "ThreadId": "572579",
+    "Html": "I very much agree! The VS extension page is a pain to use and the account is actually &quot;broken&quot;. I've been using Nuget a lot lately and love it. We'll look into this.<br />\n",
+    "PostedDate": "2014-11-25T12:43:59.173-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

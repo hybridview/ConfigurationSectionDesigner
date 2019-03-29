@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have been using the Config Section Designer since Visual Studio 2005.\nI currently have \"Xml Schema Namespace\" defined as : \"http://schemas.abc.adventure.com/DVR\".\nUpon upgrading to VS 2015 Config Section Designer 2.0.1.801 this NOW generates the following error:\n\nError\t\tThe ConfigurationSectionModel 'Xml Namespace' for CSD Model \n'http://schemas.abc.adventure.com/DVR' must be alphanumeric, start with a letter, cannot have special characters or spaces, must be valid XML namespace.\tDVRConfigurationSection\t...\\ConfigurationSection.csd\t\t\n\nThe config section designer also does not like the following:\n\"http://...\"\n\".../DVR\"\n\nIs this a new BUG that was introduced?\nAre you validating the \"XML Schema Namespace\" as a C# Namespace?\nShouldn't this allow for any URI?\n\nIf I change the value to : \"dvr.abc.adventure.com\" then it works without error.",
+    "LastUpdatedDate": "2016-09-13T08:34:18.14-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2016-03-28T10:32:48.953-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Validation of Xml Namespace in version 2.0.1.801 VS2015",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 11076
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Note: I branched source for VS 2015 support. I also updated the validation code to resolve this issue (not fully tested yet).",
+      "PostedDate": "2016-09-13T08:34:18.14-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

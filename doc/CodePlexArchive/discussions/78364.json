@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "268171",
+    "ThreadId": "78364",
+    "Html": "<p>I have create a project, say ExcelComparerConfig of csd type, added my element and collection and saved the file.</p>\r\n<p>However the only thing I see in the project dir is the .csd and normal vs files. Do I need to set the following properties of the csd file</p>\r\n<ul>\r\n<li>BuildAction</li>\r\n<li>Copy to output</li>\r\n</ul>\r\n<p>And then right-click and run it ? When I do that, I get the error &quot;The string was not recognized as a valid uri. Parameter inputUri.&quot;</p>\r\n<p>thanks</p>\r\n<p>Sunit</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-12-16T13:19:37.637-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "268203",
+    "ThreadId": "78364",
+    "Html": "<p>I had to reboot my machine and then everything seems to work.</p>\r\n<p>thanks</p>\r\n<p>Sunit</p>",
+    "PostedDate": "2009-12-16T14:34:08.387-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "268221",
+    "ThreadId": "78364",
+    "Html": "<p>I'm glad it worked for you, but I'm not certain I understand what kind of problem you had. That error seems very unrelated to the CSD tool, so I have no idea what happened there. There should never be any need to set BuildAction or Copy to output on the .csd file.</p>",
+    "PostedDate": "2009-12-16T15:34:02.157-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "268473",
+    "ThreadId": "78364",
+    "Html": "<p>Thanks. In case you wonder, i'm using this on Vista Business x64.</p>\r\n<p>BTW thanks a bunch for the awesome work you have done here...saved me quite some trying to code/inherit the dozen classes that ones</p>\r\n<p>has to inorder to work with config sections.</p>",
+    "PostedDate": "2009-12-17T06:04:04.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "268519",
+    "ThreadId": "78364",
+    "Html": "<p>It's not all made by me, but thank you. I'm using Windows 7 Professional x64, I think they are pretty much &quot;the same thing&quot; when it comes to this.</p>\r\n<p>Remember to check back from time to time, new features are being planned and implemented all the time since I joined the team here, and if you have any ideas or come across any bugs, please let me know. :-)</p>\r\n<p>Oh, and I don't know if this goes without saying or not, but don't run Visual Studio while installing the tool. That can cause problems.</p>",
+    "PostedDate": "2009-12-17T08:11:39.703-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

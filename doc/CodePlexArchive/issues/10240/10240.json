@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I really like the tool; thanks for creating it.\n\nI would like to have the ability to make the generated code for ConfigurationElements and ConfigurationElementCollections implement interfaces, so that my configuration implementation can be abstracted away, making it easier to mock away during testing.  Otherwise, all of my tests will need to read configuration from a file, or some other means, rather than my just configuring some stubs.\n\nI tried to do this via setting a base class, but the interface that I created next door to the CSD file isn't available in the Type dropdown.\n\nIs there a way to do this already that I haven't found?",
+    "LastUpdatedDate": "2015-02-13T07:59:56.53-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-07-10T03:52:29.047-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Ability to make ConfigurationElements and Collections implement interfaces",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 4,
+    "Id": 10240
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I should have said; I tried to define an external type, too, but this also wasn't picked up.",
+      "PostedDate": "2013-07-10T03:53:01.93-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I also tried via a partial class, once I noticed the generated code makes partials, but that didn't make the compiler happy either.\r\n\r\nFrom the tutorial (add a string Name attribute to the FooBar):\r\n\r\npublic interface FooBar {\nstring Name { get; }\n}\npublic partial class FooBar : IFooBar {\n//compiler complains about Name not being implemented, despite the generated code defining public virtual string Name { get ... set ... }\n}",
+      "PostedDate": "2013-07-10T03:57:58.553-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-08-13T15:30:27.843-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-12-12T02:14:03.07-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2015-02-13T07:59:56.53-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

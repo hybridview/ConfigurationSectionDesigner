@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1468235",
+    "ThreadId": "652991",
+    "Html": "I have been using the Config Section Designer since Visual Studio 2005.\r<br />\n I currently have &quot;Xml Schema Namespace&quot; defined as : &quot;<a href=\"http://schemas.abc.adventure.com/DVR\" rel=\"nofollow\">http://schemas.abc.adventure.com/DVR</a>&quot;.\r<br />\n Upon upgrading to VS 2015 Config Section Designer 2.0.1.801 this NOW generates the following error:\r<br />\n<br />\n Error The ConfigurationSectionModel 'Xml Namespace' for CSD Model \r<br />\n '<a href=\"http://schemas.abc.adventure.com/DVR\" rel=\"nofollow\">http://schemas.abc.adventure.com/DVR</a>' must be alphanumeric, start with a letter, cannot have special characters or spaces, must be valid XML namespace. DVRConfigurationSection ...\\ConfigurationSection.csd \r<br />\n<br />\n The config section designer also does not like the following:\r<br />\n &quot;<a href=\"http://\" rel=\"nofollow\">http://</a>...&quot;\r<br />\n &quot;.../DVR&quot;\r<br />\n<br />\n Is this a new BUG that was introduced?\r<br />\n Are you validating the &quot;XML Schema Namespace&quot; as a C# Namespace?\r<br />\n Shouldn't this allow for any URI?\r<br />\n<br />\n If I change the value to : &quot;dvr.abc.adventure.com&quot; then it works without error.<br />\n",
+    "PostedDate": "2016-03-28T10:35:22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1479413",
+    "ThreadId": "652991",
+    "Html": "First, I apologize for not having much free time to contribute to this project for a while.\r<br />\n<br />\nI know exactly what is causing this issue. At some point, I added validation because adding an invalid value would cause the CSD to be permanently damaged unless edited manually in a text editor. It looks like the wrong validation function is being called for this field. It's not a difficult fix, but I will need to re-build my development environment for this tool on my new machine. I'll check back in when I get set back up.\r<br />\n<br />\nDue to lack of time to quickly resolve reported issues, I was hoping to add a feature to this tool that executes a transform after each build. The transform can be 100% customized by the user to alter the generated code to get around issues similar to this. It would essentially enable users to &quot;fix&quot; issues themselves until the plugin can be updated. In your case, your transform could look for all instances of  &quot;dvr.abc.adventure.com&quot; and prepend the <a href=\"http:// part\" rel=\"nofollow\">http:// part</a>.<br />\n",
+    "PostedDate": "2016-07-20T11:23:47.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

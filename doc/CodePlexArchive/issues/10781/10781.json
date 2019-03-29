@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I don't know how many people have had this problem (it was years before I first saw it), but it's worth investigating and fixing.\n\nSomeone reported this in the VS2010 downloads page, and I FINALLY was able to reproduce (Except I was using VS2013). What happened to me, is I performed actions in a certain order that caused that project file to stop working with ANY CSDs (new or old). \n\n__UPDATE: This sentence is false after further testing!__ *The order of actions I performed (see bottom of this post) caused the text \"<Service Include=\"{508349B6-6B84-4DF5-91F0-309BEEBAD82D}\" />\" to be added to the csproj file. If this text is deleted, the CSDs work again.*\n\nNext steps would be to:\n* Find out why this service reference gets added to the csproj file when the specific steps are performed.\n* See if we can properly handle the situation where this reference is present, and allow the CSD to work. NOTE: I would say try to PREVENT this ref from being added (which is still a good idea), but we probably need to handle this correctly for users who NEED this service reference.\n\nWith my current research data included below, we should be able to figure this one it without too much difficulty.\n\n__LATEST ANALYSIS__\nIt looks like the problem occurs because PROJECT file in MEMORY has some object in an invalid state until it is reloaded from FILE. The project file being more up-to-date than MEMORY does not appear to be an issue since problem occurs even BEFORE project file is updated. Something in the project in MEMORY is invalid, but what is it?\n\n\n\n*******************************\n**** EXCEPTION DETAILS ****\n*******************************\n\n------ CSD file generation started: Configuration document: C:\\Users\\amoore\\Documents\\Visual Studio 2013\\Projects\\GKConfigDemo\\UseCaseDemos.Configuration\\IntraElementDependencies.csd ------\n* Searching for configuration project handle... found!\n[ ERROR ENCOUNTERED! ] TextTemplating service unavailable\n   at Microsoft.VisualStudio.TextTemplating.VSHost.BaseTemplatedCodeGenerator.GenerateCode(String inputFileName, String inputFileContent)\n   at Microsoft.VisualStudio.TextTemplating.VSHost.TemplatedCodeGenerator.GenerateCode(String inputFileName, String inputFileContent)\n   at ConfigurationSectionDesigner.CsdFileGenerator.TemplateCodeGenerator.GenerateCode(String inputFileName, String inputFileContent)\n   at ConfigurationSectionDesigner.CsdFileGenerator.GenerateAllContent(String fileExtension)\n   at ConfigurationSectionDesigner.CsdFileGenerator.GenerateContent(String element)\n   at ConfigurationSectionDesigner.VsMultipleFileGenerator`1.Generate(String wszInputFilePath, String bstrInputFileContents, String wszDefaultNamespace, IntPtr[] rgbOutputFileContents, UInt32& pcbOutput, IVsGeneratorProgress pGenerateProgress)\n\n\n\n**************************************************************\n**** My response to user in VS2010 DL page\n**************************************************************\n\n__UPDATE: Removed since this response is false after further testing!__ \n\n\n**************************************************************\n**** Steps I performed to reliably trigger this error.\n**************************************************************\n\n__WHAT I DID IN BAD PROJ__\n\nCreate new class library proj. in EXISTING or NEW solution.\n* Add new CSD item (ConfigurationSectionDesigner1).\n\t+ csproj file NOT modified here.\n* Save ConfigurationSectionDesigner1.\n\t+ csproj file NOT modified here.\n* Add new CSD item (ConfigurationSectionDesigner2).\n\t+ csproj file NOT modified here.\n* SAVE ConfigurationSectionDesigner2.\n\t+ NO ERROR!\n* Save ConfigurationSectionDesigner2.\n\t+ csproj file NOT modified here.\n* DELETE ConfigurationSectionDesigner1.  [ This where problem is created!!! ]\n* Open ConfigurationSectionDesigner2 diagram.\n* Save ConfigurationSectionDesigner2 diagram.\n\t+ ERROR OCCURS!!!!!! But csproj file still not saved to disk.\n* RELOAD project (Unload project, then reload).\n\t+ Problem goes away!\n\n\n__Another Set Of Steps to Reproduce__\n\t\nCreate new class library proj. in EXISTING or NEW solution.\n* Add new CSD item (ConfigurationSectionDesigner1).\n\t+ csproj file NOT modified here.\n* Add new CSD item (ConfigurationSectionDesigner2).\n\t+ csproj file NOT modified here.\n* SAVE ConfigurationSectionDesigner2.\n\t+ NO ERROR!\n* DELETE ConfigurationSectionDesigner1. [ This where problem is created!!! ]\n\t+ csproj file NOT modified here.\n* Open ConfigurationSectionDesigner2 diagram.\n* Save ConfigurationSectionDesigner2 diagram.\n\t+ ERROR OCCURS!!!!!! But csproj file still not saved to disk.\n\t* NOTE: This is weird... Project in memory would seem to be more up to date at this point than the file.\n* At this point, adding, deleting new CSD files does not fix issue. All CSDs in project fail to build.\n* REBUILD Solution\n\t+ csproj file IS modified here!!!\n* Save ConfigurationSectionDesigner2 diagram.\n\t+ ERROR OCCURS!!!!!!\t\n* RELOAD project (Unload project, then reload).\n\t+ Problem goes away!!!",
+    "LastUpdatedDate": "2014-11-26T08:13:52.997-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2014-11-12T08:50:49.84-08:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "CSD files not generated and \"TextTemplating service unavailable\" error is shown.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10781
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "\nMORE INFO for DEBUGGING::::\r\n\r\nIn source code, the error occurs when calling TemplateGenerator.GenerateCode in the FileGeneration.cs file. Content below should help developer locate area in FileGeneration.cs file:\r\n\r\n System.Diagnostics.Debugger.Log(0, \"\", String.Format(\"Replacing $inputFileName$ with real value before running TemplateGenerator.GenerateCode(InputFilePath={0},inputFileContent.Length={1}); \", InputFilePath, inputFileContent.Length));\n inputFileContent = inputFileContent.Replace(\"$inputFileName$\", InputFilePath);\nreturn TemplateGenerator.GenerateCode(InputFilePath, inputFileContent); // FAILS HERE.\r\n\r\nFailure occurs in BaseTemplatedCodeGenerator (Microsoft class) during a check to see if TextTemplating property is NULL. Source code of this property accessor are below:\r\n\r\n\nprotected ITextTemplating TextTemplating\n{\n    get\n    {\n    ITextTemplating textTemplating = (ITextTemplating) null;\n    IVsHierarchy vsHierarchy = this.GetService(typeof (IVsHierarchy)) as IVsHierarchy;\n    if (vsHierarchy != null)\n    {\n        Microsoft.VisualStudio.OLE.Interop.IServiceProvider ppSP = (Microsoft.VisualStudio.OLE.Interop.IServiceProvider) null;\n        if (!Microsoft.VisualStudio.TextTemplating.NativeMethods.Failed(vsHierarchy.GetSite(out ppSP)) && ppSP != null)\n        {\n        Guid guid = typeof (STextTemplating).GUID;\n        IntPtr ppvObject = IntPtr.Zero;\n        ErrorHandler.ThrowOnFailure(ppSP.QueryService(ref guid, ref guid, out ppvObject));\n        if (ppvObject != IntPtr.Zero)\n            textTemplating = Marshal.GetObjectForIUnknown(ppvObject) as ITextTemplating;\n        }\n    }\n    return textTemplating;\n    }\n}\r\n\r\n",
+      "PostedDate": "2014-11-12T08:55:25.56-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "UPDATE:\nI did another test and discovered that the service reference mentioned previously is NOT the problem. Just unloading, then reloading the project fixes the issue. No changes to project file are required. It seems like something is not updating in memory for the project. Back to the drawing board...",
+      "PostedDate": "2014-11-26T07:40:03.367-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-11-26T08:13:52.997-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

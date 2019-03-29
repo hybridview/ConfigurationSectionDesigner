@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "177316",
+    "ThreadId": "52724",
+    "Html": "Forgive me if this is already possible, but I don't see a way to create a Configuration Element from an already existing type (like System.Configuration.NameValueConfigurationCollection).  Am I missing something?\r\n",
+    "PostedDate": "2009-04-08T12:26:43.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "265573",
+    "ThreadId": "52724",
+    "Html": "<p>Because the NameValueConfigurationCollection is a sealed type, it has very little expansion potential. We will therefore probably not add support for that particular type. However, the code that our tool generates is meant to be extended, and you can add support for your custom requirements such as this NameValueConfigurationCollection in one of the generated partial classes.</p>",
+    "PostedDate": "2009-12-09T23:14:12.133-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,106 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-01-15T11:13:51.417-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When a new project is created and the diagram is well laid out, if we close it and reopen it, the layout is still good.\nWhen a well laid out project is loaded or reloaded for the first time, the layout is a total mess, layout settings does not seem to be persisted in the project.\n \nEDIT 05/01/2009: \n \nThe .diagram file that contain diagram layout settings is not referenced in the project file.\nAs a result, in source controlled solutions (TFS), .diagram file is not checked in, so other contributors may have a diagram with a corrupted layout.",
+    "LastUpdatedDate": "2013-05-16T04:04:52.42-07:00",
+    "PlannedForRelease": "1.6",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-26T05:19:50.3-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Add .diagram file to project template for diagram layout persistance over Source Control",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5654
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1888,
+      "FileName": "TestCSD.PNG",
+      "DownloadUrl": ".\\1888"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "I have not experienced this happening myself. However, if you open a CSD created in a version before 1.2 in a version after 1.2, this happens, as described in the change log for version 1.2: http://csd.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=16188 I have later realized that this was not necessary, and it won't happen in future releases, but I can't go back now. Unless you can provide me with a .csd file and associated .diagram file created in a >1.2 release of the CSD in which this happens, I will close this issue.",
+      "PostedDate": "2009-12-26T09:52:54.487-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-01-03T06:39:26.233-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "In fact I was using the CSD 1.1.1 which was already not saving layout when reloading on another machine.\r\nThen when I saw CSD developpement restarted, I reacreated my project from zero as I was fearing issues with the old DSL files and as I saw that generated file organization changed too.\r\n\r\nSo to be clear, I created a new project using CSD 1.5 and I still have the problem with the new project. But I forgot to notice that this project is on a TFS Server and I saw that if you put a CSD project on a TFS server, then delete it locally and then get it again from TFS, then the layout is a total mess. I made 2 screenshots of an before/after to illustrate.",
+      "PostedDate": "2010-01-05T04:48:45.29-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-01-05T04:48:48.373-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I found what was wausing the issue. In fact the .diagram file that contains layout definition is only generated on diagram editing/saving and seems to not be referenced as part of the project file. So when you want to put it on TFS, Source Control does not check in the .diagram as it is not referenced as part of the project file. So for the moment I just need to check in manually the .diagram file, but I think you can fix this problem by adding the .diagram file in the project definition.",
+      "PostedDate": "2010-01-05T04:58:56.873-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Over a week without reply from reporter of issue, issue considered resolved.\r\n\r\n\n\n** Closed by alexschrod 1/3/2010 6:39 AM",
+      "PostedDate": "2010-01-05T08:33:38.43-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Valid issue when using TFS.",
+      "PostedDate": "2010-01-05T08:33:39.303-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Yeah, I think I'm going to add the .diagram to the templates for release 1.6. Thank you for reporting the issue.",
+      "PostedDate": "2010-01-05T08:34:41.573-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks a lot!",
+      "PostedDate": "2010-01-05T10:34:46.47-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 33409.",
+      "PostedDate": "2010-01-15T11:13:51.417-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:34.407-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:52.42-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

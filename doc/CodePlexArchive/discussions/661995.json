@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1494217",
+    "ThreadId": "661995",
+    "Html": "Any idea when can we get this built for VS 2017? Would be appreciated.<br />\n",
+    "PostedDate": "2017-03-17T09:47:42.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1495419",
+    "ThreadId": "661995",
+    "Html": "<strong>alexgurman wrote:</strong><br />\n<blockquote>\nAny idea when can we get this built for VS 2017? Would be appreciated.<br />\n</blockquote>\nI've modified the source codes to make it available for VS 2017.<br />\nThe source codes repository is <a href=\"https://github.com/rayncc/configuration-section-designer\" rel=\"nofollow\">here</a> on github.<br />\nOr you can download the vsix directly from <a href=\"https://github.com/rayncc/configuration-section-designer/archive/2.0.0.0.zip\" rel=\"nofollow\">here</a>.<br />\n",
+    "PostedDate": "2017-04-12T02:41:56.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1496765",
+    "ThreadId": "661995",
+    "Html": "The downloads provided do not contain the vsix.  I can't seem to get my Visual Studio to build this project.  Can you please compile and post the VSIX?\r<br />\nThanks,\r<br />\n-Stuart<br />\n",
+    "PostedDate": "2017-05-26T08:49:20.563-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1497035",
+    "ThreadId": "661995",
+    "Html": "A vsix (working) has been supplied in the releases, at least here:\r<br />\n<a href=\"https://github.com/rayncc/configuration-section-designer/releases/tag/2.0.1.804\" rel=\"nofollow\">https://github.com/rayncc/configuration-section-designer/releases/tag/2.0.1.804</a><br />\n",
+    "PostedDate": "2017-06-13T05:23:52.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

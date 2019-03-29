@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-09-08T11:04:01.347-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi\n\nWhen running the custom tool on the CSD file, I'm getting the error: \"The custom tool 'CsdFileGenerator' failed.  Unrecognized Guid format.\"\n\nI'm running version 2.0.1.0 on VS2012upd4. Problem happens in both a Web application, and in a blank class application.\n\nAny ideas please?",
+    "LastUpdatedDate": "2014-09-08T11:04:02.54-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2014-03-03T04:18:28.93-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Duplicate"
+    },
+    "Summary": "The custom tool 'CsdFileGenerator' failed.  Unrecognized Guid format.",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 10540
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Hi David,\r\n\r\nWe are looking at implementing some better debugging functionality to help resolve issues like this. I saw this error once before in a new project, but the problem disappeared before I could troubleshoot. It might be a problem with the function that recursively traverses solution files. I'll attempt to reproduce this again and figure this out once and for all.",
+      "PostedDate": "2014-09-04T12:22:58.05-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I found some flaws and unnecessary complexity in the solution tree parser. I made some changes to use proper app calls to find the selected project. I still have an issue when a brand new project has not been saved, but should solve that soon. I will release a beta version once I test these changes.",
+      "PostedDate": "2014-09-08T06:49:47.223-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I uploaded a package with a possible fix (see downloads), but it is for VS 2013. I will try to migrate the changes to VS2012 ASAP.",
+      "PostedDate": "2014-09-08T10:52:28.56-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-08T11:04:01.347-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-08T11:04:02.54-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

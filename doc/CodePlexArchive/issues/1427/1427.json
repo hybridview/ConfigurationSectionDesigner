@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Text Templates",
+      "DisplayName": "Text Templates"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-03-19T12:41:55.5-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Properties that are generated for attributes of elements are not using the global keyword. So if you have a element named System, there will be a class named System. The code will not complie becuse it looking for the type String in System class not in the System namepace.\n \n[global::System.Configuration.ConfigurationProperty(................\n public System.String AllGroups\n {\n   get\n \n \n \nThe code that is genrated dost not use global:: for return types. So if you have a element named System then code will not compile becuse it will try to use the type <ConfigName>.System.String when it should be using global::System.String.",
+    "LastUpdatedDate": "2017-12-09T05:53:39.71-08:00",
+    "PlannedForRelease": "1.1",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-03-17T03:29:05.63-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "global:: missing on basic types for attributes",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 1427
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 7748.",
+      "PostedDate": "2008-03-19T12:41:55.5-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:39.167-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:56.627-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:53:39.71-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

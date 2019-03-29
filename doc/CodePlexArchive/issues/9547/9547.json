@@ -1,0 +1,130 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Closing due to alpha release for VS2012, which does not seem to suffer any major issues.",
+    "ClosedDate": "2012-12-13T13:02:09.463-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Are there any plans to support Visual Studio 2012 soon?",
+    "LastUpdatedDate": "2013-05-16T04:04:46.503-07:00",
+    "PlannedForRelease": "2.0.0 r8 for Visual Studio 2012 ALPHA",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-08-17T00:47:13.483-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Configuration Section Designer on Visual Studio 2012",
+    "Type": {
+      "Name": "Task",
+      "Id": 2
+    },
+    "VoteCount": 12,
+    "Id": 9547
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "+1\r\n\r\nI like this tool. Hope it will support 2012 soon.",
+      "PostedDate": "2012-08-26T09:02:59.217-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-09-02T03:12:38.407-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-09-06T08:31:40.8-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-09-15T08:17:05.587-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-09-26T02:50:39.137-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-10-02T16:34:21.33-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-10-05T08:33:29.287-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-10-09T00:36:38.217-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-10-09T04:17:11.873-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-10-24T04:28:08.09-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-11-15T05:35:35.757-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-11-19T08:06:39.443-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-11-21T07:17:43.167-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Support has been added. It is currently marked an \"Alpha\" release in the downloads. The source code has also been branched for this version. This task will be closed once we confirm that there are no major issues with this conversion.",
+      "PostedDate": "2012-12-10T08:31:48.833-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-12-10T08:33:21.793-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-12-13T13:02:09.463-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:25.443-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:46.503-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

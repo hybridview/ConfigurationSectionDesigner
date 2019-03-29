@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Fixed in latest changeset.  Applied from VS2008 branch changeset posted by Alex. Will be included in next release &#40;after 2.0.0.8&#41;.",
+    "ClosedDate": "2012-12-19T07:09:00.817-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "[[ UPDATE ]] When creating a new CSD file, correct the \"assembly name\" property in the designer view (click empty space in designer). The assembly name will now be generated correctly.\n \n \nWhen the demo config files are generated for the user's CSD, the assembly name is not added correctly. The namespace is being added instead. \n \nSee demo:\n \nConsider that the assembly name in the DLL is named \"MyAssembly\".\n \n** Actual Result **\n<section name=\"SessionSection\" type=\"MyAssembly.MyNamespace.MyType, MyAssembly.MyNamespace\"/>\n \n** Expected Result **\n<section name=\"SessionSection\" type=\"MyAssembly.MyNamespace.MyType, MyAssembly\"/>\n \n \nIn the \"WriteConfigSection\" method in \"ConfigurationSectionDesignerSample.tt\", the call to \"this.ConfigurationSectionModel.AssemblyName\" is returning the Namespace. It should be returning the assembly name.",
+    "LastUpdatedDate": "2013-05-16T04:04:48.18-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-07-21T09:33:38.5-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Demo config files have assembly name set to namespace.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 8511
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "MORE INFO: When creating a new CSD in a sub-directory of a solution, the default value for \"Assembly Name\" (in properties frame of CSD window) will be set to the same value as Namespace, which is causing this issue. Until fixed,  users should correct the \"Assembly Name\" value of the model after creating a new CSD. This will only need to be performed once per CSD.",
+      "PostedDate": "2012-03-16T08:43:54.45-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-18T10:48:26.8-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-12-19T07:09:00.817-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:28.737-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:48.18-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

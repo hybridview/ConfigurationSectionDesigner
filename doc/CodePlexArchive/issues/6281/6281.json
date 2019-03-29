@@ -1,0 +1,120 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-06-05T06:08:47.507-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Currently, it's not possible to upgrade a VS2008 project using CSD as the designer isn't supported in VS2010.",
+    "LastUpdatedDate": "2017-12-09T05:57:06.723-08:00",
+    "PlannedForRelease": "2.0.0 r1 for Visual Studio 2010",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-04-08T00:31:07.11-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Visual Studio 2010 support",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 18,
+    "Id": 6281
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This is a great tool!  We are using it to manage a ton of config settings.  VS 2010 compatibility will be much appreciated.",
+      "PostedDate": "2010-05-17T07:50:29.78-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-05-18T09:06:14.81-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-05-20T00:12:22.763-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-05-24T11:20:47.077-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-05-24T11:25:42.293-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I submited a patch for 2010 support has not been accepted yet",
+      "PostedDate": "2010-05-31T18:30:12.477-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-06-01T10:31:01.983-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-06-03T03:43:56.29-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Work in Progress beta to be posted soon.",
+      "PostedDate": "2010-06-04T16:06:59.237-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Associated with changeset 46703.",
+      "PostedDate": "2010-06-04T21:20:36.437-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Associated with changeset 46704.",
+      "PostedDate": "2010-06-04T23:11:51.453-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Associated with changeset 46708.",
+      "PostedDate": "2010-06-05T05:42:58.13-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 46711.",
+      "PostedDate": "2010-06-05T06:08:47.507-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:31.853-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:50.977-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:57:06.723-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

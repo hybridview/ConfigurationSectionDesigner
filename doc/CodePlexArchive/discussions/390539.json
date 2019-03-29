@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "896400",
+    "ThreadId": "390539",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>&nbsp;</p>\r\n<p>I'm using this very usefull extension version 2.0.0.0 in VS2010.</p>\r\n<p>&nbsp;</p>\r\n<p>If the option does not already exists, you should add somewhere a menu to alter a project's config file (app.config or web.config) to add the appropriate entries in /configuration/configSections node of config files.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks :)</p>\r\n",
+    "PostedDate": "2012-08-07T01:57:43.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

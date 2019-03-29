@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Text Templates",
+      "DisplayName": "Text Templates"
+    },
+    "ClosedComment": "Resolved by changeset 31948.",
+    "ClosedDate": "2009-12-07T15:54:01.16-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "System:\nVisual Studio 2008 SP1\n.NET Framework 3.5 SP1\n \nReproduction Steps\n1) Setup ConfigurationSection with ConfigurationElementCollection\n2) Generate Code\n3) Create Test Application where you create ConfigurationSection\n4) Add an element to the ConfigurationElementCollection\n5) Remove the element\n \nExpected result:\nThe ConfigurationElementCollection is empty\n \nResult:\nThe ConfigurationElementCollection contains the element that was added.\n \nReason:\nThe Remove method is wrongly generated. \nThe base.BaseRemove method called by the generated Remove method takes the ConfigurationElement as argument. \nInstead it should take the Key Member of the ConfigurationElement.\n \nSolution:\nFind the section where the Remove method is generated in ConfigurationSectionDesignerCode.tt and change the following\nFrom: base.BaseRemove(<#= collectionElement.XmlItemName #>);\nTo: base.BaseRemove(<#= collectionElement.XmlItemName #>.<#= keyPropertyName #>);\n \nAttached you can find the updated file",
+    "LastUpdatedDate": "2017-12-09T05:48:17.5-08:00",
+    "PlannedForRelease": "1.2",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-02-26T04:36:59.717-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Unable to Remove ConfigurationElement from ConfigurationElementCollection",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3888
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1428,
+      "FileName": "ConfigurationSectionDesignerCode.tt",
+      "DownloadUrl": ".\\1428"
+    }
+  ],
+  "Comments": []
+}

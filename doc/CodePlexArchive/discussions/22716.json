@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "75890",
+    "ThreadId": "22716",
+    "Html": "\r\nfor a complicated config, there will be too many collection types<br /><br />so, just generate as List&lt;T&gt; is a good option.<br />",
+    "PostedDate": "2008-02-22T20:09:21.453-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "76031",
+    "ThreadId": "22716",
+    "Html": "\r\nThere are a number of reasons that I generate these collection classes:<br /><ul><li>You have to provide some metadata that allows the configuration system to know how collections are configured (element names, collection type, ...). This is part of the generated collection classes.</li><li>Using List&lt;T&gt; would introduce a dependency on .NET 2.0 and at this point the generated configuration classes can even be used in .NET 1.x.</li><li>And finally, I don't think it's even possible to use List&lt;T&gt; as a configuration collection class :-) I've briefly tried it but didn't get it to work because it lacks the necessary metadata as described above.</li></ul>",
+    "PostedDate": "2008-02-24T03:15:13.713-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

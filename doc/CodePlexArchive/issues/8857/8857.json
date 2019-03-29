@@ -1,0 +1,85 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The same old problem (closed issue 7458) persists in VS2010 (release 2.0.0 r4).",
+    "LastUpdatedDate": "2013-06-14T00:26:36.263-07:00",
+    "PlannedForRelease": "2.0.0 r4 for Visual Studio 2010",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-10-27T22:14:37.79-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Element name issues with ConfigurationElementCollection using AddRemoveClearMapAlternate in Visual Studio 2010",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 8857
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This fix will need to be merged over to the VS 2010 version.",
+      "PostedDate": "2012-03-16T08:17:46.03-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-04-09T12:24:02.38-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I merged the fix over to the VS2010 version. I have not tested the fix, so it has not been packaged as a download yet. The fix is part of change set 68141.",
+      "PostedDate": "2012-06-18T08:48:05.14-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Released 2.0.0 R5, which has this fix included. Please report any issues encountered.",
+      "PostedDate": "2012-06-18T10:45:49.777-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have installed Release 2.0.0 R5 on VS 2010 (my first install of this package) and I see no change in the behavior noted in the original issue Id #7458.",
+      "PostedDate": "2012-11-28T06:48:45.85-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:27.75-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:47.383-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:47.573-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-06-14T00:26:36.263-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

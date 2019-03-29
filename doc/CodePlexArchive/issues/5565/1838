@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSectionModel dslVersion="1.0.0.0" Id="d0ed9acb-0435-4532-afdd-b5115bc4d562" namespace="MyConfiguration.Wholesale.Credit" xmlSchemaNamespace="MyConfiguration.Wholesale.Credit" xmlns="http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner">
+  <typeDefinitions>
+    <externalType name="String" namespace="System" />
+    <externalType name="Boolean" namespace="System" />
+    <externalType name="Int32" namespace="System" />
+    <externalType name="Int64" namespace="System" />
+    <externalType name="Single" namespace="System" />
+    <externalType name="Double" namespace="System" />
+    <externalType name="DateTime" namespace="System" />
+    <externalType name="TimeSpan" namespace="System" />
+  </typeDefinitions>
+  <configurationElements>
+    <configurationSection name="EmailConfiguration" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="emailConfiguration">
+      <elementProperties>
+        <elementProperty name="EmailMessages" isRequired="false" isKey="false" isDefaultCollection="true" xmlName="emailMessages" isReadOnly="false" customAttributes="">
+          <type>
+            <configurationElementCollectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EmailMessageCollection" />
+          </type>
+        </elementProperty>
+      </elementProperties>
+    </configurationSection>
+    <configurationSection name="SmtpServersConfiguration" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="smtpServersConfiguration">
+      <elementProperties>
+        <elementProperty name="SmtpServers" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="smtpServers" isReadOnly="false" customAttributes="">
+          <type>
+            <configurationElementCollectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/SmtpServerCollection" />
+          </type>
+        </elementProperty>
+      </elementProperties>
+    </configurationSection>
+    <configurationSection name="EnvironmentConfiguration" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="environmentConfiguration">
+      <elementProperties>
+        <elementProperty name="CurrentEnvironment" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="currentEnvironment" isReadOnly="false" customAttributes="">
+          <type>
+            <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EnvironmentElement" />
+          </type>
+        </elementProperty>
+        <elementProperty name="Environments" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="environments" isReadOnly="false" customAttributes="">
+          <type>
+            <configurationElementCollectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EnvironmentCollection" />
+          </type>
+        </elementProperty>
+      </elementProperties>
+    </configurationSection>
+    <configurationSection name="DataConfiguration" codeGenOptions="Singleton, XmlnsProperty" xmlSectionName="dataConfiguration">
+      <attributeProperties>
+        <attributeProperty name="DefaultDatabase" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="defaultDatabase" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+      </attributeProperties>
+      <elementProperties>
+        <elementProperty name="Connections" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="connections" isReadOnly="false" customAttributes="">
+          <type>
+            <configurationElementCollectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/ConnectionCollection" />
+          </type>
+        </elementProperty>
+      </elementProperties>
+    </configurationSection>
+    <configurationElementCollection name="EmailMessageCollection" xmlItemName="emailMessage" codeGenOptions="Indexer, AddMethod, RemoveMethod">
+      <itemType>
+        <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EmailMessageElement" />
+      </itemType>
+    </configurationElementCollection>
+    <configurationElement name="EmailMessageElement">
+      <attributeProperties>
+        <attributeProperty name="Name" isRequired="true" isKey="true" isDefaultCollection="false" xmlName="name" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="ReceiveFrom" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="receiveFrom" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="Subject" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="subject" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="Priority" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="priority" isReadOnly="false" customAttributes="" defaultValue="Normal">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="Format" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="format" isReadOnly="false" customAttributes="" defaultValue="Html">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="SendTo" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="sendTo" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+      </attributeProperties>
+    </configurationElement>
+    <configurationElementCollection name="SmtpServerCollection" xmlItemName="smtpServer" codeGenOptions="Indexer, AddMethod, RemoveMethod">
+      <itemType>
+        <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/SmtpServerElement" />
+      </itemType>
+    </configurationElementCollection>
+    <configurationElement name="SmtpServerElement">
+      <attributeProperties>
+        <attributeProperty name="Name" isRequired="true" isKey="true" isDefaultCollection="false" xmlName="name" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="HostAddress" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="hostAddress" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+      </attributeProperties>
+      <elementProperties>
+        <elementProperty name="Environments" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="environments" isReadOnly="false" customAttributes="">
+          <type>
+            <configurationElementCollectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EnvironmentCollection" />
+          </type>
+        </elementProperty>
+      </elementProperties>
+    </configurationElement>
+    <configurationElementCollection name="EnvironmentCollection" xmlItemName="environment" codeGenOptions="Indexer, AddMethod, RemoveMethod">
+      <itemType>
+        <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EnvironmentElement" />
+      </itemType>
+    </configurationElementCollection>
+    <configurationElement name="EnvironmentElement">
+      <attributeProperties>
+        <attributeProperty name="Name" isRequired="true" isKey="true" isDefaultCollection="false" xmlName="name" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+      </attributeProperties>
+    </configurationElement>
+    <configurationElementCollection name="ConnectionCollection" namespace="MyConfiguration.Wholesale.Credit" xmlItemName="connection" codeGenOptions="Indexer, AddMethod, RemoveMethod">
+      <itemType>
+        <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/ConnectionElement" />
+      </itemType>
+    </configurationElementCollection>
+    <configurationElement name="ConnectionElement">
+      <attributeProperties>
+        <attributeProperty name="Name" isRequired="true" isKey="true" isDefaultCollection="false" xmlName="name" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="ProviderName" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="providerName" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="IntegratedSecurity" isRequired="true" isKey="false" isDefaultCollection="false" xmlName="integratedSecurity" isReadOnly="false" customAttributes="" defaultValue="false">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/Boolean" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="UserId" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="userId" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+        <attributeProperty name="Password" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="password" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+      </attributeProperties>
+      <elementProperties>
+        <elementProperty name="Servers" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="servers" isReadOnly="false" customAttributes="">
+          <type>
+            <configurationElementCollectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/ServerCollection" />
+          </type>
+        </elementProperty>
+      </elementProperties>
+    </configurationElement>
+    <configurationElementCollection name="ServerCollection" xmlItemName="server" codeGenOptions="Indexer, AddMethod, RemoveMethod">
+      <itemType>
+        <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/ServerElement" />
+      </itemType>
+    </configurationElementCollection>
+    <configurationElement name="ServerElement">
+      <attributeProperties>
+        <attributeProperty name="Address" isRequired="false" isKey="false" isDefaultCollection="false" xmlName="address" isReadOnly="false" customAttributes="">
+          <type>
+            <externalTypeMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/String" />
+          </type>
+        </attributeProperty>
+      </attributeProperties>
+      <elementProperties>
+        <elementProperty name="Environment" isRequired="true" isKey="true" isDefaultCollection="false" xmlName="environment" isReadOnly="false" customAttributes="">
+          <type>
+            <configurationElementMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EnvironmentElement" />
+          </type>
+        </elementProperty>
+      </elementProperties>
+    </configurationElement>
+    <configurationSectionGroup name="MyConfigurationConfigurationGroup" namespace="MyConfiguration.Wholesale.Credit">
+      <configurationSectionProperties>
+        <configurationSectionProperty>
+          <containedConfigurationSection>
+            <configurationSectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/DataConfiguration" />
+          </containedConfigurationSection>
+        </configurationSectionProperty>
+        <configurationSectionProperty>
+          <containedConfigurationSection>
+            <configurationSectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EmailConfiguration" />
+          </containedConfigurationSection>
+        </configurationSectionProperty>
+        <configurationSectionProperty>
+          <containedConfigurationSection>
+            <configurationSectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/EnvironmentConfiguration" />
+          </containedConfigurationSection>
+        </configurationSectionProperty>
+        <configurationSectionProperty>
+          <containedConfigurationSection>
+            <configurationSectionMoniker name="/d0ed9acb-0435-4532-afdd-b5115bc4d562/SmtpServersConfiguration" />
+          </containedConfigurationSection>
+        </configurationSectionProperty>
+      </configurationSectionProperties>
+    </configurationSectionGroup>
+  </configurationElements>
+</configurationSectionModel>

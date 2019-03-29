@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "This can easily be done today, just create an external type System.Configuration.KeyValueConfigurationCollection and set it as the type on the attribute you want to be a KeyValueConfigurationCollection. Voil&#224;, you have a KeyValueConfigurationCollection property ready for use. I don&#39;t see how adding this explicitly to the designer would make its use any better.",
+    "ClosedDate": "2009-12-22T00:43:39.453-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Add the possibility to use collections like KeyValueConfigurationCollection.",
+    "LastUpdatedDate": "2013-05-16T04:04:53.757-07:00",
+    "PlannedForRelease": "1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-09T23:44:45.333-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "KeyValueConfigurationCollection",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 5563
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

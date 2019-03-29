@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Text Templates",
+      "DisplayName": "Text Templates"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-12-07T15:29:26.08-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The code generator that generates the sample config file does not generate the assembly name when building the section type:\n \n<configSections>\n\t<section name=\"ZoneConfiguration\" type=\"ORIX.Common.Config.ZonesConfigurationSection\"/>\n</configSections>\n \nWhen you run the code it tries to load the section class from the default System.Configuration assembly and throws the following exception:\n \nSystem.Configuration.ConfigurationErrorsException was unhandled\n  Message=\"An error occurred creating the configuration section handler for ZoneConfiguration: Could not load type 'ORIX.Common.Config.ZonesConfigurationSection' from assembly 'System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'. (C:\\\\Projects\\\\WebCrawlerII\\\\WebCrawlerUI\\\\bin\\\\Debug\\\\WebCrawlerUI.vshost.exe.config line 4)\"\n  Source=\"System.Configuration\"\n  BareMessage=\"An error occurred creating the configuration section handler for ZoneConfiguration: Could not load type 'ORIX.Common.Config.ZonesConfigurationSection' from assembly 'System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.\"\n  Filename=\"C:\\\\Projects\\\\WebCrawlerII\\\\WebCrawlerUI\\\\bin\\\\Debug\\\\WebCrawlerUI.vshost.exe.config\"\n  Line=4\n  StackTrace:\n       at System.Configuration.BaseConfigurationRecord.FindAndEnsureFactoryRecord(String configKey, Boolean& isRootDeclaredHere)\n       at System.Configuration.BaseConfigurationRecord.GetSectionRecursive(String configKey, Boolean getLkg, Boolean checkPermission, Boolean getRuntimeObject, Boolean requestIsHere, Object& result, Object& resultRuntimeObject)\n       at System.Configuration.BaseConfigurationRecord.GetSection(String configKey, Boolean getLkg, Boolean checkPermission)\n       at System.Configuration.BaseConfigurationRecord.GetSection(String configKey)\n       at System.Configuration.ClientConfigurationSystem.System.Configuration.Internal.IInternalConfigSystem.GetSection(String sectionName)\n       at System.Configuration.ConfigurationManager.GetSection(String sectionName)\n       at WebCrawlerUI.MainForm..ctor() in C:\\Projects\\WebCrawlerII\\WebCrawlerUI\\MainForm.cs:line 22\n       at WebCrawlerUI.Program.Main() in C:\\Projects\\WebCrawlerII\\WebCrawlerUI\\Program.cs:line 17\n       at System.AppDomain._nExecuteAssembly(Assembly assembly, String[] args)\n       at System.AppDomain.ExecuteAssembly(String assemblyFile, Evidence assemblySecurity, String[] args)\n       at Microsoft.VisualStudio.HostingProcess.HostProc.RunUsersAssembly()\n       at System.Threading.ThreadHelper.ThreadStart_Context(Object state)\n       at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)\n       at System.Threading.ThreadHelper.ThreadStart()\n  InnerException: System.TypeLoadException\n       Message=\"Could not load type 'ORIX.Common.Config.ZonesConfigurationSection' from assembly 'System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'.\"\n       Source=\"System.Configuration\"\n       TypeName=\"ORIX.Common.Config.ZonesConfigurationSection\"\n       StackTrace:\n            at System.Configuration.TypeUtil.GetTypeWithReflectionPermission(IInternalConfigHost host, String typeString, Boolean throwOnError)\n            at System.Configuration.RuntimeConfigurationRecord.RuntimeConfigurationFactory.Init(RuntimeConfigurationRecord configRecord, FactoryRecord factoryRecord)\n            at System.Configuration.RuntimeConfigurationRecord.RuntimeConfigurationFactory.InitWithRestrictedPermissions(RuntimeConfigurationRecord configRecord, FactoryRecord factoryRecord)\n            at System.Configuration.RuntimeConfigurationRecord.RuntimeConfigurationFactory..ctor(RuntimeConfigurationRecord configRecord, FactoryRecord factoryRecord)\n            at System.Configuration.RuntimeConfigurationRecord.CreateSectionFactory(FactoryRecord factoryRecord)\n            at System.Configuration.BaseConfigurationRecord.FindAndEnsureFactoryRecord(String configKey, Boolean& isRootDeclaredHere)\n       InnerException: \n \nAdding the assembly name (see below) corrects the problem:\n \n  <configSections>\n    <section name=\"ZoneConfiguration\" type=\"ORIX.Common.Config.ZonesConfigurationSection, ORIX.Common.Config\"/>\n  </configSections>",
+    "LastUpdatedDate": "2017-12-09T05:48:17.72-08:00",
+    "PlannedForRelease": "1.2",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-03-06T11:33:39.4-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Generated sample config file does not contain assembly name in section type attribute",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 3907
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 31952.",
+      "PostedDate": "2009-12-07T15:29:26.08-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-09T09:59:42.573-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:37.29-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:55.007-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:17.72-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

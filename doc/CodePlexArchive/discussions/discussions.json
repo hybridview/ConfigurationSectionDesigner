@@ -1,0 +1,587 @@
+[
+  {
+    "Id": "19736",
+    "Title": "Setting Validators",
+    "LatestDate": "2007-12-30T05:22:09.477-08:00"
+  },
+  {
+    "Id": "19781",
+    "Title": "What is the purpose for \"Has Custom child Elements\"",
+    "LatestDate": "2008-01-01T05:06:24.18-08:00"
+  },
+  {
+    "Id": "20152",
+    "Title": "Error opening the solution",
+    "LatestDate": "2010-08-25T02:33:37.02-07:00"
+  },
+  {
+    "Id": "20666",
+    "Title": "Support for IIS7 Configuration Sections",
+    "LatestDate": "2008-01-30T02:07:48.43-08:00"
+  },
+  {
+    "Id": "22716",
+    "Title": "Generate ElementColleciton as List<T>",
+    "LatestDate": "2008-02-24T03:15:13.713-08:00"
+  },
+  {
+    "Id": "22718",
+    "Title": "Set ConfigrationSection and Element type into different Namespace",
+    "LatestDate": "2008-02-24T03:23:17.433-08:00"
+  },
+  {
+    "Id": "23153",
+    "Title": "Requirements?",
+    "LatestDate": "2008-03-11T03:08:02.683-07:00"
+  },
+  {
+    "Id": "24206",
+    "Title": "Visual Studio 2008",
+    "LatestDate": "2008-03-17T11:24:46.683-07:00"
+  },
+  {
+    "Id": "24416",
+    "Title": "Package Load Failure",
+    "LatestDate": "2008-03-23T20:14:46.123-07:00"
+  },
+  {
+    "Id": "26790",
+    "Title": "csd project not exist",
+    "LatestDate": "2010-11-13T10:32:18.323-08:00"
+  },
+  {
+    "Id": "31156",
+    "Title": "Accessing collection element by Key",
+    "LatestDate": "2008-08-05T06:19:26.003-07:00"
+  },
+  {
+    "Id": "31555",
+    "Title": "Crashing on save",
+    "LatestDate": "2008-09-23T23:09:58.95-07:00"
+  },
+  {
+    "Id": "32565",
+    "Title": "Cannot build DslSetup",
+    "LatestDate": "2008-08-08T05:29:19.36-07:00"
+  },
+  {
+    "Id": "39902",
+    "Title": "Strange behavior of ConfigurationSectionShape",
+    "LatestDate": "2008-11-19T15:53:12.453-08:00"
+  },
+  {
+    "Id": "40836",
+    "Title": "Some enhacements (Protection, Visual config)",
+    "LatestDate": "2009-12-09T23:00:23.277-08:00"
+  },
+  {
+    "Id": "51025",
+    "Title": "Support for enums",
+    "LatestDate": "2009-03-30T09:50:48.947-07:00"
+  },
+  {
+    "Id": "52086",
+    "Title": "Protection Level Errors -> Cannot generate code",
+    "LatestDate": "2009-04-08T08:14:20.67-07:00"
+  },
+  {
+    "Id": "52724",
+    "Title": "Using configuration types from existing assemblies?",
+    "LatestDate": "2009-12-09T23:14:12.133-08:00"
+  },
+  {
+    "Id": "54226",
+    "Title": "Unable to see tools in toolbox",
+    "LatestDate": "2009-12-09T23:16:43.593-08:00"
+  },
+  {
+    "Id": "57967",
+    "Title": "VB.net",
+    "LatestDate": "2009-12-15T10:56:59.72-08:00"
+  },
+  {
+    "Id": "61849",
+    "Title": "Getting resulting XML for instance of CSD classes",
+    "LatestDate": "2009-12-09T23:43:08.97-08:00"
+  },
+  {
+    "Id": "68266",
+    "Title": "KeyValueConfigurationCollection ",
+    "LatestDate": "2009-12-09T23:44:46.663-08:00"
+  },
+  {
+    "Id": "73125",
+    "Title": "Unable to install CSD on VS2008 French version",
+    "LatestDate": "2009-11-16T02:24:29.99-08:00"
+  },
+  {
+    "Id": "73703",
+    "Title": "Visual Studio 2010 beta 2",
+    "LatestDate": "2011-01-16T20:47:47.393-08:00"
+  },
+  {
+    "Id": "77765",
+    "Title": "Getting System.NullReferenceException when Running transformation",
+    "LatestDate": "2009-12-11T07:36:54.06-08:00"
+  },
+  {
+    "Id": "77835",
+    "Title": "Auto generated code and how to use the output.",
+    "LatestDate": "2009-12-12T01:54:03.013-08:00"
+  },
+  {
+    "Id": "78364",
+    "Title": "How to get resulting dll",
+    "LatestDate": "2009-12-17T08:11:39.703-08:00"
+  },
+  {
+    "Id": "79176",
+    "Title": "Reorder attributes in config section",
+    "LatestDate": "2009-12-28T13:38:03.23-08:00"
+  },
+  {
+    "Id": "80873",
+    "Title": "Can I use it in my App.Config?",
+    "LatestDate": "2010-01-14T13:58:07.693-08:00"
+  },
+  {
+    "Id": "81805",
+    "Title": "Migration Path 1.1 to 1.6+",
+    "LatestDate": "2010-06-24T00:54:37.383-07:00"
+  },
+  {
+    "Id": "83995",
+    "Title": "using \"Base Class\" properties?",
+    "LatestDate": "2010-02-11T14:32:00.757-08:00"
+  },
+  {
+    "Id": "84848",
+    "Title": "csd designer crashes",
+    "LatestDate": "2010-02-11T13:04:59.77-08:00"
+  },
+  {
+    "Id": "85559",
+    "Title": "singleton?",
+    "LatestDate": "2010-02-18T07:06:02.127-08:00"
+  },
+  {
+    "Id": "85654",
+    "Title": "Section singleton instance returns null if section within group",
+    "LatestDate": "2010-02-18T00:43:08.747-08:00"
+  },
+  {
+    "Id": "85661",
+    "Title": "using configSource to split out sections to separate files",
+    "LatestDate": "2010-02-17T09:46:17.753-08:00"
+  },
+  {
+    "Id": "209790",
+    "Title": "Inherit from \"designer external\" base class",
+    "LatestDate": "2010-06-08T00:24:34.06-07:00"
+  },
+  {
+    "Id": "215774",
+    "Title": "Installation for VS 2010 requires elevated permissions",
+    "LatestDate": "2010-11-26T06:24:14.783-08:00"
+  },
+  {
+    "Id": "217021",
+    "Title": "No Files Generated on VS 2008 TS",
+    "LatestDate": "2010-06-24T04:08:59.94-07:00"
+  },
+  {
+    "Id": "218139",
+    "Title": "$inputFileName$",
+    "LatestDate": "2010-07-02T06:11:56.647-07:00"
+  },
+  {
+    "Id": "218572",
+    "Title": "Validation for required attribute (as string)",
+    "LatestDate": "2010-07-07T02:55:23.113-07:00"
+  },
+  {
+    "Id": "219285",
+    "Title": "Unable to create instance of custom section",
+    "LatestDate": "2010-07-15T02:05:23.9-07:00"
+  },
+  {
+    "Id": "223796",
+    "Title": "Design time access to web.config",
+    "LatestDate": "2010-08-17T03:28:28.13-07:00"
+  },
+  {
+    "Id": "224017",
+    "Title": "Can't find it after seemingly successful installation",
+    "LatestDate": "2012-02-16T16:39:06.9-08:00"
+  },
+  {
+    "Id": "229631",
+    "Title": "Combined Collection?",
+    "LatestDate": "2010-10-05T02:13:20.243-07:00"
+  },
+  {
+    "Id": "234031",
+    "Title": "Exception when calling instance",
+    "LatestDate": "2011-07-22T09:58:35.233-07:00"
+  },
+  {
+    "Id": "234594",
+    "Title": "(posted by mistake - please delete)",
+    "LatestDate": "2010-11-13T11:07:07.447-08:00"
+  },
+  {
+    "Id": "237372",
+    "Title": "Can't Generate Files",
+    "LatestDate": "2010-12-06T20:12:11.32-08:00"
+  },
+  {
+    "Id": "241425",
+    "Title": "Property in Nullable type?",
+    "LatestDate": "2012-05-31T06:24:20.297-07:00"
+  },
+  {
+    "Id": "241507",
+    "Title": "Installation cannot find readme file",
+    "LatestDate": "2011-03-04T06:49:51.32-08:00"
+  },
+  {
+    "Id": "248149",
+    "Title": " The Item Type of this collection does not have a key property.",
+    "LatestDate": "2011-03-03T05:52:47.937-08:00"
+  },
+  {
+    "Id": "249101",
+    "Title": "Reload Configuration Instance",
+    "LatestDate": "2011-03-11T06:23:00.037-08:00"
+  },
+  {
+    "Id": "257503",
+    "Title": "Where is the VS 2010 installation?",
+    "LatestDate": "2011-06-27T11:13:19.173-07:00"
+  },
+  {
+    "Id": "257571",
+    "Title": "Is Flags",
+    "LatestDate": "2011-05-13T12:25:34.447-07:00"
+  },
+  {
+    "Id": "262180",
+    "Title": "Fixes for vs2010 coming, and a thank you to Jelle",
+    "LatestDate": "2011-06-24T06:05:59.01-07:00"
+  },
+  {
+    "Id": "263935",
+    "Title": "Classes should not be decorated with GeneratedCodeAttribute",
+    "LatestDate": "2011-07-05T10:00:08.53-07:00"
+  },
+  {
+    "Id": "265547",
+    "Title": "CSD wont generate sample configuration VS2010",
+    "LatestDate": "2011-07-19T08:27:38.96-07:00"
+  },
+  {
+    "Id": "265611",
+    "Title": "Can't create CSD project in VS2010",
+    "LatestDate": "2011-07-19T11:15:53.657-07:00"
+  },
+  {
+    "Id": "272087",
+    "Title": "What About Simple Tags/Elements",
+    "LatestDate": "2011-10-19T09:59:03.433-07:00"
+  },
+  {
+    "Id": "278354",
+    "Title": "possible bug",
+    "LatestDate": "2011-11-08T05:06:23.373-08:00"
+  },
+  {
+    "Id": "278683",
+    "Title": "Migrate to 2.0.0 r4 VS2010",
+    "LatestDate": "2011-11-08T01:10:12.12-08:00"
+  },
+  {
+    "Id": "278721",
+    "Title": "Do not make Configuration Element Collections read-only",
+    "LatestDate": "2011-11-08T05:13:34.903-08:00"
+  },
+  {
+    "Id": "278925",
+    "Title": "ConfigurationElementCollection - support composite key",
+    "LatestDate": "2013-08-21T12:21:23.767-07:00"
+  },
+  {
+    "Id": "279531",
+    "Title": "add/remove are not recognized when dealing with collections",
+    "LatestDate": "2012-05-15T04:48:27.857-07:00"
+  },
+  {
+    "Id": "281097",
+    "Title": "How to use the generated files in a project",
+    "LatestDate": "2011-12-15T01:50:58.65-08:00"
+  },
+  {
+    "Id": "288098",
+    "Title": "SqlConfigurationSource compatible?",
+    "LatestDate": "2012-02-29T11:51:27.52-08:00"
+  },
+  {
+    "Id": "303516",
+    "Title": "Great job - I use this with great success",
+    "LatestDate": "2012-02-10T07:00:10.853-08:00"
+  },
+  {
+    "Id": "324223",
+    "Title": "Code Snippet for neophyte",
+    "LatestDate": "2012-02-19T02:43:29.643-08:00"
+  },
+  {
+    "Id": "348440",
+    "Title": "how could I generator a sample file ？",
+    "LatestDate": "2012-03-13T19:22:12.943-07:00"
+  },
+  {
+    "Id": "353173",
+    "Title": "Why Class is not generated for ConfigurationSectionGroup   ?",
+    "LatestDate": "2012-04-22T23:27:13.937-07:00"
+  },
+  {
+    "Id": "353266",
+    "Title": "VS 11 Support",
+    "LatestDate": "2012-12-10T11:46:52.987-08:00"
+  },
+  {
+    "Id": "354308",
+    "Title": "This extension is already installed to all applicable products",
+    "LatestDate": "2012-06-28T10:41:46.35-07:00"
+  },
+  {
+    "Id": "356004",
+    "Title": "Instances are null",
+    "LatestDate": "2012-06-18T08:59:50.217-07:00"
+  },
+  {
+    "Id": "356276",
+    "Title": "Using Custom Type created by CSD for storing UserSettings",
+    "LatestDate": "2012-05-18T04:17:48.367-07:00"
+  },
+  {
+    "Id": "360094",
+    "Title": "Code generation persistance",
+    "LatestDate": "2012-06-22T04:29:09.48-07:00"
+  },
+  {
+    "Id": "361804",
+    "Title": "Howto declare a collection as ProviderSettingsCollection in Designer?",
+    "LatestDate": "2012-07-03T05:03:31.997-07:00"
+  },
+  {
+    "Id": "362249",
+    "Title": "Optional attributes",
+    "LatestDate": "2012-07-12T13:34:08.237-07:00"
+  },
+  {
+    "Id": "389833",
+    "Title": "ConfigurationElement base class",
+    "LatestDate": "2012-08-01T03:08:53.927-07:00"
+  },
+  {
+    "Id": "389834",
+    "Title": "Custom Attributes",
+    "LatestDate": "2012-08-01T03:13:01.177-07:00"
+  },
+  {
+    "Id": "389836",
+    "Title": "Feature suggestion",
+    "LatestDate": "2012-08-01T03:14:51.46-07:00"
+  },
+  {
+    "Id": "390539",
+    "Title": "Suggestion : Add ConfigSection declarations to a project app.config",
+    "LatestDate": "2012-08-07T01:57:43.18-07:00"
+  },
+  {
+    "Id": "393139",
+    "Title": "Not working",
+    "LatestDate": "2012-08-28T00:00:56.283-07:00"
+  },
+  {
+    "Id": "393299",
+    "Title": "Cannot load the type",
+    "LatestDate": "2012-08-28T00:07:51.76-07:00"
+  },
+  {
+    "Id": "394128",
+    "Title": "Is there a working VS2010 VB example?",
+    "LatestDate": "2012-09-02T13:04:13.773-07:00"
+  },
+  {
+    "Id": "395339",
+    "Title": "Abstract Configuration Element",
+    "LatestDate": "2012-09-12T20:42:03.86-07:00"
+  },
+  {
+    "Id": "400267",
+    "Title": "VS2012 Support",
+    "LatestDate": "2012-12-06T14:43:08.353-08:00"
+  },
+  {
+    "Id": "401232",
+    "Title": "Support for attributes of type System.Type",
+    "LatestDate": "2012-10-30T07:42:42.42-07:00"
+  },
+  {
+    "Id": "401924",
+    "Title": "NetOffice Visual Studio 2008",
+    "LatestDate": "2012-11-07T01:22:53.797-08:00"
+  },
+  {
+    "Id": "402436",
+    "Title": "Has Custom Attributes",
+    "LatestDate": "2012-11-08T10:21:26.487-08:00"
+  },
+  {
+    "Id": "403423",
+    "Title": "Custom type converter",
+    "LatestDate": "2012-11-16T00:04:43.017-08:00"
+  },
+  {
+    "Id": "404661",
+    "Title": "ConfigurationElementCollection and the generated XSD",
+    "LatestDate": "2013-02-18T00:22:08.18-08:00"
+  },
+  {
+    "Id": "406262",
+    "Title": "Nested Structures",
+    "LatestDate": "2013-05-21T02:47:25.423-07:00"
+  },
+  {
+    "Id": "406983",
+    "Title": "Configuration Collection of type 'AddRemoveClearMap': why do children need a key property?",
+    "LatestDate": "2013-07-26T16:33:35.23-07:00"
+  },
+  {
+    "Id": "415217",
+    "Title": "Documentation update",
+    "LatestDate": "2012-12-22T07:23:59.717-08:00"
+  },
+  {
+    "Id": "430339",
+    "Title": "Custom type problem",
+    "LatestDate": "2013-01-21T12:46:06.743-08:00"
+  },
+  {
+    "Id": "434068",
+    "Title": "Cannot find a schema that defines target namespace ..",
+    "LatestDate": "2014-02-20T08:34:02.23-08:00"
+  },
+  {
+    "Id": "437465",
+    "Title": "Sharing items between diagrams",
+    "LatestDate": "2014-09-17T09:14:05.457-07:00"
+  },
+  {
+    "Id": "437734",
+    "Title": "Read configuration element data that is not in an attribute?",
+    "LatestDate": "2014-02-26T06:29:40.587-08:00"
+  },
+  {
+    "Id": "459444",
+    "Title": "Any chance of this making it to VS 2013?",
+    "LatestDate": "2014-09-08T23:08:52.237-07:00"
+  },
+  {
+    "Id": "460922",
+    "Title": "Save modified values to configuration file",
+    "LatestDate": "2013-10-02T04:52:18.733-07:00"
+  },
+  {
+    "Id": "532916",
+    "Title": "Something wrong with Source Code?",
+    "LatestDate": "2014-02-19T11:13:24.083-08:00"
+  },
+  {
+    "Id": "535799",
+    "Title": "Abstract Elements",
+    "LatestDate": "2014-09-12T13:48:51.84-07:00"
+  },
+  {
+    "Id": "542996",
+    "Title": "Generating an Interface",
+    "LatestDate": "2014-09-16T13:55:34.873-07:00"
+  },
+  {
+    "Id": "561057",
+    "Title": "Consfiguration Section Designer - how to fix broken XSD?",
+    "LatestDate": "2014-09-02T11:47:29.4-07:00"
+  },
+  {
+    "Id": "562261",
+    "Title": "Integrate PolymorphicConfigurationElementCollection<T>?",
+    "LatestDate": "2014-08-27T10:13:14.003-07:00"
+  },
+  {
+    "Id": "564900",
+    "Title": "Plan some more work",
+    "LatestDate": "2014-09-02T11:50:59.94-07:00"
+  },
+  {
+    "Id": "565105",
+    "Title": "Design Note 1: Extensibility and sharing knowledge",
+    "LatestDate": "2014-09-12T07:35:21.55-07:00"
+  },
+  {
+    "Id": "567576",
+    "Title": "New Samples solution added to VS 2013 downloads.",
+    "LatestDate": "2014-09-16T07:26:51.657-07:00"
+  },
+  {
+    "Id": "568098",
+    "Title": "New feature discussions.",
+    "LatestDate": "2014-09-22T15:09:27.7-07:00"
+  },
+  {
+    "Id": "571336",
+    "Title": "VS2013 Prof - how to generate a sample config file?",
+    "LatestDate": "2014-11-15T01:51:15-08:00"
+  },
+  {
+    "Id": "572309",
+    "Title": "Sections must only appear once per config file",
+    "LatestDate": "2014-11-17T06:17:57.93-08:00"
+  },
+  {
+    "Id": "572579",
+    "Title": "NuGet",
+    "LatestDate": "2014-11-25T12:43:59.173-08:00"
+  },
+  {
+    "Id": "578327",
+    "Title": "Plugin Configuration",
+    "LatestDate": "2015-01-22T03:30:56.913-08:00"
+  },
+  {
+    "Id": "586233",
+    "Title": "CSD does not work when I put configuration inside a group",
+    "LatestDate": "2015-03-13T02:41:25.577-07:00"
+  },
+  {
+    "Id": "641721",
+    "Title": "VS2015 Support",
+    "LatestDate": "2016-10-19T08:58:31.67-07:00"
+  },
+  {
+    "Id": "652991",
+    "Title": "Validation of Xml Namespace in version 2.0.1.801 VS2015",
+    "LatestDate": "2016-07-20T11:23:47.05-07:00"
+  },
+  {
+    "Id": "658539",
+    "Title": "vs 2015 error generating xsd",
+    "LatestDate": "2016-10-06T13:52:44.21-07:00"
+  },
+  {
+    "Id": "661995",
+    "Title": "Visual Studio 2017 support",
+    "LatestDate": "2017-06-13T05:23:52.18-07:00"
+  }
+]

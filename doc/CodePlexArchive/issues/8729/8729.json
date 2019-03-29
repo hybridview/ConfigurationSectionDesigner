@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I think that the GeneratedCodeAttribute should be on added to generated classes to avoid conflicts with code analysis rules that might be applied to projects. Otherwise projects have to deal with suppressing errors from rules that does not match generated code.\n \nHope it will be added. Love the tool.\n \nJAXN",
+    "LastUpdatedDate": "2014-09-12T13:14:17.657-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-09-26T21:24:55.63-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "GeneratedCodeAttribute on generated classes to avoid conflicts with code analysis rules",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 8729
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "As mentioned in workitem 5504 ( http://csd.codeplex.com/workitem/5504 ) the generated classes are partial, and as such, can (and in some cases must, depending on the settings you use in our tool) be extended, and Microsoft's guidelines on such generated partial classes states that they should not be marked with GeneratedCodeAttribute, because it would apply to the whole class, not just the generated methods and properties.",
+      "PostedDate": "2011-09-27T01:46:50.993-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Ahh. I had only searched under issues. Not work items. I see the point of the rule. \r\n\r\nI too would like an option in the tool to turn them on, as suggested in the work item :) ..because many classes will not be extended in a project. But it is a nice to have feature.",
+      "PostedDate": "2011-09-27T02:22:51.193-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-10-15T10:07:16.393-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:28.093-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I like the idea of having an override setting with some visible warning related to what Alex posted. Might be worth looking in to.",
+      "PostedDate": "2014-09-12T13:14:17.657-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

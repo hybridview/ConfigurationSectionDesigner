@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Text Templates",
+      "DisplayName": "Text Templates"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2008-08-08T09:08:14.207-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Unfortunitly, it seem that one method is missing to do this.\n \nWhen a collection is generated, it must have this method:\n \n \nnew public TheItemTypeInTheCollection this[string keyname] \n {\n \n    get \n \n    { \n return (TheItemTypeInTheCollection )this.BaseGet(keyname); \n \n    }\n \n \n }",
+    "LastUpdatedDate": "2017-12-09T05:53:39.913-08:00",
+    "PlannedForRelease": "1.2",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-07-22T12:08:47.197-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Accessing collection item by key",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 2767
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 14978.",
+      "PostedDate": "2008-08-08T09:08:14.207-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-08-10T07:32:20.2-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:38.523-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:56.03-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:53:39.913-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

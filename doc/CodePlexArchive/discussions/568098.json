@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1307178",
+    "ThreadId": "568098",
+    "Html": "After doing some work on a very large configuration management project at work, I've noticed some features that would be very useful for this tool in my own experience. Please feel free to discuss and share. Some of these may already be listed in other discussions and/or Issues, but it would be nice to have a nice summary in this thread. Feel free to summarize your issue report here (with link to the issue) if it is not already included.<br />\n<br />\n<strong>Custom Validator Class Support</strong><br />\nAbility to incorporate custom validator classes into this tool instead of just using the CallBackValidator (which can be a little ugly). I'd like the tool to be able to find custom validator classes in my assemblies and make them available when adding new property validators.<br />\n<br />\n<strong>Support for Manual Config File Loading</strong><br />\nThis tool currently uses ConfigurationManager.GetSection when loading sections. I would like to have the option to support loading sections via a Configuration object when opened through  something like &quot;Configuration myConfig = ConfigurationManager.OpenMappedExeConfiguration(...&quot;. In this case, the generated code would allow loading through this Configuration object. This would take more thought, because ConfigurationManager.GetSection is static, while the Configuration object (ex: myConfig ) is not. Also note: sections loaded this way do not throw validation errors UNTIL properties are accessed.<br />\n<br />\n<strong>Support ConfigurationSection Super Class</strong><br />\nBe able to to have all sections inherit from your custom configuration section class (inherits from ConfigurationSection)  instead of from ConfigurationSection. In our project, we have a ConfigurationSection super class that overrides the ConfigurationSection.PostDeserialize() method.<br />\n",
+    "PostedDate": "2014-09-22T15:09:27.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,111 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2014-09-16T14:38:52.657-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I've spent the last day and half with CSD and I've had pretty good luck converting some custom sections, elements, and element collections.  My reason for pursuing this approach is as a workaround to a problem with xsd.exe that Microsoft says they don't plan to fix (it is no longer possible to generate xsd file from an assembly containing custom configuration types).\n\nI have a configuration element collection that holds instances of a configuration element type that has two key properties (this is intentional).  I made this work previously by overriding GetElementKey on the collection class.  It looks like CSD is trying to do the same thing (it overrides GetElementKey and references a property that I can implement in a partial class.  So it seems like it ought to work, but I can't get the project to compile.  I get the following error messages:\n\nError\t5\tThe Item Type of this collection has more than one key property.\nError\t6\tRunning transformation: System.InvalidOperationException: Sequence contains more than one element\n\nI can get both error messages to go away if I do not mark both properties as keys, but the generated code won't allow me to override GetElementKey.  If I do not mark either properties as a key I can override GetElementKey but I cannot create a configuration element collection that refers to an item type that doesn't have a key.\n\nAny help would be appreciated.  I can send more details if it will help, but I don't think it's difficult to reproduce this scenario.\n\nThanks,\nMike",
+    "LastUpdatedDate": "2014-09-16T14:38:53.19-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-08-21T14:10:08.86-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Wontfix"
+    },
+    "Summary": "ConfigurationElementCollection item type has more than one key property",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10292
+  },
+  "FileAttachments": [
+    {
+      "FileId": 5683,
+      "FileName": "ConfigurationSectionDesignerSchema.tt",
+      "DownloadUrl": ".\\5683"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Forgot to mention I am using Visual Studio 2012.",
+      "PostedDate": "2013-08-21T14:38:53.857-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "By the way,  In order to work around this issue from last year I have customized versions of csd-74006 for VS2012 and VS2013 that allow multiple keys when \"UseHashForElementKey\" is selected - and generate more correct schema for add-remove-clear maps.\r\n\r\nIf interested let me know and I'll post the changes (two small changes, same for VS2012 and VS2013).",
+      "PostedDate": "2014-02-20T09:44:29.91-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Please share. I would like to see your solution.",
+      "PostedDate": "2014-09-09T15:13:30.62-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T17:41:45.7-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Starting with version 74006 I changed two files twice (once for VS2012 version, once for VS2013 version).\r\n\r\nThe changes (from VS2013 version): \r\n\r\nFile: Source/Dsl/CustomCode/DomainClasses/ConfigurationElementCollection.cs\r\n\r\nReplace line 69 with:\r\n\r\n                // If using hash for element key it doesn't care how many key properties there are.\n                if (this.UseHashForElementKey)\n                    return;\n                if (numKeys == 0)\r\n\r\nFile: Source/DslPackage/TextTemplates/ConfigurationSectionDesignerSchema.tt  is attached.\r\n\r\nThe changes are virtually identical for the VS 2012 version.\r\n\r\n",
+      "PostedDate": "2014-09-09T17:41:46.463-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I think the simplest solution is to avoid any properties as a key property and set use hash for key to true.\r\n\r\nNo code change required.",
+      "PostedDate": "2014-09-10T01:33:47.363-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I suppose that might work.  I have a vague recollection that CSD didn't like creating a ConfigurationElementCollection with an item type that didn't have any keys (but that might be from an earlier version).\r\n\r\nOne suggestion: it should be possible to generate an implementation of GetHashCode using the identified key properties (not that I did this, it just occurred to me).  That might make it easier for folks that want multi-field keys.\r\n\r\nI haven't touched this in a while and given the lack of recent activity for CSD (and relatively small number of downloads) I kind of figured that CSD was fading away.  I'm glad to see that someone is paying attention, is there any plan to enhance this tool further?",
+      "PostedDate": "2014-09-10T08:11:25.53-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "There are definite plans to improve this tool. Check out the discussion section to see more. We hit a point where all developers became very busy at work/life at the same time, but the situation has improved recently.  The DSL framework and code generation that this tool is based on has a steep learning curve for new developers, which can be a turn-off. I am developing some much needed documentation related to the source code of this tool, so I hope to get more contributions from the community after it is released.",
+      "PostedDate": "2014-09-11T08:31:53.913-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "NOTE: It might be nice to include text in the error msg stating that hash key is an optional solution.",
+      "PostedDate": "2014-09-16T12:17:20.66-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Since Key property is a domain property of CSD model I think now is conceptually wrong to allow more than one key property on an element. As you pointed out, we could allow multiple keys property and use it for an implementation of the GetHasCode, btw this is not implemented now, you actually have to implement this yourself in a partial class.\r\n\r\nNow I'm currently a little bit reticent about changing the current code generator (it uses CodeDOM) because every addition is quite painful, what I would like to achieve is a sort of extensibility (as Entity Framework 4.0 does) where we provide you a default code generator that can be easily customized to achieve the desired effect. This IMHO is a much more effective solution. You can find our plans about extensibility [here](https://csd.codeplex.com/discussions/565105) any feedback are appreciated.\r\n\r\n@andym1978 absolutely.",
+      "PostedDate": "2014-09-16T13:13:23.143-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Enhanced validation message with [75421](https://csd.codeplex.com/SourceControl/changeset/75421)",
+      "PostedDate": "2014-09-16T14:34:41.08-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-16T14:38:52.657-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-16T14:38:53.19-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

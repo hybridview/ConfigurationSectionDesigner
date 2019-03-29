@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "277292",
+    "ThreadId": "80873",
+    "Html": "<p>Hello,</p>\r\n<p>I must say, after trying to do some more complex custom configuration settings for the first time, I was glad to stumble upon this tool.&nbsp; I love it - mostly!</p>\r\n<p>What I mean is it seems to work great.&nbsp; However, I do NOT want an extra .config file if I can help it.&nbsp; I would like to be able to just reference the Config project or .dll (as created in the tutorial) and just add to the configSections element.&nbsp; Then somewhere in the App.confg actually get the intellisense just like all of the standard sections get.</p>\r\n<p>Is this possible it CSD's current state?&nbsp; Am I just missing something?</p>\r\n<p>Thank you for what you have though!</p>\r\n<p>Kevin</p>",
+    "PostedDate": "2010-01-14T12:35:09.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "277314",
+    "ThreadId": "80873",
+    "Html": "<p>To get intellisense in a configuration file, you must put the right namespace on the configuration element, just like in the example configuration file, e.g.</p>\r\n<p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">SomeSection</span> <span style=\"color:Red\">xmlns</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">theNameSpace</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n    ...\r\n<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">SomeSection</span><span style=\"color:Blue\">&gt;</span>\r\n</pre>\r\n</div>\r\nand the generated XML schema which describes that namespace must either be in the same folder as the .config file is, or it must be placed in &lt;Program Files&gt;\\Microsoft Visual Studio 9.0\\Xml\\Schemas. That should be all it takes. Let me know if you need more help.</p>",
+    "PostedDate": "2010-01-14T13:27:09.713-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "277330",
+    "ThreadId": "80873",
+    "Html": "<p>One more thing, to get it to work in your App.config, your project must (naturally) have a reference to the custom configuration dll, and the &lt;section&gt; element in the &lt;configSections&gt; element must have a full type attribute, like so:</p>\r\n<p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre><span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">configuration</span><span style=\"color:Blue\">&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">configSections</span><span style=\"color:Blue\">&gt;</span>\r\n\t\t...\r\n\t\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">section</span> <span style=\"color:Red\">name</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">SomeSection</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Red\">type</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">MyConfigSectionHandler.SomeSection,MyCustomConfigurationHandler,Version=1.0.0.0,Culture=neutral,PublicKeyToken=null</span><span style=\"color:Black\">&quot;</span> <span style=\"color:Blue\">/&gt;</span>\r\n\t\t...\r\n\t<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">configSections</span><span style=\"color:Blue\">&gt;</span>\r\n\t<span style=\"color:Blue\">&lt;</span><span style=\"color:#A31515\">SomeSection</span> <span style=\"color:Red\">xmlns</span><span style=\"color:Blue\">=</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">theNameSpace</span><span style=\"color:Black\">&quot;</span><span style=\"color:Blue\">&gt;</span>\r\n\t\t...\r\n\t<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">SomeSection</span><span style=\"color:Blue\">&gt;</span>\r\n<span style=\"color:Blue\">&lt;/</span><span style=\"color:#A31515\">configuration</span><span style=\"color:Blue\">&gt;</span>\r\n</pre>\r\n</div>\r\n</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-14T13:58:07.693-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

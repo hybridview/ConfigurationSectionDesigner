@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1363065",
+    "ThreadId": "586233",
+    "Html": "This seems an old problem and I see that you have talked about it in ISSUES, but it seems that the problem has not been solved.\r<br />\nStill have this problem... I am working on VS2013 Premium and CSD 2.0.1.7... \r<br />\n<br />\nIf I put my section inside a Group I receive null when I try to execute following line<br />\n<pre><code>Configs.MySettingsSection.Instance //&lt;- Instance is null;</code></pre>\n\nIf I remove group everything works... \r<br />\n<br />\nHere how I have tried:<br />\n<pre><code>&lt;sectionGroup name=&quot;mySectionGroup &quot; type=&quot;Configs.MediaCommunications&quot;&gt;\n      &lt;section name=&quot;settings&quot; type=&quot;Configs.Settings, Website&quot; allowLocation=&quot;true&quot; allowDefinition=&quot;Everywhere&quot; /&gt;\n    &lt;/sectionGroup&gt;</code></pre>\n\nor in this way:<br />\n<pre><code>&lt;sectionGroup name=&quot;mySectionGroup &quot;  type=&quot;System.Configuration.ConfigurationSectionGroup, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a&quot;&gt;\n      &lt;section name=&quot;settings&quot; type=&quot;Configs.Settings, Website&quot; allowLocation=&quot;true&quot; allowDefinition=&quot;Everywhere&quot; /&gt;\n    &lt;/sectionGroup&gt;</code></pre>\n\nCan you help me please?<br />\n",
+    "PostedDate": "2015-03-13T02:41:25.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

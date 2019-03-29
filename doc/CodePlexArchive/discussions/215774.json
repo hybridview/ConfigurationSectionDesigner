@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "454636",
+    "ThreadId": "215774",
+    "Html": "<p>I just tried installing the config section designer under VS 2010, but I get the error &quot;This setup must be launched from an elevated command prompt&quot;. &nbsp;However, your notes on installation for VS 2010 mention that an Administrator account is not required. &nbsp;I am, in fact, not an administrator on the machine [at work] on which I'm trying to install this. &nbsp;However, I did install VS 2010 itself without any such administrative privileges, so I'm not sure why a VS add-in would require such privileges. &nbsp;Can you help me out here? &nbsp;Thanks!</p>",
+    "PostedDate": "2010-06-11T17:24:44.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "455120",
+    "ThreadId": "215774",
+    "Html": "VS 2010 is currently not supported. See http://csd.codeplex.com/Thread/View.aspx?ThreadId=73703",
+    "PostedDate": "2010-06-14T03:14:37.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "455598",
+    "ThreadId": "215774",
+    "Html": "<p>I am working on VS 2010 however I had to pull the beta download as I missed a glaring problem. Some time soon as time allows I will finish it up</p>",
+    "PostedDate": "2010-06-15T05:16:19.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "527366",
+    "ThreadId": "215774",
+    "Html": "\r\n<p>The error is not Visual Studio installation but a Windows 7/Server 2008 change in security as the administrator account does not automatically run with elevated priviledges. The installer for the project needs to be changed but it is a small change. I have\r\n submitted this as an issue and how to change it.</p>\r\n<p>The workaround for installing on Windows 7/Server 2008&nbsp;is to</p>\r\n<p>1.&nbsp;Write cmd in the search box&nbsp;under the Start&nbsp;button</p>\r\n<p>2. Rightclick on the cmd in the list and choose Run as Administrator</p>\r\n<p>3. Log in as admin or press ok elevated security</p>\r\n<p>4. Install from the prompt. This way you install from the Admin account with elevated priviledges</p>\r\n",
+    "PostedDate": "2010-11-26T06:24:14.783-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "947331",
+    "ThreadId": "404661",
+    "Html": "\r\n<p>How do I create a collection that will generate an XSD containing the 'add', 'remove' and 'clear' entries? I select AddRemoveClearMapAlternate as the collection type and the commands work in the .config file but the tool never generates the xsd that recognizes\r\n them.</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2012-11-26T15:08:34.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "952533",
+    "ThreadId": "404661",
+    "Html": "\r\n<p>I was able to follow the chain from your issue report and saw some detailed analysis of the issue. I'll take a look while working on the vs2012 version.</p>\r\n",
+    "PostedDate": "2012-12-06T13:53:23.13-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "985526",
+    "ThreadId": "404661",
+    "Html": "\r\n<p>Has there been a fix for this? (Have been busy and might have missed it.)</p>\r\n",
+    "PostedDate": "2013-01-11T08:56:45.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002667",
+    "ThreadId": "404661",
+    "Html": "Hi,\r<br />\n<br />\nHas there been any progress on this?\r<br />\n<br />\nBest,\r<br />\n<br />\nAsher<br />\n",
+    "PostedDate": "2013-02-18T00:22:08.18-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

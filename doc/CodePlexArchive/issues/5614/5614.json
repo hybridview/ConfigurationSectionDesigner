@@ -1,0 +1,105 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-12-23T13:58:59.047-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Allow creating abstract elements, sealed elements and sub-classing of any kind of non-abstract element",
+    "LastUpdatedDate": "2017-12-09T05:48:19.34-08:00",
+    "PlannedForRelease": "1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-16T13:15:47.217-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Inheritance support",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 5614
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I have already started an implementation of this if you are interested in merging my solution (currently based on the 1.3.1 build).",
+      "PostedDate": "2009-12-17T07:55:04.017-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I wouldn't mind taking a look. Would you upload it as a patch for me? http://csd.codeplex.com/SourceControl/UploadPatch.aspx",
+      "PostedDate": "2009-12-17T08:23:42.79-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I just got it working, but I'm updating it to fit into your existing architecture more closely. I'll post it as soon as I'm done.",
+      "PostedDate": "2009-12-17T09:36:43.173-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "It would be best (and the least work for me :-P) if it is compatible with the latest source code change set commit.",
+      "PostedDate": "2009-12-17T10:55:07.207-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Ok, I'll refresh first.",
+      "PostedDate": "2009-12-17T11:18:07.18-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Jeez, you have a lot going on here. I thought this was going to be a 2 hour feature, but there is far more going on than I had anticipated. Do you have any more info on what you meant by creating elements with different inheritance modifiers? If I'm going to spend the time to do this, I want to make sure I get it all.\r\n\r\nThanks, and nice work on this project.",
+      "PostedDate": "2009-12-17T18:50:53.023-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I was essentially going to let configuration elements have two extra properties, \"Base Class\", which is a reference to another class of its type (I.e. a configuration section can only inherit from another configuration section. In order to do this right, I'd have to read up on Domain Relationships some more) and \"Inheritance Modifier\", which would be a choice between \"(none)\", \"abstract\" and \"sealed\". I haven't quite thought out how I would display the inheritance graphically in the designer yet, but I figured I'd come up with something once I had worked a bit on it.\r\n\r\nThat's how I planned doing it, and it probably wouldn't take me too long to do. (although the research might take quite a while compared to the actual implementation.)",
+      "PostedDate": "2009-12-17T23:48:39.61-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Due to lack of feedback on your part, I've started working on my own implementation of this. I'm sorry if this makes you feel like you've wasted time on your solution.",
+      "PostedDate": "2009-12-22T15:48:08.523-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-23T12:48:20.45-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 32742.",
+      "PostedDate": "2009-12-23T13:58:59.047-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:34.74-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:52.713-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:19.34-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

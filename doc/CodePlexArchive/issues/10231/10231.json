@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "For VS2012, I am using the dark theme, and the Configuration Section Explorer window doesn't use the colors from the dark theme.  The background is white, when it should be dark.",
+    "LastUpdatedDate": "2014-09-09T15:18:33.59-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-07-02T12:41:30.66-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Theme Colors Ignored",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 10231
+  },
+  "FileAttachments": [
+    {
+      "FileId": 3435,
+      "FileName": "Capture.PNG",
+      "DownloadUrl": ".\\3435"
+    }
+  ],
+  "Comments": []
+}

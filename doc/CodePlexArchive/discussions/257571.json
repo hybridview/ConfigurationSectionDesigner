@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "612550",
+    "ThreadId": "257571",
+    "Html": "\r\n<p>In the Configuation Section Explorer, you can define an enumerated type and set &quot;Is Flags&quot; to true.</p>\r\n<p>But it took me half a dozen attempts to figure out the syntax for specifying multiple flag values in my xml, and I couldn't find the answer when searching the documentation or discussions.&nbsp; So hopefully this post will help someone else in the same situation.</p>\r\n<p>Separate your values with commas!&nbsp; So for example, an attribute in your xml might look like this:&nbsp; modifierKeys=&quot;Ctrl,Shift&quot;</p>\r\n<p>Maybe that's obvious to some people, but I had tried the bitwise-or symbol '|' and a space, but they don't work.</p>\r\n<p>Ion</p>\r\n",
+    "PostedDate": "2011-05-13T12:25:34.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

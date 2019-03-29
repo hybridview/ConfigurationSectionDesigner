@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The visual studio 2012 plugin throws an exception for windows service projects. It works for other projects but as soon as you right click and run custom tool in a windows service project it throws \"The custom tool 'CsdFileGenerator' failed. Unrecognized Guid format\". Very frustrating the output shows \"* Searching for configuration project handle... \" then just keels over. Are there any logs that I can use or some way to see where the error is occuring. I am using version 2.0.1.0.",
+    "LastUpdatedDate": "2014-09-12T13:02:06.357-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-11-14T22:35:45.213-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The custom tool 'CsdFileGenerator' failed. Unrecognized Guid format",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 10435
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Any news on this?",
+      "PostedDate": "2014-03-03T03:12:08.263-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-03-03T04:00:58.303-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "You can download DebugView from SysInternals (free) to see debug messages. I just used this debug tool to try and figure out why windows services are not working with the tool. In my case (VS 2013), I get an error \"... Project is not a VS project\" when I try to run custom tool. This might be related to your issue. Since I can reproduce, I should find out what the problem is soon.",
+      "PostedDate": "2014-09-04T12:54:16.167-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "UPDATE: I fixed my error by rebuilding the solution, THEN trying to run the custom tool. Could you try this on your solution as well? Since your error message is different, this might be a long shot.\r\n\r\nObviously, this is a defect, so I am still looking into it.",
+      "PostedDate": "2014-09-04T12:58:17.857-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "WARNING: This is mainly a brain dump, so it might be confusing to those not familiar with the source code.\r\n\r\nMORE FINDINGS: \nIn my case, the issue appears to come from adding a 2nd new windows service project to the solution (will try with other project types). Ultimately, I get a NULL result when calling ToVsProject on the affected project. \r\n\r\nHere are my notes so far.\r\n\r\n* If solution has only 1 project (the service project), a CSD can be added and built with no issue.\r\n\r\n* If a 2nd NEW project is added, the first CSD to be added has the issue.\n    + Once I take steps to allow FIRST CSD file to build properly, I can delete it, then add a new one and have no issue. \n    +  After I had first CSD, only the CSD file and diagram file are created. When it's working correctly, the cs file will be immediately added.\r\n\r\n* During problem, when tool attempts to generate code, the first call to function \"vsProject.IsDocumentInProject(inputFilePath, out iFound, docPriority, out itemId);\" from source code DOES return an itemid, but the iFound is \"0\" because the CSD file is in 2nd project, not first (not an issue, just observation). I saw this using \"DebugView\" tool.\n   + Once the loop reaches the target windows service project, the FAILURE occurs on this code: \" IVsProject vsProject = VsHelper.ToVsProject(project);\"\r\n\r\n\nFor invalid GUID error, I think the problem is in code very close to where my issue occurs. My guess is that the call to ToHierarchy(project) generates the GUID error due to projectGUID not being found in the project file being parsed (resulting in NULL). When  projectGUID is NULL, we attempt to generate a new Guid with EMPTY string as argument --new Guid(projectGuid ?? \"\")--, which is not allowed. At minimum, we should catch this problem and log it instead of just sending empty string.\n",
+      "PostedDate": "2014-09-04T13:54:03.2-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I uploaded a package for VS 2013 (see downloads) with fixes, but will try to migrate the patch to 2012 ASAP.  It has received limited testing, so please report issues.",
+      "PostedDate": "2014-09-08T10:54:44.603-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Fix is checked in to TFS. Will close once it is deployed as download package and confirmed.",
+      "PostedDate": "2014-09-12T13:02:06.357-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "289544",
+    "ThreadId": "84848",
+    "Html": "<p>hi,</p>\r\n<p>I&nbsp;have xp, vs2008 sp1 and have recently installed csd. Looks great and promises to solve much pain!</p>\r\n<p>&nbsp;</p>\r\n<p>However, I have followed the getting started pages, adding a new section and some collections and elements&nbsp;etc. This all works well on the designer view. Then&nbsp;I flick to my own code classes and try to use the config section....which works -&nbsp;I get intellisense and everything!&nbsp;Brilliant!</p>\r\n<p>Problem is when&nbsp;I switch back to the designer view I keep getting the compiler warning:<br>&quot;Warning&nbsp;1&nbsp;The 'codeGenOptions' attribute is invalid - The value 'Singleton, XmlnsProperty' is invalid according to its datatype 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner:ConfigurationSectionCodeGenOptions' - The Enumeration constraint failed.&nbsp;C:\\Gordon\\Prototypes\\MyConsoleApp\\MyConsoleApp\\Config.csd&nbsp;14&nbsp;44&nbsp;MyConsoleApp&quot;</p>\r\n<p>&nbsp;</p>\r\n<p>Any ideas?</p>\r\n<p>&nbsp;</p>\r\n<p>Cheers muchly in advance</p>",
+    "PostedDate": "2010-02-11T07:24:31.767-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "289845",
+    "ThreadId": "84848",
+    "Html": "<p>Yes, that's a known bug with the tool, it's caused by Microsoft and not us, so we can't get those warnings to disappear. All I can really tell you is that they can be safely ignored.</p>\r\n<p>Also, it shouldn't crash the designer. If the designer crashes, it's caused by something else entirely.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-11T13:04:59.77-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

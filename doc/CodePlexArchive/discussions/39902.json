@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "132461",
+    "ThreadId": "39902",
+    "Html": "Hi, guys.<br>\r\n<br>\r\nFirst of all, thanks for the nice tool.<br>\r\n<br>\r\nBut I've come across a strange &quot;bug&quot; I think.<br>\r\n<br>\r\nFor instance: you have two ConfigurationElements (A and B). Then you add a property to the element A, say Prop1 and set its type to B, and a connection is created between them to making clear their relationship.<br>\r\n<br>\r\nSo far, so good.<br>\r\n<br>\r\nThe problem is that when you drag any of the element the shape for the element A will streach if the element B is at the right of the element A, and the property NameDecorator will be shown under the element A, if the element B is at the left of element A.<br>\r\n<br>\r\nThis behavior occurs either with the binary bit, as well as with the source code.<br>\r\n<br>\r\nI've gone through the source code, but found nothing that would generate such behavior.<br>\r\n<br>\r\nSee the images linked below.<br>\r\n<br>\r\n<a href=\"http://img217.imageshack.us/img217/5220/elementsaandbbeforedraggz0.jpg\">Elements A and B before dragging element B.</a><br>\r\n<a href=\"http://img217.imageshack.us/img217/7793/elementsaandbafterdragxb5.jpg\">Elements A and B after dragging element B.</a> <br>\r\n<br>\r\n<p>Regards,<br>\r\n<br>\r\nPaulo Santos<br>\r\n<a href=\"http://pjondevelopment.50webs.com/\">http://pjondevelopment.50webs.com/</a> </p>\r\n",
+    "PostedDate": "2008-11-13T18:31:09.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "132588",
+    "ThreadId": "39902",
+    "Html": "This is a known issue (to me anyway), but unfortunately I also haven't found the cause of this strange rendering yet. It's on my list of things to look at but since it's really just a rendering issue (albeit a rather irritating one) I didn't put too much effort into it yet. But some day, I will :-) If you would happen to find it before that, please let me know :-)<br>\r\n<br>\r\nCheers,<br>\r\n<br>\r\nJelle\r\n",
+    "PostedDate": "2008-11-14T06:05:33.49-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "132776",
+    "ThreadId": "39902",
+    "Html": "<p>Hi, jelled<br>\r\n<br>\r\nI understand... but it is really annoying.</p>\r\n<p>Regards,<br>\r\n<br>\r\nPaulo Santos<br>\r\n<a href=\"http://pjondevelopment.50webs.com\">http://pjondevelopment.50webs.com</a> </p>\r\n",
+    "PostedDate": "2008-11-14T18:46:37.64-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "133793",
+    "ThreadId": "39902",
+    "Html": "Hi, jelled.<br>\r\n<br>\r\nAlthough I was not able to SOLVE the problem, I think I came up with a &quot;good enough&quot; workaround.<br>\r\n<br>\r\nI've added a port shato to represent ElementProperty class and removed the custom parent of the ElementHasTypeConnector.<br>\r\n<br>\r\nTrue, it's not pretty, but at least it does not have that very annoying behavior.<br>\r\n<br>\r\nRegards,<br>\r\n<br>\r\nPaulo Santos<br>\r\nhttp://pjondevelopment.50webs.com\r\n",
+    "PostedDate": "2008-11-19T15:53:12.453-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

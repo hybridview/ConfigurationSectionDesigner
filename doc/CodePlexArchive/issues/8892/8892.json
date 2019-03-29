@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\n \nFirstly just to say that I think this is a great tool!\n \n1) Could add a designer attribute that allows one to specify a list of acceptable values for enum types which can then be used by the code generator to create the appropriate xsd, thereby providing intellisense within config file (assuming generated schema refenced from config), or better still, infer the values by reflecting the type.\n2) Could generate method in configuration section class that allows one to search for a particulate element by xpath expression - (i guess this could also be achieve by use of an extension method). I realize lambda's can be used and can go someway to achieving the same result as specified above. (Most configuration files I end up working with are very generic, list of key/values which are normally exposed as a NameValueCollection or something unspecific for use in various components).\n3) Add ability to have configuration elements implement an interface (for which can be generated automatically by code), just need appropriate attribute added to designer and handling of it's value - this makes TDD simpler. I realize that the classes are generated as partial classes and thus this could be done manually, but would be better if could generate automatically).\n4) Add ability for classes generated to be in separate files (much like as happens with edmx code behind via poco templates for example).\n5) Add ability for separation of xsd and class generation by perhaps allowing csd file to have two file generators specified, one for classes and one for xsd. This way people can implement their own T4 templates should they so desire to implement their own code generation. (This would also need an object model to wrap around the xml model for the csd code-behind - again much in the same way as T4 templates can be used for edmx (entity framework 4) class generation.\n \nRegards,\nRik",
+    "LastUpdatedDate": "2013-02-21T16:30:27.1-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-11-06T11:27:32.627-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Generated XSD to include list of available enum values for a defined type",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 8892
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "These are interesting ideas.",
+      "PostedDate": "2012-06-21T12:07:03.37-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-09-22T18:55:16.45-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Hi Rik,\nFor 1), there is already and option to do this.\r\n\r\nSteps\n1) Define by code you custom enum\n2) Open the CSD Designer and open the Configuration Section Explorer\n3) Right click the root node (Configuration Section Model) and click \"Add new enumerated type\"\n4) Change name and namespace of EnumeratedType1 (the newly created enumerated type)\n5) Set the Code generation options to None for the enumerated type\n6) Right click on the enumerated type and click Add new enumeration literal\n7) For each enumeration literal change the name and value, the value should correspond to your domain enum\n8) Repeat step 6 and 7 for each enum member.\r\n\r\nRegards Max",
+      "PostedDate": "2012-11-13T07:53:00.28-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:27.1-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

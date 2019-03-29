@@ -1,0 +1,65 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "CsdFileGenerator Tool",
+      "DisplayName": "CsdFileGenerator Tool"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-01-12T15:35:16.82-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I just start experimenting with the project.  When I set a new ConfigurationSection attribute to readonly, my project wouldn't compile.  The generated code added a System.ComponentModel.ReadOnlyAttribute with a default constructor, but it requires one argument.",
+    "LastUpdatedDate": "2017-12-09T05:48:19.873-08:00",
+    "PlannedForRelease": "1.6",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-01-04T11:44:40.447-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "ReadOnlyAttribute in generated code is missing argument",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5692
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Don't know why I didn't catch that one myself... I'll fix it for release 1.6.",
+      "PostedDate": "2010-01-05T08:38:18.67-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 33323.",
+      "PostedDate": "2010-01-12T15:35:16.82-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:33.46-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:51.717-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:19.873-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

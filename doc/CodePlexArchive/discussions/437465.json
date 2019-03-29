@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "1018748",
+    "ThreadId": "437465",
+    "Html": "First I would like to send a big Thank You for everyone participating in this great tool, because it makes creating configurations a joy. The question I face now is that is it possible to share items (sections, elements, etc.) between diagrams? I think the answer is no, because the code for the diagrams is always re-generated.\r<br />\nI think it would be a nice feature to allow elements and collections be shared among diagrams, because now if I need to have some elements be shared among diagrams (have the same name), it is possible to copy-paste them, but they result in identical generated classes thus collide with each other (not if I put them into different namespaces or rename them). If this tool would allow referring to content in other diagrams, this issue would not arise.<br />\n",
+    "PostedDate": "2013-03-21T03:15:26.137-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1240799",
+    "ThreadId": "437465",
+    "Html": "I second this request (and big thank you).  We want to partition the elements into separate diagrams (the diagram is becoming too big to manage) without having to create a separate C# project for each type that would be shared.<br />\n",
+    "PostedDate": "2014-05-02T11:48:39.987-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1304219",
+    "ThreadId": "437465",
+    "Html": "A feature like this would be quite useful. We will look into it, though it will not be a simple fix.<br />\n",
+    "PostedDate": "2014-09-12T13:35:49.203-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1305195",
+    "ThreadId": "437465",
+    "Html": "I looked at this a bit further.<br />\n<br />\n<strong>Schema Problem</strong>: Currently, a schema is generated for each csd file, so how do we present the shared element?<br />\nThe most likely solution, in my opinion, is to create a copy of the shared element in each schema file during file generation. This could cause consistency issues if one csd is changed and re-generated but another is not. However, I think the benefit would far out-weigh the extra caution that will be required for the developer. A warning could also be added.<br />\n<br />\n<br />\nFor UI, I have a few ideas:<br />\n<ul>\n<li><strong>Easiest, but least friendly:</strong> Give developer ability to specify shared elements in the &quot;Configuration Section Explorer&quot;, similar to how custom types and validators are added. These shared components would then be available in the &quot;Type&quot; property of the elements. A visual cue should be added to the UI indicate a shared element has been selected.</li>\n<li>\n<strong>Most user friendly, but more development</strong>: Add a new property to the &quot;Element&quot; that allows user to select a shared type. The tool would load all types inheriting &quot;ConfigurationElement&quot; in all loaded dlls, and show those in the dropdown. We might want to add a &quot;IsShared&quot; property to elements to keep this list smaller, or add a custom UI for this selection. Once the shared section is chosen, it will appear in the designer with a style that indicates it's external. This shape will be connected to the section. This would probably best resemble a UML class diagram design.<br />\n</li>\n</ul>\nPlease feel free to comment.<br />\n",
+    "PostedDate": "2014-09-16T06:52:25.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1305345",
+    "ThreadId": "437465",
+    "Html": "I think this feature &quot;can&quot; be achieved although the effort it requires could be quite high.<br />\nI will try to explain my first thoughts on how we can achieve this, there are of course different possible ways of achieve this (note I don't discuss UI related stuff, only code gen phase is analyzed here)<br />\n<h1>Higher level</h1>\n<ol>\n<li>We need to be able to reference diagrams (we should disallow circular references)</li>\n<li>\nWe need to load all types from shared diagram referenced (directly or indirectly) by the actual diagram and import those types in generated code<br />\n</li>\n</ol>\n<h1>Lower level</h1>\n<ol>\n<li>Add the ability to reference another diagram should be pretty easy we only need to add a property (or bunch of properties to the csd model) to actually store the path to the referenced diagrams (note we should carefully handle file moved or deleted scenario) and build a open file dialog</li>\n<li>Load all types needed by the code generation phase from the referenced diagrams should be pretty easy as well since we load the whole referenced model and import all used types  (e.g. using importedType.Namespace;)</li>\n<li>\nFinally the hard part :) we should avoid to serialize imported types from referenced diagrams, so we should write a custom serializer/deserializer and I really don't know how simple it is.<br />\n</li>\n</ol>\nP.S. this can led to a dedicated Design notes 2 post :)<br />\n",
+    "PostedDate": "2014-09-16T13:45:37.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1305375",
+    "ThreadId": "437465",
+    "Html": "You bring up some good points Max. This would definitely make a good chapter for the design doc.\r<br />\n<br />\n I missed your 2nd point 2nd in my first analysis. Being able to reference a diagram with the shared item would be necessary to support creating the copy in the schema file. As this area is not where I am most knowledgeable, I originally thought this would be the hardest part.\r<br />\n<br />\nI created an example set of .cs files which represent the OUTPUT that we are trying to achieve. My first impression is that it won't be too difficult to implement a custom serializer, but I could be wrong. Lately, I have been spending more time learning the serialization portion of this project.<br />\n",
+    "PostedDate": "2014-09-16T15:02:32.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1305633",
+    "ThreadId": "437465",
+    "Html": "The explained implementation is simplistic so every diagram generates code, but there are diagrams that can reference another diagrams so in order to generate code that compile we need to import directly referenced types. My previous comment was wrong (since I start the post thinking about a slightly different and complicated approach that changed along the way) we only need to import directly referenced types (let say for example we have diagram A and diagram B, diagram A contains type T1 and diagram B contains type T2, now if we need a property of type T1 inside T2, we need to reference diagram A from diagram B and during code gen import T1 namespace).\r<br />\n<br />\nNote that this is by no means a complete analysis, in fact I'm only thinking about code gen phase, but xsd gen should be quite easy as well.<br />\n",
+    "PostedDate": "2014-09-17T09:14:05.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

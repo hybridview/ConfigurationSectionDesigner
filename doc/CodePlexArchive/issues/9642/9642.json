@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Closing as invalid as requested by original reporter.",
+    "ClosedDate": "2012-09-19T00:05:17.36-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "By adding IEnumerable, it make the code cleaner to use Linq statements against the collection to look for specific entries in the config section when you need to more quering then just the key value.",
+    "LastUpdatedDate": "2013-05-16T04:04:46.347-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-09-17T12:02:45.417-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Extend Configuration Collections to support IEnumerable",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9642
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This can be dropped, I had the wrong .net version in the project.",
+      "PostedDate": "2012-09-17T12:41:24.147-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-09-19T00:05:17.36-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:25.28-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:46.347-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

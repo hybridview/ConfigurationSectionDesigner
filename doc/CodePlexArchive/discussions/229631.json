@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "502377",
+    "ThreadId": "229631",
+    "Html": "<p>Hi Guys, i have a problem that i can't figure out. How do i make element that can have 2 collections?<br>I would like to have the following XML in the configuration<br>&lt;access&gt;<br><span style=\"white-space:pre\"> </span>&lt;allow network=&quot;&quot; /&gt;<br><span style=\"white-space:pre\"> </span>&lt;allow network=&quot;&quot; /&gt;<br><span style=\"white-space:pre\"> </span>&lt;allow network=&quot;&quot; /&gt;<br><span style=\"white-space:pre\"> </span>&lt;deny network=&quot;&quot; /&gt;<br><span style=\"white-space:pre\"> </span>&lt;deny network=&quot;&quot; /&gt;</p>\r\n<p>&lt;/access&gt;</p>\r\n<p>Currently i have made &quot;access&quot; configuration section with two elements &quot;allow&quot; and &quot;deny&quot;, which are respectively of type &quot;allowCollection&quot; and &quot;denyCollection&quot;, but it seems that the generated schema asks me to structure the XML &nbsp;that way:</p>\r\n<p>&lt;access&gt;<br><span style=\"white-space:pre\"> </span>&lt;allow&gt;<br><span style=\"white-space:pre\"> </span>&lt;allow network=&quot;&quot; /&gt;<br><span style=\"white-space:pre\"> </span>&lt;allow network=&quot;&quot; /&gt;<br><span style=\"white-space:pre\"> </span>&lt;/allow&gt;<br><span style=\"white-space:pre\"> </span>&lt;deny&gt;<br><span style=\"white-space:pre\"> </span>&lt;deny network=&quot;&quot; /&gt;<br><span style=\"white-space:pre\"> </span>&lt;deny network=&quot;&quot; /&gt;<br><span style=\"white-space:pre\"> </span>&lt;/deny&gt;<br>&lt;/access&gt;</p>\r\n<p>&nbsp;</p>\r\n<p>Any ideas?&nbsp;</p>",
+    "PostedDate": "2010-10-05T02:13:20.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

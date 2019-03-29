@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In VS2012 (VB.NET) I am trying to use this tool with a Class Library project (and eventually also created a Configuration Section Project). I have created my diagram but the tool fails to generate any code. I get the warning \"The custom tool 'CsdFileGenerator' failed.  Unrecognized Guid format.\" and then nothing happens.",
+    "LastUpdatedDate": "2014-09-12T13:06:52.827-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-01-16T12:51:11.873-08:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The custom tool 'CsdFileGenerator' failed.  Unrecognized Guid format.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 9841
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Any news on this? It's stopping me using the tool...",
+      "PostedDate": "2014-03-03T04:00:08.35-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-03-03T04:00:52.68-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I eventually worked round this by creating my configuration settings designer in a seperate (temporary) solution where it was the only project. This worked, and I could design my CSD files.\r\n\r\nSource Control:\n1. For source control integration, I just manually copied the relevant files into my main solution after making any changes in this temporary project. \n2. You can of course set this up that this \"seperate\" solution/project is in the same folder, then you dont have to copy the files manually from some other location all the time.",
+      "PostedDate": "2014-03-03T05:40:21.187-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Potential Fix is checked in to TFS and in latest VS2013 package. Will close once it is deployed as download package for VS2012 and confirmed.",
+      "PostedDate": "2014-09-12T13:06:52.827-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

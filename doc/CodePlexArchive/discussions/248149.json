@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "574466",
+    "ThreadId": "248149",
+    "Html": "\r\n<p>I am trying to create a very simple config section with a single collection.</p>\r\n<p>I following the documentation, creating a Foobars configuration element collection, and a Foobar configuration element.&nbsp; But I get the error:</p>\r\n<p>&nbsp;The Item Type of this collection does not have a key property.</p>\r\n<p>When I double click it, it selects both my collection and focuses on the property window.&nbsp; I don't know where the problem is.</p>\r\n<p>Since I'm just following the documentation, I'd think everyone would have this problem?&nbsp; Is anyone else having issues like this?</p>\r\n<p>I've tried a previous version, and a new separate solution, but I can't seem to make any progress.</p>\r\n<p>Any help?</p>\r\n",
+    "PostedDate": "2011-03-02T07:48:47.863-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "574999",
+    "ThreadId": "248149",
+    "Html": "<p>Found my problem.&nbsp; It seems very obvious now.&nbsp; The \"Key\" attribute in the configuration element has to have IsKey = true.</p>\r\n<p>The error message \"The Item Type of this collection does not have a key property.\" makes sense.</p>",
+    "PostedDate": "2011-03-03T05:52:47.937-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1102690",
+    "ThreadId": "460922",
+    "Html": "I'd like to be able to save some values to the application configuration file. I'm already using the section designer to read values, and it works well (Visual Studio 2010).\r<br />\n<br />\nI've defined a tag in the designer that I want to use to store the current position of a long-running, interruptible process for filling a cache on a server with image tiles. This may run for several hours unattended and stores it's current position so it can resume from that position if the service is restarted. The code runs from a windows service and currently stores it's rendering 'position' in a separate xml file. However, I'm updating the software and felt it would be more convenient to put this directly in the application configuration, so the data is all in one place.\r<br />\n<br />\nI've tried writing values into a configuration element created in the designer, making sure it's not read only, and the value is assigned in the code, but is not saved in the config file. Can saving of modified values be done directly with your code, or will I have to put in separate code to save values using the MS System.Configuration classes? Also, if I do this, might this interfere with the config data values read in by your software? e.g. If I've read the application config at application startup and accessed it via an Instance property, but subsequently write values back to the config somehow, will I have to refresh the values read in using your software to pick up the changed values, and if so, can this be done without restarting the application?\r<br />\n<br />\nMany thanks,\r<br />\nSteve<br />\n",
+    "PostedDate": "2013-10-02T04:52:18.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

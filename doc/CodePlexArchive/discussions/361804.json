@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "856758",
+    "ThreadId": "361804",
+    "Html": "\r\n<p>Is ist possible to generate a section with an Element-Collection of Type ProviderSettingsCollection with the Designer?</p>\r\n<p>Example:</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">MySection</span> <span style=\"color:red\">defaultProvider</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">testprovider</span><span style=\"color:black\">&quot;</span> <span style=\"color:blue\">&gt;</span>\r\n    <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">providers</span><span style=\"color:blue\">&gt;</span>\r\n      <span style=\"color:blue\">&lt;</span><span style=\"color:#a31515\">add</span> <span style=\"color:red\">name</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">testprovider</span><span style=\"color:black\">&quot;</span> <span style=\"color:red\">type</span><span style=\"color:blue\">=</span><span style=\"color:black\">&quot;</span><span style=\"color:blue\">Test.Web.Providers.TestProvider, Test.Web</span><span style=\"color:black\">&quot;</span> <span style=\"color:blue\">/&gt;</span>\r\n    <span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">providers</span><span style=\"color:blue\">&gt;</span>\r\n  <span style=\"color:blue\">&lt;/</span><span style=\"color:#a31515\">MySection</span><span style=\"color:blue\">&gt;</span>\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>Like the MembershipProvider.</p>\r\n<p>Only Add, Remove and Clear Items allowed!</p>\r\n<p>All my attempts were in vain.</p>\r\n<p>Please help!</p>\r\n<p>Holger</p>\r\n",
+    "PostedDate": "2012-07-03T05:03:31.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

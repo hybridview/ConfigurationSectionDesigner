@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "65398",
+    "ThreadId": "19736",
+    "Html": "\r\nHi,  I'm quite excited about the prospects of this designer.  I've created by hand a fairly complex configuration section and am trying to rebuild it in csd.  I have validators set on some of my elements.  How do I set a validator on an attribute with csd?<br /><br />Thanks Scott<br />",
+    "PostedDate": "2007-12-29T17:59:57.637-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "65429",
+    "ThreadId": "19736",
+    "Html": "<br /><div class=\"quote\" style=\"border: dotted .1em #aaa; border-left: none; border-right: none; font-style: italic; margin: 1em 0em 2.5em 3em;padding: .2em;\"><br />spascoe64 wrote:<br />Hi,  I'm quite excited about the prospects of this designer.  I've created by hand a fairly complex configuration section and am trying to rebuild it in csd.  I have validators set on some of my elements.  How do I set a validator on an attribute with csd?<br /><br />Thanks Scott<br /><br /></div><br />It's currently not yet possible to add validators, I'm afraid. I expected the question to come up - just not this soon :-)<br /><br />I'll make it a work item for a next release. I'll be putting up the source code soon, and I was hoping other people would want to contribute to add features like this, so maybe you would like to help out?<br />",
+    "PostedDate": "2007-12-30T05:20:15.297-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "65430",
+    "ThreadId": "19736",
+    "Html": "\r\nThis discussion has been copied to a work item. Click here to <a href=\"http://www.codeplex.com/csd/WorkItem/View.aspx?WorkItemId=128\">go to the work item and continue the discussion</a>.<br />",
+    "PostedDate": "2007-12-30T05:22:09.477-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

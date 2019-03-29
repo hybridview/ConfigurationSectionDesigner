@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "934167",
+    "ThreadId": "401232",
+    "Html": "\r\n<p>Hi,&nbsp;</p>\r\n<p>Is there no support for attributes of type System.Type or did I just fail to locate it?</p>\r\n<p>This is a common feature.</p>\r\n<p>&nbsp;</p>\r\n<p>Best</p>\r\n<p>Asher</p>\r\n",
+    "PostedDate": "2012-10-30T05:18:07.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "934246",
+    "ThreadId": "401232",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>AsherBarak wrote:</strong><br />\r\n<p>Hi,&nbsp;</p>\r\n<p>Is there no support for attributes of type System.Type or did I just fail to locate it?</p>\r\n<p>This is a common feature.</p>\r\n<p>&nbsp;</p>\r\n<p>Best</p>\r\n<p>Asher</p>\r\n</blockquote>\r\n<p>OK,</p>\r\n<p>Found it - it is done by adding the System.Type to the type definitions. Reachable from a right click on the root element in the Configuration Section Explorer window. It is documented here, but I would suggest adding the functionality to the right click menu of the Type Definitions folder, and adding an Add New option in the drop down you get when editing an attribute.</p>\r\n<p>Also, I would consider including System.Type in the initial list as it's converter is in the list and as it is very&nbsp;useful.</p>\r\n<p>Asher</p>",
+    "PostedDate": "2012-10-30T07:42:42.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

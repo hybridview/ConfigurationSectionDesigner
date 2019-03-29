@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "532087",
+    "ThreadId": "237372",
+    "Html": "\r\n<p>Installed CSD in VS2008. Added a Configuration Section Project to a current solution. Created a very simple three item diagram with the assistance of your docs. Build works.</p>\r\n<p>However, I cannot see anything but a diagram file. No cs or xsd files are listed under the csd node in the solution explorer. No files are generated except empty dlls (as per looking into them via the Object browser).</p>\r\n<p>Any suggestions?</p>\r\n",
+    "PostedDate": "2010-12-06T20:12:11.32-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

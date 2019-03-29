@@ -1,0 +1,130 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Installer",
+      "DisplayName": "Installer"
+    },
+    "ClosedComment": "A few confirmed successful installations and no further bug reports. Closing for now.",
+    "ClosedDate": "2011-07-13T16:11:23.7-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When we checked out the code of today, built the vsxi on one machine (with VS 2010 Premium), then install that on another machine with the same version of VS, the custom tool can not get startet, saying something like \"The custom tool 'CsdFileGenerator' can not be found\".\n \nThe issue is gone, once the code gets copied and built on the second machine.",
+    "LastUpdatedDate": "2013-05-16T04:04:49.903-07:00",
+    "PlannedForRelease": "2.0.0 r2 for Visual Studio 2010",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-08-06T06:26:45.717-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Current code does not correctly install the Custom Tool",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 4,
+    "Id": 7078
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Some changes have been made to the VSIX since this was reported. They MAY have fixed this issue, but I will need to try and reproduce this behavior on a clean machine.",
+      "PostedDate": "2011-06-30T12:27:50.877-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-01T02:37:55.33-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-05T08:06:34.927-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "In the extension package ConfigurationSectionDesigner.DslPackage.pkgdef file one of the registry keys was pointing not to \"CodeBase\"=\"$PackageFolder$\\ConfigurationSectionDesigner.Dsl.dll\" but rather to some private build location so the assembly was not able to be located by the runtime. After making changes directly in the package everything seems ok. Unfortunately I did not find place where the .pkgdef file is stored (maybe it get generated during build process so I was not able to upload patch). Please make appropriate changes.",
+      "PostedDate": "2011-07-05T09:03:42.703-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I believe this may be caused by a VS2010 bug (that is over a year old!). I'm hoping to find a workaround that isn't as ugly as the ones I've seen online. More info can be found at the following link:\r\n\r\nhttp://social.msdn.microsoft.com/Forums/en-US/vsx/thread/4bb91fe2-3262-4236-8008-47820b16dbb8",
+      "PostedDate": "2011-07-05T13:46:03.29-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Looks like it. At the connect site MS seems to give some advise. https://connect.microsoft.com/VisualStudio/feedback/details/552622/deployed-custom-code-generator-using-vsix-has-wrong-codebase-in-registry",
+      "PostedDate": "2011-07-05T21:52:11.147-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-06T09:52:28.9-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I think I have resolved the issue, but it wasn't easy, nor was it entirely pretty. I installed the \"MSBuild.Community.Tasks\" library and added a regex text replace task that fixes the offending entry in the pkgdef file before the VSIX is built. I need to add some comments about this for the other developers before uploading source code, but will include the build with this fix in this post. I can't confirm that it works at the moment, so if you have a moment to try it out, I would appreciate it. Thanks.",
+      "PostedDate": "2011-07-06T09:52:30.91-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I made a slight tweak to the VSIX after my test failed on a clean developer box. The 2.0.0 r2 download (in the downloads section) is working as expected and should eliminate this issue (finally!).",
+      "PostedDate": "2011-07-06T16:42:58.65-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-06T16:43:12.513-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks a lot for the fix. I confirm that on clean install the designer now works with no issues. At least for me.",
+      "PostedDate": "2011-07-06T23:57:25.59-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "@bugkiller\r\nExcellent news! That was a pretty important issue to get out of the way.\r\n\r\nI have uploaded the source to the fix in source code change set 60330.",
+      "PostedDate": "2011-07-07T07:51:48.647-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-07T07:52:37.043-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-13T16:09:50.427-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-13T16:11:10.15-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-07-13T16:11:23.7-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:30.47-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:49.903-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

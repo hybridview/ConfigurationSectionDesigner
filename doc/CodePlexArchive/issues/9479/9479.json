@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "It would be very nice to be able to specify the collection element type was the key (for items that have no real organic/natural key).  That way, collections like the following could be defined:\n \n<maps>\n  <map name=\"Mapping 1\" mapValue=\"ABC\">\n    <applicableValues>\n      <applicableValue value1=\"a\" value2=\"1\"/>\n      <applicableValue value1=\"a\" value2=\"2\"/>\n      <applicableValue value1=\"b\" value2=\"1\"/>\n    </applicableValues>\n  </map>\n  <map name=\"Mapping 2\" mapValue=\"DEF\">\n    <applicableValues>\n      <applicableValue value1=\"a\" value2=\"3\"/>\n      <applicableValue value1=\"b\" value2=\"3\"/>\n      <applicableValue value1=\"b\" value2=\"4\"/>\n    </applicableValues>\n  </map>\n</maps>",
+    "LastUpdatedDate": "2013-07-15T07:45:39.53-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-07-02T18:10:05.323-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Element-as-Key for collections",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 9479
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "See this: https://csd.codeplex.com/discussions/406983",
+      "PostedDate": "2013-07-15T07:45:39.53-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

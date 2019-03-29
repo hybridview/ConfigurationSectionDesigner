@@ -1,0 +1,66 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Known issue in VS",
+    "ClosedDate": "2010-06-04T16:08:03.89-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "When I created a new project, and go the diagarm, the toolbox is empty , showing a number #13119 and no elements.\n \nWhat I did:\nInstalled\nRepaired\nRemoves & installed\non VS 2008 SP",
+    "LastUpdatedDate": "2013-05-16T04:04:51.263-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-02-24T04:58:25.607-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Toolbox elements doesn't exist",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6074
+  },
+  "FileAttachments": [
+    {
+      "FileId": 2016,
+      "FileName": "csp_screenshot.png",
+      "DownloadUrl": ".\\2016"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "right click on the tool box and choose reset tool box.\r\nThis is a VS issue not a tool specific issue",
+      "PostedDate": "2010-05-26T10:32:25.203-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2010-06-04T16:08:03.89-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:32.447-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:51.263-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

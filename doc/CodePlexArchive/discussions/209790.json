@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "432750",
+    "ThreadId": "209790",
+    "Html": "<p>I need to inherit from a configuration section base class located in a different assembly (referenced by the Configuration section project).</p>\r\n<p>The designer currently only allows for selecting base classes that are part of the same CSD file (e.g. <em>ConfigurationSection.csd</em>). How could I accomplish this other than manually editing the base class in <em>ConfigurationSection.csd.cs</em>?</p>\r\n<p>Thanks in advance.</p>",
+    "PostedDate": "2010-04-19T08:59:25.51-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452837",
+    "ThreadId": "209790",
+    "Html": "This discussion has been copied to a work item. Click <a href=\"http://csd.codeplex.com/workitem/6836\">here</a> to go to the work item and continue the discussion.",
+    "PostedDate": "2010-06-08T00:24:34.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I need to inherit from a configuration section base class located in a different assembly (referenced by the Configuration section project).\n \nThe designer currently only allows for selecting base classes that are part of the same CSD file (e.g. ConfigurationSection.csd).",
+    "LastUpdatedDate": "2016-01-11T04:34:31.87-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2010-06-08T00:24:26.01-07:00",
+    "Status": {
+      "Name": "Active",
+      "Id": 2
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Inherit from \"designer external\" base class",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 8,
+    "Id": 6836
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "You could scan all the assemblies referenced by the project containing the .csd for relevant System.Configuration.* derived types, and present them in the various drop-downs.",
+      "PostedDate": "2011-07-21T07:00:23.577-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-10-31T00:47:49.12-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-06T08:08:27.743-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-01-14T06:41:48.123-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:31.087-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "It would also be extremely helpful if you could use the built in .net Elements/Sections as well.\nhttp://msdn.microsoft.com/en-us/library/system.configuration.configurationelement.aspx#inheritanceContinued\r\n\r\n\nAlso, support for text within an element as suggested here:\nhttp://csd.codeplex.com/discussions/272087\r\n\r\nWould be great.",
+      "PostedDate": "2013-03-14T19:40:00.613-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "This would probably need some moderate designer work to support correctly (similar to how class diagram works in visual studio for this subject). It would be very useful to have this.",
+      "PostedDate": "2014-09-12T13:23:41.563-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-12T13:24:04.377-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-10-27T03:13:53.677-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2016-01-11T04:34:31.87-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

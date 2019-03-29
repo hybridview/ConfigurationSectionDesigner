@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "547936",
+    "ThreadId": "241425",
+    "Html": "\r\n<p>Is it possible to define a property in nullable type?</p>\r\n<p>Statically typed default values are ok but it would be useful if we could get nullable types (bool?) directly from properties.<br>\r\nIt seems like it is a must if your default handling logic is dynamic.</p>\r\n<p>Thank you.&nbsp;</p>\r\n",
+    "PostedDate": "2011-01-12T04:15:57.233-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "633659",
+    "ThreadId": "241425",
+    "Html": "<p>Interesting idea. I'll take a look.</p>",
+    "PostedDate": "2011-06-27T11:15:58.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "842844",
+    "ThreadId": "241425",
+    "Html": "<blockquote style=\"padding-bottom: 0px; font-style: italic; margin: 0.25em 1em 0px; padding-left: 0.25em; padding-right: 0.25em; padding-top: 0px; border: #ccc 0.1em solid;\"><strong>gokhanercan wrote:</strong><br />\r\n<p>Is it possible to define a property in nullable type?</p>\r\n<p>Statically typed default values are ok but it would be useful if we could get nullable types (bool?) directly from properties.<br />It seems like it is a must if your default handling logic is dynamic.</p>\r\n<p>Thank you.&nbsp;</p>\r\n</blockquote>\r\n<p>I ran into this same limitation. Assume Max is a non-required attribute of type double. At runtime, there's no difference between &lt;element Max=\"0.0\"/&gt; and &lt;element /&gt;. Both will return 0.0, but obviously a Max of 0.0 has a very different meaning than not having a Max.</p>\r\n<p>In the auto generated code, you can manually change the type of this property from double to double?, but you'd have to do this any time the code is regenerated. And although I only have two properties in my case, someone with many of these attributes would have to spend quite a bit of time changing the code. It would be great to have support for nullable types out of the box.</p>",
+    "PostedDate": "2012-05-30T15:22:28.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843094",
+    "ThreadId": "241425",
+    "Html": "<p>This is not very hard to do. In the \"Configuration Section Explorer\" window, right-click the root \"Configuration Section Model\" node, select \"Add New External Type\", set its \"Name\" to \"Nullable&lt;global::System.Double&gt;\" and its \"Namespace\" to \"System\". Replace \"System.Double\" in the \"Name\" with whatever type you want nullable.</p>\r\n<p>We do this in our configuration sections at the company I work for, and it works just fine.</p>",
+    "PostedDate": "2012-05-31T06:24:20.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "Fixed in latest changeset. Will be included in next release &#40;after 2.0.0.8&#41;.",
+    "ClosedDate": "2012-12-19T07:07:23.243-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "In the resul XSD file get white space in XSD file between namespace and class name. For Example:\n<xs:schema xmlns:tns=\"urn:\" elementFormDefault=\"qualified\" targetNamespace=\"urn:\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n\t<xs:element name=\"boilerSection\" type=\"tns:Microsoft.Samples.XmlAjaxService .BoilerSectionCT\" />\n\t<xs:complexType name=\"Microsoft.Samples.XmlAjaxService .BoilerSectionCT\">",
+    "LastUpdatedDate": "2013-05-16T04:04:47.877-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2011-09-01T02:44:20.703-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "White space in XSD file between namespace and class name",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 8659
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I only get that issue if I add a space after the string in the \"Namespace\" property of a ConfiguractionSection. For now, could you check to see if you have any spaces before or after your values? Regardless, this tool should really be automatically stripping white spaces out (or showing errors).",
+      "PostedDate": "2011-09-02T07:32:29.15-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2011-09-02T07:41:41.503-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I think a good task will be to add \"trim\"s to areas of the plugin that are susceptible to this.",
+      "PostedDate": "2012-06-21T12:01:57.36-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I have added validation to the name properties. Fix will be released on next build.",
+      "PostedDate": "2012-12-13T12:53:18.507-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-12-19T07:07:23.243-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:28.397-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:47.877-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

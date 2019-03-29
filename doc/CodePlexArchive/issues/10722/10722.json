@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "There is a class in the Microsoft Enterprise Library called PolymorphicConfigurationElementCollection<T> which allows a configuration element to contain a collection of config elements of polymorphic type.  This turned out to be fairly useful to me, but using it meant that I had to move my configuration section and configuration element classes away from CSD.  It would be great if CSD offered a similar capability.",
+    "LastUpdatedDate": "2015-01-14T08:26:45.64-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2014-09-10T08:15:40.22-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "PolymorphicConfigurationElementCollection in CSD?",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 2,
+    "Id": 10722
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I briefly looked at this class and it is quite interesting. I'm going to learn more about it and report back asap. Thanks for letting us know!",
+      "PostedDate": "2014-09-10T12:56:22.563-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Some reference links below:\r\n\r\n[Stackoverflow question](http://stackoverflow.com/questions/4902461/configurationelementcollection-with-a-number-of-configurationelements-of-differe)\r\n\r\n[MSDN page](http://msdn.microsoft.com/en-us/library/bb750549%28PandP.50%29.aspx)",
+      "PostedDate": "2014-09-10T13:00:16.463-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Interesting one! Some thoughts:\r\n\r\nWhat should be the discriminator? Should we list all collection supported types via UI? Should we use a base abstract type and all derived are accepted?\r\n\r\nThe implementation of the collection seems quite easy.",
+      "PostedDate": "2014-09-16T14:57:56.997-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2015-01-14T08:26:45.64-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

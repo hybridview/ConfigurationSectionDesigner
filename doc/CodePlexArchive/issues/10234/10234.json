@@ -1,0 +1,75 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Visual Studio 2012.\n\nIssue with design similar to:\n\n<configuration>\n    <customGroup>\n        <secondCustomGroup>\n               <CustomSection/>\n        </secondCustomGroup>\n    </customGroup>\n</configuration>\n\nCustom sections are inaccessible using generated code - it does not take into account that they are enclosed by groups.\n\nIn my case i fixed it by modifying name property for configuration section, by adding full xpath:\nin this case instead of \"CustomSection\" name would be \"customGroup/secondCustomGroup/CustomSection\".\n\nWithout the modification ConfigurationManager return null from GetSection method.",
+    "LastUpdatedDate": "2017-12-09T05:49:58.747-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-07-03T15:24:59.997-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Bug: config sections eclosed by groups",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 10234
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This looks like it is related to [Work Item 6053](https://csd.codeplex.com/workitem/6053)\n",
+      "PostedDate": "2014-01-31T09:01:50.497-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I was able to integrate a patch submitted 3 years ago (after some modification) that may have resolved this issue. I will perform more internal testing and make public if there are no problems.",
+      "PostedDate": "2014-09-08T13:09:04.93-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-08T13:10:27.503-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I greatly revised the group handling function to support nested groups. Will still want to test a bit more before releasing, but it looks good so far.",
+      "PostedDate": "2014-09-09T15:20:14.157-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Potential Fix is checked in to TFS and in latest VS2013 package. Will close once it is also deployed as download package for VS2012 and confirmed.",
+      "PostedDate": "2014-09-12T13:05:51.48-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-12T13:06:01.077-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:49:58.747-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

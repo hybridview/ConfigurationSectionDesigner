@@ -1,0 +1,85 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-12-12T11:08:59.863-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Currently the tool only generates C# code. However, the tool should be language-neutral, supporting other .NET languages like VB.NET. To accomplish this, the tool must move from a text transformation tool to a language-neutral code generation tool. The plan is to move the code generation facilities to the CodeDOM tools.",
+    "LastUpdatedDate": "2017-12-09T05:48:18.51-08:00",
+    "PlannedForRelease": "1.3",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-09T23:22:10.447-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Language-neutral code generation",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 5562
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I'm not sure I agree on moving to CodeDOM since this is more complicated to create initially and above all, much more difficult for end users to customize.\r\n\r\nThe reasoning behind the T4 (*.tt) files is that they are fairly easy to create, maintain, update and customize - and also that you can easily create new ones to match specific needs. For example, to generate additional output types like text files or sample configuration sections. I really don't think this will still be considered by users when moving to CodeDOM.\r\n\r\nSo if support for other languages is really required, I propose to ship different tt files per language. Although \r\n\r\nFor that reason, I would also suggest to look at [workitem:5573].",
+      "PostedDate": "2009-12-11T04:35:06.037-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Aw man. And I just spent so much work and time on CodeDOM and I was just about to check it in. :-P Also, I wasn't intending to remove the .tt files that make the schema file and the sample configuration file, I was only planning to move the code generation to CodeDOM. The CodeDOM cannot create files like XML schema files and configuration files.",
+      "PostedDate": "2009-12-11T06:38:06.477-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Also, the whole point of partial classes is to be able to extend/change behavior without needing to be able to change how the code is generated. That also prevents things from screwing up when a new version is released or the code is regenerated.",
+      "PostedDate": "2009-12-11T11:04:47.2-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "If you don't have any complaints with the *code* generation moving to CodeDOM while leaving the Configuration Sample and XML Schema in T4, I'm going to go ahead and move the code generation to CodeDOM. All the code for the generation has already written, and to read and extend it is not very difficult. It's a little verbose, yes, but it generates code almost identical to the existing T4 generator.\r\n\r\nMaintaining code in one place (Like the CodeDOM) for several languages has many advantages to having a separate T4 file for each type of language one would want to support. First, you don't even have to know the language. I've used VB.NET before, but I can't say I'm well versed, but the output from my CodeDOM code generator run with the VB.NET code generator created beautiful VB.NET code that I'm certain VB.NET users will like and be familiar with. Second, there's no risk of forgetting to update all the languages with the same changes if a change is required in the code generation. Make the change to the CodeDOM generator, and all supported languages are updated.",
+      "PostedDate": "2009-12-12T02:01:33.023-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 32286.",
+      "PostedDate": "2009-12-12T11:08:59.863-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Good points, glad to see that you've worked it all out :-)\r\n\r\nI thought from another thread that you were also planning on removing the .tt files for the XSD and sample config, but if that mechanism stays in place while making the code generator language-neutral then I'm all for it!",
+      "PostedDate": "2009-12-13T12:22:25.907-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:36.07-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:53.893-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:18.51-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

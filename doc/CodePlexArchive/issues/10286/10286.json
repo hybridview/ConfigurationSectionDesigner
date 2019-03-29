@@ -1,0 +1,80 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I install Configuration Section Designer, and it was generating code correctly.  but suddenly and without any reasons.  The cs file is no more generated, I got the following error message:\n\n> The custom tool 'CsdFileGenerator' failed.  Guid should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)\n\n.\n.\nThe message seems misleading, because I uninstall Configuration Section Manager, and I still getting the same message every time I right click on CSD file and click \"Run Custom Tool\".",
+    "LastUpdatedDate": "2014-09-12T13:05:09.847-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Medium",
+      "Severity": 100,
+      "Id": 2
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2013-08-19T09:09:12.827-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Cannot generate cs file.   Misleading error message.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 10286
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I am getting a similar issue when I click run custom tool I see \"The custom tool 'CsdFileGenerator' failed. Unrecognized Guid format\". I've uninstalled and reinstalled and still no luck is there a workaround? It was working just fine then it just unexpectedly falls over??",
+      "PostedDate": "2013-11-12T04:55:20.493-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I wonder if this has to do with a new project type being added to the solution. I'll look into this a bit more...",
+      "PostedDate": "2014-01-31T08:55:48.97-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Any news?",
+      "PostedDate": "2014-03-03T03:40:34.9-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-03-03T04:03:15.117-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "I uploaded a package with a possible fix to this issue for VS 2013 (see downloads). I will port to VS2012 ASAP. This release also attempts to resolve some issues related to \"not a vs project\" errors. It has received limited testing, so please report issues.",
+      "PostedDate": "2014-09-08T10:56:13.97-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-09T15:15:41.41-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Potential Fix is checked in to TFS and in latest VS2013 package. Will close once it is deployed as download package for VS2012 and confirmed.",
+      "PostedDate": "2014-09-12T13:04:58.403-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2014-09-12T13:05:09.847-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

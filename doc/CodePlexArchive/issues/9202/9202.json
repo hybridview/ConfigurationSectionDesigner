@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Installer",
+      "DisplayName": "Installer"
+    },
+    "ClosedComment": "I&#39;m closing this issue since the newer revisions fix the issue for 99&#37;&#43; of windowsxp users, and a further fix would require changing the project name to something shorter.",
+    "ClosedDate": "2012-06-21T11:48:05.737-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "[[ Same issue as 8494 ]]\n \nHi I'm Fabrizio from Italy\nI'm trying to install the designer using ConfigurationSectionDesigner.DslPackage.vsix\nand  it fails with a System.IO.PathTooLongException, see the message below:\n \n 24/02/2012 11.23.30 - Beginning to install extension to Microsoft Visual Studio 2010 Professional...\n24/02/2012 11.23.30 - Install Error : System.IO.PathTooLongException: C:\\Documents and Settings\\Administrator\\Impostazioni locali\\Dati applicazioni\\Microsoft\\VisualStudio\\10.0\\Extensions\\The Community\\ConfigurationSectionDesigner\\2.0.0.0\\ItemTemplates\\VisualBasic\\General\\1033\\ConfigurationSectionDesigner.zip: VisualBasic.vstemplate\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.BeginInstall(IInstallableExtension installableExtension, Boolean perMachine, AsyncOperation asyncOp)\n   at Microsoft.VisualStudio.ExtensionManager.ExtensionManagerService.InstallWorker(IInstallableExtension extension, Boolean perMachine, AsyncOperation asyncOp)",
+    "LastUpdatedDate": "2013-05-16T04:04:46.803-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2012-02-24T02:42:18.877-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "PathTooLong Installing from VSIX (WinXP Only)",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 9202
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "It's a problem with this extension on WindowsXP (Server2003) machines due to the way XP structures user folders. A lot of VS2010 extension developers have run into this issue. I fixed this for many people by shrinking the size of the template file names, but from your post, it appears you are not using the fixed version. Did you download the 2.0.0.0 R4 version?\r\n\r\nHere is my message chain about this subject on the VisualStudio Gallery page. My ID there is hybridview.\r\n\r\nhybridview\r\nThat is very strange... It appears that the extension, when installed on Windows XP, exceeds the path char limit. I will look into this. It looks like we may have to shorten the name of the extension to prevent this in Windows XP. - andym1978, CSD contributor\r\n\r\nWritten July 18, 2011\r\nhybridview\r\nI just did some more research on this issue. It turns out that a lot of VSIX extension developers run into this issue on Windows XP. The problem occurs because Windows XP requires an astonishing 75 ADDITIONAL characters to create the same path as Windows Vista/7 (Due to 'documents and settings' etc...). The main solution I have seen is quite a Kludge, so I'm going to opt to create an installer to wrap around this package to handle this issue. I will try to have this ready this week. For those who want to try the kludge, I learned about it at the following URL: \r\nhttp://www.telerik.com/community/forums/wpf/vs-extensions/error-installing-wpf-vsextensions-2011-1-422-0.aspx\r\n\r\nWritten July 20, 2011\r\nhybridview\r\nI uploaded a new VSIX package that fixes this \"path too long\" issue for most Windows XP users. The fix involved shortening the template ZIP file name. If you have successfully installed the 2.0.0 R2 release, there is no need to install this update. For those with unusually long user account names, this fix may not be enough. Please let me know if you encounter this issue and I will prioritize my permanent fix, which will use an installer wrapper.\r\n",
+      "PostedDate": "2012-02-29T12:15:27.997-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "You are right,  maybe I did not downloaded the correct version.\r\nNow it works fine,Thank you Andy!",
+      "PostedDate": "2012-03-01T00:04:07.27-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-21T11:46:24.247-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2012-06-21T11:48:05.737-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:26.21-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:46.803-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

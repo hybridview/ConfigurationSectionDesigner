@@ -1,0 +1,86 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "Designer",
+      "DisplayName": "Designer"
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-12-11T07:31:40.047-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The 'codeGenOptions' attribute is invalid - The value 'Singleton, XmlnsProperty' is invalid according to its datatype 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner:ConfigurationSectionCodeGenOptions' - The Enumeration constraint failed.\n \nThe 'codeGenOptions' attribute is invalid - The value 'Indexer, AddMethod, RemoveMethod, GetItemMethods' is invalid according to its datatype 'http://schemas.microsoft.com/dsltools/ConfigurationSectionDesigner:ConfigurationElementCollectionCodeGenOptions' - The Enumeration constraint failed.\n \nI think this then causes:\nRunning transformation: System.NullReferenceException: Object reference not set to an instance of an object.\n   at Microsoft.VisualStudio.TextTemplatingB23DA7D10BAD265D026AA231C0E7AB94.GeneratedTextTransformation.TransformText()\n \nIf I can send my file or other information to help please let me know.\n \nAwesome tool!  Thanks.",
+    "LastUpdatedDate": "2017-12-09T05:48:18.727-08:00",
+    "PlannedForRelease": "1.2.1",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "High",
+      "Severity": 150,
+      "Id": 3
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-12-10T09:36:50.51-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The 'codeGenOptions' attribute is invalid - The value '*' is invalid according to its datatype",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5565
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1838,
+      "FileName": "MyConfigGroup.csd",
+      "DownloadUrl": ".\\1838"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Your assumption about the cause of the error is wrong, but that you get the exception I don't doubt. Would you please attach your .csd file to this work item using the \"Attach File\" field below, so that I may test it?",
+      "PostedDate": "2009-12-10T14:19:22.077-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Thanks.",
+      "PostedDate": "2009-12-11T04:58:35.72-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-11T04:58:40.243-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Okay, I see what's wrong. It's not your fault, it's a bug in the CSD. I'll fix it and issue a bug-fix release ASAP.",
+      "PostedDate": "2009-12-11T07:01:03.11-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 32217.",
+      "PostedDate": "2009-12-11T07:31:40.047-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:35.753-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:53.623-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:18.727-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

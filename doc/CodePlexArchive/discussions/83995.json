@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "288445",
+    "ThreadId": "83995",
+    "Html": "<p>Is there any way to use inheritance to utilize varying objects of a compatible base type in a collection?</p>\r\n<p>For example, I have a configuration collection &quot;Data Sources&quot;. In it, I could have an &quot;FTP Data Source&quot;, &quot;UNC Data Source&quot;, &quot;HTTP Data Source&quot;, all inheriting from a base class &quot;Data Source&quot;.</p>\r\n<p>It seems natural, but currently the designer won't let me do it... It only allows collection elements of type &quot;Data Source&quot;, not any sub-classing elements.</p>\r\n<p>Am I going about it the wrong way?</p>\r\n<p>I know there's a dirty workaround using &quot;custom child elements&quot;, but that is very dirty. If I use that, the subclassing elements do not have any intellisence in app.config, they are in essence not considered to be part of the schema when the schema is built.</p>",
+    "PostedDate": "2010-02-10T13:06:22.39-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "288665",
+    "ThreadId": "83995",
+    "Html": "<p>What do you mean it only allows elements of type &quot;Data Source&quot;? What is the warning/error/exception you get, and where/when?</p>",
+    "PostedDate": "2010-02-11T00:28:09.367-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "289522",
+    "ThreadId": "83995",
+    "Html": "<p>Here's what I have:</p>\r\n<p>I have a Configuration element collection&nbsp; DataSourceCollection (&lt;dataSources&gt;) with item type &quot;DataSourceDefinition&quot;.</p>\r\n<p>Then I have a basic configuration element called &quot;DataSourceDefinition&quot;.</p>\r\n<p>Then I have a couple of other more advanced configuration elements called FTPDataSourceDefinition and UNCDataSourceDefinition, both marked with the &quot;Base Class&quot; propery as &quot;DataSourceDefinition&quot;. There's a arrow link that shows now from those config elements to DataSourceDefinition configuration element.</p>\r\n<p>What happens when I try to substitute &lt;dataSourceDefinition /&gt; elements in the collection in web.config by &lt;ftpDataSourceDefinition /&gt; or &lt;uncDataSourceDefinition /&gt;, app.config complains as follows:</p>\r\n<p>Warning&nbsp;&nbsp; &nbsp;9&nbsp;&nbsp; &nbsp;The element 'dataSources' in namespace 'DataSourceConfig' has invalid child element 'ftpDataSourceDefinition' in namespace 'DataSourceConfig'. List of possible elements expected: 'dataSourceDefinition' in namespace 'DataSourceConfig'.&nbsp;&nbsp;&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-11T07:14:10.073-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "289843",
+    "ThreadId": "83995",
+    "Html": "<p>Hm, well, it's just an XML Schema warning. Have you tried running it anyway to see if it actually works? When I did my testing with inheritance in collections, the results were rather disappointing. I could never get the configuration system to figure out which class type to instantiate.</p>",
+    "PostedDate": "2010-02-11T13:03:34.71-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "289852",
+    "ThreadId": "83995",
+    "Html": "<p>What told me that it's not working is that there is no intellisense on the subclassing types in app.config. There is intellisense on dataSourceDefinition, but never on ftpDataSourceDefinition or uncDataSourceDefinition. It's as if they do not exist as far as the schema is concerned.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-11T13:23:32.397-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "289869",
+    "ThreadId": "83995",
+    "Html": "<p>The reason they are not showing up in the intellisense is because CSD has not been coded to include them, because I believe that the configuration system does not support this. However, if you're interested, try anyway and see what happens.</p>",
+    "PostedDate": "2010-02-11T14:32:00.757-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

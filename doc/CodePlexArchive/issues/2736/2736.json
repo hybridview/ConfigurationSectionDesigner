@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Cannot implement in .NET",
+    "ClosedDate": "2008-08-18T05:59:28.137-07:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "The use of settings like:\n<servicedata name=\"localData\">\n        <address>http://www.service.com/Service/dataService.svc</address>\n</servicedata >\n \nfails with Warning:\tThe element cannot contain text. Content model is empty.\n \nHow can such setting be designed?",
+    "LastUpdatedDate": "2013-05-16T04:04:56.167-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2008-07-14T00:34:23.93-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "The element cannot contain text. Content model is empty.",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 2736
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "That's actually a good question, because I've never seen any configuration file that has plain text inside a configuration element. I've been looking at the .NET Configuration system but I can't find a way to enable this type of configuration file, so unless you happen to know how .NET supports this I'm afraid I can't implement this work item...\r\n\r\nThe workaround would of course be move the text to an attribute of the address configuration element as such:\r\n<address url=\"http://www.service.com/Service/dataService.svc\" />",
+      "PostedDate": "2008-08-18T05:58:52.373-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2008-08-18T05:59:28.137-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:38.69-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:56.167-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

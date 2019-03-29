@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "135403",
+    "ThreadId": "40836",
+    "Html": "Section protection support would be usefull.<br>\r\nOther great feature is visual editing of new *.config file. It's look similar to <span style=\"border-collapse:separate;font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:pre;word-spacing:0px;font-family:'lucida grande';color:rgb(0, 0, 0)\">http://www.codeplex.com/CoMan</span> :)<br>\r\nP.S. and use multiple output for template file.<br>\r\nhttp://www.olegsych.com/2008/03/how-to-generate-multiple-outputs-from-single-t4-template/<br>\r\n",
+    "PostedDate": "2008-11-25T22:47:31.797-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "265565",
+    "ThreadId": "40836",
+    "Html": "<p>With the release of version 1.2, we don't even use template files, and the file generation procedure has been improved a lot.</p>\r\n<p>I created a <a href=\"http://csd.codeplex.com/WorkItem/View.aspx?WorkItemId=5561\">work item for the section protection support</a>.</p>",
+    "PostedDate": "2009-12-09T23:00:23.277-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

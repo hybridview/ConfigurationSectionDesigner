@@ -1,0 +1,70 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2009-12-22T09:48:46.863-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "To avoid the CollectionOfB element in <Section><CollectionOfA><ConfigElementA></ConfigElementA><ConfigElementA></ConfigElementA></CollectionOfB></Section> one can use the following attribute on the collection class: [ConfigurationElementCollection(\"\", IsRequired=true, IsDefaultCollection=true)].\nThe generated xsd would also need to be modified, to reflect this difference.",
+    "LastUpdatedDate": "2017-12-09T05:48:17.863-08:00",
+    "PlannedForRelease": "1.5",
+    "ReleaseVisibleToPublic": true,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "csd",
+    "ReportedDate": "2009-08-07T07:30:32.063-07:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Allow a ConfigurationElementCollection that is required and is the defaultcollection to have an empty xml name",
+    "Type": {
+      "Name": "Feature",
+      "Id": 1
+    },
+    "VoteCount": 1,
+    "Id": 4733
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "And that should nave been \"To avoid the CollectionOfA element in ...\"",
+      "PostedDate": "2009-08-07T07:32:08.067-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-12-19T13:52:00.45-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "Resolved with changeset 32712.",
+      "PostedDate": "2009-12-22T09:48:46.863-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-21T16:30:37.113-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T04:04:54.837-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2017-12-09T05:48:17.863-08:00",
+      "Id": -2147483648
+    }
+  ]
+}
