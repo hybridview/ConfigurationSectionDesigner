@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="9f16956e-2232-4f80-9ebb-4165929ef3ef" Version="2.0.3.4" Language="en-US" Publisher="The Community" />
+    <Identity Id="9f16956e-2232-4f80-9ebb-4165929ef3ef" Version="2.0.3.5" Language="en-US" Publisher="The Community" />
     <DisplayName>ConfigurationSectionDesigner</DisplayName>
     <Description>A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.</Description>
 	<PreviewImage>Resources\ConfigurationSectionDesigner.jpg</PreviewImage>
@@ -9,8 +9,8 @@
 	<MoreInfoUrl>http://csd.codeplex.com/documentation</MoreInfoUrl>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[15.0,17.0)" />
-    <InstallationTarget Version="[15.0,17.0)" Id="Microsoft.VisualStudio.Enterprise" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[15.0,15.99)" />
+    <InstallationTarget Version="[15.0,15.99)" Id="Microsoft.VisualStudio.Enterprise" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.6.1,)" />
@@ -25,6 +25,6 @@
     
   </Assets>
   <Prerequisites>
-    <Prerequisite Id="Microsoft.VisualStudio.Component.TextTemplating" Version="[15.0,17.0)" DisplayName="Text Template Transformation" />
+    <Prerequisite Id="Microsoft.VisualStudio.Component.TextTemplating" Version="[15.0,15.99)" DisplayName="Text Template Transformation" />
   </Prerequisites>
 </PackageManifest>
