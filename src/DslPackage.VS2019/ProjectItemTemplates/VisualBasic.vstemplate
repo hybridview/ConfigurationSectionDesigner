@@ -1,0 +1,23 @@
+﻿<!--DSL Tools Language Template-->
+<VSTemplate Version="3.0.0" Type="Item" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<TemplateData>
+		<Name Package="{9f16956e-2232-4f80-9ebb-4165929ef3ef}" ID="103"></Name>
+		<!--<TemplateGroupID>General</TemplateGroupID>-->
+		<Description Package="{9f16956e-2232-4f80-9ebb-4165929ef3ef}" ID="102"/>
+		<Icon Package="{9f16956e-2232-4f80-9ebb-4165929ef3ef}" ID="201" />
+		<TemplateID>ConfigurationSectionDesigner.VisualBasic</TemplateID>
+		<ProjectType>VisualBasic</ProjectType>
+		<!--<ProjectSubType>General</ProjectSubType>-->
+		<SortOrder>360</SortOrder>
+		<DefaultName>ConfigurationSectionDesigner.csd</DefaultName>
+		<NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+	</TemplateData>
+	<TemplateContent>
+		<ProjectItem TargetFileName="$fileinputname$.csd" ReplaceParameters="true">csd.csd</ProjectItem>
+		<ProjectItem TargetFileName="$fileinputname$.csd.diagram">csd.diagram</ProjectItem>
+	</TemplateContent>
+	<WizardExtension>
+		<Assembly>Dsl.Wizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=null</Assembly>
+		<FullClassName>Dsl.Wizard.ConfigurationSectionDesignerWizard</FullClassName>
+	</WizardExtension>
+</VSTemplate>

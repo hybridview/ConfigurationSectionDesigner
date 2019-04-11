@@ -174,8 +174,8 @@
       <!-- Buttons -->
       <IDSymbol name="NewConfigurationElement" value="0x0101" />
       <IDSymbol name="NewConfigurationSection" value="0x0102" />
-      <IDSymbol name="NewConfigurationSectionGroup" value="0x0103" />
-      <IDSymbol name="NewConfigurationElementCollection" value="0x0104" />
+      <IDSymbol name="NewConfigurationSectionGroup" value="0x0104" />
+      <IDSymbol name="NewConfigurationElementCollection" value="0x0103" />
     </GuidSymbol>
 
     <GuidSymbol name="LayoutDiagramGUID" value="{A9B79FB0-E9F0-46B2-8BAA-A8CBC8717870}">
