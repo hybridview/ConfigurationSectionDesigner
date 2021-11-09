@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="9f16956e-2232-4f80-9ebb-4165929ef3ef" Version="2.0.3.5" Language="en-US" Publisher="The Community" />
+    <DisplayName>ConfigurationSectionDesigner</DisplayName>
+    <Description>A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.</Description>
+	<PreviewImage>Resources\ConfigurationSectionDesigner.jpg</PreviewImage>
+	
+	<MoreInfoUrl>https://github.com/hybridview/ConfigurationSectionDesigner/wiki</MoreInfoUrl>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[16.0,16.99)" />
+    <InstallationTarget Version="[16.0,16.99)" Id="Microsoft.VisualStudio.Enterprise" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.7.2,)" />
+  </Dependencies>
+  <Assets>
+	<Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="Dsl" Path="|Dsl|" />
+	<Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="Dsl.Wizard" Path="|Dsl.Wizard|" AssemblyName="|Dsl.Wizard;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="%CurrentProject%" d:TargetPath="|%CurrentProject%;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="%CurrentProject%" d:TargetPath="|%CurrentProject%;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />
+    
+  </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.TextTemplating" Version="[16.0,16.99)" DisplayName="Text Template Transformation" />
+  </Prerequisites>
+</PackageManifest>
