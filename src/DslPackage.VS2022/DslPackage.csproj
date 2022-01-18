@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\DSLTools\Microsoft.DslTools.settings.targets" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20723</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{94F8A22C-41CF-4784-A82B-CBB8A1EB4166}</ProjectGuid>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ApplicationIcon>Resources\File.ico</ApplicationIcon>
+    <RootNamespace>ConfigurationSectionDesigner</RootNamespace>
+    <AssemblyName>ConfigurationSectionDesigner.DslPackage</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\Key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <SignAssembly>true</SignAssembly>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ClearToolboxCacheInExpHive>true</ClearToolboxCacheInExpHive>
+    <StartupObject>
+    </StartupObject>
+    <TargetRegistryRoot>SOFTWARE\Microsoft\VisualStudio\11.0Exp</TargetRegistryRoot>
+    <RegisterOutputPackage>true</RegisterOutputPackage>
+    <UseCodebase>true</UseCodebase>
+    <GacTargetOutput>false</GacTargetOutput>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ProjectTypeGuids>{82b43b9b-a64c-4715-b499-d71e9ca2bd60};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- Properties for VSSDK/DSL Targets: Must be defined before importing the targets -->
+  <PropertyGroup>
+    <RegisterOutputPackage>true</RegisterOutputPackage>
+    <UseCodebase>true</UseCodebase>
+    <GacTargetOutput>false</GacTargetOutput>
+    <TransformOnBuild>True</TransformOnBuild>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" />
+  <Import Project="$(DslTargetsPath)\Microsoft.DSLTools.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Reference Include="envdte100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.DslDefinition$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Integration$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Shell$(MpfVersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Framework" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating$(T4VersionSuffix)">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling$(T4VersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.VSHost$(T4VersionSuffix)" />
+    <Reference Include="Microsoft.VisualStudio.Threading">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.Threading.17.x\Microsoft.VisualStudio.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Utilities">
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Microsoft.VisualStudio.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.XML" />
+    <Reference Include="VsWebSite.Interop, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="VsWebSite.Interop100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\CodeFileGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\ConfigurationElementCollectionGenerator.cs" />
+    <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\ConfigurationSectionCodeGenerator.cs" />
+    <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\ConverterCodeGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\GenerateCustomChildElementHandler.cs" />
+    <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\HelperMethods.cs" />
+    <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\PropertyCodeGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\ValidatorCodeGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\FileGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\FileGenerationRegistrationAttribute.cs" />
+    <Compile Include="CustomCode\CodeGeneration\OptionsCodeFileGeneration\CodeFileGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\OptionsCodeFileGeneration\ConfigurationElementCollectionGenerator.cs" />
+    <Compile Include="CustomCode\CodeGeneration\OptionsCodeFileGeneration\ConfigurationSectionCodeGenerator.cs" />
+    <Compile Include="CustomCode\CodeGeneration\OptionsCodeFileGeneration\ConverterCodeGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\OptionsCodeFileGeneration\GenerateCustomChildElementHandler.cs" />
+    <Compile Include="CustomCode\CodeGeneration\OptionsCodeFileGeneration\HelperMethods.cs" />
+    <Compile Include="CustomCode\CodeGeneration\OptionsCodeFileGeneration\PropertyCodeGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\OptionsCodeFileGeneration\ValidatorCodeGeneration.cs" />
+    <Compile Include="CustomCode\CodeGeneration\Util.cs" />
+    <Compile Include="CustomCode\CodeGeneration\VsHelper.cs" />
+    <Compile Include="CustomCode\CodeGeneration\VsMultipleFileGenerator.cs" />
+    <Compile Include="CustomCode\CodeGeneration\VsOutputWindowPaneManager.cs" />
+    <Compile Include="CustomCode\Commands\CommandSet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommandSet.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCode\Commands\CommandSetConfig.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommandSetConfig.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCode\Commands\ConfigurationSectionDesignerCommandSet.cs" />
+    <Compile Include="CustomCode\Commands\ImportEnumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomCode\Commands\ImportEnumForm.Designer.cs">
+      <DependentUpon>ImportEnumForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomCode\ConfigurationSectionDesignerClipboardCommandSet.cs" />
+    <Compile Include="CustomCode\ConfigurationSectionDesignerEditorFactory.cs" />
+    <Compile Include="CustomCode\ConfigurationSectionDesignerExplorer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomCode\ConfigurationSectionDesignerPackage.cs" />
+    <Compile Include="GeneratedCode\CommandSet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommandSet.tt</DependentUpon>
+    </Compile>
+    <None Include="CustomCode\Commands\CommandSet.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CommandSet.cs</LastGenOutput>
+    </None>
+    <None Include="CustomCode\Commands\CommandSetConfig.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CommandSetConfig.cs</LastGenOutput>
+    </None>
+    <None Include="ProjectItemTemplates\csd.csd" />
+    <None Include="ProjectItemTemplates\csd.diagram" />
+    <Content Include="ProjectTemplates\CSharp\General\1033\CSharpConfigurationSectionProject.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProjectTemplates\VisualBasic\General\1033\VBConfigurationSectionProject.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="source.extension.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>source.extension.vsixmanifest</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Constants.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Constants.cs</LastGenOutput>
+    </None>
+    <Compile Include="GeneratedCode\Constants.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Constants.tt</DependentUpon>
+    </Compile>
+    <None Include="GeneratedCode\DocData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DocData.cs</LastGenOutput>
+    </None>
+    <Compile Include="GeneratedCode\DocData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocData.tt</DependentUpon>
+    </Compile>
+    <None Include="GeneratedCode\DocView.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DocView.cs</LastGenOutput>
+    </None>
+    <Compile Include="GeneratedCode\DocView.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DocView.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\EditorFactory.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EditorFactory.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GeneratedCode\ModelExplorer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelExplorer.tt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GeneratedCode\ModelExplorerToolWindow.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelExplorerToolWindow.tt</DependentUpon>
+    </Compile>
+    <None Include="GeneratedCode\ModelExplorer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelExplorer.cs</LastGenOutput>
+    </None>
+    <Compile Include="GeneratedCode\Package.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Package.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="GeneratedCode\EditorFactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EditorFactory.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\ModelExplorerToolWindow.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModelExplorerToolWindow.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\Package.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Package.cs</LastGenOutput>
+    </None>
+    <Content Include="Additional.pkgdef" />
+    <Content Include="MSPL.TXT">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ConfigurationSectionDesigner.jpg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="source.extension.vsixmanifest">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>source.extension.tt</DependentUpon>
+    </None>
+    <Content Include="TextTemplates\ConfigurationSectionDesignerSample.tt">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="TextTemplates\ConfigurationSectionDesignerSchema.tt">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CustomCode\Commands\ImportEnumForm.resx">
+      <DependentUpon>ImportEnumForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSPackage.resx">
+      <SubType>Designer</SubType>
+      <MergeWithCTO>true</MergeWithCTO>
+      <ManifestResourceName>VSPackage</ManifestResourceName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <VSItemTemplate Include="ProjectItemTemplates\CSharp.vstemplate">
+      <OutputName>ConfigurationSectionDesigner</OutputName>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CSharp.tt</DependentUpon>
+    </VSItemTemplate>
+    <VSItemTemplate Include="ProjectItemTemplates\VisualBasic.vstemplate">
+      <OutputName>ConfigurationSectionDesigner</OutputName>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisualBasic.tt</DependentUpon>
+    </VSItemTemplate>
+    <Content Include="Resources\File.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Key.snk">
+      <Link>Key.snk</Link>
+    </None>
+    <None Include="GeneratedCode\CommandSet.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CommandSet.cs</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\GeneratedVSCT.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GeneratedVSCT.vsct</LastGenOutput>
+    </None>
+    <None Include="GeneratedCode\GeneratedVSCT.vsct">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GeneratedVSCT.tt</DependentUpon>
+    </None>
+    <None Include="ProjectItemTemplates\CSharp.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CSharp.vstemplate</LastGenOutput>
+    </None>
+    <None Include="ProjectItemTemplates\VisualBasic.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>VisualBasic.vstemplate</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartArguments>/rootsuffix Exp "..\..\..\Debugging\Debugging.sln"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <CodeAnalysisDictionary Include="..\CodeAnalysisDictionary.xml">
+      <Link>CodeAnalysisDictionary.xml</Link>
+    </CodeAnalysisDictionary>
+    <Content Include="Resources\ModelExplorerToolWindowBitmaps.bmp">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <VSCTCompile Include="Commands.vsct">
+      <ResourceName>1000.ctmenu</ResourceName>
+    </VSCTCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dsl.VS2022\Dsl.csproj">
+      <Project>{53ce0112-2220-43bb-b202-c09158e590e1}</Project>
+      <Name>Dsl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dsl.Wizard.VS2022\Dsl.Wizard.csproj">
+      <Project>{b4da261d-c7d4-4da4-b0e0-8c8a450db478}</Project>
+      <Name>Dsl.Wizard</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_ConfigurationName="Release" BuildVersion_UseGlobalSettings="True" BuildVersion_UpdateFileVersion="True" BuildVersion_BuildVersioningStyle="None.None.DeltaBaseYearDayOfYear.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

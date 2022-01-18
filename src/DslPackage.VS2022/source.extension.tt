@@ -1,0 +1,59 @@
+﻿<#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\Dsl\DslDefinition.dsl'" #>
+<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".vsixmanifest" #>
+<#
+/***************************************************************************
+	Rather than following the normal DSL practice of including most of the
+	template from a common include file, this template is deliberately inlined 
+	in the DslPackage project to make it easier to customise. 
+	
+	If you wish to edit the vsix manifest with its designer, then simply copy 
+	the current content of the generated manifest, delete this template from
+	the project, and add back the copied source.extension.vsixmanifest. Note
+	that if you do this you will lose automatic tracking of certain properties
+	of the DSL such as the name, description and version, and will have to 
+	edit these in your custom manifest as well should you wish to change them.
+***************************************************************************/
+
+  // The name of the Dsl Project - Must be updated if the project is renamed.
+  string dslProjectName = "Dsl";
+  string dslWizardProjectName = "Dsl.Wizard";
+  //string localeId = "1033"; // VS fails the build due to warning that this is never used, but never tells us this. How lovely... Commented out.
+#>
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="<#= this.Dsl.PackageGuid #>" Version="2.0.4.0" Language="en-US" Publisher="The Community" />
+    <DisplayName><#= this.Dsl.DisplayName #></DisplayName>
+    <Description>A Visual Studio add-in that allows you to graphically design .NET Configuration Sections and automatically generates all the required code and a schema definition (XSD) for them.</Description>
+	<PreviewImage>Resources\ConfigurationSectionDesigner.jpg</PreviewImage>
+	
+	<MoreInfoUrl>https://github.com/hybridview/ConfigurationSectionDesigner/wiki</MoreInfoUrl>
+  </Metadata>
+  <Installation>
+	<InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+	</InstallationTarget>
+	<InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0,18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+	</InstallationTarget>
+	<InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0,18.0)">
+      <ProductArchitecture>amd64</ProductArchitecture>
+	</InstallationTarget>
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.7.2,)" />
+  </Dependencies>
+  <Assets>
+	<Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="<#= dslProjectName #>" Path="|<#= dslProjectName #>|" />
+	<Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="<#= dslWizardProjectName #>" Path="|<#= dslWizardProjectName #>|" AssemblyName="|<#= dslWizardProjectName #>;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+    <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="Project" d:ProjectName="%CurrentProject%" d:TargetPath="|%CurrentProject%;TemplateProjectOutputGroup|" Path="ProjectTemplates" d:VsixSubPath="ProjectTemplates" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="Project" d:ProjectName="%CurrentProject%" d:TargetPath="|%CurrentProject%;TemplateProjectOutputGroup|" Path="ItemTemplates" d:VsixSubPath="ItemTemplates" />
+    
+  </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.TextTemplating" Version="[17.0,18.0)" DisplayName="Text Template Transformation" />
+  </Prerequisites>
+</PackageManifest>
