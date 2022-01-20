@@ -33,9 +33,6 @@
   <!-- ConfigurationElement -->
   <xsd:element name="configurationElement" type="ConfigurationElement" substitutionGroup="baseConfigurationType" />
   <xsd:complexType name="ConfigurationElement">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationElement</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="BaseConfigurationType">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -127,9 +124,6 @@
   <!-- AttributeProperty -->
   <xsd:element name="attributeProperty" type="AttributeProperty" substitutionGroup="configurationProperty" />
   <xsd:complexType name="AttributeProperty">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.AttributeProperty</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ConfigurationProperty">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -187,9 +181,6 @@
   <!-- ConfigurationSection -->
   <xsd:element name="configurationSection" type="ConfigurationSection" substitutionGroup="configurationElement" />
   <xsd:complexType name="ConfigurationSection">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSection</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ConfigurationElement">
         <!-- Property: CodeGenOptions -->
@@ -235,9 +226,6 @@
   <!-- ConfigurationElementCollection -->
   <xsd:element name="configurationElementCollection" type="ConfigurationElementCollection" substitutionGroup="configurationElement" />
   <xsd:complexType name="ConfigurationElementCollection">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationElementCollection</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ConfigurationElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -325,9 +313,6 @@
   <!-- ElementProperty -->
   <xsd:element name="elementProperty" type="ElementProperty" substitutionGroup="configurationProperty" />
   <xsd:complexType name="ElementProperty">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ElementProperty</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="ConfigurationProperty">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -373,9 +358,6 @@
   <!-- ConfigurationProperty -->
   <xsd:element name="configurationProperty" abstract="true" type="ConfigurationProperty" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationProperty" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationProperty</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -536,9 +518,6 @@
   <!-- TypeDefinition -->
   <xsd:element name="typeDefinition" abstract="true" type="TypeDefinition" substitutionGroup="typeBase" />
   <xsd:complexType name="TypeDefinition" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.TypeDefinition</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="TypeBase">
       </xsd:extension>
@@ -560,9 +539,6 @@
   <!-- ExternalType -->
   <xsd:element name="externalType" type="ExternalType" substitutionGroup="typeDefinition" />
   <xsd:complexType name="ExternalType">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ExternalType</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="TypeDefinition">
       </xsd:extension>
@@ -584,9 +560,6 @@
   <!-- EnumeratedType -->
   <xsd:element name="enumeratedType" type="EnumeratedType" substitutionGroup="typeDefinition" />
   <xsd:complexType name="EnumeratedType">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.EnumeratedType</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="TypeDefinition">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -650,9 +623,6 @@
   <!-- EnumerationLiteral -->
   <xsd:element name="enumerationLiteral" type="EnumerationLiteral" substitutionGroup="core:modelElement" />
   <xsd:complexType name="EnumerationLiteral">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.EnumerationLiteral</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <!-- Property: Name -->
@@ -697,9 +667,6 @@
   <!-- BaseConfigurationType -->
   <xsd:element name="baseConfigurationType" abstract="true" type="BaseConfigurationType" substitutionGroup="typeBase" />
   <xsd:complexType name="BaseConfigurationType" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.BaseConfigurationType</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="TypeBase">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -757,9 +724,6 @@
   <!-- ConfigurationSectionGroup -->
   <xsd:element name="configurationSectionGroup" type="ConfigurationSectionGroup" substitutionGroup="baseConfigurationType" />
   <xsd:complexType name="ConfigurationSectionGroup">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionGroup</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="BaseConfigurationType">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -827,9 +791,6 @@
   <!-- ConfigurationSectionProperty -->
   <xsd:element name="configurationSectionProperty" type="ConfigurationSectionProperty" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionProperty">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionProperty</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -875,9 +836,6 @@
   <!-- ConfigurationSectionGroupProperty -->
   <xsd:element name="configurationSectionGroupProperty" type="ConfigurationSectionGroupProperty" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionGroupProperty">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupProperty</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -923,9 +881,6 @@
   <!-- PropertyValidators -->
   <xsd:element name="validators" type="PropertyValidators" substitutionGroup="core:modelElement" />
   <xsd:complexType name="PropertyValidators">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.PropertyValidators</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -962,9 +917,6 @@
   <!-- PropertyValidator -->
   <xsd:element name="validator" abstract="true" type="PropertyValidator" substitutionGroup="core:modelElement" />
   <xsd:complexType name="PropertyValidator" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.PropertyValidator</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <!-- Property: Name -->
@@ -1027,9 +979,6 @@
   <!-- NumberValidator -->
   <xsd:element name="numberValidator" abstract="true" type="NumberValidator" substitutionGroup="validator" />
   <xsd:complexType name="NumberValidator" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.NumberValidator</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="PropertyValidator">
         <!-- Property: ExcludeRange -->
@@ -1261,9 +1210,6 @@
   <!-- CustomTypeConverter -->
   <xsd:element name="converter" type="CustomTypeConverter" substitutionGroup="core:modelElement" />
   <xsd:complexType name="CustomTypeConverter">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.CustomTypeConverter</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1326,9 +1272,6 @@
   <!-- TypeBase -->
   <xsd:element name="typeBase" abstract="true" type="TypeBase" substitutionGroup="core:modelElement" />
   <xsd:complexType name="TypeBase" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.TypeBase</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <!-- Property: Name -->
@@ -1426,9 +1369,6 @@
   <!-- AttributeParameter -->
   <xsd:element name="parameter" type="AttributeParameter" substitutionGroup="core:modelElement" />
   <xsd:complexType name="AttributeParameter">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.AttributeParameter</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <!-- Property: Name -->
@@ -1525,9 +1465,6 @@
   <!-- ConfigurationElementHasAttributeProperties -->
   <xsd:element name="configurationElementHasAttributeProperties" abstract="true" type="ConfigurationElementHasAttributeProperties" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationElementHasAttributeProperties" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationElementHasAttributeProperties</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1557,9 +1494,6 @@
   <!-- ConfigurationElementCollectionHasItemType -->
   <xsd:element name="configurationElementCollectionHasItemType" abstract="true" type="ConfigurationElementCollectionHasItemType" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationElementCollectionHasItemType" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationElementCollectionHasItemType</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1589,9 +1523,6 @@
   <!-- ConfigurationElementHasElementProperties -->
   <xsd:element name="configurationElementHasElementProperties" abstract="true" type="ConfigurationElementHasElementProperties" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationElementHasElementProperties" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationElementHasElementProperties</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1685,9 +1616,6 @@
   <!-- ConfigurationSectionModelHasTypeDefinitions -->
   <xsd:element name="configurationSectionModelHasTypeDefinitions" abstract="true" type="ConfigurationSectionModelHasTypeDefinitions" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionModelHasTypeDefinitions" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasTypeDefinitions</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1717,9 +1645,6 @@
   <!-- EnumeratedTypeHasLiterals -->
   <xsd:element name="enumeratedTypeHasLiterals" abstract="true" type="EnumeratedTypeHasLiterals" substitutionGroup="core:modelElement" />
   <xsd:complexType name="EnumeratedTypeHasLiterals" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.EnumeratedTypeHasLiterals</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1749,9 +1674,6 @@
   <!-- ConfigurationSectionModelHasConfigurationElements -->
   <xsd:element name="configurationSectionModelHasConfigurationElements" abstract="true" type="ConfigurationSectionModelHasConfigurationElements" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionModelHasConfigurationElements" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasConfigurationElements</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1781,9 +1703,6 @@
   <!-- ConfigurationSectionGroupHasConfigurationSectionProperties -->
   <xsd:element name="configurationSectionGroupHasConfigurationSectionProperties" abstract="true" type="ConfigurationSectionGroupHasConfigurationSectionProperties" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionGroupHasConfigurationSectionProperties" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionProperties</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1813,9 +1732,6 @@
   <!-- ConfigurationSectionPropertyHasConfigurationSection -->
   <xsd:element name="configurationSectionPropertyHasConfigurationSection" abstract="true" type="ConfigurationSectionPropertyHasConfigurationSection" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionPropertyHasConfigurationSection" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionPropertyHasConfigurationSection</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1845,9 +1761,6 @@
   <!-- ConfigurationSectionGroupHasConfigurationSectionGroupProperties -->
   <xsd:element name="configurationSectionGroupHasConfigurationSectionGroupProperties" abstract="true" type="ConfigurationSectionGroupHasConfigurationSectionGroupProperties" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionGroupHasConfigurationSectionGroupProperties" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupHasConfigurationSectionGroupProperties</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1877,9 +1790,6 @@
   <!-- ConfigurationSectionGroupPropertyHasConfigurationSectionGroup -->
   <xsd:element name="configurationSectionGroupPropertyHasConfigurationSectionGroup" abstract="true" type="ConfigurationSectionGroupPropertyHasConfigurationSectionGroup" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionGroupPropertyHasConfigurationSectionGroup" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionGroupPropertyHasConfigurationSectionGroup</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1909,9 +1819,6 @@
   <!-- ConfigurationSectionModelHasPropertyValidators -->
   <xsd:element name="configurationSectionModelHasPropertyValidators" abstract="true" type="ConfigurationSectionModelHasPropertyValidators" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionModelHasPropertyValidators" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasPropertyValidators</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1941,9 +1848,6 @@
   <!-- PropertyValidatorsHasValidators -->
   <xsd:element name="propertyValidatorsHasValidators" abstract="true" type="PropertyValidatorsHasValidators" substitutionGroup="core:modelElement" />
   <xsd:complexType name="PropertyValidatorsHasValidators" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.PropertyValidatorsHasValidators</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -1973,9 +1877,6 @@
   <!-- ConfigurationPropertyHasPropertyValidator -->
   <xsd:element name="validatorReference" abstract="true" type="ConfigurationPropertyHasPropertyValidator" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationPropertyHasPropertyValidator" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationPropertyHasPropertyValidator</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2005,9 +1906,6 @@
   <!-- ConfigurationSectionModelHasCustomTypeConverters -->
   <xsd:element name="configurationSectionModelHasCustomTypeConverters" abstract="true" type="ConfigurationSectionModelHasCustomTypeConverters" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionModelHasCustomTypeConverters" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasCustomTypeConverters</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2037,9 +1935,6 @@
   <!-- ConfigurationPropertyReferencesCustomTypeConverter -->
   <xsd:element name="configurationPropertyReferencesCustomTypeConverter" abstract="true" type="ConfigurationPropertyReferencesCustomTypeConverter" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationPropertyReferencesCustomTypeConverter" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationPropertyReferencesCustomTypeConverter</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2069,9 +1964,6 @@
   <!-- CustomTypeConverterHasType -->
   <xsd:element name="customTypeConverterHasType" abstract="true" type="CustomTypeConverterHasType" substitutionGroup="core:modelElement" />
   <xsd:complexType name="CustomTypeConverterHasType" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.CustomTypeConverterHasType</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2101,9 +1993,6 @@
   <!-- BaseConfigurationTypeHasBaseClass -->
   <xsd:element name="baseConfigurationTypeHasBaseClass" abstract="true" type="BaseConfigurationTypeHasBaseClass" substitutionGroup="core:modelElement" />
   <xsd:complexType name="BaseConfigurationTypeHasBaseClass" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.BaseConfigurationTypeHasBaseClass</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2133,9 +2022,6 @@
   <!-- AttributeHasParameters -->
   <xsd:element name="attributeHasParameters" abstract="true" type="AttributeHasParameters" substitutionGroup="core:modelElement" />
   <xsd:complexType name="AttributeHasParameters" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.AttributeHasParameters</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2165,9 +2051,6 @@
   <!-- ConfigurationPropertyHasAttributes -->
   <xsd:element name="configurationPropertyHasAttributes" abstract="true" type="ConfigurationPropertyHasAttributes" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationPropertyHasAttributes" abstract="true" >
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationPropertyHasAttributes</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2197,9 +2080,6 @@
   <!-- ConfigurationSectionModelHasComments -->
   <xsd:element name="configurationSectionModelHasComments" type="ConfigurationSectionModelHasComments" substitutionGroup="core:modelElement" />
   <xsd:complexType name="ConfigurationSectionModelHasComments">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ConfigurationSectionModelHasComments</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2240,9 +2120,6 @@
   <!-- CommentsReferenceConfigurationItems -->
   <xsd:element name="commentsReferenceConfigurationItems" type="CommentsReferenceConfigurationItems" substitutionGroup="core:modelElement" />
   <xsd:complexType name="CommentsReferenceConfigurationItems">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.CommentsReferenceConfigurationItems</xsd:documentation>
-    </xsd:annotation>
     <xsd:complexContent>
       <xsd:extension base="core:ModelElement">
         <xsd:sequence minOccurs="0" maxOccurs="1">
@@ -2369,9 +2246,6 @@
   
   <!-- Enum CustomEditors -->
   <xsd:simpleType name="CustomEditors">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.CustomEditors</xsd:documentation>
-    </xsd:annotation>
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="None">
         <xsd:annotation>
@@ -2393,9 +2267,6 @@
   
   <!-- Enum ProtectionProviders -->
   <xsd:simpleType name="ProtectionProviders">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.ProtectionProviders</xsd:documentation>
-    </xsd:annotation>
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="DataProtectionConfigurationProvider">
         <xsd:annotation>
@@ -2417,9 +2288,6 @@
   
   <!-- Enum TypeConverters -->
   <xsd:simpleType name="TypeConverters">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.TypeConverters</xsd:documentation>
-    </xsd:annotation>
     <xsd:restriction base="xsd:string">
       <xsd:enumeration value="CommaDelimitedStringCollectionConverter">
         <xsd:annotation>
@@ -2486,44 +2354,18 @@
   
   <!-- Enum InheritanceModifiers -->
   <xsd:simpleType name="InheritanceModifiers">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.InheritanceModifiers</xsd:documentation>
-    </xsd:annotation>
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="None">
-        <xsd:annotation>
-          <xsd:documentation>Description for ConfigurationSectionDesigner.InheritanceModifiers.None</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="Abstract">
-        <xsd:annotation>
-          <xsd:documentation>Description for ConfigurationSectionDesigner.InheritanceModifiers.Abstract</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="Sealed">
-        <xsd:annotation>
-          <xsd:documentation>Description for ConfigurationSectionDesigner.InheritanceModifiers.Sealed</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
+      <xsd:enumeration value="None"/>
+      <xsd:enumeration value="Abstract"/>
+      <xsd:enumeration value="Sealed"/>
     </xsd:restriction>
   </xsd:simpleType>
   
   <!-- Enum AccessModifiers -->
   <xsd:simpleType name="AccessModifiers">
-    <xsd:annotation>
-      <xsd:documentation>Description for ConfigurationSectionDesigner.AccessModifiers</xsd:documentation>
-    </xsd:annotation>
     <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="Internal">
-        <xsd:annotation>
-          <xsd:documentation>Description for ConfigurationSectionDesigner.AccessModifiers.Internal</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
-      <xsd:enumeration value="Public">
-        <xsd:annotation>
-          <xsd:documentation>Description for ConfigurationSectionDesigner.AccessModifiers.Public</xsd:documentation>
-        </xsd:annotation>
-      </xsd:enumeration>
+      <xsd:enumeration value="Internal"/>
+      <xsd:enumeration value="Public"/>
     </xsd:restriction>
   </xsd:simpleType>
   
