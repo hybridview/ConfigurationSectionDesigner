@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ConfigurationSectionDesigner</RootNamespace>
     <AssemblyName>ConfigurationSectionDesigner.Dsl</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -51,26 +51,29 @@
   </Target>
   -->
   <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Modeling.Sdk">
+      <Version>17.0.31902.203</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams">
+      <Version>17.0.31902.203</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell">
+      <Version>17.0.31902.203</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0">
+      <Version>17.0.31902.203</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.TextTemplating.Modeling">
+      <Version>17.0.31902.203</Version>
+    </PackageReference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.DslDefinition$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Integration$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.OLE.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.15.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Framework" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.14.0, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.11.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.8.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating$(T4VersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling$(T4VersionSuffix)" />
+    <PackageReference Include="Microsoft.VisualStudio.Interop">
+      <Version>17.0.31902.203</Version>
+    </PackageReference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.DslDefinition, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\DSL SDK\DSL Designer\17.0\Microsoft.VisualStudio.Modeling.Sdk.DslDefinition.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.configuration" />

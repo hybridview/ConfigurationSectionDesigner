@@ -17,7 +17,7 @@
     <AssemblyOriginatorKeyFile>..\Key.snk</AssemblyOriginatorKeyFile>
     <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
     <SignAssembly>true</SignAssembly>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <ClearToolboxCacheInExpHive>true</ClearToolboxCacheInExpHive>
     <StartupObject>
     </StartupObject>
@@ -92,54 +92,12 @@
   </Target>
   -->
   <ItemGroup>
-    <Reference Include="envdte100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.Interop, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Diagrams$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.DslDefinition$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Integration$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.Shell$(DslToolsVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Shell$(MpfVersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.Framework" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.10.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.12.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.Shell.Interop.9.0, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating$(T4VersionSuffix)">
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.11.0, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.Modeling$(T4VersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.TextTemplating.VSHost$(T4VersionSuffix)" />
-    <Reference Include="Microsoft.VisualStudio.Threading">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\PublicAssemblies\Microsoft.VisualStudio.Threading.17.x\Microsoft.VisualStudio.Threading.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Utilities">
-      <HintPath>..\..\..\..\..\..\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Microsoft.VisualStudio.Utilities.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.configuration" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.XML" />
-    <Reference Include="VsWebSite.Interop, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="VsWebSite.Interop100, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="WindowsBase">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
+    <PackageReference Include="VsWebSite.Interop">
+      <Version>17.0.31902.203</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CustomCode\CodeGeneration\CodeFileGeneration\CodeFileGeneration.cs" />
@@ -345,11 +303,11 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>GeneratedVSCT.vsct</LastGenOutput>
     </None>
-    <None Include="GeneratedCode\GeneratedVSCT.vsct">
+    <Content Include="GeneratedCode\GeneratedVSCT.vsct">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GeneratedVSCT.tt</DependentUpon>
-    </None>
+    </Content>
     <None Include="ProjectItemTemplates\CSharp.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>CSharp.vstemplate</LastGenOutput>
@@ -415,7 +373,7 @@
   </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.DeltaBaseYearDayOfYear.TimeStamp" BuildVersion_UpdateFileVersion="True" BuildVersion_UseGlobalSettings="True" BuildVersion_ConfigurationName="Release" />
+      <UserProperties BuildVersion_ConfigurationName="Release" BuildVersion_UseGlobalSettings="True" BuildVersion_UpdateFileVersion="True" BuildVersion_BuildVersioningStyle="None.None.DeltaBaseYearDayOfYear.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
